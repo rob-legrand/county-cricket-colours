@@ -65,23 +65,24 @@ document.addEventListener('DOMContentLoaded', function () {
       }
 
       self = {
-         getCounties: function () {
-            return info.map(function (currentValue) {
-               return {
-                  countyName: currentValue.countyName,
-                  colours: currentValue.colours.map(function (stripe) {
-                     return stripe.colour ? {
-                        colour: stripe.colour,
-                        rows: stripe.rows
-                     } : {
-                        rows: stripe.rows
-                     };
-                  })
+         getColours: function (which) {
+            return info[which].colours.map(function (stripe) {
+               return stripe.colour ? {
+                  colour: stripe.colour,
+                  rows: stripe.rows
+               } : {
+                  rows: stripe.rows
                };
             });
          },
+         getCountyName: function (which) {
+            return info[which].countyName;
+         },
          getCreamColour: function () {
             return creamColour;
+         },
+         getNumCounties: function () {
+            return info.length;
          },
          getNumRows: function (which) {
             return info[which].colours.reduce(function (numRowsSoFar, stripe) {
@@ -107,7 +108,7 @@ document.addEventListener('DOMContentLoaded', function () {
          while (countiesElement.hasChildNodes()) {
             countiesElement.lastChild.remove();
          }
-         countiesInfo.getCounties().forEach(function (countyInfo, whichCounty) {
+         Array.from({length: countiesInfo.getNumCounties()}, function (ignore, whichCounty) {
             var newElement, newElement2, pixelsPerRow;
             pixelsPerRow = 4;
             newElement = document.createElement('div');
@@ -117,7 +118,7 @@ document.addEventListener('DOMContentLoaded', function () {
             newElement2.width = 32 * pixelsPerRow;
             newElement2.getContext('2d').fillStyle = countiesInfo.getCreamColour();
             newElement2.getContext('2d').fillRect(0, 0, newElement2.width, newElement2.height);
-            countyInfo.colours.reduce(function (totalRowsSoFar, stripe) {
+            countiesInfo.getColours(whichCounty).reduce(function (totalRowsSoFar, stripe) {
                if (stripe.hasOwnProperty('colour')) {
                   newElement2.getContext('2d').fillStyle = stripe.colour;
                   newElement2.getContext('2d').fillRect(0, totalRowsSoFar, newElement2.width, stripe.rows * pixelsPerRow);
@@ -127,7 +128,7 @@ document.addEventListener('DOMContentLoaded', function () {
             newElement.appendChild(newElement2);
             newElement2 = document.createElement('div');
             newElement2.classList.add('county-name');
-            newElement2.textContent = countyInfo.countyName;
+            newElement2.textContent = countiesInfo.getCountyName(whichCounty);
             newElement.appendChild(newElement2);
             countiesElement.appendChild(newElement);
          });
