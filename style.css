@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+html {
+   box-sizing: border-box;
+}
+
+*, *:before, *:after {
+   box-sizing: inherit;
+}
+
+body {
+   align-items: center;
+   background-color: rgb(255, 248, 240);
+   display: flex;
+   font-family: Futura, "Century Gothic", Geneva, Tahoma, Verdana, Arial, sans-serif;
+   font-family: Georgia, serif;
+   justify-content: center;
+}
+
+.counties {
+   align-items: flex-start;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   margin: 50px;
+}
+
+.counties .county {
+   align-items: center;
+   display: flex;
+   justify-content: center;
+}
+
+.counties .county-name {
+   margin-left: 5px;
+}
