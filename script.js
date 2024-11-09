@@ -36,9 +36,9 @@ document.addEventListener('DOMContentLoaded', function () {
                }, {
                   countyName: 'Kent',
                   colours: [
-                     {rows: 6, colour: 'rgb(0, 32, 64)'},
+                     {rows: 6, colour: 'rgb(160, 0, 32)'},
                      {rows: 3},
-                     {rows: 6, colour: 'rgb(0, 32, 64)'}
+                     {rows: 6, colour: 'rgb(160, 0, 32)'}
                   ]
                }, {
                   countyName: 'Middlesex',
@@ -50,9 +50,7 @@ document.addEventListener('DOMContentLoaded', function () {
                }, {
                   countyName: 'Yorkshire',
                   colours: [
-                     //{rows: 5, colour: 'rgb(32, 128, 192)'},
                      {rows: 5, colour: 'rgb(128, 160, 192)'},
-                     //{rows: 4, colour: 'rgb(240, 192, 0)'},
                      {rows: 4, colour: 'rgb(248, 224, 96)'},
                      {rows: 5, colour: 'rgb(32, 32, 64)'}
                   ]
@@ -67,23 +65,12 @@ document.addEventListener('DOMContentLoaded', function () {
                      {rows: 1, colour: 'rgb(224, 0, 32)'},
                      {rows: 4, colour: 'rgb(0, 0, 64)'}
                   ]
-               }, /*{
-                  countyName: 'Sussex',
-                  colours: [
-                     {rows: 1, colour: 'rgb(0, 32, 64)'},
-                     {rows: 4},
-                     {rows: 1, colour: 'rgb(96, 192, 224)'},
-                     {rows: 4},
-                     {rows: 1, colour: 'rgb(255, 224, 0)'}
-                  ]
-               },*/ {
+               }, {
                   countyName: 'Sussex',
                   colours: [
                      {rows: 1, colour: 'rgb(32, 32, 64)'},
-                     //{rows: 2, colour: 'rgb(48, 112, 192)'},
                      {rows: 2, colour: 'rgb(64, 160, 224)'},
                      {rows: 1, colour: 'rgb(255, 176, 16)'},
-                     //{rows: 2, colour: 'rgb(48, 112, 192)'},
                      {rows: 2, colour: 'rgb(64, 160, 224)'},
                      {rows: 1, colour: 'rgb(32, 32, 64)'}
                   ]
@@ -102,7 +89,8 @@ document.addEventListener('DOMContentLoaded', function () {
                      {rows: 1, colour: 'rgb(255, 224, 0)'},
                      {rows: 6, colour: 'rgb(160, 224, 255)'},
                      {rows: 1, colour: 'rgb(255, 224, 0)'},
-                     {rows: 7, colour: 'rgb(84, 46, 4)'}
+                     {rows: 7, colour: 'rgb(84, 46, 4)'},
+                     {rows: 1, colour: 'rgb(255, 224, 0)'}
                   ]
                }, {
                   countyName: 'Leicestershire',
@@ -157,31 +145,25 @@ document.addEventListener('DOMContentLoaded', function () {
                }, {
                   countyName: 'Devon',
                   colours: [
-                     {rows: 3, colour: 'rgb(0, 0, 0)'},
+                     {rows: 3, colour: 'rgb(0, 0, 32)'},
                      {rows: 2, colour: 'rgb(240, 208, 96)'},
                      {rows: 4, colour: 'rgb(0, 64, 192)'},
                      {rows: 2, colour: 'rgb(240, 208, 96)'},
-                     {rows: 3, colour: 'rgb(0, 0, 0)'}
+                     {rows: 3, colour: 'rgb(0, 0, 32)'}
                   ]
                }, {
                   countyName: 'Northumberland',
                   colours: [
-                     {rows: 5, colour: 'rgb(0, 96, 64)'},
-                     {rows: 1, colour: 'rgb(240, 224, 0)'},
-                     {rows: 1, colour: 'rgb(224, 64, 0)'},
-                     {rows: 1, colour: 'rgb(240, 224, 0)'},
-                     {rows: 1, colour: 'rgb(224, 64, 0)'},
-                     {rows: 1, colour: 'rgb(240, 224, 0)'},
-                     {rows: 5, colour: 'rgb(0, 96, 64)'}
+                     {rows: 5, colour: 'rgb(160, 0, 32)'},
+                     {rows: 5, colour: 'rgb(0, 64, 32)'},
+                     {rows: 5, colour: 'rgb(240, 224, 0)'}
                   ]
                }, {
                   countyName: 'Lincolnshire',
                   colours: [
-                     {rows: 4, colour: 'rgb(0, 64, 0)'},
-                     {rows: 1, colour: 'rgb(255, 224, 0)'},
-                     {rows: 4, colour: 'rgb(0, 64, 0)'},
-                     {rows: 1, colour: 'rgb(255, 224, 0)'},
-                     {rows: 4, colour: 'rgb(0, 64, 0)'}
+                     {rows: 6, colour: 'rgb(0, 64, 0)'},
+                     {rows: 2, colour: 'rgb(255, 224, 0)'},
+                     {rows: 6, colour: 'rgb(0, 64, 0)'}
                   ]
                }, {
                   countyName: 'Durham',
@@ -232,9 +214,11 @@ document.addEventListener('DOMContentLoaded', function () {
                }, {
                   countyName: 'Herefordshire',
                   colours: [
-                     {rows: 5, colour: 'rgb(0, 0, 96)'},
-                     {rows: 4, colour: 'rgb(192, 0, 0)'},
-                     {rows: 5, colour: 'rgb(0, 0, 96)'}
+                     {rows: 5, colour: 'rgb(192, 0, 0)'},
+                     {rows: 1, colour: 'rgb(160, 192, 255)'},
+                     {rows: 2, colour: 'rgb(0, 0, 96)'},
+                     {rows: 1, colour: 'rgb(160, 192, 255)'},
+                     {rows: 5, colour: 'rgb(192, 0, 0)'}
                   ]
                }, {
                   countyName: 'Oxfordshire',
@@ -261,9 +245,9 @@ document.addEventListener('DOMContentLoaded', function () {
                }, {
                   countyName: 'Cumberland',
                   colours: [
-                     {rows: 5, colour: 'rgb(0, 96, 32)'},
-                     {rows: 4, colour: 'rgb(160, 224, 255)'},
-                     {rows: 5, colour: 'rgb(0, 96, 32)'}
+                     {rows: 5, colour: 'rgb(160, 0, 32)'},
+                     {rows: 5, colour: 'rgb(240, 224, 0)'},
+                     {rows: 5, colour: 'rgb(0, 64, 32)'}
                   ]
                }, {
                   countyName: 'Westmorland',
@@ -277,17 +261,18 @@ document.addEventListener('DOMContentLoaded', function () {
                }, {
                   countyName: 'Buckinghamshire',
                   colours: [
-                     {rows: 7, colour: 'rgb(224, 192, 160)'},
-                     {rows: 7, colour: 'rgb(0, 64, 32)'}
+                     {rows: 4, colour: 'rgb(0, 64, 32)'},
+                     {rows: 1},
+                     {rows: 3, colour: 'rgb(160, 224, 255)'},
+                     {rows: 1},
+                     {rows: 4, colour: 'rgb(0, 64, 32)'}
                   ]
                }, {
                   countyName: 'Wiltshire',
                   colours: [
-                     {rows: 3, colour: 'rgb(0, 128, 0)'},
-                     {rows: 3},
-                     {rows: 3, colour: 'rgb(0, 128, 0)'},
-                     {rows: 3},
-                     {rows: 3, colour: 'rgb(0, 128, 0)'}
+                     {rows: 6, colour: 'rgb(0, 64, 32)'},
+                     {rows: 2},
+                     {rows: 6, colour: 'rgb(0, 64, 32)'}
                   ]
                }, {
                   countyName: 'Cambridgeshire',
@@ -300,13 +285,13 @@ document.addEventListener('DOMContentLoaded', function () {
                }, {
                   countyName: 'Monmouthshire',
                   colours: [
-                     {rows: 3, colour: 'rgb(0, 96, 192)'},
+                     {rows: 4, colour: 'rgb(0, 96, 192)'},
                      {rows: 1, colour: 'rgb(255, 224, 0)'},
-                     {rows: 3, colour: 'rgb(0, 96, 192)'},
+                     {rows: 2, colour: 'rgb(0, 96, 192)'},
                      {rows: 1, colour: 'rgb(255, 224, 0)'},
-                     {rows: 3, colour: 'rgb(0, 0, 0)'},
+                     {rows: 2, colour: 'rgb(0, 0, 0)'},
                      {rows: 1, colour: 'rgb(255, 224, 0)'},
-                     {rows: 3, colour: 'rgb(0, 0, 0)'}
+                     {rows: 4, colour: 'rgb(0, 0, 0)'}
                   ]
                }, {
                   countyName: 'Suffolk',
@@ -320,11 +305,11 @@ document.addEventListener('DOMContentLoaded', function () {
                }, {
                   countyName: 'Berkshire',
                   colours: [
-                     {rows: 1, colour: 'rgb(255, 255, 128)'},
+                     {rows: 2, colour: 'rgb(255, 255, 128)'},
                      {rows: 5, colour: 'rgb(32, 128, 64)'},
                      {rows: 2, colour: 'rgb(255, 255, 128)'},
-                     {rows: 5, colour: 'rgb(16, 32, 96)'},
-                     {rows: 1, colour: 'rgb(255, 255, 128)'}
+                     {rows: 5, colour: 'rgb(48, 0, 96)'},
+                     {rows: 2, colour: 'rgb(255, 255, 128)'}
                   ]
                }, {
                   countyName: 'Cornwall',
@@ -337,11 +322,11 @@ document.addEventListener('DOMContentLoaded', function () {
                }, {
                   countyName: 'Dorset',
                   colours: [
-                     {rows: 2, colour: 'rgb(0, 64, 32)'},
+                     {rows: 1, colour: 'rgb(0, 64, 32)'},
                      {rows: 2},
-                     {rows: 2, colour: 'rgb(0, 64, 32)'},
+                     {rows: 1, colour: 'rgb(0, 64, 32)'},
                      {rows: 2},
-                     {rows: 6, colour: 'rgb(0, 64, 32)'}
+                     {rows: 1, colour: 'rgb(0, 64, 32)'}
                   ]
                }, {
                   countyName: 'Huntingdonshire',
@@ -350,7 +335,6 @@ document.addEventListener('DOMContentLoaded', function () {
                      {rows: 4, colour: 'rgb(255, 240, 0)'},
                      {rows: 5, colour: 'rgb(0, 0, 48)'}
                   ]
-               /*
                }, {
                   countyName: 'Carmarthenshire',
                   colours: [
@@ -361,8 +345,17 @@ document.addEventListener('DOMContentLoaded', function () {
                }, {
                   countyName: 'Pembrokeshire',
                   colours: [
+                     {rows: 5, colour: 'rgb(0, 32, 96)'},
+                     {rows: 4, colour: 'rgb(192, 224, 255)'},
+                     {rows: 5, colour: 'rgb(0, 32, 96)'}
                   ]
-               */
+               }, {
+                  countyName: 'Denbighshire',
+                  colours: [
+                     {rows: 5, colour: 'rgb(0, 0, 0)'},
+                     {rows: 5, colour: 'rgb(224, 0, 32)'},
+                     {rows: 5, colour: 'rgb(0, 0, 0)'}
+                  ]
                }
             ];
          },
@@ -439,7 +432,7 @@ document.addEventListener('DOMContentLoaded', function () {
             var newDiv, newLi;
             newLi = document.createElement('li');
             newLi.classList.add('county');
-            newLi.appendChild(counties.createCanvas(county, 1, 1.2));
+            newLi.appendChild(counties.createCanvas(county, 1, 2));
             newDiv = document.createElement('div');
             newDiv.classList.add('county-name');
             newDiv.textContent = county.countyName;
