@@ -212,9 +212,9 @@ document.addEventListener('DOMContentLoaded', function () {
                   countyName: 'Herefordshire',
                   colours: [
                      {rows: 5, colour: 'rgb(180, 0, 30)'},
-                     {rows: 1, colour: 'rgb(165, 180, 255)'},
+                     {rows: 1, colour: 'rgb(165, 195, 255)'},
                      {rows: 2, colour: 'rgb(0, 0, 90)'},
-                     {rows: 1, colour: 'rgb(165, 180, 255)'},
+                     {rows: 1, colour: 'rgb(165, 195, 255)'},
                      {rows: 5, colour: 'rgb(180, 0, 30)'}
                   ]
                }, {
@@ -324,9 +324,18 @@ document.addEventListener('DOMContentLoaded', function () {
                }, {
                   countyName: 'Huntingdonshire',
                   colours: [
-                     {rows: 5, colour: 'rgb(0, 0, 48)'},
+                     {rows: 5, colour: 'rgb(0, 0, 45)'},
                      {rows: 4, colour: 'rgb(255, 240, 0)'},
-                     {rows: 5, colour: 'rgb(0, 0, 48)'}
+                     {rows: 5, colour: 'rgb(0, 0, 45)'}
+                  ]
+               }, {
+                  countyName: 'Rutland',
+                  colours: [
+                     {rows: 4, colour: 'rgb(0, 165, 90)'},
+                     {rows: 2, colour: 'rgb(255, 210, 30)'},
+                     {rows: 2, colour: 'rgb(0, 150, 90)'},
+                     {rows: 2, colour: 'rgb(255, 210, 30)'},
+                     {rows: 4, colour: 'rgb(0, 150, 90)'}
                   ]
                }, {
                   countyName: 'Carmarthenshire',
@@ -354,11 +363,11 @@ document.addEventListener('DOMContentLoaded', function () {
                }, {
                   countyName: 'Caernarfonshire',
                   colours: [
-                     {rows: 1, colour: 'rgb(255, 210, 0)'},
-                     {rows: 5, colour: 'rgb(0, 165, 60)'},
-                     {rows: 2, colour: 'rgb(255, 210, 0)'},
-                     {rows: 5, colour: 'rgb(0, 165, 60)'},
-                     {rows: 1, colour: 'rgb(255, 210, 0)'},
+                     {rows: 1, colour: 'rgb(255, 240, 15)'},
+                     {rows: 5, colour: 'rgb(0, 180, 90)'},
+                     {rows: 2, colour: 'rgb(255, 240, 0)'},
+                     {rows: 5, colour: 'rgb(0, 180, 90)'},
+                     {rows: 1, colour: 'rgb(255, 240, 15)'}
                   ]
                }, {
                   countyName: 'Midlothian',
@@ -388,41 +397,96 @@ document.addEventListener('DOMContentLoaded', function () {
 
       const self = {
          createCanvas: function (args) {
+            const numRows = 20;
             const newCanvas = document.createElement('canvas');
-            if (args.isVertical) {
-               newCanvas.width = 20 * Math.round(args.pixelsPerRow);
-               newCanvas.height = Math.round(newCanvas.width / args.widthToHeightRatio);
-            } else {
-               newCanvas.height = 20 * Math.round(args.pixelsPerRow);
-               newCanvas.width = Math.round(newCanvas.height * args.widthToHeightRatio);
-            }
-            newCanvas.getContext('2d').fillStyle = util.creamColour;
-            newCanvas.getContext('2d').fillRect(0, 0, newCanvas.width, newCanvas.height);
-            args.county.colours.reduce(function (totalRowsSoFar, stripe) {
-               if (stripe.hasOwnProperty('colour')) {
-                  newCanvas.getContext('2d').fillStyle = stripe.colour;
-                  if (args.isVertical) {
-                     newCanvas.getContext('2d').fillRect(totalRowsSoFar, 0, stripe.rows * args.pixelsPerRow, newCanvas.height);
+            if (args.isHorizontal) {
+               if (args.isVertical) {
+                  const pixelsPerRow = Math.ceil(Math.min(args.width, args.height) / numRows);
+                  if (args.width > args.height) {
+                     newCanvas.height = numRows * pixelsPerRow;
+                     newCanvas.width = Math.max(Math.round(args.width), newCanvas.height);
                   } else {
-                     newCanvas.getContext('2d').fillRect(0, totalRowsSoFar, newCanvas.width, stripe.rows * args.pixelsPerRow);
+                     newCanvas.width = numRows * pixelsPerRow;
+                     newCanvas.height = Math.max(Math.round(args.height), newCanvas.width);
                   }
+                  newCanvas.getContext('2d').fillStyle = util.creamColour;
+                  newCanvas.getContext('2d').fillRect(0, 0, newCanvas.width, newCanvas.height);
+                  args.county.colours.reduce(function (totalRowsSoFar, stripe) {
+                     if (stripe.hasOwnProperty('colour')) {
+                        newCanvas.getContext('2d').fillStyle = stripe.colour;
+                        newCanvas.getContext('2d').fillRect(0, totalRowsSoFar, newCanvas.width - newCanvas.height + totalRowsSoFar + stripe.rows * pixelsPerRow, stripe.rows * pixelsPerRow);
+                     }
+                     return totalRowsSoFar + stripe.rows * pixelsPerRow;
+                  }, Math.round(
+                     newCanvas.height - (numRows * pixelsPerRow + self.getNumRows(args.county.colours) * pixelsPerRow) / 2
+                  ));
+                  args.county.colours.reduce(function (totalRowsSoFar, stripe) {
+                     if (stripe.hasOwnProperty('colour')) {
+                        newCanvas.getContext('2d').fillStyle = stripe.colour;
+                        newCanvas.getContext('2d').fillRect(totalRowsSoFar, 0, stripe.rows * pixelsPerRow, newCanvas.height - newCanvas.width + totalRowsSoFar + stripe.rows * pixelsPerRow);
+                     }
+                     return totalRowsSoFar + stripe.rows * pixelsPerRow;
+                  }, Math.round(
+                     newCanvas.width - (numRows * pixelsPerRow + self.getNumRows(args.county.colours) * pixelsPerRow) / 2
+                  ));
+                  return newCanvas;
+               } else {
+                  const pixelsPerRow = Math.ceil(args.height / numRows);
+                  newCanvas.height = numRows * pixelsPerRow;
+                  newCanvas.width = Math.round(args.width);
+                  newCanvas.getContext('2d').fillStyle = util.creamColour;
+                  newCanvas.getContext('2d').fillRect(0, 0, newCanvas.width, newCanvas.height);
+                  args.county.colours.reduce(function (totalRowsSoFar, stripe) {
+                     if (stripe.hasOwnProperty('colour')) {
+                        newCanvas.getContext('2d').fillStyle = stripe.colour;
+                        if (args.isVertical) {
+                           newCanvas.getContext('2d').fillRect(totalRowsSoFar, 0, stripe.rows * pixelsPerRow, newCanvas.height);
+                        } else {
+                           newCanvas.getContext('2d').fillRect(0, totalRowsSoFar, newCanvas.width, stripe.rows * pixelsPerRow);
+                        }
+                     }
+                     return totalRowsSoFar + stripe.rows * pixelsPerRow;
+                  }, Math.round(((
+                     args.isVertical
+                     ? newCanvas.width
+                     : newCanvas.height
+                  ) - self.getNumRows(args.county.colours) * pixelsPerRow) / 2));
+                  return newCanvas;
                }
-               return totalRowsSoFar + stripe.rows * args.pixelsPerRow;
-            }, Math.round(((
-               args.isVertical
-               ? newCanvas.width
-               : newCanvas.height
-            ) - self.getNumRows(args.county.colours) * args.pixelsPerRow) / 2));
-            return newCanvas;
+            } else {
+               if (args.isVertical) {
+                  const pixelsPerRow = Math.ceil(args.width / numRows);
+                  newCanvas.width = numRows * pixelsPerRow;
+                  newCanvas.height = Math.round(args.height);
+                  newCanvas.getContext('2d').fillStyle = util.creamColour;
+                  newCanvas.getContext('2d').fillRect(0, 0, newCanvas.width, newCanvas.height);
+                  args.county.colours.reduce(function (totalRowsSoFar, stripe) {
+                     if (stripe.hasOwnProperty('colour')) {
+                        newCanvas.getContext('2d').fillStyle = stripe.colour;
+                        if (args.isVertical) {
+                           newCanvas.getContext('2d').fillRect(totalRowsSoFar, 0, stripe.rows * pixelsPerRow, newCanvas.height);
+                        } else {
+                           newCanvas.getContext('2d').fillRect(0, totalRowsSoFar, newCanvas.width, stripe.rows * pixelsPerRow);
+                        }
+                     }
+                     return totalRowsSoFar + stripe.rows * pixelsPerRow;
+                  }, Math.round(((
+                     args.isVertical
+                     ? newCanvas.width
+                     : newCanvas.height
+                  ) - self.getNumRows(args.county.colours) * pixelsPerRow) / 2));
+                  return newCanvas;
+               } else {
+                  newCanvas.width = Math.round(args.width);
+                  newCanvas.height = Math.round(args.height);
+                  newCanvas.getContext('2d').fillStyle = util.creamColour;
+                  newCanvas.getContext('2d').fillRect(0, 0, newCanvas.width, newCanvas.height);
+                  return newCanvas;
+               }
+            }
          },
-         createInfo: function () {
-            return util.deepFreeze(util.createInfo());
-         },
-         getNumRows: function (colours) {
-            return colours.reduce(function (numRowsSoFar, stripe) {
-               return numRowsSoFar + stripe.rows;
-            }, 0);
-         }
+         createInfo: () => util.deepFreeze(util.createInfo()),
+         getNumRows: (colours) => colours.reduce((numRowsSoFar, stripe) => numRowsSoFar + stripe.rows, 0)
       };
       return Object.freeze(self);
    }());
@@ -438,8 +502,9 @@ document.addEventListener('DOMContentLoaded', function () {
             newDiv.classList.add('county');
             newDiv.appendChild(counties.createCanvas({
                county: county,
-               pixelsPerRow: 6,
-               widthToHeightRatio: 1.2
+               height: 120,
+               isHorizontal: true,
+               width: 144
             }));
             const newDiv2 = document.createElement('div');
             newDiv2.classList.add('county-name');
@@ -456,14 +521,48 @@ document.addEventListener('DOMContentLoaded', function () {
             newLi.classList.add('county');
             newLi.appendChild(counties.createCanvas({
                county: county,
-               pixelsPerRow: 1,
-               widthToHeightRatio: 2
+               height: 20,
+               isHorizontal: true,
+               width: 40
             }));
             newLi.appendChild(counties.createCanvas({
                county: county,
+               height: 20,
                isVertical: true,
-               pixelsPerRow: 4,
-               widthToHeightRatio: 4
+               width: 80
+            }));
+            newLi.appendChild(counties.createCanvas({
+               county: county,
+               height: 40,
+               isHorizontal: true,
+               isVertical: true,
+               width: 80
+            }));
+            newLi.appendChild(counties.createCanvas({
+               county: county,
+               height: 80,
+               isHorizontal: true,
+               isVertical: true,
+               width: 40
+            }));
+            newLi.appendChild(counties.createCanvas({
+               county: county,
+               height: 1,
+               isHorizontal: true,
+               width: 1
+            }));
+            newLi.appendChild(counties.createCanvas({
+               county: county,
+               height: 1,
+               isVertical: true,
+               width: 1
+            }));
+            newLi.appendChild(counties.createCanvas({
+               county: county,
+               height: 1,
+               isHorizontal: true,
+               isVertical: true,
+               width: 1
             }));
             const newDiv = document.createElement('div');
             newDiv.classList.add('county-name');
@@ -476,4 +575,4 @@ document.addEventListener('DOMContentLoaded', function () {
       const countiesInfo = counties.createInfo();
       updateCounties();
    }());
-}, false);
+});
