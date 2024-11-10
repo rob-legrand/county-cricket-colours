@@ -8,62 +8,62 @@ document.addEventListener('DOMContentLoaded', function () {
       var self, util;
 
       util = Object.freeze({
-         creamColour: 'rgb(255, 248, 240)',
+         creamColour: 'rgb(255, 245, 225)',
          createInfo: function () {
             return [
                {
                   countyName: 'Surrey',
                   colours: [
-                     {rows: 6, colour: 'rgb(84, 46, 4)'},
+                     {rows: 6, colour: 'rgb(90, 45, 15)'},
                      {rows: 2},
-                     {rows: 6, colour: 'rgb(84, 46, 4)'}
+                     {rows: 6, colour: 'rgb(90, 45, 15)'}
                   ]
                }, {
                   countyName: 'Lancashire',
                   colours: [
-                     {rows: 5, colour: 'rgb(0, 32, 64)'},
-                     {rows: 2, colour: 'rgb(224, 0, 32)'},
-                     {rows: 2, colour: 'rgb(0, 96, 32)'},
-                     {rows: 5, colour: 'rgb(0, 32, 64)'}
+                     {rows: 5, colour: 'rgb(0, 30, 60)'},
+                     {rows: 2, colour: 'rgb(225, 0, 30)'},
+                     {rows: 2, colour: 'rgb(0, 90, 30)'},
+                     {rows: 5, colour: 'rgb(0, 30, 60)'}
                   ]
                }, {
                   countyName: 'Nottinghamshire',
                   colours: [
-                     {rows: 5, colour: 'rgb(0, 64, 0)'},
-                     {rows: 4, colour: 'rgb(255, 224, 0)'},
-                     {rows: 5, colour: 'rgb(0, 64, 0)'}
+                     {rows: 5, colour: 'rgb(0, 60, 0)'},
+                     {rows: 4, colour: 'rgb(255, 225, 0)'},
+                     {rows: 5, colour: 'rgb(0, 60, 0)'}
                   ]
                }, {
                   countyName: 'Kent',
                   colours: [
-                     {rows: 6, colour: 'rgb(160, 0, 32)'},
+                     {rows: 6, colour: 'rgb(135, 0, 30)'},
                      {rows: 3},
-                     {rows: 6, colour: 'rgb(160, 0, 32)'}
+                     {rows: 6, colour: 'rgb(135, 0, 30)'}
                   ]
                }, {
                   countyName: 'Middlesex',
                   colours: [
-                     {rows: 6, colour: 'rgb(0, 0, 64)'},
+                     {rows: 6, colour: 'rgb(0, 0, 60)'},
                      {rows: 2},
-                     {rows: 6, colour: 'rgb(0, 0, 64)'}
+                     {rows: 6, colour: 'rgb(0, 0, 60)'}
                   ]
                }, {
                   countyName: 'Yorkshire',
                   colours: [
-                     {rows: 5, colour: 'rgb(128, 160, 192)'},
-                     {rows: 4, colour: 'rgb(248, 224, 96)'},
-                     {rows: 5, colour: 'rgb(32, 32, 64)'}
+                     {rows: 5, colour: 'rgb(135, 165, 195)'},
+                     {rows: 4, colour: 'rgb(240, 225, 90)'},
+                     {rows: 5, colour: 'rgb(30, 30, 60)'}
                   ]
                }, {
                   countyName: 'Gloucestershire',
                   colours: [
-                     {rows: 4, colour: 'rgb(0, 0, 64)'},
-                     {rows: 1, colour: 'rgb(224, 192, 128)'},
-                     {rows: 1, colour: 'rgb(84, 46, 4)'},
+                     {rows: 4, colour: 'rgb(0, 0, 60)'},
+                     {rows: 1, colour: 'rgb(225, 195, 120)'},
+                     {rows: 1, colour: 'rgb(90, 45, 15)'},
                      {rows: 2},
-                     {rows: 1, colour: 'rgb(0, 128, 32)'},
-                     {rows: 1, colour: 'rgb(224, 0, 32)'},
-                     {rows: 4, colour: 'rgb(0, 0, 64)'}
+                     {rows: 1, colour: 'rgb(0, 120, 30)'},
+                     {rows: 1, colour: 'rgb(225, 0, 30)'},
+                     {rows: 4, colour: 'rgb(0, 0, 60)'}
                   ]
                }, {
                   countyName: 'Sussex',
@@ -87,9 +87,9 @@ document.addEventListener('DOMContentLoaded', function () {
                   countyName: 'Derbyshire',
                   colours: [
                      {rows: 1, colour: 'rgb(255, 224, 0)'},
-                     {rows: 6, colour: 'rgb(160, 224, 255)'},
+                     {rows: 6, colour: 'rgb(192, 224, 248)'},
                      {rows: 1, colour: 'rgb(255, 224, 0)'},
-                     {rows: 7, colour: 'rgb(84, 46, 4)'},
+                     {rows: 6, colour: 'rgb(90, 45, 15)'},
                      {rows: 1, colour: 'rgb(255, 224, 0)'}
                   ]
                }, {
@@ -106,7 +106,7 @@ document.addEventListener('DOMContentLoaded', function () {
                   colours: [
                      {rows: 4, colour: 'rgb(32, 32, 64)'},
                      {rows: 2, colour: 'rgb(255, 224, 64)'},
-                     {rows: 2},
+                     {rows: 2, colour: 'rgb(240, 240, 240)'},
                      {rows: 2, colour: 'rgb(255, 224, 64)'},
                      {rows: 4, colour: 'rgb(32, 32, 64)'}
                   ]
@@ -114,9 +114,8 @@ document.addEventListener('DOMContentLoaded', function () {
                   countyName: 'Essex',
                   colours: [
                      {rows: 2, colour: 'rgb(0, 0, 96)'},
-                     {rows: 3, colour: 'rgb(255, 224, 0)'},
-                     {rows: 4, colour: 'rgb(192, 0, 32)'},
-                     {rows: 3, colour: 'rgb(255, 224, 0)'},
+                     {rows: 5, colour: 'rgb(255, 224, 0)'},
+                     {rows: 5, colour: 'rgb(192, 0, 0)'},
                      {rows: 2, colour: 'rgb(0, 0, 96)'}
                   ]
                }, {
@@ -168,9 +167,9 @@ document.addEventListener('DOMContentLoaded', function () {
                }, {
                   countyName: 'Durham',
                   colours: [
-                     {rows: 5, colour: 'rgb(160, 0, 32)'},
-                     {rows: 5, colour: 'rgb(255, 208, 0)'},
-                     {rows: 5, colour: 'rgb(0, 0, 128)'}
+                     {rows: 5, colour: 'rgb(0, 0, 96)'},
+                     {rows: 4, colour: 'rgb(248, 208, 0)'},
+                     {rows: 5, colour: 'rgb(128, 0, 32)'}
                   ]
                }, {
                   countyName: 'Glamorgan',
@@ -261,18 +260,18 @@ document.addEventListener('DOMContentLoaded', function () {
                }, {
                   countyName: 'Buckinghamshire',
                   colours: [
-                     {rows: 4, colour: 'rgb(0, 64, 32)'},
+                     {rows: 5, colour: 'rgb(0, 75, 30)'},
                      {rows: 1},
-                     {rows: 3, colour: 'rgb(160, 224, 255)'},
+                     {rows: 3, colour: 'rgb(165, 195, 225)'},
                      {rows: 1},
-                     {rows: 4, colour: 'rgb(0, 64, 32)'}
+                     {rows: 5, colour: 'rgb(0, 75, 30)'}
                   ]
                }, {
                   countyName: 'Wiltshire',
                   colours: [
-                     {rows: 6, colour: 'rgb(0, 64, 32)'},
+                     {rows: 6, colour: 'rgb(0, 60, 30)'},
                      {rows: 2},
-                     {rows: 6, colour: 'rgb(0, 64, 32)'}
+                     {rows: 6, colour: 'rgb(0, 60, 30)'}
                   ]
                }, {
                   countyName: 'Cambridgeshire',
@@ -285,13 +284,9 @@ document.addEventListener('DOMContentLoaded', function () {
                }, {
                   countyName: 'Monmouthshire',
                   colours: [
-                     {rows: 4, colour: 'rgb(0, 96, 192)'},
-                     {rows: 1, colour: 'rgb(255, 224, 0)'},
-                     {rows: 2, colour: 'rgb(0, 96, 192)'},
-                     {rows: 1, colour: 'rgb(255, 224, 0)'},
-                     {rows: 2, colour: 'rgb(0, 0, 0)'},
-                     {rows: 1, colour: 'rgb(255, 224, 0)'},
-                     {rows: 4, colour: 'rgb(0, 0, 0)'}
+                     {rows: 6, colour: 'rgb(0, 96, 192)'},
+                     {rows: 2, colour: 'rgb(255, 224, 0)'},
+                     {rows: 6, colour: 'rgb(0, 0, 0)'}
                   ]
                }, {
                   countyName: 'Suffolk',
@@ -322,11 +317,11 @@ document.addEventListener('DOMContentLoaded', function () {
                }, {
                   countyName: 'Dorset',
                   colours: [
-                     {rows: 1, colour: 'rgb(0, 64, 32)'},
-                     {rows: 2},
-                     {rows: 1, colour: 'rgb(0, 64, 32)'},
-                     {rows: 2},
-                     {rows: 1, colour: 'rgb(0, 64, 32)'}
+                     {rows: 2, colour: 'rgb(0, 75, 30)'},
+                     {rows: 5},
+                     {rows: 2, colour: 'rgb(0, 75, 30)'},
+                     {rows: 5},
+                     {rows: 2, colour: 'rgb(0, 75, 30)'}
                   ]
                }, {
                   countyName: 'Huntingdonshire',
@@ -376,20 +371,29 @@ document.addEventListener('DOMContentLoaded', function () {
       });
 
       self = {
-         createCanvas: function (county, pixelsPerRow, widthToHeightRatio) {
+         createCanvas: function (args) {
             var newCanvas;
             newCanvas = document.createElement('canvas');
-            newCanvas.height = 20 * Math.round(pixelsPerRow);
-            newCanvas.width = Math.round(widthToHeightRatio * newCanvas.height);
+            if (args.isVertical) {
+               newCanvas.width = 20 * Math.round(args.pixelsPerRow);
+               newCanvas.height = Math.round(newCanvas.width / args.widthToHeightRatio);
+            } else {
+               newCanvas.height = 20 * Math.round(args.pixelsPerRow);
+               newCanvas.width = Math.round(newCanvas.height * args.widthToHeightRatio);
+            }
             newCanvas.getContext('2d').fillStyle = util.creamColour;
             newCanvas.getContext('2d').fillRect(0, 0, newCanvas.width, newCanvas.height);
-            county.colours.reduce(function (totalRowsSoFar, stripe) {
+            args.county.colours.reduce(function (totalRowsSoFar, stripe) {
                if (stripe.hasOwnProperty('colour')) {
                   newCanvas.getContext('2d').fillStyle = stripe.colour;
-                  newCanvas.getContext('2d').fillRect(0, totalRowsSoFar, newCanvas.width, stripe.rows * pixelsPerRow);
+                  if (args.isVertical) {
+                     newCanvas.getContext('2d').fillRect(totalRowsSoFar, 0, stripe.rows * args.pixelsPerRow, newCanvas.height);
+                  } else {
+                     newCanvas.getContext('2d').fillRect(0, totalRowsSoFar, newCanvas.width, stripe.rows * args.pixelsPerRow);
+                  }
                }
-               return totalRowsSoFar + stripe.rows * pixelsPerRow;
-            }, Math.round((newCanvas.height - self.getNumRows(county.colours) * pixelsPerRow) / 2));
+               return totalRowsSoFar + stripe.rows * args.pixelsPerRow;
+            }, Math.round(((args.isVertical ? newCanvas.width : newCanvas.height) - self.getNumRows(args.county.colours) * args.pixelsPerRow) / 2));
             return newCanvas;
          },
          createInfo: function () {
@@ -417,7 +421,11 @@ document.addEventListener('DOMContentLoaded', function () {
             var newDiv, newDiv2;
             newDiv = document.createElement('div');
             newDiv.classList.add('county');
-            newDiv.appendChild(counties.createCanvas(county, 6, 1.2));
+            newDiv.appendChild(counties.createCanvas({
+               county: county,
+               pixelsPerRow: 6,
+               widthToHeightRatio: 1.2
+            }));
             newDiv2 = document.createElement('div');
             newDiv2.classList.add('county-name');
             newDiv2.textContent = county.countyName;
@@ -432,7 +440,17 @@ document.addEventListener('DOMContentLoaded', function () {
             var newDiv, newLi;
             newLi = document.createElement('li');
             newLi.classList.add('county');
-            newLi.appendChild(counties.createCanvas(county, 1, 2));
+            newLi.appendChild(counties.createCanvas({
+               county: county,
+               pixelsPerRow: 1,
+               widthToHeightRatio: 2
+            }));
+            newLi.appendChild(counties.createCanvas({
+               county: county,
+               isVertical: true,
+               pixelsPerRow: 4,
+               widthToHeightRatio: 4
+            }));
             newDiv = document.createElement('div');
             newDiv.classList.add('county-name');
             newDiv.textContent = county.countyName;
