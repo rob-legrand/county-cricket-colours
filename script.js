@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
             return [
                {
                   countyName: 'Surrey',
+                  chapmanCode: 'sry',
                   colours: [
                      {rows: 6, colour: 'rgb(90, 45, 15)'},
                      {rows: 2},
@@ -18,6 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
                   ]
                }, {
                   countyName: 'Lancashire',
+                  chapmanCode: 'lan',
                   colours: [
                      {rows: 5, colour: 'rgb(0, 30, 60)'},
                      {rows: 2, colour: 'rgb(225, 0, 30)'},
@@ -26,27 +28,31 @@ document.addEventListener('DOMContentLoaded', function () {
                   ]
                }, {
                   countyName: 'Nottinghamshire',
+                  chapmanCode: 'ntt',
                   colours: [
                      {rows: 5, colour: 'rgb(0, 60, 0)'},
                      {rows: 4, colour: 'rgb(255, 225, 0)'},
                      {rows: 5, colour: 'rgb(0, 60, 0)'}
                   ]
                }, {
-                  countyName: 'Kent',
-                  colours: [
-                     {rows: 6, colour: 'rgb(135, 0, 30)'},
-                     {rows: 3},
-                     {rows: 6, colour: 'rgb(135, 0, 30)'}
-                  ]
-               }, {
                   countyName: 'Middlesex',
+                  chapmanCode: 'mdx',
                   colours: [
                      {rows: 6, colour: 'rgb(0, 0, 60)'},
                      {rows: 2},
                      {rows: 6, colour: 'rgb(0, 0, 60)'}
                   ]
                }, {
+                  countyName: 'Kent',
+                  chapmanCode: 'ken',
+                  colours: [
+                     {rows: 6, colour: 'rgb(135, 0, 30)'},
+                     {rows: 3},
+                     {rows: 6, colour: 'rgb(135, 0, 30)'}
+                  ]
+               }, {
                   countyName: 'Yorkshire',
+                  chapmanCode: 'yks',
                   colours: [
                      {rows: 5, colour: 'rgb(135, 165, 195)'},
                      {rows: 4, colour: 'rgb(240, 225, 90)'},
@@ -54,6 +60,7 @@ document.addEventListener('DOMContentLoaded', function () {
                   ]
                }, {
                   countyName: 'Gloucestershire',
+                  chapmanCode: 'gls',
                   colours: [
                      {rows: 4, colour: 'rgb(0, 0, 60)'},
                      {rows: 1, colour: 'rgb(240, 210, 150)'},
@@ -65,14 +72,16 @@ document.addEventListener('DOMContentLoaded', function () {
                   ]
                }, {
                   countyName: 'Sussex',
+                  chapmanCode: 'ssx',
                   colours: [
-                     {rows: 2, colour: 'rgb(0, 30, 90)'},
-                     {rows: 5, colour: 'rgb(255, 180, 15)'},
-                     {rows: 5, colour: 'rgb(60, 150, 210)'},
-                     {rows: 2, colour: 'rgb(0, 30, 90)'}
+                     {rows: 4, colour: 'rgb(0, 30, 90)'},
+                     {rows: 2, colour: 'rgb(255, 180, 15)'},
+                     {rows: 2, colour: 'rgb(60, 150, 210)'},
+                     {rows: 4, colour: 'rgb(0, 30, 90)'}
                   ]
                }, {
                   countyName: 'Somerset',
+                  chapmanCode: 'som',
                   colours: [
                      {rows: 4, colour: 'rgb(105, 0, 30)'},
                      {rows: 2, colour: 'rgb(195, 195, 195)'},
@@ -82,6 +91,7 @@ document.addEventListener('DOMContentLoaded', function () {
                   ]
                }, {
                   countyName: 'Derbyshire',
+                  chapmanCode: 'dby',
                   colours: [
                      {rows: 1, colour: 'rgb(255, 225, 0)'},
                      {rows: 6, colour: 'rgb(180, 225, 240)'},
@@ -91,6 +101,7 @@ document.addEventListener('DOMContentLoaded', function () {
                   ]
                }, {
                   countyName: 'Leicestershire',
+                  chapmanCode: 'lei',
                   colours: [
                      {rows: 2, colour: 'rgb(195, 0, 30)'},
                      {rows: 2},
@@ -100,6 +111,7 @@ document.addEventListener('DOMContentLoaded', function () {
                   ]
                }, {
                   countyName: 'Warwickshire',
+                  chapmanCode: 'war',
                   colours: [
                      {rows: 4, colour: 'rgb(30, 30, 60)'},
                      {rows: 2, colour: 'rgb(255, 225, 60)'},
@@ -109,15 +121,17 @@ document.addEventListener('DOMContentLoaded', function () {
                   ]
                }, {
                   countyName: 'Essex',
+                  chapmanCode: 'ess',
                   colours: [
                      {rows: 2, colour: 'rgb(0, 0, 90)'},
-                     {rows: 3, colour: 'rgb(255, 225, 0)'},
+                     {rows: 2, colour: 'rgb(255, 225, 0)'},
                      {rows: 4, colour: 'rgb(195, 0, 0)'},
-                     {rows: 3, colour: 'rgb(255, 225, 0)'},
+                     {rows: 2, colour: 'rgb(255, 225, 0)'},
                      {rows: 2, colour: 'rgb(0, 0, 90)'}
                   ]
                }, {
                   countyName: 'Hampshire',
+                  chapmanCode: 'ham',
                   colours: [
                      {rows: 4, colour: 'rgb(0, 0, 60)'},
                      {rows: 2, colour: 'rgb(255, 225, 0)'},
@@ -127,6 +141,7 @@ document.addEventListener('DOMContentLoaded', function () {
                   ]
                }, {
                   countyName: 'Cheshire',
+                  chapmanCode: 'chs',
                   colours: [
                      {rows: 6, colour: 'rgb(90, 0, 120)'},
                      {rows: 2},
@@ -134,129 +149,93 @@ document.addEventListener('DOMContentLoaded', function () {
                   ]
                }, {
                   countyName: 'Staffordshire',
+                  chapmanCode: 'sts',
                   colours: [
                      {rows: 6, colour: 'rgb(60, 105, 75)'},
                      {rows: 2, colour: 'rgb(255, 225, 60)'},
                      {rows: 6, colour: 'rgb(60, 105, 75)'}
                   ]
                }, {
-                  countyName: 'Devon',
-                  colours: [
-                     {rows: 3, colour: 'rgb(0, 0, 32)'},
-                     {rows: 2, colour: 'rgb(240, 208, 96)'},
-                     {rows: 4, colour: 'rgb(0, 64, 192)'},
-                     {rows: 2, colour: 'rgb(240, 208, 96)'},
-                     {rows: 3, colour: 'rgb(0, 0, 32)'}
-                  ]
-               }, {
                   countyName: 'Northumberland',
+                  chapmanCode: 'nbl',
                   colours: [
-                     {rows: 5, colour: 'rgb(160, 0, 32)'},
-                     {rows: 5, colour: 'rgb(0, 64, 32)'},
-                     {rows: 5, colour: 'rgb(240, 224, 0)'}
+                     {rows: 5, colour: 'rgb(180, 0, 30)'},
+                     {rows: 5, colour: 'rgb(0, 60, 30)'},
+                     {rows: 5, colour: 'rgb(240, 225, 0)'}
                   ]
                }, {
                   countyName: 'Lincolnshire',
+                  chapmanCode: 'lin',
                   colours: [
-                     {rows: 6, colour: 'rgb(0, 64, 0)'},
-                     {rows: 2, colour: 'rgb(255, 224, 0)'},
-                     {rows: 6, colour: 'rgb(0, 64, 0)'}
+                     {rows: 6, colour: 'rgb(0, 60, 0)'},
+                     {rows: 2, colour: 'rgb(255, 225, 0)'},
+                     {rows: 6, colour: 'rgb(0, 60, 0)'}
                   ]
                }, {
                   countyName: 'Durham',
+                  chapmanCode: 'dur',
                   colours: [
-                     {rows: 5, colour: 'rgb(0, 0, 96)'},
-                     {rows: 4, colour: 'rgb(248, 208, 0)'},
-                     {rows: 5, colour: 'rgb(128, 0, 32)'}
+                     {rows: 5, colour: 'rgb(0, 0, 90)'},
+                     {rows: 4, colour: 'rgb(240, 210, 0)'},
+                     {rows: 5, colour: 'rgb(135, 0, 30)'}
                   ]
                }, {
                   countyName: 'Glamorgan',
+                  chapmanCode: 'gla',
                   colours: [
-                     {rows: 5, colour: 'rgb(0, 32, 64)'},
-                     {rows: 2, colour: 'rgb(255, 240, 128)'},
-                     {rows: 2, colour: 'rgb(0, 32, 64)'},
-                     {rows: 2, colour: 'rgb(255, 240, 128)'},
-                     {rows: 5, colour: 'rgb(0, 32, 64)'}
+                     {rows: 5, colour: 'rgb(0, 30, 60)'},
+                     {rows: 2, colour: 'rgb(255, 240, 135)'},
+                     {rows: 2, colour: 'rgb(0, 30, 60)'},
+                     {rows: 2, colour: 'rgb(255, 240, 135)'},
+                     {rows: 5, colour: 'rgb(0, 30, 60)'}
                   ]
                }, {
-                  countyName: 'Norfolk',
+                  countyName: 'Devon',
+                  chapmanCode: 'dev',
                   colours: [
-                     {rows: 5, colour: 'rgb(0, 0, 80)'},
-                     {rows: 2, colour: 'rgb(255, 224, 0)'},
-                     {rows: 2, colour: 'rgb(192, 0, 0)'},
-                     {rows: 5, colour: 'rgb(0, 0, 80)'}
+                     {rows: 3, colour: 'rgb(0, 0, 45)'},
+                     {rows: 2, colour: 'rgb(240, 210, 90)'},
+                     {rows: 4, colour: 'rgb(0, 60, 195)'},
+                     {rows: 2, colour: 'rgb(240, 210, 90)'},
+                     {rows: 3, colour: 'rgb(0, 0, 45)'}
                   ]
                }, {
                   countyName: 'Hertfordshire',
+                  chapmanCode: 'hrt',
                   colours: [
-                     {rows: 6, colour: 'rgb(0, 64, 0)'},
-                     {rows: 2, colour: 'rgb(255, 224, 128)'},
-                     {rows: 6, colour: 'rgb(0, 0, 64)'}
+                     {rows: 6, colour: 'rgb(0, 75, 0)'},
+                     {rows: 2, colour: 'rgb(255, 225, 120)'},
+                     {rows: 6, colour: 'rgb(0, 0, 75)'}
+                  ]
+               }, {
+                  countyName: 'Norfolk',
+                  chapmanCode: 'nfk',
+                  colours: [
+                     {rows: 5, colour: 'rgb(0, 0, 75)'},
+                     {rows: 2, colour: 'rgb(255, 225, 0)'},
+                     {rows: 2, colour: 'rgb(195, 0, 0)'},
+                     {rows: 5, colour: 'rgb(0, 0, 75)'}
                   ]
                }, {
                   countyName: 'Northamptonshire',
+                  chapmanCode: 'nth',
                   colours: [
-                     {rows: 6, colour: 'rgb(96, 0, 0)'},
-                     {rows: 3, colour: 'rgb(255, 224, 0)'},
-                     {rows: 6, colour: 'rgb(96, 0, 0)'}
+                     {rows: 6, colour: 'rgb(90, 0, 0)'},
+                     {rows: 3, colour: 'rgb(255, 225, 0)'},
+                     {rows: 6, colour: 'rgb(90, 0, 0)'}
                   ]
                }, {
                   countyName: 'Worcestershire',
+                  chapmanCode: 'wor',
                   colours: [
-                     {rows: 5, colour: 'rgb(0, 64, 32)'},
+                     {rows: 5, colour: 'rgb(0, 60, 30)'},
                      {rows: 2},
                      {rows: 2, colour: 'rgb(0, 0, 0)'},
-                     {rows: 5, colour: 'rgb(0, 64, 32)'}
-                  ]
-               }, {
-                  countyName: 'Herefordshire',
-                  colours: [
-                     {rows: 5, colour: 'rgb(180, 0, 30)'},
-                     {rows: 1, colour: 'rgb(165, 195, 255)'},
-                     {rows: 2, colour: 'rgb(0, 0, 90)'},
-                     {rows: 1, colour: 'rgb(165, 195, 255)'},
-                     {rows: 5, colour: 'rgb(180, 0, 30)'}
-                  ]
-               }, {
-                  countyName: 'Oxfordshire',
-                  colours: [
-                     {rows: 6, colour: 'rgb(90, 0, 30)'},
-                     {rows: 2, colour: 'rgb(240, 225, 0)'},
-                     {rows: 6, colour: 'rgb(0, 30, 75)'}
-                  ]
-               }, {
-                  countyName: 'Shropshire',
-                  colours: [
-                     {rows: 7, colour: 'rgb(255, 225, 0)'},
-                     {rows: 7, colour: 'rgb(0, 30, 120)'}
-                  ]
-               }, {
-                  countyName: 'Bedfordshire',
-                  colours: [
-                     {rows: 3, colour: 'rgb(60, 0, 150)'},
-                     {rows: 4, colour: 'rgb(0, 0, 0)'},
-                     {rows: 1, colour: 'rgb(195, 195, 195)'},
-                     {rows: 4, colour: 'rgb(0, 0, 0)'},
-                     {rows: 3, colour: 'rgb(60, 0, 150)'}
-                  ]
-               }, {
-                  countyName: 'Cumberland',
-                  colours: [
-                     {rows: 5, colour: 'rgb(160, 0, 32)'},
-                     {rows: 5, colour: 'rgb(240, 224, 0)'},
-                     {rows: 5, colour: 'rgb(0, 64, 32)'}
-                  ]
-               }, {
-                  countyName: 'Westmorland',
-                  colours: [
-                     {rows: 5, colour: 'rgb(192, 0, 32)'},
-                     {rows: 1},
-                     {rows: 2, colour: 'rgb(240, 208, 0)'},
-                     {rows: 1},
-                     {rows: 5, colour: 'rgb(192, 0, 32)'}
+                     {rows: 5, colour: 'rgb(0, 60, 30)'}
                   ]
                }, {
                   countyName: 'Buckinghamshire',
+                  chapmanCode: 'bkm',
                   colours: [
                      {rows: 5, colour: 'rgb(0, 75, 30)'},
                      {rows: 1},
@@ -265,7 +244,59 @@ document.addEventListener('DOMContentLoaded', function () {
                      {rows: 5, colour: 'rgb(0, 75, 30)'}
                   ]
                }, {
+                  countyName: 'Bedfordshire',
+                  chapmanCode: 'bdf',
+                  colours: [
+                     {rows: 3, colour: 'rgb(60, 0, 150)'},
+                     {rows: 4, colour: 'rgb(0, 0, 0)'},
+                     {rows: 1, colour: 'rgb(195, 195, 195)'},
+                     {rows: 4, colour: 'rgb(0, 0, 0)'},
+                     {rows: 3, colour: 'rgb(60, 0, 150)'}
+                  ]
+               }, {
+                  countyName: 'Oxfordshire',
+                  chapmanCode: 'oxf',
+                  colours: [
+                     {rows: 6, colour: 'rgb(105, 0, 45)'},
+                     {rows: 2, colour: 'rgb(240, 225, 0)'},
+                     {rows: 6, colour: 'rgb(0, 30, 75)'}
+                  ]
+               }, {
+                  countyName: 'Herefordshire',
+                  chapmanCode: 'hef',
+                  colours: [
+                     {rows: 5, colour: 'rgb(180, 0, 30)'},
+                     {rows: 1, colour: 'rgb(165, 195, 255)'},
+                     {rows: 2, colour: 'rgb(0, 0, 90)'},
+                     {rows: 1, colour: 'rgb(165, 195, 255)'},
+                     {rows: 5, colour: 'rgb(180, 0, 30)'}
+                  ]
+               }, {
+                  countyName: 'Shropshire',
+                  chapmanCode: 'sal',
+                  colours: [
+                     {rows: 7, colour: 'rgb(255, 225, 0)'},
+                     {rows: 7, colour: 'rgb(0, 30, 120)'}
+                  ]
+               }, {
+                  countyName: 'Cumberland',
+                  chapmanCode: 'cul',
+                  colours: [
+                     {rows: 5, colour: 'rgb(165, 0, 30)'},
+                     {rows: 5, colour: 'rgb(240, 225, 0)'},
+                     {rows: 5, colour: 'rgb(0, 60, 30)'}
+                  ]
+               }, {
+                  countyName: 'Huntingdonshire',
+                  chapmanCode: 'hun',
+                  colours: [
+                     {rows: 5, colour: 'rgb(0, 0, 45)'},
+                     {rows: 4, colour: 'rgb(255, 240, 0)'},
+                     {rows: 5, colour: 'rgb(0, 0, 45)'}
+                  ]
+               }, {
                   countyName: 'Wiltshire',
+                  chapmanCode: 'wil',
                   colours: [
                      {rows: 6, colour: 'rgb(0, 60, 30)'},
                      {rows: 2},
@@ -273,6 +304,7 @@ document.addEventListener('DOMContentLoaded', function () {
                   ]
                }, {
                   countyName: 'Cambridgeshire',
+                  chapmanCode: 'cam',
                   colours: [
                      {rows: 3, colour: 'rgb(105, 0, 15)'},
                      {rows: 4, colour: 'rgb(165, 225, 225)'},
@@ -280,58 +312,67 @@ document.addEventListener('DOMContentLoaded', function () {
                      {rows: 3, colour: 'rgb(105, 0, 15)'}
                   ]
                }, {
-                  countyName: 'Monmouthshire',
+                  countyName: 'Westmorland',
+                  chapmanCode: 'wes',
                   colours: [
-                     {rows: 6, colour: 'rgb(0, 96, 192)'},
-                     {rows: 2, colour: 'rgb(255, 224, 0)'},
+                     {rows: 5, colour: 'rgb(195, 0, 30)'},
+                     {rows: 1},
+                     {rows: 2, colour: 'rgb(240, 210, 0)'},
+                     {rows: 1},
+                     {rows: 5, colour: 'rgb(195, 0, 30)'}
+                  ]
+               }, {
+                  countyName: 'Monmouthshire',
+                  chapmanCode: 'mon',
+                  colours: [
+                     {rows: 6, colour: 'rgb(0, 90, 195)'},
+                     {rows: 2, colour: 'rgb(255, 225, 0)'},
                      {rows: 6, colour: 'rgb(0, 0, 0)'}
                   ]
                }, {
                   countyName: 'Suffolk',
+                  chapmanCode: 'sfk',
                   colours: [
-                     {rows: 4, colour: 'rgb(128, 0, 0)'},
-                     {rows: 1, colour: 'rgb(255, 224, 0)'},
-                     {rows: 4, colour: 'rgb(128, 0, 0)'},
-                     {rows: 1, colour: 'rgb(255, 224, 0)'},
-                     {rows: 4, colour: 'rgb(128, 0, 0)'}
+                     {rows: 4, colour: 'rgb(120, 0, 0)'},
+                     {rows: 1, colour: 'rgb(255, 225, 0)'},
+                     {rows: 4, colour: 'rgb(120, 0, 0)'},
+                     {rows: 1, colour: 'rgb(255, 225, 0)'},
+                     {rows: 4, colour: 'rgb(120, 0, 0)'}
                   ]
                }, {
                   countyName: 'Berkshire',
+                  chapmanCode: 'brk',
                   colours: [
-                     {rows: 2, colour: 'rgb(255, 255, 128)'},
-                     {rows: 5, colour: 'rgb(32, 128, 64)'},
-                     {rows: 2, colour: 'rgb(255, 255, 128)'},
-                     {rows: 5, colour: 'rgb(48, 0, 96)'},
-                     {rows: 2, colour: 'rgb(255, 255, 128)'}
+                     {rows: 2, colour: 'rgb(255, 255, 135)'},
+                     {rows: 5, colour: 'rgb(30, 120, 60)'},
+                     {rows: 2, colour: 'rgb(255, 255, 135)'},
+                     {rows: 5, colour: 'rgb(45, 0, 90)'},
+                     {rows: 2, colour: 'rgb(255, 255, 135)'}
                   ]
                }, {
                   countyName: 'Cornwall',
+                  chapmanCode: 'con',
                   colours: [
                      {rows: 6, colour: 'rgb(0, 0, 0)'},
-                     {rows: 1, colour: 'rgb(224, 0, 0)'},
-                     {rows: 1, colour: 'rgb(255, 224, 0)'},
+                     {rows: 1, colour: 'rgb(225, 0, 0)'},
+                     {rows: 1, colour: 'rgb(255, 225, 0)'},
                      {rows: 6, colour: 'rgb(0, 0, 0)'}
                   ]
                }, {
                   countyName: 'Dorset',
+                  chapmanCode: 'dor',
                   colours: [
-                     {rows: 3, colour: 'rgb(0, 75, 30)'},
+                     {rows: 2, colour: 'rgb(0, 90, 30)'},
                      {rows: 3},
-                     {rows: 2, colour: 'rgb(0, 75, 30)'},
+                     {rows: 2, colour: 'rgb(0, 90, 30)'},
                      {rows: 3},
-                     {rows: 3, colour: 'rgb(0, 75, 30)'}
-                  ]
-               }, {
-                  countyName: 'Huntingdonshire',
-                  colours: [
-                     {rows: 5, colour: 'rgb(0, 0, 45)'},
-                     {rows: 4, colour: 'rgb(255, 240, 0)'},
-                     {rows: 5, colour: 'rgb(0, 0, 45)'}
+                     {rows: 2, colour: 'rgb(0, 90, 30)'}
                   ]
                }, {
                   countyName: 'Rutland',
+                  chapmanCode: 'rut',
                   colours: [
-                     {rows: 4, colour: 'rgb(0, 165, 90)'},
+                     {rows: 4, colour: 'rgb(0, 150, 90)'},
                      {rows: 2, colour: 'rgb(255, 210, 30)'},
                      {rows: 2, colour: 'rgb(0, 150, 90)'},
                      {rows: 2, colour: 'rgb(255, 210, 30)'},
@@ -339,20 +380,23 @@ document.addEventListener('DOMContentLoaded', function () {
                   ]
                }, {
                   countyName: 'Carmarthenshire',
+                  chapmanCode: 'cmn',
                   colours: [
-                     {rows: 2, colour: 'rgb(255, 224, 0)'},
-                     {rows: 10, colour: 'rgb(192, 0, 32)'},
-                     {rows: 2, colour: 'rgb(255, 224, 0)'}
+                     {rows: 3, colour: 'rgb(255, 225, 0)'},
+                     {rows: 8, colour: 'rgb(195, 0, 30)'},
+                     {rows: 3, colour: 'rgb(255, 225, 0)'}
                   ]
                }, {
                   countyName: 'Pembrokeshire',
+                  chapmanCode: 'pem',
                   colours: [
-                     {rows: 5, colour: 'rgb(0, 32, 96)'},
-                     {rows: 4, colour: 'rgb(192, 224, 255)'},
-                     {rows: 5, colour: 'rgb(0, 32, 96)'}
+                     {rows: 5, colour: 'rgb(0, 30, 90)'},
+                     {rows: 4, colour: 'rgb(195, 225, 255)'},
+                     {rows: 5, colour: 'rgb(0, 30, 90)'}
                   ]
                }, {
                   countyName: 'Denbighshire',
+                  chapmanCode: 'den',
                   colours: [
                      {rows: 4, colour: 'rgb(0, 0, 0)'},
                      {rows: 2},
@@ -362,6 +406,7 @@ document.addEventListener('DOMContentLoaded', function () {
                   ]
                }, {
                   countyName: 'Caernarfonshire',
+                  chapmanCode: 'cae',
                   colours: [
                      {rows: 1, colour: 'rgb(255, 240, 15)'},
                      {rows: 5, colour: 'rgb(0, 180, 90)'},
@@ -371,6 +416,7 @@ document.addEventListener('DOMContentLoaded', function () {
                   ]
                }, {
                   countyName: 'Midlothian',
+                  chapmanCode: 'mln',
                   colours: [
                      {rows: 5, colour: 'rgb(0, 30, 60)'},
                      {rows: 4},
@@ -395,13 +441,21 @@ document.addEventListener('DOMContentLoaded', function () {
          }
       });
 
-      const self = {
+      const self = Object.freeze({
          createCanvas: function (args) {
             const numRows = 20;
+            const pixelsPerRow = Math.ceil(Math.min((
+               args.isHorizontal
+               ? args.height
+               : Number.POSITIVE_INFINITY
+            ), (
+               args.isVertical
+               ? args.width
+               : Number.POSITIVE_INFINITY
+            )) / numRows);
             const newCanvas = document.createElement('canvas');
             if (args.isHorizontal) {
                if (args.isVertical) {
-                  const pixelsPerRow = Math.ceil(Math.min(args.width, args.height) / numRows);
                   if (args.width > args.height) {
                      newCanvas.height = numRows * pixelsPerRow;
                      newCanvas.width = Math.max(Math.round(args.width), newCanvas.height);
@@ -409,86 +463,54 @@ document.addEventListener('DOMContentLoaded', function () {
                      newCanvas.width = numRows * pixelsPerRow;
                      newCanvas.height = Math.max(Math.round(args.height), newCanvas.width);
                   }
-                  newCanvas.getContext('2d').fillStyle = util.creamColour;
-                  newCanvas.getContext('2d').fillRect(0, 0, newCanvas.width, newCanvas.height);
-                  args.county.colours.reduce(function (totalRowsSoFar, stripe) {
-                     if (stripe.hasOwnProperty('colour')) {
-                        newCanvas.getContext('2d').fillStyle = stripe.colour;
-                        newCanvas.getContext('2d').fillRect(0, totalRowsSoFar, newCanvas.width - newCanvas.height + totalRowsSoFar + stripe.rows * pixelsPerRow, stripe.rows * pixelsPerRow);
-                     }
-                     return totalRowsSoFar + stripe.rows * pixelsPerRow;
-                  }, Math.round(
-                     newCanvas.height - (numRows * pixelsPerRow + self.getNumRows(args.county.colours) * pixelsPerRow) / 2
-                  ));
-                  args.county.colours.reduce(function (totalRowsSoFar, stripe) {
-                     if (stripe.hasOwnProperty('colour')) {
-                        newCanvas.getContext('2d').fillStyle = stripe.colour;
-                        newCanvas.getContext('2d').fillRect(totalRowsSoFar, 0, stripe.rows * pixelsPerRow, newCanvas.height - newCanvas.width + totalRowsSoFar + stripe.rows * pixelsPerRow);
-                     }
-                     return totalRowsSoFar + stripe.rows * pixelsPerRow;
-                  }, Math.round(
-                     newCanvas.width - (numRows * pixelsPerRow + self.getNumRows(args.county.colours) * pixelsPerRow) / 2
-                  ));
-                  return newCanvas;
                } else {
-                  const pixelsPerRow = Math.ceil(args.height / numRows);
                   newCanvas.height = numRows * pixelsPerRow;
                   newCanvas.width = Math.round(args.width);
-                  newCanvas.getContext('2d').fillStyle = util.creamColour;
-                  newCanvas.getContext('2d').fillRect(0, 0, newCanvas.width, newCanvas.height);
-                  args.county.colours.reduce(function (totalRowsSoFar, stripe) {
-                     if (stripe.hasOwnProperty('colour')) {
-                        newCanvas.getContext('2d').fillStyle = stripe.colour;
-                        if (args.isVertical) {
-                           newCanvas.getContext('2d').fillRect(totalRowsSoFar, 0, stripe.rows * pixelsPerRow, newCanvas.height);
-                        } else {
-                           newCanvas.getContext('2d').fillRect(0, totalRowsSoFar, newCanvas.width, stripe.rows * pixelsPerRow);
-                        }
-                     }
-                     return totalRowsSoFar + stripe.rows * pixelsPerRow;
-                  }, Math.round(((
-                     args.isVertical
-                     ? newCanvas.width
-                     : newCanvas.height
-                  ) - self.getNumRows(args.county.colours) * pixelsPerRow) / 2));
-                  return newCanvas;
                }
             } else {
                if (args.isVertical) {
-                  const pixelsPerRow = Math.ceil(args.width / numRows);
                   newCanvas.width = numRows * pixelsPerRow;
                   newCanvas.height = Math.round(args.height);
-                  newCanvas.getContext('2d').fillStyle = util.creamColour;
-                  newCanvas.getContext('2d').fillRect(0, 0, newCanvas.width, newCanvas.height);
-                  args.county.colours.reduce(function (totalRowsSoFar, stripe) {
-                     if (stripe.hasOwnProperty('colour')) {
-                        newCanvas.getContext('2d').fillStyle = stripe.colour;
-                        if (args.isVertical) {
-                           newCanvas.getContext('2d').fillRect(totalRowsSoFar, 0, stripe.rows * pixelsPerRow, newCanvas.height);
-                        } else {
-                           newCanvas.getContext('2d').fillRect(0, totalRowsSoFar, newCanvas.width, stripe.rows * pixelsPerRow);
-                        }
-                     }
-                     return totalRowsSoFar + stripe.rows * pixelsPerRow;
-                  }, Math.round(((
-                     args.isVertical
-                     ? newCanvas.width
-                     : newCanvas.height
-                  ) - self.getNumRows(args.county.colours) * pixelsPerRow) / 2));
-                  return newCanvas;
                } else {
                   newCanvas.width = Math.round(args.width);
                   newCanvas.height = Math.round(args.height);
-                  newCanvas.getContext('2d').fillStyle = util.creamColour;
-                  newCanvas.getContext('2d').fillRect(0, 0, newCanvas.width, newCanvas.height);
-                  return newCanvas;
                }
             }
+            newCanvas.getContext('2d').fillStyle = util.creamColour;
+            newCanvas.getContext('2d').fillRect(0, 0, newCanvas.width, newCanvas.height);
+            if (args.isHorizontal) {
+               args.county.colours.reduce(function (totalRowsSoFar, stripe) {
+                  if (stripe.hasOwnProperty('colour')) {
+                     newCanvas.getContext('2d').fillStyle = stripe.colour;
+                     newCanvas.getContext('2d').fillRect(0, totalRowsSoFar, newCanvas.width - (
+                        args.isVertical
+                        ? newCanvas.height - totalRowsSoFar - stripe.rows * pixelsPerRow
+                        : 0
+                     ), stripe.rows * pixelsPerRow);
+                  }
+                  return totalRowsSoFar + stripe.rows * pixelsPerRow;
+               }, Math.round(newCanvas.height - (numRows + self.getNumRows(args.county.colours)) * pixelsPerRow / 2));
+            }
+            if (args.isVertical) {
+               args.county.colours.reduce(function (totalRowsSoFar, stripe) {
+                  if (stripe.hasOwnProperty('colour')) {
+                     newCanvas.getContext('2d').fillStyle = stripe.colour;
+                     newCanvas.getContext('2d').fillRect(totalRowsSoFar, 0, stripe.rows * pixelsPerRow, newCanvas.height - (
+                        args.isHorizontal
+                        ? newCanvas.width - totalRowsSoFar - stripe.rows * pixelsPerRow
+                        : 0
+                     ));
+                  }
+                  return totalRowsSoFar + stripe.rows * pixelsPerRow;
+               }, Math.round(newCanvas.width - (numRows + self.getNumRows(args.county.colours)) * pixelsPerRow / 2));
+            }
+            return newCanvas;
          },
          createInfo: () => util.deepFreeze(util.createInfo()),
          getNumRows: (colours) => colours.reduce((numRowsSoFar, stripe) => numRowsSoFar + stripe.rows, 0)
-      };
-      return Object.freeze(self);
+      });
+
+      return self;
    }());
 
    (function () {
@@ -566,7 +588,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }));
             const newDiv = document.createElement('div');
             newDiv.classList.add('county-name');
-            newDiv.textContent = county.countyName;
+            newDiv.textContent = county.chapmanCode.toUpperCase() + ' ' + county.countyName;
             newLi.appendChild(newDiv);
             countiesListElement.appendChild(newLi);
          });
