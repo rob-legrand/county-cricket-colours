@@ -13,7 +13,6 @@ body {
    background-color: rgb(255, 245, 225);
    display: flex;
    flex-direction: column;
-   font-family: Futura, "Century Gothic", Geneva, Tahoma, Verdana, Arial, sans-serif;
    font-family: Georgia, serif;
    justify-content: center;
 }
@@ -46,6 +45,10 @@ body {
 
 .counties-list .county-name {
    margin: 5px;
+}
+
+.county-code {
+   font-family: Consolas, Inconsolata, "Andale Mono", AndaleMono, monospace;
 }
 
 .county-colour-name {

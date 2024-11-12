@@ -54,9 +54,9 @@ const counties = (function () {
                hcsCode: 'knt',
                classLevel: 1,
                colours: [
-                  {rows: 6, colour: 'rgb(150, 0, 30)'},
+                  {rows: 6, colour: 'rgb(0, 30, 60)'},
                   {rows: 3},
-                  {rows: 6, colour: 'rgb(0, 30, 60)'}
+                  {rows: 6, colour: 'rgb(150, 0, 30)'}
                ],
                backgroundColour: 'rgb(150, 0, 30)',
                borderColour: 'rgb(0, 30, 60)'
@@ -119,8 +119,8 @@ const counties = (function () {
                   {rows: 2, colour: 'rgb(0, 30, 90)'}
                ],
                textColour: 'rgb(255, 180, 15)',
-               backgroundColour: 'rgb(60, 150, 210)',
-               borderColour: 'rgb(0, 30, 90)'
+               backgroundColour: 'rgb(0, 30, 90)',
+               borderColour: 'rgb(60, 150, 210)'
             }, {
                countyName: 'Somerset',
                countyCode: 'som',
@@ -241,9 +241,9 @@ const counties = (function () {
                   {rows: 4, colour: 'rgb(255, 210, 75)'},
                   {rows: 5, colour: 'rgb(0, 90, 45)'}
                ],
-               textColour: '',
-               backgroundColour: '',
-               borderColour: ''
+               textColour: 'rgb(255, 210, 75)',
+               backgroundColour: 'rgb(0, 90, 45)',
+               borderColour: 'rgb(255, 210, 75)'
             }, {
                countyName: 'Durham',
                countyCode: 'dur',
@@ -252,12 +252,12 @@ const counties = (function () {
                classLevel: 3,
                colours: [
                   {rows: 5, colour: 'rgb(0, 0, 90)'},
-                  {rows: 4, colour: 'rgb(240, 210, 0)'},
-                  {rows: 5, colour: 'rgb(135, 0, 30)'}
+                  {rows: 3, colour: 'rgb(240, 210, 0)'},
+                  {rows: 5, colour: 'rgb(105, 0, 30)'}
                ],
-               textColour: '',
-               backgroundColour: '',
-               borderColour: ''
+               textColour: 'rgb(240, 210, 0)',
+               backgroundColour: 'rgb(0, 0, 90)',
+               borderColour: 'rgb(105, 0, 30)'
             }, {
                countyName: 'Lincolnshire',
                countyCode: 'lin',
@@ -269,9 +269,8 @@ const counties = (function () {
                   {rows: 2, colour: 'rgb(255, 225, 0)'},
                   {rows: 6, colour: 'rgb(0, 60, 0)'}
                ],
-               textColour: '',
-               backgroundColour: '',
-               borderColour: ''
+               textColour: 'rgb(255, 225, 0)',
+               backgroundColour: 'rgb(0, 60, 0)'
             }, {
                countyName: 'Northumberland',
                countyCode: 'nbl',
@@ -283,9 +282,9 @@ const counties = (function () {
                   {rows: 5, colour: 'rgb(0, 60, 30)'},
                   {rows: 5, colour: 'rgb(225, 180, 0)'}
                ],
-               textColour: '',
-               backgroundColour: '',
-               borderColour: ''
+               textColour: 'rgb(210, 30, 30)',
+               backgroundColour: 'rgb(0, 60, 30)',
+               borderColour: 'rgb(225, 180, 0)'
             }, {
                countyName: 'Glamorgan',
                countyCode: 'gla',
@@ -315,9 +314,9 @@ const counties = (function () {
                   {rows: 2, colour: 'rgb(240, 210, 90)'},
                   {rows: 3, colour: 'rgb(0, 0, 45)'}
                ],
-               textColour: '',
-               backgroundColour: '',
-               borderColour: ''
+               textColour: 'rgb(240, 210, 90)',
+               backgroundColour: 'rgb(0, 0, 45)',
+               borderColour: 'rgb(0, 60, 195)'
             }, {
                countyName: 'Hertfordshire',
                countyCode: 'hrt',
@@ -329,9 +328,9 @@ const counties = (function () {
                   {rows: 2, colour: 'rgb(255, 225, 120)'},
                   {rows: 6, colour: 'rgb(0, 0, 75)'}
                ],
-               textColour: '',
-               backgroundColour: '',
-               borderColour: ''
+               textColour: 'rgb(255, 225, 120)',
+               backgroundColour: 'rgb(0, 75, 0)',
+               borderColour: 'rgb(0, 0, 75)'
             }, {
                countyName: 'Norfolk',
                countyCode: 'nfk',
@@ -339,14 +338,12 @@ const counties = (function () {
                hcsCode: 'nrf',
                classLevel: 3,
                colours: [
-                  {rows: 5, colour: 'rgb(0, 0, 75)'},
-                  {rows: 2, colour: 'rgb(255, 225, 0)'},
-                  {rows: 2, colour: 'rgb(195, 0, 0)'},
-                  {rows: 5, colour: 'rgb(0, 0, 75)'}
+                  {rows: 5, colour: 'rgb(30, 30, 75)'},
+                  {rows: 2, colour: 'rgb(195, 240, 255)'},
+                  {rows: 5, colour: 'rgb(30, 30, 75)'}
                ],
-               textColour: '',
-               backgroundColour: '',
-               borderColour: ''
+               backgroundColour: 'rgb(0, 0, 75)',
+               borderColour: 'rgb(195, 240, 255)'
             }, {
                countyName: 'Northamptonshire',
                countyCode: 'nth',
@@ -358,9 +355,8 @@ const counties = (function () {
                   {rows: 3, colour: 'rgb(255, 225, 0)'},
                   {rows: 6, colour: 'rgb(90, 0, 0)'}
                ],
-               textColour: '',
-               backgroundColour: '',
-               borderColour: ''
+               textColour: 'rgb(255, 225, 0)',
+               backgroundColour: 'rgb(90, 0, 0)'
             }, {
                countyName: 'Worcestershire',
                countyCode: 'wor',
@@ -388,9 +384,8 @@ const counties = (function () {
                   {rows: 1},
                   {rows: 5, colour: 'rgb(0, 75, 30)'}
                ],
-               textColour: '',
-               backgroundColour: '',
-               borderColour: ''
+               backgroundColour: 'rgb(0, 75, 30)',
+               borderColour: 'rgb(195, 195, 210)'
             }, {
                countyName: 'Shropshire',
                countyCode: 'sal',
@@ -411,13 +406,13 @@ const counties = (function () {
                hcsCode: 'oxd',
                classLevel: 4,
                colours: [
-                  {rows: 6, colour: 'rgb(105, 0, 45)'},
-                  {rows: 2, colour: 'rgb(240, 225, 0)'},
+                  {rows: 6, colour: 'rgb(120, 0, 45)'},
+                  {rows: 2, colour: 'rgb(240, 225, 105)'},
                   {rows: 6, colour: 'rgb(0, 30, 75)'}
                ],
-               textColour: '',
-               backgroundColour: '',
-               borderColour: ''
+               textColour: 'rgb(240, 225, 0)',
+               backgroundColour: 'rgb(120, 0, 45)',
+               borderColour: 'rgb(0, 30, 75)'
             }, {
                countyName: 'Bedfordshire',
                countyCode: 'bed',
@@ -472,9 +467,9 @@ const counties = (function () {
                   {rows: 2, colour: 'rgb(255, 225, 0)'},
                   {rows: 6, colour: 'rgb(0, 0, 0)'}
                ],
-               textColour: '',
-               backgroundColour: '',
-               borderColour: ''
+               textColour: 'rgb(255, 225, 0)',
+               backgroundColour: 'rgb(0, 90, 195)',
+               borderColour: 'rgb(0, 0, 0)'
             }, {
                countyName: 'Herefordshire',
                countyCode: 'hef',
@@ -520,9 +515,9 @@ const counties = (function () {
                   {rows: 2, colour: 'rgb(255, 210, 0)'},
                   {rows: 4, colour: 'rgb(225, 30, 0)'}
                ],
-               textColour: '',
-               backgroundColour: '',
-               borderColour: ''
+               textColour: 'rgb(255, 210, 0)',
+               backgroundColour: 'rgb(225, 30, 0)',
+               borderColour: 'rgb(30, 45, 240)'
             }, {
                countyName: 'Cumberland',
                countyCode: 'cum',
@@ -534,9 +529,9 @@ const counties = (function () {
                   {rows: 4, colour: 'rgb(240, 225, 0)'},
                   {rows: 5, colour: 'rgb(0, 60, 30)'}
                ],
-               textColour: '',
-               backgroundColour: '',
-               borderColour: ''
+               textColour: 'rgb(240, 225, 0)',
+               backgroundColour: 'rgb(0, 60, 30)',
+               borderColour: 'rgb(165, 0, 30)'
             }, {
                countyName: 'Rutland',
                countyCode: 'rut',
@@ -550,9 +545,8 @@ const counties = (function () {
                   {rows: 2, colour: 'rgb(255, 210, 30)'},
                   {rows: 4, colour: 'rgb(0, 150, 90)'}
                ],
-               textColour: '',
-               backgroundColour: '',
-               borderColour: ''
+               textColour: 'rgb(255, 210, 30)',
+               backgroundColour: 'rgb(0, 150, 90)'
             }, {
                countyName: 'Suffolk',
                countyCode: 'sfk',
@@ -566,9 +560,9 @@ const counties = (function () {
                   {rows: 1, colour: 'rgb(255, 225, 0)'},
                   {rows: 2, colour: 'rgb(120, 0, 0)'}
                ],
-               textColour: '',
-               backgroundColour: '',
-               borderColour: ''
+               //textColour: '',
+               backgroundColour: 'rgb(120, 0, 0)',
+               borderColour: 'rgb(255, 225, 0)'
             }, {
                countyName: 'Huntingdonshire',
                countyCode: 'hun',
@@ -580,9 +574,8 @@ const counties = (function () {
                   {rows: 4, colour: 'rgb(255, 240, 0)'},
                   {rows: 5, colour: 'rgb(0, 0, 45)'}
                ],
-               textColour: '',
-               backgroundColour: '',
-               borderColour: ''
+               textColour: 'rgb(255, 240, 0)',
+               backgroundColour: 'rgb(0, 0, 45)'
             }, {
                countyName: 'Westmorland',
                countyCode: 'wes',
@@ -596,12 +589,11 @@ const counties = (function () {
                   {rows: 2},
                   {rows: 4, colour: 'rgb(195, 0, 30)'}
                ],
-               textColour: '',
-               backgroundColour: '',
-               borderColour: ''
+               backgroundColour: 'rgb(195, 0, 30)',
+               borderColour: 'rgb(240, 210, 0)'
             }, {
                countyName: 'Berkshire',
-               countyCode: 'ber',
+               countyCode: 'brk',
                chapmanCode: 'brk',
                hcsCode: 'ber',
                classLevel: 6,
@@ -612,9 +604,9 @@ const counties = (function () {
                   {rows: 5, colour: 'rgb(45, 0, 90)'},
                   {rows: 2, colour: 'rgb(255, 255, 135)'}
                ],
-               textColour: '',
-               backgroundColour: '',
-               borderColour: ''
+               textColour: 'rgb(255, 255, 135)',
+               backgroundColour: 'rgb(30, 120, 60)',
+               borderColour: 'rgb(45, 0, 90)'
             }, {
                countyName: 'Dorset',
                countyCode: 'dor',
@@ -692,9 +684,8 @@ const counties = (function () {
                   {rows: 2},
                   {rows: 4, colour: 'rgb(0, 0, 0)'}
                ],
-               textColour: '',
-               backgroundColour: '',
-               borderColour: ''
+               backgroundColour: 'rgb(0, 0, 0)',
+               borderColour: 'rgb(225, 0, 30)'
             }, {
                countyName: 'Pembrokeshire',
                countyCode: 'pem',
@@ -739,9 +730,8 @@ const counties = (function () {
                   {rows: 2},
                   {rows: 2, colour: 'rgb(0, 0, 0)'}
                ],
-               textColour: '',
-               backgroundColour: '',
-               borderColour: ''
+               backgroundColour: 'rgb(0, 0, 0)',
+               borderColour: 'rgb(255, 45, 0)'
             }, {
                countyName: 'Midlothian',
                countyCode: 'mln',
@@ -842,7 +832,7 @@ const counties = (function () {
          }
          return newCanvas;
       },
-      createDiv: function (county) {
+      createCountyElement: function (county) {
          const newDiv = document.createElement('div');
          newDiv.textContent = county.countyName;
          newDiv.style.color = county.textColour ?? util.creamColour;
