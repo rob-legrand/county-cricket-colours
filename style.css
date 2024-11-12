@@ -47,3 +47,10 @@ body {
 .counties-list .county-name {
    margin: 5px;
 }
+
+.county-colour-name {
+   border-style: solid;
+   border-width: 3px;
+   margin: 5px;
+   padding: 9px;
+}
