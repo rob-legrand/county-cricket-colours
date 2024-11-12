@@ -44,11 +44,27 @@ body {
 }
 
 .counties-list .county-name {
+   margin: 0px 5px;
+}
+
+.counties-points-table {
+   align-items: center;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   margin: 5px;
+}
+
+.counties-points-tables {
+   align-items: center;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
    margin: 5px;
 }
 
 .county-code {
-   font-family: Consolas, Inconsolata, "Andale Mono", AndaleMono, monospace;
+   font-family: Inconsolata, Consolas, "Andale Mono", AndaleMono, monospace;
 }
 
 .county-colour-name {

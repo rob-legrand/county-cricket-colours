@@ -17,9 +17,10 @@ const counties = (function () {
                   {rows: 2},
                   {rows: 6, colour: 'rgb(90, 45, 15)'}
                ],
-               backgroundColour: 'rgb(90, 45, 15)',
+               backgroundColour: 'rgb(90, 45, 15)'
             }, {
                countyName: 'Lancashire',
+               countyAbbreviation: 'Lancs',
                countyCode: 'lan',
                chapmanCode: 'lan',
                hcsCode: 'lcs',
@@ -35,6 +36,7 @@ const counties = (function () {
                borderColour: 'rgb(0, 90, 30)'
             }, {
                countyName: 'Nottinghamshire',
+               countyAbbreviation: 'Notts',
                countyCode: 'not',
                chapmanCode: 'ntt',
                hcsCode: 'not',
@@ -62,6 +64,7 @@ const counties = (function () {
                borderColour: 'rgb(0, 30, 60)'
             }, {
                countyName: 'Middlesex',
+               countyAbbreviation: 'Middx',
                countyCode: 'mdx',
                chapmanCode: 'mdx',
                hcsCode: 'msx',
@@ -74,6 +77,7 @@ const counties = (function () {
                backgroundColour: 'rgb(0, 0, 60)'
             }, {
                countyName: 'Yorkshire',
+               countyAbbreviation: 'Yorks',
                countyCode: 'yrk',
                chapmanCode: 'yks',
                hcsCode: 'yrk',
@@ -88,6 +92,7 @@ const counties = (function () {
                borderColour: 'rgb(135, 165, 195)'
             }, {
                countyName: 'Gloucestershire',
+               countyAbbreviation: 'Glos',
                countyCode: 'gls',
                chapmanCode: 'gls',
                hcsCode: 'glc',
@@ -139,6 +144,7 @@ const counties = (function () {
                borderColour: 'rgb(0, 0, 0)'
             }, {
                countyName: 'Derbyshire',
+               countyAbbreviation: 'Derbys',
                countyCode: 'drb',
                chapmanCode: 'dby',
                hcsCode: 'drb',
@@ -155,6 +161,7 @@ const counties = (function () {
                borderColour: 'rgb(180, 225, 240)'
             }, {
                countyName: 'Warwickshire',
+               countyAbbreviation: 'Warks',
                countyCode: 'war',
                chapmanCode: 'war',
                hcsCode: 'wrw',
@@ -171,6 +178,7 @@ const counties = (function () {
                borderColour: 'rgb(255, 225, 60)'
             }, {
                countyName: 'Leicestershire',
+               countyAbbreviation: 'Leics',
                countyCode: 'lei',
                chapmanCode: 'lei',
                hcsCode: 'lcr',
@@ -203,6 +211,7 @@ const counties = (function () {
                borderColour: 'rgb(0, 0, 90)'
             }, {
                countyName: 'Hampshire',
+               countyAbbreviation: 'Hants',
                countyCode: 'ham',
                chapmanCode: 'ham',
                hcsCode: 'hmp',
@@ -219,6 +228,7 @@ const counties = (function () {
                borderColour: 'rgb(255, 225, 0)'
             }, {
                countyName: 'Cheshire',
+               countyAbbreviation: 'Ches',
                countyCode: 'che',
                chapmanCode: 'chs',
                hcsCode: 'che',
@@ -232,6 +242,7 @@ const counties = (function () {
                borderColour: 'rgb(0, 0, 0)'
             }, {
                countyName: 'Staffordshire',
+               countyAbbreviation: 'Staffs',
                countyCode: 'stf',
                chapmanCode: 'sts',
                hcsCode: 'stf',
@@ -260,6 +271,7 @@ const counties = (function () {
                borderColour: 'rgb(105, 0, 30)'
             }, {
                countyName: 'Lincolnshire',
+               countyAbbreviation: 'Lincs',
                countyCode: 'lin',
                chapmanCode: 'lin',
                hcsCode: 'lnc',
@@ -285,6 +297,21 @@ const counties = (function () {
                textColour: 'rgb(210, 30, 30)',
                backgroundColour: 'rgb(0, 60, 30)',
                borderColour: 'rgb(225, 180, 0)'
+            }, {
+               countyName: 'Hertfordshire',
+               countyAbbreviation: 'Herts',
+               countyCode: 'hrt',
+               chapmanCode: 'hrt',
+               hcsCode: 'htf',
+               classLevel: 3,
+               colours: [
+                  {rows: 6, colour: 'rgb(0, 75, 0)'},
+                  {rows: 2, colour: 'rgb(255, 225, 120)'},
+                  {rows: 6, colour: 'rgb(0, 0, 75)'}
+               ],
+               textColour: 'rgb(255, 225, 120)',
+               backgroundColour: 'rgb(0, 75, 0)',
+               borderColour: 'rgb(0, 0, 75)'
             }, {
                countyName: 'Glamorgan',
                countyCode: 'gla',
@@ -318,20 +345,6 @@ const counties = (function () {
                backgroundColour: 'rgb(0, 0, 45)',
                borderColour: 'rgb(0, 60, 195)'
             }, {
-               countyName: 'Hertfordshire',
-               countyCode: 'hrt',
-               chapmanCode: 'hrt',
-               hcsCode: 'htf',
-               classLevel: 3,
-               colours: [
-                  {rows: 6, colour: 'rgb(0, 75, 0)'},
-                  {rows: 2, colour: 'rgb(255, 225, 120)'},
-                  {rows: 6, colour: 'rgb(0, 0, 75)'}
-               ],
-               textColour: 'rgb(255, 225, 120)',
-               backgroundColour: 'rgb(0, 75, 0)',
-               borderColour: 'rgb(0, 0, 75)'
-            }, {
                countyName: 'Norfolk',
                countyCode: 'nfk',
                chapmanCode: 'nfk',
@@ -346,6 +359,7 @@ const counties = (function () {
                borderColour: 'rgb(195, 240, 255)'
             }, {
                countyName: 'Northamptonshire',
+               countyAbbreviation: 'Northants',
                countyCode: 'nth',
                chapmanCode: 'nth',
                hcsCode: 'nhp',
@@ -359,6 +373,7 @@ const counties = (function () {
                backgroundColour: 'rgb(90, 0, 0)'
             }, {
                countyName: 'Worcestershire',
+               countyAbbreviation: 'Worcs',
                countyCode: 'wor',
                chapmanCode: 'wor',
                hcsCode: 'wrc',
@@ -373,6 +388,7 @@ const counties = (function () {
                borderColour: 'rgb(0, 0, 0)'
             }, {
                countyName: 'Buckinghamshire',
+               countyAbbreviation: 'Bucks',
                countyCode: 'buc',
                chapmanCode: 'bkm',
                hcsCode: 'buc',
@@ -387,34 +403,8 @@ const counties = (function () {
                backgroundColour: 'rgb(0, 75, 30)',
                borderColour: 'rgb(195, 195, 210)'
             }, {
-               countyName: 'Shropshire',
-               countyCode: 'sal',
-               chapmanCode: 'sal',
-               hcsCode: 'shp',
-               classLevel: 4,
-               colours: [
-                  {rows: 7, colour: 'rgb(255, 225, 0)'},
-                  {rows: 7, colour: 'rgb(0, 30, 120)'}
-               ],
-               textColour: 'rgb(255, 225, 0)',
-               backgroundColour: 'rgb(0, 30, 120)',
-               borderColour: 'rgb(255, 225, 0)'
-            }, {
-               countyName: 'Oxfordshire',
-               countyCode: 'oxf',
-               chapmanCode: 'oxf',
-               hcsCode: 'oxd',
-               classLevel: 4,
-               colours: [
-                  {rows: 6, colour: 'rgb(120, 0, 45)'},
-                  {rows: 2, colour: 'rgb(240, 225, 105)'},
-                  {rows: 6, colour: 'rgb(0, 30, 75)'}
-               ],
-               textColour: 'rgb(240, 225, 0)',
-               backgroundColour: 'rgb(120, 0, 45)',
-               borderColour: 'rgb(0, 30, 75)'
-            }, {
                countyName: 'Bedfordshire',
+               countyAbbreviation: 'Beds',
                countyCode: 'bed',
                chapmanCode: 'bdf',
                hcsCode: 'bed',
@@ -430,7 +420,54 @@ const counties = (function () {
                backgroundColour: 'rgb(0, 0, 0)',
                borderColour: 'rgb(60, 0, 150)'
             }, {
+               countyName: 'Oxfordshire',
+               countyAbbreviation: 'Oxon',
+               countyCode: 'oxf',
+               chapmanCode: 'oxf',
+               hcsCode: 'oxd',
+               classLevel: 4,
+               colours: [
+                  {rows: 6, colour: 'rgb(120, 0, 45)'},
+                  {rows: 2, colour: 'rgb(240, 225, 105)'},
+                  {rows: 6, colour: 'rgb(0, 30, 75)'}
+               ],
+               textColour: 'rgb(240, 225, 0)',
+               backgroundColour: 'rgb(120, 0, 45)',
+               borderColour: 'rgb(0, 30, 75)'
+            }, {
+               countyName: 'Shropshire',
+               countyAbbreviation: 'Salop',
+               countyCode: 'sal',
+               chapmanCode: 'sal',
+               hcsCode: 'shp',
+               classLevel: 4,
+               colours: [
+                  {rows: 7, colour: 'rgb(240, 195, 30)'},
+                  {rows: 7, colour: 'rgb(0, 30, 120)'}
+               ],
+               textColour: 'rgb(240, 195, 30)',
+               backgroundColour: 'rgb(0, 30, 120)',
+               borderColour: 'rgb(240, 195, 30)'
+            }, {
+               countyName: 'Herefordshire',
+               countyAbbreviation: 'Herefs',
+               countyCode: 'hef',
+               chapmanCode: 'hef',
+               hcsCode: 'hrf',
+               classLevel: 4,
+               colours: [
+                  {rows: 4, colour: 'rgb(165, 0, 0)'},
+                  {rows: 1, colour: 'rgb(165, 195, 255)'},
+                  {rows: 3, colour: 'rgb(0, 0, 90)'},
+                  {rows: 1, colour: 'rgb(165, 195, 255)'},
+                  {rows: 4, colour: 'rgb(165, 0, 0)'}
+               ],
+               textColour: 'rgb(165, 195, 255)',
+               backgroundColour: 'rgb(165, 0, 0)',
+               borderColour: 'rgb(0, 0, 90)'
+            }, {
                countyName: 'Wiltshire',
+               countyAbbreviation: 'Wilts',
                countyCode: 'wil',
                chapmanCode: 'wil',
                hcsCode: 'wts',
@@ -442,11 +479,43 @@ const counties = (function () {
                ],
                backgroundColour: 'rgb(0, 60, 30)'
             }, {
+               countyName: 'Berkshire',
+               countyAbbreviation: 'Berks',
+               countyCode: 'brk',
+               chapmanCode: 'brk',
+               hcsCode: 'ber',
+               classLevel: 4,
+               colours: [
+                  {rows: 2, colour: 'rgb(255, 255, 135)'},
+                  {rows: 5, colour: 'rgb(30, 120, 60)'},
+                  {rows: 2, colour: 'rgb(255, 255, 135)'},
+                  {rows: 5, colour: 'rgb(45, 0, 90)'},
+                  {rows: 2, colour: 'rgb(255, 255, 135)'}
+               ],
+               textColour: 'rgb(255, 255, 135)',
+               backgroundColour: 'rgb(30, 120, 60)',
+               borderColour: 'rgb(45, 0, 90)'
+            }, {
+               countyName: 'Cumberland',
+               countyCode: 'cum',
+               chapmanCode: 'cul',
+               hcsCode: 'cum',
+               classLevel: 5,
+               colours: [
+                  {rows: 5, colour: 'rgb(165, 0, 30)'},
+                  {rows: 4, colour: 'rgb(240, 225, 0)'},
+                  {rows: 5, colour: 'rgb(0, 60, 30)'}
+               ],
+               textColour: 'rgb(240, 225, 0)',
+               backgroundColour: 'rgb(0, 60, 30)',
+               borderColour: 'rgb(165, 0, 30)'
+            }, {
                countyName: 'Cambridgeshire',
+               countyAbbreviation: 'Cambs',
                countyCode: 'cam',
                chapmanCode: 'cam',
                hcsCode: 'cmb',
-               classLevel: 4,
+               classLevel: 5,
                colours: [
                   {rows: 3, colour: 'rgb(105, 0, 15)'},
                   {rows: 4, colour: 'rgb(165, 225, 225)'},
@@ -457,11 +526,56 @@ const counties = (function () {
                backgroundColour: 'rgb(105, 0, 15)',
                borderColour: 'rgb(165, 225, 225)'
             }, {
+               countyName: 'Rutland',
+               countyCode: 'rut',
+               chapmanCode: 'rut',
+               hcsCode: 'rtl',
+               classLevel: 5,
+               colours: [
+                  {rows: 4, colour: 'rgb(0, 150, 90)'},
+                  {rows: 2, colour: 'rgb(255, 210, 30)'},
+                  {rows: 2, colour: 'rgb(0, 150, 90)'},
+                  {rows: 2, colour: 'rgb(255, 210, 30)'},
+                  {rows: 4, colour: 'rgb(0, 150, 90)'}
+               ],
+               textColour: 'rgb(255, 210, 30)',
+               backgroundColour: 'rgb(0, 150, 90)'
+            }, {
+               countyName: 'Dorset',
+               countyCode: 'dor',
+               chapmanCode: 'dor',
+               hcsCode: 'drs',
+               classLevel: 5,
+               colours: [
+                  {rows: 2, colour: 'rgb(0, 90, 30)'},
+                  {rows: 2},
+                  {rows: 2, colour: 'rgb(0, 90, 30)'},
+                  {rows: 2},
+                  {rows: 2, colour: 'rgb(0, 90, 30)'}
+               ],
+               textColour: 'rgb(0, 90, 30)',
+               borderColour: 'rgb(0, 90, 30)'
+            }, {
+               countyName: 'Suffolk',
+               countyCode: 'sfk',
+               chapmanCode: 'sfk',
+               hcsCode: 'sff',
+               classLevel: 5,
+               colours: [
+                  {rows: 2, colour: 'rgb(120, 0, 0)'},
+                  {rows: 1, colour: 'rgb(255, 225, 0)'},
+                  {rows: 4, colour: 'rgb(120, 0, 0)'},
+                  {rows: 1, colour: 'rgb(255, 225, 0)'},
+                  {rows: 2, colour: 'rgb(120, 0, 0)'}
+               ],
+               backgroundColour: 'rgb(120, 0, 0)',
+               borderColour: 'rgb(255, 225, 0)'
+            }, {
                countyName: 'Monmouthshire',
                countyCode: 'mnm',
                chapmanCode: 'mon',
                hcsCode: 'mnm',
-               classLevel: 4,
+               classLevel: 5,
                colours: [
                   {rows: 6, colour: 'rgb(0, 90, 195)'},
                   {rows: 2, colour: 'rgb(255, 225, 0)'},
@@ -470,38 +584,6 @@ const counties = (function () {
                textColour: 'rgb(255, 225, 0)',
                backgroundColour: 'rgb(0, 90, 195)',
                borderColour: 'rgb(0, 0, 0)'
-            }, {
-               countyName: 'Herefordshire',
-               countyCode: 'hef',
-               chapmanCode: 'hef',
-               hcsCode: 'hrf',
-               classLevel: 5,
-               colours: [
-                  {rows: 5, colour: 'rgb(180, 0, 30)'},
-                  {rows: 1, colour: 'rgb(165, 195, 255)'},
-                  {rows: 2, colour: 'rgb(0, 0, 90)'},
-                  {rows: 1, colour: 'rgb(165, 195, 255)'},
-                  {rows: 5, colour: 'rgb(180, 0, 30)'}
-               ],
-               textColour: 'rgb(165, 195, 255)',
-               backgroundColour: 'rgb(180, 0, 30)',
-               borderColour: 'rgb(0, 0, 90)'
-            }, {
-               countyName: 'Caernarfonshire',
-               countyCode: 'cae',
-               chapmanCode: 'cae',
-               hcsCode: 'crn',
-               classLevel: 5,
-               colours: [
-                  {rows: 1, colour: 'rgb(255, 210, 0)'},
-                  {rows: 5, colour: 'rgb(0, 180, 60)'},
-                  {rows: 2, colour: 'rgb(255, 210, 0)'},
-                  {rows: 5, colour: 'rgb(0, 180, 60)'},
-                  {rows: 1, colour: 'rgb(255, 210, 0)'}
-               ],
-               textColour: 'rgb(255, 210, 0)',
-               backgroundColour: 'rgb(0, 180, 60)',
-               borderColour: 'rgb(255, 210, 0)'
             }, {
                countyName: 'Radnorshire',
                countyCode: 'rad',
@@ -519,109 +601,21 @@ const counties = (function () {
                backgroundColour: 'rgb(225, 30, 0)',
                borderColour: 'rgb(30, 45, 240)'
             }, {
-               countyName: 'Cumberland',
-               countyCode: 'cum',
-               chapmanCode: 'cul',
-               hcsCode: 'cum',
+               countyName: 'Caernarfonshire',
+               countyCode: 'cae',
+               chapmanCode: 'cae',
+               hcsCode: 'crn',
                classLevel: 5,
                colours: [
-                  {rows: 5, colour: 'rgb(165, 0, 30)'},
-                  {rows: 4, colour: 'rgb(240, 225, 0)'},
-                  {rows: 5, colour: 'rgb(0, 60, 30)'}
+                  {rows: 1, colour: 'rgb(255, 210, 0)'},
+                  {rows: 5, colour: 'rgb(0, 180, 60)'},
+                  {rows: 2, colour: 'rgb(255, 210, 0)'},
+                  {rows: 5, colour: 'rgb(0, 180, 60)'},
+                  {rows: 1, colour: 'rgb(255, 210, 0)'}
                ],
-               textColour: 'rgb(240, 225, 0)',
-               backgroundColour: 'rgb(0, 60, 30)',
-               borderColour: 'rgb(165, 0, 30)'
-            }, {
-               countyName: 'Rutland',
-               countyCode: 'rut',
-               chapmanCode: 'rut',
-               hcsCode: 'rtl',
-               classLevel: 5,
-               colours: [
-                  {rows: 4, colour: 'rgb(0, 150, 90)'},
-                  {rows: 2, colour: 'rgb(255, 210, 30)'},
-                  {rows: 2, colour: 'rgb(0, 150, 90)'},
-                  {rows: 2, colour: 'rgb(255, 210, 30)'},
-                  {rows: 4, colour: 'rgb(0, 150, 90)'}
-               ],
-               textColour: 'rgb(255, 210, 30)',
-               backgroundColour: 'rgb(0, 150, 90)'
-            }, {
-               countyName: 'Suffolk',
-               countyCode: 'sfk',
-               chapmanCode: 'sfk',
-               hcsCode: 'sff',
-               classLevel: 5,
-               colours: [
-                  {rows: 2, colour: 'rgb(120, 0, 0)'},
-                  {rows: 1, colour: 'rgb(255, 225, 0)'},
-                  {rows: 4, colour: 'rgb(120, 0, 0)'},
-                  {rows: 1, colour: 'rgb(255, 225, 0)'},
-                  {rows: 2, colour: 'rgb(120, 0, 0)'}
-               ],
-               //textColour: '',
-               backgroundColour: 'rgb(120, 0, 0)',
-               borderColour: 'rgb(255, 225, 0)'
-            }, {
-               countyName: 'Huntingdonshire',
-               countyCode: 'hun',
-               chapmanCode: 'hun',
-               hcsCode: 'hnt',
-               classLevel: 5,
-               colours: [
-                  {rows: 5, colour: 'rgb(0, 0, 45)'},
-                  {rows: 4, colour: 'rgb(255, 240, 0)'},
-                  {rows: 5, colour: 'rgb(0, 0, 45)'}
-               ],
-               textColour: 'rgb(255, 240, 0)',
-               backgroundColour: 'rgb(0, 0, 45)'
-            }, {
-               countyName: 'Westmorland',
-               countyCode: 'wes',
-               chapmanCode: 'wes',
-               hcsCode: 'wml',
-               classLevel: 5,
-               colours: [
-                  {rows: 4, colour: 'rgb(195, 0, 30)'},
-                  {rows: 2},
-                  {rows: 2, colour: 'rgb(240, 210, 0)'},
-                  {rows: 2},
-                  {rows: 4, colour: 'rgb(195, 0, 30)'}
-               ],
-               backgroundColour: 'rgb(195, 0, 30)',
-               borderColour: 'rgb(240, 210, 0)'
-            }, {
-               countyName: 'Berkshire',
-               countyCode: 'brk',
-               chapmanCode: 'brk',
-               hcsCode: 'ber',
-               classLevel: 6,
-               colours: [
-                  {rows: 2, colour: 'rgb(255, 255, 135)'},
-                  {rows: 5, colour: 'rgb(30, 120, 60)'},
-                  {rows: 2, colour: 'rgb(255, 255, 135)'},
-                  {rows: 5, colour: 'rgb(45, 0, 90)'},
-                  {rows: 2, colour: 'rgb(255, 255, 135)'}
-               ],
-               textColour: 'rgb(255, 255, 135)',
-               backgroundColour: 'rgb(30, 120, 60)',
-               borderColour: 'rgb(45, 0, 90)'
-            }, {
-               countyName: 'Dorset',
-               countyCode: 'dor',
-               chapmanCode: 'dor',
-               hcsCode: 'drs',
-               classLevel: 6,
-               colours: [
-                  {rows: 2, colour: 'rgb(0, 90, 30)'},
-                  {rows: 2},
-                  {rows: 2, colour: 'rgb(0, 90, 30)'},
-                  {rows: 2},
-                  {rows: 2, colour: 'rgb(0, 90, 30)'}
-               ],
-               textColour: 'rgb(0, 90, 30)',
-               borderColour: 'rgb(0, 90, 30)'
+               textColour: 'rgb(255, 210, 0)',
+               backgroundColour: 'rgb(0, 180, 60)',
+               borderColour: 'rgb(255, 210, 0)'
             }, {
                countyName: 'Brecknockshire',
                countyCode: 'bre',
@@ -658,7 +652,37 @@ const counties = (function () {
                backgroundColour: 'rgb(0, 0, 0)',
                borderColour: 'rgb(225, 0, 0)'
             }, {
+               countyName: 'Westmorland',
+               countyCode: 'wes',
+               chapmanCode: 'wes',
+               hcsCode: 'wml',
+               classLevel: 6,
+               colours: [
+                  {rows: 4, colour: 'rgb(195, 0, 30)'},
+                  {rows: 2},
+                  {rows: 2, colour: 'rgb(240, 210, 0)'},
+                  {rows: 2},
+                  {rows: 4, colour: 'rgb(195, 0, 30)'}
+               ],
+               backgroundColour: 'rgb(195, 0, 30)',
+               borderColour: 'rgb(240, 210, 0)'
+            }, {
+               countyName: 'Huntingdonshire',
+               countyAbbreviation: 'Hunts',
+               countyCode: 'hun',
+               chapmanCode: 'hun',
+               hcsCode: 'hnt',
+               classLevel: 6,
+               colours: [
+                  {rows: 5, colour: 'rgb(0, 0, 45)'},
+                  {rows: 4, colour: 'rgb(255, 240, 0)'},
+                  {rows: 5, colour: 'rgb(0, 0, 45)'}
+               ],
+               textColour: 'rgb(255, 240, 0)',
+               backgroundColour: 'rgb(0, 0, 45)'
+            }, {
                countyName: 'Carmarthenshire',
+               countyAbbreviation: 'Carms',
                countyCode: 'crm',
                chapmanCode: 'cmn',
                hcsCode: 'crm',
@@ -688,6 +712,7 @@ const counties = (function () {
                borderColour: 'rgb(225, 0, 30)'
             }, {
                countyName: 'Pembrokeshire',
+               countyAbbreviation: 'Pembs',
                countyCode: 'pem',
                chapmanCode: 'pem',
                hcsCode: 'pmb',
@@ -702,18 +727,21 @@ const counties = (function () {
                borderColour: 'rgb(195, 225, 255)'
             }, {
                countyName: 'Montgomeryshire',
+               countyAbbreviation: 'Monts',
                countyCode: 'mtg',
                chapmanCode: 'mgy',
                hcsCode: 'mtg',
                classLevel: 6,
                colours: [
+                  {rows: 1, colour: 'rgb(0, 0, 0)'},
+                  {rows: 3, colour: 'rgb(240, 240, 45)'},
                   {rows: 2, colour: 'rgb(135, 0, 0)'},
-                  {rows: 4, colour: 'rgb(240, 240, 45)'},
-                  {rows: 2, colour: 'rgb(45, 45, 240)'},
-                  {rows: 4, colour: 'rgb(240, 240, 45)'},
-                  {rows: 2, colour: 'rgb(135, 0, 0)'}
+                  {rows: 2, colour: 'rgb(45, 90, 240)'},
+                  {rows: 2, colour: 'rgb(135, 0, 0)'},
+                  {rows: 3, colour: 'rgb(240, 240, 45)'},
+                  {rows: 1, colour: 'rgb(0, 0, 0)'}
                ],
-               textColour: 'rgb(45, 45, 240)',
+               textColour: 'rgb(45, 90, 240)',
                backgroundColour: 'rgb(240, 240, 45)',
                borderColour: 'rgb(135, 0, 0)'
             }, {
