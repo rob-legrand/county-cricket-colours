@@ -56,12 +56,16 @@ const counties = (function () {
                hcsCode: 'knt',
                classLevel: 1,
                colours: [
-                  {rows: 6, colour: 'rgb(0, 30, 60)'},
-                  {rows: 3},
-                  {rows: 6, colour: 'rgb(150, 0, 30)'}
+                  {rows: 1, colour: 'rgb(0, 30, 75)'},
+                  {rows: 1},
+                  {rows: 2, colour: 'rgb(150, 0, 30)'},
+                  {rows: 2},
+                  {rows: 2, colour: 'rgb(150, 0, 30)'},
+                  {rows: 1},
+                  {rows: 1, colour: 'rgb(0, 30, 75)'}
                ],
                backgroundColour: 'rgb(150, 0, 30)',
-               borderColour: 'rgb(0, 30, 60)'
+               borderColour: 'rgb(0, 30, 75)'
             }, {
                countyName: 'Middlesex',
                countyAbbreviation: 'Middx',
@@ -285,6 +289,7 @@ const counties = (function () {
                backgroundColour: 'rgb(0, 60, 0)'
             }, {
                countyName: 'Northumberland',
+               countyAbbreviation: 'Northum',
                countyCode: 'nbl',
                chapmanCode: 'nbl',
                hcsCode: 'nhb',
@@ -497,6 +502,7 @@ const counties = (function () {
                borderColour: 'rgb(45, 0, 90)'
             }, {
                countyName: 'Cumberland',
+               countyAbbreviation: 'Cumb',
                countyCode: 'cum',
                chapmanCode: 'cul',
                hcsCode: 'cum',
@@ -607,11 +613,13 @@ const counties = (function () {
                hcsCode: 'crn',
                classLevel: 5,
                colours: [
+                  {rows: 2, colour: 'rgb(0, 180, 60)'},
                   {rows: 1, colour: 'rgb(255, 210, 0)'},
-                  {rows: 5, colour: 'rgb(0, 180, 60)'},
-                  {rows: 2, colour: 'rgb(255, 210, 0)'},
-                  {rows: 5, colour: 'rgb(0, 180, 60)'},
-                  {rows: 1, colour: 'rgb(255, 210, 0)'}
+                  {rows: 3, colour: 'rgb(0, 180, 60)'},
+                  {rows: 1, colour: 'rgb(255, 210, 0)'},
+                  {rows: 3, colour: 'rgb(0, 180, 60)'},
+                  {rows: 1, colour: 'rgb(255, 210, 0)'},
+                  {rows: 2, colour: 'rgb(0, 180, 60)'}
                ],
                textColour: 'rgb(255, 210, 0)',
                backgroundColour: 'rgb(0, 180, 60)',
@@ -653,6 +661,7 @@ const counties = (function () {
                borderColour: 'rgb(225, 0, 0)'
             }, {
                countyName: 'Westmorland',
+               countyAbbreviation: 'Westm',
                countyCode: 'wes',
                chapmanCode: 'wes',
                hcsCode: 'wml',
@@ -733,19 +742,31 @@ const counties = (function () {
                hcsCode: 'mtg',
                classLevel: 6,
                colours: [
-                  {rows: 1, colour: 'rgb(0, 0, 0)'},
-                  {rows: 3, colour: 'rgb(240, 240, 45)'},
                   {rows: 2, colour: 'rgb(135, 0, 0)'},
+                  {rows: 4, colour: 'rgb(240, 240, 45)'},
                   {rows: 2, colour: 'rgb(45, 90, 240)'},
-                  {rows: 2, colour: 'rgb(135, 0, 0)'},
-                  {rows: 3, colour: 'rgb(240, 240, 45)'},
-                  {rows: 1, colour: 'rgb(0, 0, 0)'}
+                  {rows: 4, colour: 'rgb(240, 240, 45)'},
+                  {rows: 2, colour: 'rgb(135, 0, 0)'}
                ],
                textColour: 'rgb(45, 90, 240)',
                backgroundColour: 'rgb(240, 240, 45)',
                borderColour: 'rgb(135, 0, 0)'
             }, {
+               countyName: 'Cardiganshire',
+               countyAbbreviation: 'Cards',
+               countyCode: 'crd',
+               chapmanCode: 'cgn',
+               hcsCode: 'crd',
+               colours: [
+                  {rows: 6, colour: 'rgb(0, 0, 0)'},
+                  {rows: 3, colour: 'rgb(255, 210, 0)'},
+                  {rows: 6, colour: 'rgb(0, 0, 0)'}
+               ],
+               textColour: 'rgb(255, 210, 0)',
+               backgroundColour: 'rgb(0, 0, 0)'
+            }, {
                countyName: 'Flintshire',
+               countyAbbreviation: 'Flints',
                countyCode: 'fln',
                chapmanCode: 'fln',
                hcsCode: 'flt',
@@ -761,17 +782,31 @@ const counties = (function () {
                backgroundColour: 'rgb(0, 0, 0)',
                borderColour: 'rgb(255, 45, 0)'
             }, {
-               countyName: 'Midlothian',
-               countyCode: 'mln',
-               chapmanCode: 'mln',
-               hcsCode: 'mlt',
+               countyName: 'Merionethshire',
+               countyCode: 'mer',
+               chapmanCode: 'mer',
+               hcsCode: 'mrn',
                colours: [
-                  {rows: 5, colour: 'rgb(0, 30, 60)'},
-                  {rows: 4},
-                  {rows: 5, colour: 'rgb(0, 30, 60)'}
+                  {rows: 2, colour: 'rgb(255, 210, 0)'},
+                  {rows: 4, colour: 'rgb(0, 60, 180)'},
+                  {rows: 2},
+                  {rows: 4, colour: 'rgb(0, 60, 180)'},
+                  {rows: 2, colour: 'rgb(255, 210, 0)'}
                ],
-               textColour: 'rgb(0, 30, 60)',
-               borderColour: 'rgb(0, 30, 60)'
+               backgroundColour: 'rgb(0, 60, 180)',
+               borderColour: 'rgb(255, 210, 0)'
+            }, {
+               countyName: 'Anglesey',
+               countyCode: 'agy',
+               chapmanCode: 'agy',
+               hcsCode: 'agl',
+               colours: [
+                  {rows: 5, colour: 'rgb(225, 45, 60)'},
+                  {rows: 3, colour: 'rgb(255, 225, 15)'},
+                  {rows: 5, colour: 'rgb(225, 45, 60)'}
+               ],
+               textColour: 'rgb(255, 225, 15)',
+               backgroundColour: 'rgb(225, 45, 60)'
             }
          ];
       },

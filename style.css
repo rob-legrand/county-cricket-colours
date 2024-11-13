@@ -47,6 +47,11 @@ body {
    margin: 0px 5px;
 }
 
+.counties-list .county-rank {
+   font-family: Inconsolata, Consolas, "Andale Mono", AndaleMono, monospace;
+   margin: 0px 5px;
+}
+
 .counties-points-table {
    align-items: center;
    display: flex;

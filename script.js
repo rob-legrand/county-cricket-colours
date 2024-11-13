@@ -25,6 +25,62 @@ document.addEventListener('DOMContentLoaded', function () {
          newDiv.append(newDiv2);
          countiesElement.append(newDiv);
       });
+      const countiesPointsTablesElement = document.querySelector('#counties-points-tables');
+      [...countiesPointsTablesElement.childNodes].forEach(function (childNode) {
+         childNode.remove();
+      });
+      const classLevels = [...new Set(
+         countiesInfo.map(
+            (county) => county.classLevel
+         ).filter(
+            (classLevel) => Number.isInteger(classLevel)
+         )
+      )].sort(
+         (x, y) => x - y
+      );
+      const ordinalise = (n) => (
+         (!Number.isInteger(n) || n < 0)
+         ? n
+         : (Math.floor(n / 10) % 10 !== 1 && n % 10 === 1)
+         ? n + 'st'
+         : (Math.floor(n / 10) % 10 !== 1 && n % 10 === 2)
+         ? n + 'nd'
+         : (Math.floor(n / 10) % 10 !== 1 && n % 10 === 3)
+         ? n + 'rd'
+         : n + 'th'
+      );
+      classLevels.forEach(function (classLevel) {
+         const newPointsTableDiv = document.createElement('div');
+         newPointsTableDiv.classList.add('counties-points-table');
+         const newClassLevelDiv = document.createElement('div');
+         newClassLevelDiv.textContent = ordinalise(classLevel) + ' class';
+         newPointsTableDiv.append(newClassLevelDiv);
+         const newPointsTableUl = document.createElement('ul');
+         newPointsTableUl.classList.add('counties-list');
+         countiesInfo.filter(
+            (county) => county.classLevel === classLevel
+         ).forEach(function (county, rank) {
+            const newLi = document.createElement('li');
+            newLi.classList.add('county');
+            const newRankDiv = document.createElement('div');
+            newRankDiv.classList.add('county-rank');
+            newRankDiv.textContent = rank + 1 ?? '-';
+            newLi.append(newRankDiv);
+            newLi.append(counties.createCanvas({
+               county: county,
+               height: 1,
+               isHorizontal: true,
+               width: 20
+            }));
+            const newCountyNameDiv = document.createElement('div');
+            newCountyNameDiv.classList.add('county-name');
+            newCountyNameDiv.textContent = county.countyName;
+            newLi.append(newCountyNameDiv);
+            newPointsTableUl.append(newLi);
+         });
+         newPointsTableDiv.append(newPointsTableUl);
+         countiesPointsTablesElement.append(newPointsTableDiv);
+      });
       const countiesListElement = document.querySelector('#counties-list');
       [...countiesListElement.childNodes].forEach(function (childNode) {
          childNode.remove();
@@ -111,62 +167,6 @@ document.addEventListener('DOMContentLoaded', function () {
          newColourAbbrevDiv.textContent = county.countyAbbreviation ?? county.countyName;
          newLi.append(newColourAbbrevDiv);
          countiesListElement.append(newLi);
-      });
-      const countiesPointsTablesElement = document.querySelector('#counties-points-tables');
-      [...countiesPointsTablesElement.childNodes].forEach(function (childNode) {
-         childNode.remove();
-      });
-      const classLevels = [...new Set(
-         countiesInfo.map(
-            (county) => county.classLevel
-         ).filter(
-            (classLevel) => Number.isInteger(classLevel)
-         )
-      )].sort(
-         (x, y) => x - y
-      );
-      const ordinalise = (n) => (
-         (!Number.isInteger(n) || n < 0)
-         ? n
-         : (Math.floor(n / 10) % 10 !== 1 && n % 10 === 1)
-         ? n + 'st'
-         : (Math.floor(n / 10) % 10 !== 1 && n % 10 === 2)
-         ? n + 'nd'
-         : (Math.floor(n / 10) % 10 !== 1 && n % 10 === 3)
-         ? n + 'rd'
-         : n + 'th'
-      );
-      classLevels.forEach(function (classLevel) {
-         const newPointsTableDiv = document.createElement('div');
-         newPointsTableDiv.classList.add('counties-points-table');
-         const newClassLevelDiv = document.createElement('div');
-         newClassLevelDiv.textContent = ordinalise(classLevel) + ' class';
-         newPointsTableDiv.append(newClassLevelDiv);
-         const newPointsTableUl = document.createElement('ul');
-         newPointsTableUl.classList.add('counties-list');
-         countiesInfo.filter(
-            (county) => county.classLevel === classLevel
-         ).forEach(function (county) {
-            const newLi = document.createElement('li');
-            newLi.classList.add('county');
-            const newClassDiv = document.createElement('div');
-            newClassDiv.classList.add('county-name');
-            newClassDiv.textContent = county.classLevel ?? '-';
-            newLi.append(newClassDiv);
-            newLi.append(counties.createCanvas({
-               county: county,
-               height: 1,
-               isHorizontal: true,
-               width: 20
-            }));
-            const newCountyNameDiv = document.createElement('div');
-            newCountyNameDiv.classList.add('county-name');
-            newCountyNameDiv.textContent = county.countyName;
-            newLi.append(newCountyNameDiv);
-            newPointsTableUl.append(newLi);
-         });
-         newPointsTableDiv.append(newPointsTableUl);
-         countiesPointsTablesElement.append(newPointsTableDiv);
       });
    };
 
