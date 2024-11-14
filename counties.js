@@ -66,6 +66,57 @@ const counties = (function () {
                   {rows: 1},
                   {rows: 2, colour: 'rgb(0, 30, 75)'}
                ],
+               alternateColours: [
+                  [
+                     {rows: 6, colour: 'rgb(0, 30, 75)'},
+                     {rows: 3},
+                     {rows: 6, colour: 'rgb(0, 30, 75)'}
+                  ],
+                  [
+                     {rows: 6, colour: 'rgb(0, 30, 75)'},
+                     {rows: 3},
+                     {rows: 6, colour: 'rgb(150, 0, 30)'}
+                  ],
+                  [
+                     {rows: 4, colour: 'rgb(0, 30, 75)'},
+                     {rows: 2},
+                     {rows: 4, colour: 'rgb(150, 0, 30)'}
+                  ],
+                  [
+                     {rows: 1, colour: 'rgb(0, 30, 75)'},
+                     {rows: 1},
+                     {rows: 4, colour: 'rgb(150, 0, 30)'},
+                     {rows: 3},
+                     {rows: 4, colour: 'rgb(150, 0, 30)'},
+                     {rows: 1},
+                     {rows: 1, colour: 'rgb(0, 30, 75)'}
+                  ],
+                  [
+                     {rows: 2, colour: 'rgb(0, 30, 75)'},
+                     {rows: 1},
+                     {rows: 3, colour: 'rgb(150, 0, 30)'},
+                     {rows: 3},
+                     {rows: 3, colour: 'rgb(150, 0, 30)'},
+                     {rows: 1},
+                     {rows: 2, colour: 'rgb(0, 30, 75)'}
+                  ],
+                  [
+                     {rows: 1, colour: 'rgb(0, 30, 75)'},
+                     {rows: 1},
+                     {rows: 2, colour: 'rgb(150, 0, 30)'},
+                     {rows: 2},
+                     {rows: 2, colour: 'rgb(150, 0, 30)'},
+                     {rows: 1},
+                     {rows: 1, colour: 'rgb(0, 30, 75)'}
+                  ],
+                  [
+                     {rows: 2, colour: 'rgb(150, 0, 30)'},
+                     {rows: 1},
+                     {rows: 4, colour: 'rgb(0, 30, 75)'},
+                     {rows: 1},
+                     {rows: 2, colour: 'rgb(150, 0, 30)'}
+                  ]
+               ],
                backgroundColour: 'rgb(150, 0, 30)',
                borderColour: 'rgb(0, 30, 75)'
             }, {
@@ -220,6 +271,73 @@ const counties = (function () {
                   {rows: 2, colour: 'rgb(0, 0, 90)'},
                   {rows: 1, colour: 'rgb(255, 225, 0)'},
                   {rows: 3, colour: 'rgb(195, 0, 0)'}
+               ],
+               alternateColours: [
+                  [
+                     {rows: 1, colour: 'rgb(255, 225, 0)'},
+                     {rows: 2, colour: 'rgb(0, 0, 90)'},
+                     {rows: 4, colour: 'rgb(195, 0, 0)'},
+                     {rows: 2, colour: 'rgb(0, 0, 90)'},
+                     {rows: 1, colour: 'rgb(255, 225, 0)'}
+                  ],
+                  [
+                     {rows: 2, colour: 'rgb(0, 0, 90)'},
+                     {rows: 2, colour: 'rgb(255, 225, 0)'},
+                     {rows: 4, colour: 'rgb(195, 0, 0)'},
+                     {rows: 2, colour: 'rgb(0, 0, 90)'}
+                  ],
+                  [
+                     {rows: 3, colour: 'rgb(195, 0, 0)'},
+                     {rows: 1, colour: 'rgb(0, 0, 90)'},
+                     {rows: 2, colour: 'rgb(255, 225, 0)'},
+                     {rows: 1, colour: 'rgb(0, 0, 90)'},
+                     {rows: 3, colour: 'rgb(195, 0, 0)'}
+                  ],
+                  [
+                     {rows: 1, colour: 'rgb(0, 0, 90)'},
+                     {rows: 1, colour: 'rgb(255, 225, 0)'},
+                     {rows: 6, colour: 'rgb(195, 0, 0)'},
+                     {rows: 1, colour: 'rgb(255, 225, 0)'},
+                     {rows: 1, colour: 'rgb(0, 0, 90)'}
+                  ],
+                  [
+                     {rows: 1, colour: 'rgb(0, 0, 90)'},
+                     {rows: 3, colour: 'rgb(195, 0, 0)'},
+                     {rows: 2, colour: 'rgb(255, 225, 0)'},
+                     {rows: 3, colour: 'rgb(195, 0, 0)'},
+                     {rows: 1, colour: 'rgb(0, 0, 90)'}
+                  ],
+                  [
+                     {rows: 2, colour: 'rgb(0, 0, 90)'},
+                     {rows: 1, colour: 'rgb(255, 225, 0)'},
+                     {rows: 4, colour: 'rgb(195, 0, 0)'},
+                     {rows: 1, colour: 'rgb(255, 225, 0)'},
+                     {rows: 2, colour: 'rgb(0, 0, 90)'}
+                  ],
+                  [
+                     {rows: 3, colour: 'rgb(0, 0, 90)'},
+                     {rows: 1, colour: 'rgb(255, 225, 0)'},
+                     {rows: 2, colour: 'rgb(195, 0, 0)'},
+                     {rows: 1, colour: 'rgb(255, 225, 0)'},
+                     {rows: 3, colour: 'rgb(0, 0, 90)'}
+                  ],
+                  [
+                     {rows: 3, colour: 'rgb(0, 0, 90)'},
+                     {rows: 2, colour: 'rgb(255, 225, 0)'},
+                     {rows: 5, colour: 'rgb(195, 0, 0)'}
+                  ],
+                  [
+                     {rows: 3, colour: 'rgb(195, 0, 0)'},
+                     {rows: 2, colour: 'rgb(255, 225, 0)'},
+                     {rows: 2, colour: 'rgb(0, 0, 90)'},
+                     {rows: 3, colour: 'rgb(195, 0, 0)'}
+                  ],
+                  [
+                     {rows: 2, colour: 'rgb(0, 0, 90)'},
+                     {rows: 2, colour: 'rgb(255, 225, 0)'},
+                     {rows: 4, colour: 'rgb(195, 0, 0)'},
+                     {rows: 2, colour: 'rgb(0, 0, 90)'}
+                  ]
                ],
                textColour: 'rgb(255, 225, 0)',
                backgroundColour: 'rgb(195, 0, 0)',
@@ -495,6 +613,15 @@ const counties = (function () {
                   {rows: 1, colour: 'rgb(165, 195, 255)'},
                   {rows: 4, colour: 'rgb(150, 0, 0)'}
                ],
+               alternateColours: [
+                  [
+                     {rows: 4, colour: 'rgb(165, 0, 0)'},
+                     {rows: 1, colour: 'rgb(165, 195, 255)'},
+                     {rows: 3, colour: 'rgb(0, 0, 90)'},
+                     {rows: 1, colour: 'rgb(165, 195, 255)'},
+                     {rows: 4, colour: 'rgb(165, 0, 0)'}
+                  ]
+               ],
                textColour: 'rgb(165, 195, 255)',
                backgroundColour: 'rgb(150, 0, 0)',
                borderColour: 'rgb(0, 0, 90)'
@@ -644,6 +771,15 @@ const counties = (function () {
                   {rows: 2, colour: 'rgb(225, 210, 30)'},
                   {rows: 2, colour: 'rgb(0, 0, 165)'}
                ],
+               alternateColours: [
+                  [
+                     {rows: 4, colour: 'rgb(225, 30, 0)'},
+                     {rows: 2, colour: 'rgb(255, 210, 0)'},
+                     {rows: 2, colour: 'rgb(30, 45, 240)'},
+                     {rows: 2, colour: 'rgb(255, 210, 0)'},
+                     {rows: 4, colour: 'rgb(225, 30, 0)'}
+                  ]
+               ],
                textColour: 'rgb(225, 210, 30)',
                backgroundColour: 'rgb(0, 0, 165)',
                borderColour: 'rgb(225, 210, 30)'
@@ -659,6 +795,26 @@ const counties = (function () {
                   {rows: 5, colour: 'rgb(0, 0, 0)'},
                   {rows: 3, colour: 'rgb(255, 210, 0)'},
                   {rows: 5, colour: 'rgb(0, 180, 60)'}
+               ],
+               alternateColours: [
+                  [
+                     {rows: 2, colour: 'rgb(0, 180, 60)'},
+                     {rows: 1, colour: 'rgb(255, 210, 0)'},
+                     {rows: 3, colour: 'rgb(0, 180, 60)'},
+                     {rows: 1, colour: 'rgb(255, 210, 0)'},
+                     {rows: 3, colour: 'rgb(0, 180, 60)'},
+                     {rows: 1, colour: 'rgb(255, 210, 0)'},
+                     {rows: 2, colour: 'rgb(0, 180, 60)'}
+                  ],
+                  [
+                     {rows: 3, colour: 'rgb(0, 180, 60)'},
+                     {rows: 1, colour: 'rgb(255, 210, 0)'},
+                     {rows: 2, colour: 'rgb(0, 180, 60)'},
+                     {rows: 1, colour: 'rgb(255, 210, 0)'},
+                     {rows: 2, colour: 'rgb(0, 180, 60)'},
+                     {rows: 1, colour: 'rgb(255, 210, 0)'},
+                     {rows: 3, colour: 'rgb(0, 180, 60)'}
+                  ]
                ],
                textColour: 'rgb(255, 210, 0)',
                backgroundColour: 'rgb(0, 180, 60)',
@@ -716,6 +872,15 @@ const counties = (function () {
                   {rows: 5, colour: 'rgb(195, 0, 30)'},
                   {rows: 1, colour: 'rgb(240, 210, 0)'}
                ],
+               alternateColours: [
+                  [
+                     {rows: 4, colour: 'rgb(195, 0, 30)'},
+                     {rows: 2},
+                     {rows: 2, colour: 'rgb(240, 210, 0)'},
+                     {rows: 2},
+                     {rows: 4, colour: 'rgb(195, 0, 30)'}
+                  ]
+               ],
                backgroundColour: 'rgb(195, 0, 30)',
                borderColour: 'rgb(240, 210, 0)'
             }, {
@@ -763,6 +928,40 @@ const counties = (function () {
                   {rows: 3, colour: 'rgb(0, 0, 0)'},
                   {rows: 4, colour: 'rgb(225, 0, 30)'}
                ],
+               alternateColours: [
+                  [
+                     {rows: 4, colour: 'rgb(0, 0, 0)'},
+                     {rows: 2},
+                     {rows: 2, colour: 'rgb(225, 0, 30)'},
+                     {rows: 2},
+                     {rows: 4, colour: 'rgb(0, 0, 0)'}
+                  ],
+                  [
+                     {rows: 3, colour: 'rgb(225, 0, 30)'},
+                     {rows: 2},
+                     {rows: 1, colour: 'rgb(225, 0, 30)'},
+                     {rows: 2, colour: 'rgb(0, 0, 0)'},
+                     {rows: 1, colour: 'rgb(225, 0, 30)'},
+                     {rows: 2},
+                     {rows: 3, colour: 'rgb(225, 0, 30)'}
+                  ],
+                  [
+                     {rows: 3, colour: 'rgb(225, 0, 30)'},
+                     {rows: 2, colour: 'rgb(0, 0, 0)'},
+                     {rows: 1, colour: 'rgb(225, 0, 30)'},
+                     {rows: 2},
+                     {rows: 1, colour: 'rgb(225, 0, 30)'},
+                     {rows: 2, colour: 'rgb(0, 0, 0)'},
+                     {rows: 3, colour: 'rgb(225, 0, 30)'}
+                  ],
+                  [
+                     {rows: 3, colour: 'rgb(225, 0, 30)'},
+                     {rows: 3},
+                     {rows: 2, colour: 'rgb(225, 0, 30)'},
+                     {rows: 3, colour: 'rgb(0, 0, 0)'},
+                     {rows: 3, colour: 'rgb(225, 0, 30)'}
+                  ]
+               ],
                backgroundColour: 'rgb(225, 0, 30)',
                borderColour: 'rgb(0, 0, 0)'
             }, {
@@ -795,6 +994,97 @@ const counties = (function () {
                   {rows: 2, colour: 'rgb(135, 0, 0)'},
                   {rows: 2, colour: 'rgb(240, 240, 45)'},
                   {rows: 4, colour: 'rgb(0, 0, 0)'}
+               ],
+               alternateColours: [
+                  [
+                     {rows: 1, colour: 'rgb(0, 0, 0)'},
+                     {rows: 3, colour: 'rgb(240, 240, 45)'},
+                     {rows: 2, colour: 'rgb(135, 0, 0)'},
+                     {rows: 2, colour: 'rgb(45, 90, 240)'},
+                     {rows: 2, colour: 'rgb(135, 0, 0)'},
+                     {rows: 3, colour: 'rgb(240, 240, 45)'},
+                     {rows: 1, colour: 'rgb(0, 0, 0)'}
+                  ],
+                  [
+                     {rows: 4, colour: 'rgb(240, 240, 45)'},
+                     {rows: 1, colour: 'rgb(0, 0, 0)'},
+                     {rows: 4, colour: 'rgb(135, 0, 0)'},
+                     {rows: 1, colour: 'rgb(0, 0, 0)'},
+                     {rows: 4, colour: 'rgb(240, 240, 45)'}
+                  ],
+                  [
+                     {rows: 2, colour: 'rgb(135, 0, 0)'},
+                     {rows: 4, colour: 'rgb(240, 240, 45)'},
+                     {rows: 2, colour: 'rgb(45, 90, 240)'},
+                     {rows: 4, colour: 'rgb(240, 240, 45)'},
+                     {rows: 2, colour: 'rgb(135, 0, 0)'}
+                  ],
+                  [
+                     {rows: 2, colour: 'rgb(135, 0, 0)'},
+                     {rows: 1, colour: 'rgb(240, 240, 45)'},
+                     {rows: 3, colour: 'rgb(0, 0, 0)'},
+                     {rows: 2},
+                     {rows: 3, colour: 'rgb(0, 0, 0)'},
+                     {rows: 1, colour: 'rgb(240, 240, 45)'},
+                     {rows: 2, colour: 'rgb(135, 0, 0)'}
+                  ],
+                  [
+                     {rows: 1, colour: 'rgb(0, 0, 0)'},
+                     {rows: 1},
+                     {rows: 3, colour: 'rgb(0, 0, 0)'},
+                     {rows: 1, colour: 'rgb(240, 240, 45)'},
+                     {rows: 2, colour: 'rgb(135, 0, 0)'},
+                     {rows: 1, colour: 'rgb(240, 240, 45)'},
+                     {rows: 3, colour: 'rgb(0, 0, 0)'},
+                     {rows: 1},
+                     {rows: 1, colour: 'rgb(0, 0, 0)'}
+                  ],
+                  [
+                     {rows: 3, colour: 'rgb(0, 0, 0)'},
+                     {rows: 1},
+                     {rows: 2, colour: 'rgb(240, 240, 45)'},
+                     {rows: 2, colour: 'rgb(135, 0, 0)'},
+                     {rows: 2, colour: 'rgb(240, 240, 45)'},
+                     {rows: 1},
+                     {rows: 3, colour: 'rgb(0, 0, 0)'}
+                  ],
+                  [
+                     {rows: 5, colour: 'rgb(240, 240, 45)'},
+                     {rows: 2, colour: 'rgb(135, 0, 0)'},
+                     {rows: 2},
+                     {rows: 5, colour: 'rgb(0, 0, 0)'}
+                  ],
+                  [
+                     {rows: 2, colour: 'rgb(240, 240, 45)'},
+                     {rows: 2, colour: 'rgb(135, 0, 0)'},
+                     {rows: 3, colour: 'rgb(240, 240, 45)'},
+                     {rows: 3, colour: 'rgb(0, 0, 0)'},
+                     {rows: 2},
+                     {rows: 2, colour: 'rgb(0, 0, 0)'}
+                  ],
+                  [
+                     {rows: 3, colour: 'rgb(240, 240, 45)'},
+                     {rows: 3, colour: 'rgb(135, 0, 0)'},
+                     {rows: 2, colour: 'rgb(240, 240, 45)'},
+                     {rows: 3, colour: 'rgb(0, 0, 0)'},
+                     {rows: 3, colour: 'rgb(240, 240, 45)'}
+                  ],
+                  [
+                     {rows: 2, colour: 'rgb(0, 0, 0)'},
+                     {rows: 2},
+                     {rows: 1, colour: 'rgb(0, 0, 0)'},
+                     {rows: 2, colour: 'rgb(135, 0, 0)'},
+                     {rows: 1, colour: 'rgb(0, 0, 0)'},
+                     {rows: 2, colour: 'rgb(240, 240, 45)'},
+                     {rows: 2, colour: 'rgb(0, 0, 0)'}
+                  ],
+                  [
+                     {rows: 3, colour: 'rgb(0, 0, 0)'},
+                     {rows: 3, colour: 'rgb(240, 240, 45)'},
+                     {rows: 2, colour: 'rgb(0, 0, 0)'},
+                     {rows: 3, colour: 'rgb(135, 0, 0)'},
+                     {rows: 3, colour: 'rgb(0, 0, 0)'}
+                  ]
                ],
                textColour: 'rgb(240, 240, 45)',
                backgroundColour: 'rgb(0, 0, 0)',
@@ -831,6 +1121,17 @@ const counties = (function () {
                   {rows: 2, colour: 'rgb(0, 0, 0)'},
                   {rows: 1, colour: 'rgb(255, 45, 0)'}
                ],
+               alternateColours: [
+                  [
+                     {rows: 2, colour: 'rgb(0, 0, 0)'},
+                     {rows: 2},
+                     {rows: 2, colour: 'rgb(0, 0, 0)'},
+                     {rows: 1, colour: 'rgb(255, 45, 0)'},
+                     {rows: 2, colour: 'rgb(0, 0, 0)'},
+                     {rows: 2},
+                     {rows: 2, colour: 'rgb(0, 0, 0)'}
+                  ]
+               ],
                backgroundColour: 'rgb(0, 0, 0)',
                borderColour: 'rgb(255, 45, 0)'
             }, {
@@ -847,6 +1148,21 @@ const counties = (function () {
                   {rows: 2, colour: 'rgb(0, 60, 180)'},
                   {rows: 2, colour: 'rgb(255, 210, 0)'},
                   {rows: 4, colour: 'rgb(0, 60, 180)'}
+               ],
+               alternateColours: [
+                  [
+                     {rows: 2, colour: 'rgb(255, 210, 0)'},
+                     {rows: 4, colour: 'rgb(0, 60, 180)'},
+                     {rows: 2},
+                     {rows: 4, colour: 'rgb(0, 60, 180)'},
+                     {rows: 2, colour: 'rgb(255, 210, 0)'}
+                  ],
+                  [
+                     {rows: 5, colour: 'rgb(0, 60, 180)'},
+                     {rows: 2},
+                     {rows: 2, colour: 'rgb(255, 210, 0)'},
+                     {rows: 5, colour: 'rgb(0, 60, 180)'}
+                  ]
                ],
                backgroundColour: 'rgb(0, 60, 180)',
                borderColour: 'rgb(255, 210, 0)'
@@ -925,7 +1241,7 @@ const counties = (function () {
          newCanvas.getContext('2d').fillStyle = util.creamColour;
          newCanvas.getContext('2d').fillRect(0, 0, newCanvas.width, newCanvas.height);
          if (args.isHorizontal) {
-            args.county.colours.reduce(function (totalRowsSoFar, stripe) {
+            args.colours.reduce(function (totalRowsSoFar, stripe) {
                if (stripe.hasOwnProperty('colour')) {
                   newCanvas.getContext('2d').fillStyle = stripe.colour;
                   newCanvas.getContext('2d').fillRect(0, totalRowsSoFar, newCanvas.width - (
@@ -935,10 +1251,10 @@ const counties = (function () {
                   ), stripe.rows * pixelsPerRow);
                }
                return totalRowsSoFar + stripe.rows * pixelsPerRow;
-            }, Math.round(newCanvas.height - (numRows + self.getNumRows(args.county.colours)) * pixelsPerRow / 2));
+            }, Math.round(newCanvas.height - (numRows + self.getNumRows(args.colours)) * pixelsPerRow / 2));
          }
          if (args.isVertical) {
-            args.county.colours.reduce(function (totalRowsSoFar, stripe) {
+            args.colours.reduce(function (totalRowsSoFar, stripe) {
                if (stripe.hasOwnProperty('colour')) {
                   newCanvas.getContext('2d').fillStyle = stripe.colour;
                   newCanvas.getContext('2d').fillRect(totalRowsSoFar, 0, stripe.rows * pixelsPerRow, newCanvas.height - (
@@ -948,7 +1264,7 @@ const counties = (function () {
                   ));
                }
                return totalRowsSoFar + stripe.rows * pixelsPerRow;
-            }, Math.round(newCanvas.width - (numRows + self.getNumRows(args.county.colours)) * pixelsPerRow / 2));
+            }, Math.round(newCanvas.width - (numRows + self.getNumRows(args.colours)) * pixelsPerRow / 2));
          }
          return newCanvas;
       },

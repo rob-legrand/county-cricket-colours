@@ -6,15 +6,14 @@ document.addEventListener('DOMContentLoaded', function () {
    'use strict';
 
    const updateCounties = function () {
+
       const countiesElement = document.querySelector('#counties');
-      [...countiesElement.childNodes].forEach(function (childNode) {
-         childNode.remove();
-      });
+      countiesElement.replaceChildren();
       countiesInfo.forEach(function (county) {
          const newDiv = document.createElement('div');
          newDiv.classList.add('county');
          newDiv.append(counties.createCanvas({
-            county: county,
+            colours: county.colours,
             height: 120,
             isHorizontal: true,
             width: 144
@@ -25,10 +24,28 @@ document.addEventListener('DOMContentLoaded', function () {
          newDiv.append(newDiv2);
          countiesElement.append(newDiv);
       });
-      const countiesPointsTablesElement = document.querySelector('#counties-points-tables');
-      [...countiesPointsTablesElement.childNodes].forEach(function (childNode) {
-         childNode.remove();
-      });
+
+//    countiesElement.replaceChildren();
+//    countiesInfo.forEach(function (county) {
+//       if (Array.isArray(county.alternateColours)) {
+//          county.alternateColours.forEach(function (colours) {
+//             const newDiv = document.createElement('div');
+//             newDiv.classList.add('county');
+//             newDiv.append(counties.createCanvas({
+//                colours: colours,
+//                height: 120,
+//                isHorizontal: true,
+//                width: 144
+//             }));
+//             const newDiv2 = document.createElement('div');
+//             newDiv2.classList.add('county-name');
+//             newDiv2.textContent = county.countyName;
+//             newDiv.append(newDiv2);
+//             countiesElement.append(newDiv);
+//          });
+//       }
+//    });
+
       const classLevels = [...new Set(
          countiesInfo.map(
             (county) => county.classLevel
@@ -49,6 +66,8 @@ document.addEventListener('DOMContentLoaded', function () {
          ? n + 'rd'
          : n + 'th'
       );
+      const countiesPointsTablesElement = document.querySelector('#counties-points-tables');
+      countiesPointsTablesElement.replaceChildren();
       classLevels.forEach(function (classLevel) {
          const newPointsTableDiv = document.createElement('div');
          newPointsTableDiv.classList.add('counties-points-table');
@@ -72,7 +91,7 @@ document.addEventListener('DOMContentLoaded', function () {
             newCodeDiv.classList.add('county-colour-name');
             newLi.append(newCodeDiv);
             newLi.append(counties.createCanvas({
-               county: county,
+               colours: county.colours,
                height: 40,
                isHorizontal: true,
                width: 40
@@ -86,71 +105,70 @@ document.addEventListener('DOMContentLoaded', function () {
          newPointsTableDiv.append(newPointsTableUl);
          countiesPointsTablesElement.append(newPointsTableDiv);
       });
+
       const countiesListElement = document.querySelector('#counties-list');
-      [...countiesListElement.childNodes].forEach(function (childNode) {
-         childNode.remove();
-      });
+      countiesListElement.replaceChildren();
       countiesInfo.forEach(function (county) {
          const newLi = document.createElement('li');
          newLi.classList.add('county');
          newLi.append(counties.createCanvas({
-            county: county,
+            colours: county.colours,
             height: 20,
             isHorizontal: true,
             width: 80
          }));
          newLi.append(counties.createCanvas({
-            county: county,
+            colours: county.colours,
             height: 20,
             isVertical: true,
             width: 80
          }));
          newLi.append(counties.createCanvas({
-            county: county,
+            colours: county.colours,
             height: 40,
             isHorizontal: true,
             isVertical: true,
             width: 80
          }));
          newLi.append(counties.createCanvas({
-            county: county,
+            colours: county.colours,
             height: 80,
             isHorizontal: true,
             isVertical: true,
             width: 40
          }));
          newLi.append(counties.createCanvas({
-            county: county,
+            colours: county.colours,
             height: 1,
             width: 1
          }));
          newLi.append(counties.createCanvas({
-            county: county,
+            colours: county.colours,
             height: 1,
             isHorizontal: true,
             width: 20
          }));
          newLi.append(counties.createCanvas({
-            county: county,
+            colours: county.colours,
             height: 20,
             isVertical: true,
             width: 1
          }));
          newLi.append(counties.createCanvas({
-            county: county,
+            colours: county.colours,
             height: 1,
             isHorizontal: true,
             isVertical: true,
             width: 1
          }));
          newLi.append(counties.createCanvas({
-            county: county,
+            colours: county.colours,
             height: 1,
             isHorizontal: true,
             width: 1
          }));
          newLi.append(counties.createCanvas({
-            county: county,
+            colours: county.colours,
             height: 1,
             isVertical: true,
             width: 1
