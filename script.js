@@ -66,11 +66,16 @@ document.addEventListener('DOMContentLoaded', function () {
             newRankDiv.classList.add('county-rank');
             newRankDiv.textContent = rank + 1 ?? '-';
             newLi.append(newRankDiv);
+            const newCodeDiv = counties.createCountyElement(county);
+            newCodeDiv.textContent = county.countyCode.toUpperCase();
+            newCodeDiv.classList.add('county-code');
+            newCodeDiv.classList.add('county-colour-name');
+            newLi.append(newCodeDiv);
             newLi.append(counties.createCanvas({
                county: county,
-               height: 1,
+               height: 40,
                isHorizontal: true,
-               width: 20
+               width: 40
             }));
             const newCountyNameDiv = document.createElement('div');
             newCountyNameDiv.classList.add('county-name');
