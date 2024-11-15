@@ -8,22 +8,25 @@ document.addEventListener('DOMContentLoaded', function () {
    const updateCounties = function () {
 
       const countiesElement = document.querySelector('#counties');
-      countiesElement.replaceChildren();
-      countiesInfo.forEach(function (county) {
+      countiesElement.replaceChildren(...countiesInfo.map(function (county) {
          const newDiv = document.createElement('div');
          newDiv.classList.add('county');
-         newDiv.append(counties.createCanvas({
-            colours: county.colours,
-            height: 120,
-            isHorizontal: true,
-            width: 144
-         }));
-         const newDiv2 = document.createElement('div');
-         newDiv2.classList.add('county-name');
-         newDiv2.textContent = county.countyName;
-         newDiv.append(newDiv2);
-         countiesElement.append(newDiv);
-      });
+         newDiv.replaceChildren(
+            counties.createCanvas({
+               colours: county.colours,
+               height: 120,
+               isHorizontal: true,
+               width: 144
+            }),
+            (function () {
+               const newDiv2 = document.createElement('div');
+               newDiv2.classList.add('county-name');
+               newDiv2.textContent = county.countyName;
+               return newDiv2;
+            }())
+         );
+         return newDiv;
+      }));
 
 //    countiesElement.replaceChildren();
 //    countiesInfo.forEach(function (county) {
@@ -67,130 +70,133 @@ document.addEventListener('DOMContentLoaded', function () {
          : n + 'th'
       );
       const countiesPointsTablesElement = document.querySelector('#counties-points-tables');
-      countiesPointsTablesElement.replaceChildren();
-      classLevels.forEach(function (classLevel) {
+      countiesPointsTablesElement.replaceChildren(...classLevels.map(function (classLevel) {
          const newPointsTableDiv = document.createElement('div');
          newPointsTableDiv.classList.add('counties-points-table');
          const newClassLevelDiv = document.createElement('div');
          newClassLevelDiv.textContent = ordinalise(classLevel) + ' class';
-         newPointsTableDiv.append(newClassLevelDiv);
          const newPointsTableUl = document.createElement('ul');
          newPointsTableUl.classList.add('counties-list');
-         countiesInfo.filter(
-            (county) => county.classLevel === classLevel
-         ).forEach(function (county, rank) {
-            const newLi = document.createElement('li');
-            newLi.classList.add('county');
-            const newRankDiv = document.createElement('div');
-            newRankDiv.classList.add('county-rank');
-            newRankDiv.textContent = rank + 1 ?? '-';
-            newLi.append(newRankDiv);
-            const newCodeDiv = counties.createCountyElement(county);
-            newCodeDiv.textContent = county.countyCode.toUpperCase();
-            newCodeDiv.classList.add('county-code');
-            newCodeDiv.classList.add('county-colour-name');
-            newLi.append(newCodeDiv);
-            newLi.append(counties.createCanvas({
-               colours: county.colours,
-               height: 40,
-               isHorizontal: true,
-               width: 40
-            }));
-            const newCountyNameDiv = document.createElement('div');
-            newCountyNameDiv.classList.add('county-name');
-            newCountyNameDiv.textContent = county.countyName;
-            newLi.append(newCountyNameDiv);
-            newPointsTableUl.append(newLi);
-         });
-         newPointsTableDiv.append(newPointsTableUl);
-         countiesPointsTablesElement.append(newPointsTableDiv);
-      });
+         newPointsTableUl.replaceChildren(
+            ...countiesInfo.filter(
+               (county) => county.classLevel === classLevel
+            ).map(function (county, rank) {
+               const newLi = document.createElement('li');
+               newLi.classList.add('county');
+               const newRankDiv = document.createElement('div');
+               newRankDiv.classList.add('county-rank');
+               newRankDiv.textContent = rank + 1 ?? '-';
+               const newCodeDiv = counties.createCountyElement(county);
+               newCodeDiv.textContent = county.countyCode.toUpperCase();
+               newCodeDiv.classList.add('county-code');
+               newCodeDiv.classList.add('county-colour-name');
+               const newCountyNameDiv = document.createElement('div');
+               newCountyNameDiv.classList.add('county-name');
+               newCountyNameDiv.textContent = county.countyName;
+               newLi.replaceChildren(
+                  newRankDiv,
+                  newCodeDiv,
+                  counties.createCanvas({
+                     colours: county.colours,
+                     height: 40,
+                     isHorizontal: true,
+                     width: 40
+                  }),
+                  newCountyNameDiv
+               );
+               return newLi;
+            })
+         );
+         newPointsTableDiv.replaceChildren(newClassLevelDiv, newPointsTableUl);
+         return newPointsTableDiv;
+      }));
 
       const countiesListElement = document.querySelector('#counties-list');
-      countiesListElement.replaceChildren();
-      countiesInfo.forEach(function (county) {
+      countiesListElement.replaceChildren(...countiesInfo.map(function (county) {
          const newLi = document.createElement('li');
          newLi.classList.add('county');
-         newLi.append(counties.createCanvas({
-            colours: county.colours,
-            height: 20,
-            isHorizontal: true,
-            width: 80
-         }));
-         newLi.append(counties.createCanvas({
-            colours: county.colours,
-            height: 20,
-            isVertical: true,
-            width: 80
-         }));
-         newLi.append(counties.createCanvas({
-            colours: county.colours,
-            height: 40,
-            isHorizontal: true,
-            isVertical: true,
-            width: 80
-         }));
-         newLi.append(counties.createCanvas({
-            colours: county.colours,
-            height: 80,
-            isHorizontal: true,
-            isVertical: true,
-            width: 40
-         }));
-         newLi.append(counties.createCanvas({
-            colours: county.colours,
-            height: 1,
-            width: 1
-         }));
-         newLi.append(counties.createCanvas({
-            colours: county.colours,
-            height: 1,
-            isHorizontal: true,
-            width: 20
-         }));
-         newLi.append(counties.createCanvas({
-            colours: county.colours,
-            height: 20,
-            isVertical: true,
-            width: 1
-         }));
-         newLi.append(counties.createCanvas({
-            colours: county.colours,
-            height: 1,
-            isHorizontal: true,
-            isVertical: true,
-            width: 1
-         }));
-         newLi.append(counties.createCanvas({
-            colours: county.colours,
-            height: 1,
-            isHorizontal: true,
-            width: 1
-         }));
-         newLi.append(counties.createCanvas({
-            colours: county.colours,
-            height: 1,
-            isVertical: true,
-            width: 1
-         }));
          const newCodeDiv = counties.createCountyElement(county);
          newCodeDiv.textContent = county.countyCode.toUpperCase();
          newCodeDiv.classList.add('county-code');
          newCodeDiv.classList.add('county-colour-name');
-         newLi.append(newCodeDiv);
          const newClassDiv = document.createElement('div');
          newClassDiv.classList.add('county-name');
          newClassDiv.textContent = county.classLevel ?? '-';
-         newLi.append(newClassDiv);
          const newColourDiv = counties.createCountyElement(county);
          newColourDiv.classList.add('county-colour-name');
-         newLi.append(newColourDiv);
          const newColourAbbrevDiv = counties.createCountyElement(county);
          newColourAbbrevDiv.classList.add('county-colour-name');
          newColourAbbrevDiv.textContent = county.countyAbbreviation ?? county.countyName;
-         newLi.append(newColourAbbrevDiv);
-         countiesListElement.append(newLi);
-      });
+         newLi.replaceChildren(
+            counties.createCanvas({
+               colours: county.colours,
+               height: 20,
+               isHorizontal: true,
+               width: 80
+            }),
+            counties.createCanvas({
+               colours: county.colours,
+               height: 20,
+               isVertical: true,
+               width: 80
+            }),
+            counties.createCanvas({
+               colours: county.colours,
+               height: 40,
+               isHorizontal: true,
+               isVertical: true,
+               width: 80
+            }),
+            counties.createCanvas({
+               colours: county.colours,
+               height: 80,
+               isHorizontal: true,
+               isVertical: true,
+               width: 40
+            }),
+            counties.createCanvas({
+               colours: county.colours,
+               height: 1,
+               width: 1
+            }),
+            counties.createCanvas({
+               colours: county.colours,
+               height: 1,
+               isHorizontal: true,
+               width: 20
+            }),
+            counties.createCanvas({
+               colours: county.colours,
+               height: 20,
+               isVertical: true,
+               width: 1
+            }),
+            counties.createCanvas({
+               colours: county.colours,
+               height: 1,
+               isHorizontal: true,
+               isVertical: true,
+               width: 1
+            }),
+            counties.createCanvas({
+               colours: county.colours,
+               height: 1,
+               isHorizontal: true,
+               width: 1
+            }),
+            counties.createCanvas({
+               colours: county.colours,
+               height: 1,
+               isVertical: true,
+               width: 1
+            }),
+            newCodeDiv,
+            newClassDiv,
+            newColourDiv,
+            newColourAbbrevDiv
+         );
+         return newLi;
+      }));
    };
 
    const countiesInfo = counties.createInfo();
