@@ -7,11 +7,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
    const updateCounties = function () {
 
+      const includeAlternateColours = false;
+
       const countiesElement = document.querySelector('#counties');
       countiesElement.replaceChildren(...countiesInfo.map(function (county) {
-         const newDiv = document.createElement('div');
-         newDiv.classList.add('county');
-         newDiv.replaceChildren(
+         const countyDiv = document.createElement('div');
+         countyDiv.classList.add('county');
+         countyDiv.replaceChildren(
             counties.createCanvas({
                colours: county.colours,
                height: 120,
@@ -19,35 +21,50 @@ document.addEventListener('DOMContentLoaded', function () {
                width: 144
             }),
             (function () {
-               const newDiv2 = document.createElement('div');
-               newDiv2.classList.add('county-name');
-               newDiv2.textContent = county.countyName;
-               return newDiv2;
+               const countyNameDiv = document.createElement('div');
+               countyNameDiv.classList.add('county-name');
+               countyNameDiv.textContent = county.classLevel + ' ' + county.countyName;
+               return countyNameDiv;
             }())
          );
-         return newDiv;
+         return countyDiv;
       }));
 
-//    countiesElement.replaceChildren();
-//    countiesInfo.forEach(function (county) {
-//       if (Array.isArray(county.alternateColours)) {
-//          county.alternateColours.forEach(function (colours) {
-//             const newDiv = document.createElement('div');
-//             newDiv.classList.add('county');
-//             newDiv.append(counties.createCanvas({
-//                colours: colours,
-//                height: 120,
-//                isHorizontal: true,
-//                width: 144
-//             }));
-//             const newDiv2 = document.createElement('div');
-//             newDiv2.classList.add('county-name');
-//             newDiv2.textContent = county.countyName;
-//             newDiv.append(newDiv2);
-//             countiesElement.append(newDiv);
-//          });
-//       }
-//    });
+      if (includeAlternateColours) {
+         countiesElement.replaceChildren();
+         countiesInfo.forEach(function (county) {
+            const countyDiv = document.createElement('div');
+            countyDiv.classList.add('county');
+            countyDiv.append(counties.createCanvas({
+               colours: county.colours,
+               height: 120,
+               isHorizontal: true,
+               width: 144
+            }));
+            const countyNameDiv = document.createElement('div');
+            countyNameDiv.classList.add('county-name');
+            countyNameDiv.textContent = county.classLevel + ' ' + county.countyName;
+            countyDiv.append(countyNameDiv);
+            countiesElement.append(countyDiv);
+            if (Array.isArray(county.alternateColours)) {
+               county.alternateColours.forEach(function (colours) {
+                  const countyAlternateDiv = document.createElement('div');
+                  countyAlternateDiv.classList.add('county');
+                  countyAlternateDiv.append(counties.createCanvas({
+                     colours: colours,
+                     height: 120,
+                     isHorizontal: true,
+                     width: 144
+                  }));
+                  const countyNameAlternateDiv = document.createElement('div');
+                  countyNameAlternateDiv.classList.add('county-name');
+                  countyNameAlternateDiv.textContent = county.countyName;
+                  countyAlternateDiv.append(countyNameAlternateDiv);
+                  countiesElement.append(countyAlternateDiv);
+               });
+            }
+         });
+      }
 
       const classLevels = [...new Set(
          countiesInfo.map(
