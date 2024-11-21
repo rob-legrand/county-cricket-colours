@@ -824,6 +824,13 @@ const counties = (function () {
                ],
                alternateColours: [
                   [
+                     {rows: 5, colour: 'rgb(195, 0, 30)'},
+                     {rows: 1},
+                     {rows: 1, colour: 'rgb(240, 210, 0)'},
+                     {rows: 1},
+                     {rows: 5, colour: 'rgb(195, 0, 30)'}
+                  ],
+                  [
                      {rows: 4, colour: 'rgb(195, 0, 30)'},
                      {rows: 2},
                      {rows: 2, colour: 'rgb(240, 210, 0)'},
@@ -911,51 +918,12 @@ const counties = (function () {
                backgroundColour: 'rgb(120, 0, 0)',
                borderColour: 'rgb(255, 225, 0)'
             }, {
-               countyName: 'Aberdeenshire',
-               countyAbbreviation: 'Aberds',
-               countyCode: 'abd',
-               chapmanCode: 'abd',
-               hcsCode: 'abn',
-               classLevel: 5,
-               country: 'Scotland',
-               colours: [
-                  {rows: 6, colour: 'rgb(105, 150, 225)'},
-                  {rows: 1, colour: 'rgb(255, 240, 150)'},
-                  {rows: 6, colour: 'rgb(0, 0, 60)'}
-               ],
-               alternateColours: [
-                  [
-                     {rows: 6, colour: 'rgb(255, 150, 0)'},
-                     {rows: 2},
-                     {rows: 6, colour: 'rgb(90, 30, 90)'}
-                  ]
-               ],
-               textColour: 'rgb(255, 240, 150)',
-               backgroundColour: 'rgb(105, 150, 225)',
-               borderColour: 'rgb(0, 0, 60)'
-            }, {
-               countyName: 'Angus',
-               countyCode: 'ans',
-               chapmanCode: 'ans',
-               hcsCode: 'ang',
-               classLevel: 5,
-               country: 'Scotland',
-               colours: [
-                  {rows: 5, colour: 'rgb(15, 45, 105)'},
-                  {rows: 1},
-                  {rows: 1, colour: 'rgb(210, 0, 0)'},
-                  {rows: 1},
-                  {rows: 5, colour: 'rgb(15, 45, 105)'}
-               ],
-               backgroundColour: 'rgb(15, 45, 105)',
-               borderColour: 'rgb(210, 0, 0)'
-            }, {
                countyName: 'Bedfordshire',
                countyAbbreviation: 'Beds',
                countyCode: 'bed',
                chapmanCode: 'bdf',
                hcsCode: 'bed',
-               classLevel: 6,
+               classLevel: 5,
                country: 'England',
                colours: [
                   {rows: 3, colour: 'rgb(75, 0, 165)'},
@@ -973,7 +941,7 @@ const counties = (function () {
                countyCode: 'hun',
                chapmanCode: 'hun',
                hcsCode: 'hnt',
-               classLevel: 6,
+               classLevel: 5,
                country: 'England',
                colours: [
                   {rows: 5, colour: 'rgb(30, 30, 60)'},
@@ -1179,33 +1147,158 @@ const counties = (function () {
                backgroundColour: 'rgb(30, 120, 60)',
                borderColour: 'rgb(45, 0, 90)'
             }, {
-               countyName: 'Stirlingshire',
-               countyAbbreviation: 'Stirls',
-               countyCode: 'sti',
-               chapmanCode: 'sti',
-               hcsCode: 'stl',
+               countyName: 'Denbighshire',
+               countyAbbreviation: 'Denbs',
+               countyCode: 'den',
+               chapmanCode: 'den',
+               hcsCode: 'dbh',
                classLevel: 6,
-               country: 'Scotland',
+               country: 'Wales',
                colours: [
-                  {rows: 7, colour: 'rgb(165, 0, 45)'},
-                  {rows: 7, colour: 'rgb(0, 0, 0)'}
+                  {rows: 4, colour: 'rgb(210, 0, 30)'},
+                  {rows: 3},
+                  {rows: 3, colour: 'rgb(0, 0, 0)'},
+                  {rows: 4, colour: 'rgb(210, 0, 30)'}
                ],
-               backgroundColour: 'rgb(165, 0, 45)',
+               alternateColours: [
+                  [
+                     {rows: 4, colour: 'rgb(0, 0, 0)'},
+                     {rows: 2},
+                     {rows: 2, colour: 'rgb(210, 0, 30)'},
+                     {rows: 2},
+                     {rows: 4, colour: 'rgb(0, 0, 0)'}
+                  ],
+                  [
+                     {rows: 3, colour: 'rgb(210, 0, 30)'},
+                     {rows: 2},
+                     {rows: 1, colour: 'rgb(210, 0, 30)'},
+                     {rows: 2, colour: 'rgb(0, 0, 0)'},
+                     {rows: 1, colour: 'rgb(210, 0, 30)'},
+                     {rows: 2},
+                     {rows: 3, colour: 'rgb(210, 0, 30)'}
+                  ],
+                  [
+                     {rows: 3, colour: 'rgb(210, 0, 30)'},
+                     {rows: 2, colour: 'rgb(0, 0, 0)'},
+                     {rows: 1, colour: 'rgb(210, 0, 30)'},
+                     {rows: 2},
+                     {rows: 1, colour: 'rgb(210, 0, 30)'},
+                     {rows: 2, colour: 'rgb(0, 0, 0)'},
+                     {rows: 3, colour: 'rgb(210, 0, 30)'}
+                  ],
+                  [
+                     {rows: 3, colour: 'rgb(210, 0, 30)'},
+                     {rows: 3},
+                     {rows: 2, colour: 'rgb(210, 0, 30)'},
+                     {rows: 3, colour: 'rgb(0, 0, 0)'},
+                     {rows: 3, colour: 'rgb(210, 0, 30)'}
+                  ]
+               ],
+               backgroundColour: 'rgb(210, 0, 30)',
                borderColour: 'rgb(0, 0, 0)'
             }, {
-               countyName: 'Banffshire',
-               countyCode: 'ban',
-               chapmanCode: 'ban',
-               hcsCode: 'bnf',
+               countyName: 'Buckinghamshire',
+               countyAbbreviation: 'Bucks',
+               countyCode: 'buc',
+               chapmanCode: 'bkm',
+               hcsCode: 'buc',
+               classLevel: 6,
+               country: 'England',
+               colours: [
+                  {rows: 5, colour: 'rgb(0, 75, 30)'},
+                  {rows: 1},
+                  {rows: 3, colour: 'rgb(195, 195, 210)'},
+                  {rows: 1},
+                  {rows: 5, colour: 'rgb(0, 75, 30)'}
+               ],
+               backgroundColour: 'rgb(0, 75, 30)',
+               borderColour: 'rgb(195, 195, 210)'
+            }, {
+               countyName: 'Cardiganshire',
+               countyAbbreviation: 'Cards',
+               countyCode: 'crd',
+               chapmanCode: 'cgn',
+               hcsCode: 'crd',
+               classLevel: 6,
+               country: 'Wales',
+               colours: [
+                  {rows: 6, colour: 'rgb(0, 0, 0)'},
+                  {rows: 3, colour: 'rgb(255, 210, 0)'},
+                  {rows: 6, colour: 'rgb(0, 0, 0)'}
+               ],
+               textColour: 'rgb(255, 210, 0)',
+               backgroundColour: 'rgb(0, 0, 0)'
+            }, {
+               countyName: 'Carmarthenshire',
+               countyAbbreviation: 'Carms',
+               countyCode: 'crm',
+               chapmanCode: 'cmn',
+               hcsCode: 'crm',
+               classLevel: 7,
+               country: 'Wales',
+               colours: [
+                  {rows: 3, colour: 'rgb(255, 225, 0)'},
+                  {rows: 8, colour: 'rgb(195, 0, 30)'},
+                  {rows: 3, colour: 'rgb(255, 225, 0)'}
+               ],
+               textColour: 'rgb(255, 225, 0)',
+               backgroundColour: 'rgb(195, 0, 30)',
+               borderColour: 'rgb(255, 225, 0)'
+            }, {
+               countyName: 'Pembrokeshire',
+               countyAbbreviation: 'Pembs',
+               countyCode: 'pem',
+               chapmanCode: 'pem',
+               hcsCode: 'pmb',
+               classLevel: 7,
+               country: 'Wales',
+               colours: [
+                  {rows: 5, colour: 'rgb(0, 30, 90)'},
+                  {rows: 4, colour: 'rgb(195, 225, 255)'},
+                  {rows: 5, colour: 'rgb(0, 30, 90)'}
+               ],
+               textColour: 'rgb(195, 225, 255)',
+               backgroundColour: 'rgb(0, 30, 90)',
+               borderColour: 'rgb(195, 225, 255)'
+            }, {
+               countyName: 'Aberdeenshire',
+               countyAbbreviation: 'Aberds',
+               countyCode: 'abd',
+               chapmanCode: 'abd',
+               hcsCode: 'abn',
                classLevel: 7,
                country: 'Scotland',
                colours: [
-                  {rows: 6, colour: 'rgb(255, 150, 0)'},
-                  {rows: 2},
-                  {rows: 6, colour: 'rgb(0, 45, 165)'}
+                  {rows: 6, colour: 'rgb(105, 150, 225)'},
+                  {rows: 1, colour: 'rgb(255, 240, 150)'},
+                  {rows: 6, colour: 'rgb(0, 0, 60)'}
                ],
-               backgroundColour: 'rgb(0, 45, 165)',
-               borderColour: 'rgb(255, 150, 0)'
+               alternateColours: [
+                  [
+                     {rows: 6, colour: 'rgb(255, 150, 0)'},
+                     {rows: 2},
+                     {rows: 6, colour: 'rgb(90, 30, 90)'}
+                  ]
+               ],
+               textColour: 'rgb(255, 240, 150)',
+               backgroundColour: 'rgb(105, 150, 225)',
+               borderColour: 'rgb(0, 0, 60)'
+            }, {
+               countyName: 'Angus',
+               countyCode: 'ans',
+               chapmanCode: 'ans',
+               hcsCode: 'ang',
+               classLevel: 7,
+               country: 'Scotland',
+               colours: [
+                  {rows: 5, colour: 'rgb(15, 45, 105)'},
+                  {rows: 1},
+                  {rows: 1, colour: 'rgb(210, 0, 0)'},
+                  {rows: 1},
+                  {rows: 5, colour: 'rgb(15, 45, 105)'}
+               ],
+               backgroundColour: 'rgb(15, 45, 105)',
+               borderColour: 'rgb(210, 0, 0)'
             }, {
                countyName: 'Kincardineshire',
                countyAbbreviation: 'Kincards',
@@ -1280,119 +1373,33 @@ const counties = (function () {
                backgroundColour: 'rgb(210, 0, 15)',
                borderColour: 'rgb(0, 135, 30)'
             }, {
-               countyName: 'Denbighshire',
-               countyAbbreviation: 'Denbs',
-               countyCode: 'den',
-               chapmanCode: 'den',
-               hcsCode: 'dbh',
+               countyName: 'Stirlingshire',
+               countyAbbreviation: 'Stirls',
+               countyCode: 'sti',
+               chapmanCode: 'sti',
+               hcsCode: 'stl',
                classLevel: 7,
-               country: 'Wales',
+               country: 'Scotland',
                colours: [
-                  {rows: 4, colour: 'rgb(210, 0, 30)'},
-                  {rows: 3},
-                  {rows: 3, colour: 'rgb(0, 0, 0)'},
-                  {rows: 4, colour: 'rgb(210, 0, 30)'}
+                  {rows: 7, colour: 'rgb(165, 0, 45)'},
+                  {rows: 7, colour: 'rgb(0, 0, 0)'}
                ],
-               alternateColours: [
-                  [
-                     {rows: 4, colour: 'rgb(0, 0, 0)'},
-                     {rows: 2},
-                     {rows: 2, colour: 'rgb(210, 0, 30)'},
-                     {rows: 2},
-                     {rows: 4, colour: 'rgb(0, 0, 0)'}
-                  ],
-                  [
-                     {rows: 3, colour: 'rgb(210, 0, 30)'},
-                     {rows: 2},
-                     {rows: 1, colour: 'rgb(210, 0, 30)'},
-                     {rows: 2, colour: 'rgb(0, 0, 0)'},
-                     {rows: 1, colour: 'rgb(210, 0, 30)'},
-                     {rows: 2},
-                     {rows: 3, colour: 'rgb(210, 0, 30)'}
-                  ],
-                  [
-                     {rows: 3, colour: 'rgb(210, 0, 30)'},
-                     {rows: 2, colour: 'rgb(0, 0, 0)'},
-                     {rows: 1, colour: 'rgb(210, 0, 30)'},
-                     {rows: 2},
-                     {rows: 1, colour: 'rgb(210, 0, 30)'},
-                     {rows: 2, colour: 'rgb(0, 0, 0)'},
-                     {rows: 3, colour: 'rgb(210, 0, 30)'}
-                  ],
-                  [
-                     {rows: 3, colour: 'rgb(210, 0, 30)'},
-                     {rows: 3},
-                     {rows: 2, colour: 'rgb(210, 0, 30)'},
-                     {rows: 3, colour: 'rgb(0, 0, 0)'},
-                     {rows: 3, colour: 'rgb(210, 0, 30)'}
-                  ]
-               ],
-               backgroundColour: 'rgb(210, 0, 30)',
+               backgroundColour: 'rgb(165, 0, 45)',
                borderColour: 'rgb(0, 0, 0)'
             }, {
-               countyName: 'Buckinghamshire',
-               countyAbbreviation: 'Bucks',
-               countyCode: 'buc',
-               chapmanCode: 'bkm',
-               hcsCode: 'buc',
+               countyName: 'Banffshire',
+               countyCode: 'ban',
+               chapmanCode: 'ban',
+               hcsCode: 'bnf',
                classLevel: 7,
-               country: 'England',
+               country: 'Scotland',
                colours: [
-                  {rows: 5, colour: 'rgb(0, 75, 30)'},
-                  {rows: 1},
-                  {rows: 3, colour: 'rgb(195, 195, 210)'},
-                  {rows: 1},
-                  {rows: 5, colour: 'rgb(0, 75, 30)'}
+                  {rows: 6, colour: 'rgb(255, 150, 0)'},
+                  {rows: 2},
+                  {rows: 6, colour: 'rgb(0, 45, 165)'}
                ],
-               backgroundColour: 'rgb(0, 75, 30)',
-               borderColour: 'rgb(195, 195, 210)'
-            }, {
-               countyName: 'Cardiganshire',
-               countyAbbreviation: 'Cards',
-               countyCode: 'crd',
-               chapmanCode: 'cgn',
-               hcsCode: 'crd',
-               classLevel: 7,
-               country: 'Wales',
-               colours: [
-                  {rows: 6, colour: 'rgb(0, 0, 0)'},
-                  {rows: 3, colour: 'rgb(255, 210, 0)'},
-                  {rows: 6, colour: 'rgb(0, 0, 0)'}
-               ],
-               textColour: 'rgb(255, 210, 0)',
-               backgroundColour: 'rgb(0, 0, 0)'
-            }, {
-               countyName: 'Carmarthenshire',
-               countyAbbreviation: 'Carms',
-               countyCode: 'crm',
-               chapmanCode: 'cmn',
-               hcsCode: 'crm',
-               classLevel: 7,
-               country: 'Wales',
-               colours: [
-                  {rows: 3, colour: 'rgb(255, 225, 0)'},
-                  {rows: 8, colour: 'rgb(195, 0, 30)'},
-                  {rows: 3, colour: 'rgb(255, 225, 0)'}
-               ],
-               textColour: 'rgb(255, 225, 0)',
-               backgroundColour: 'rgb(195, 0, 30)',
-               borderColour: 'rgb(255, 225, 0)'
-            }, {
-               countyName: 'Pembrokeshire',
-               countyAbbreviation: 'Pembs',
-               countyCode: 'pem',
-               chapmanCode: 'pem',
-               hcsCode: 'pmb',
-               classLevel: 7,
-               country: 'Wales',
-               colours: [
-                  {rows: 5, colour: 'rgb(0, 30, 90)'},
-                  {rows: 4, colour: 'rgb(195, 225, 255)'},
-                  {rows: 5, colour: 'rgb(0, 30, 90)'}
-               ],
-               textColour: 'rgb(195, 225, 255)',
-               backgroundColour: 'rgb(0, 30, 90)',
-               borderColour: 'rgb(195, 225, 255)'
+               backgroundColour: 'rgb(0, 45, 165)',
+               borderColour: 'rgb(255, 150, 0)'
             }, {
                countyName: 'Flintshire',
                countyAbbreviation: 'Flints',
