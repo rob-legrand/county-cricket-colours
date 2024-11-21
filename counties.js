@@ -808,46 +808,6 @@ const counties = (function () {
                backgroundColour: 'rgb(0, 0, 165)',
                borderColour: 'rgb(225, 210, 30)'
             }, {
-               countyName: 'Westmorland',
-               countyAbbreviation: 'Westm',
-               countyCode: 'wml',
-               chapmanCode: 'wes',
-               hcsCode: 'wml',
-               classLevel: 5,
-               country: 'England',
-               colours: [
-                  {rows: 1, colour: 'rgb(240, 210, 0)'},
-                  {rows: 5, colour: 'rgb(195, 0, 30)'},
-                  {rows: 3},
-                  {rows: 5, colour: 'rgb(195, 0, 30)'},
-                  {rows: 1, colour: 'rgb(240, 210, 0)'}
-               ],
-               alternateColours: [
-                  [
-                     {rows: 5, colour: 'rgb(195, 0, 30)'},
-                     {rows: 1},
-                     {rows: 1, colour: 'rgb(240, 210, 0)'},
-                     {rows: 1},
-                     {rows: 5, colour: 'rgb(195, 0, 30)'}
-                  ],
-                  [
-                     {rows: 4, colour: 'rgb(195, 0, 30)'},
-                     {rows: 2},
-                     {rows: 2, colour: 'rgb(240, 210, 0)'},
-                     {rows: 2},
-                     {rows: 4, colour: 'rgb(195, 0, 30)'}
-                  ],
-                  [
-                     {rows: 5, colour: 'rgb(195, 0, 30)'},
-                     {rows: 1, colour: 'rgb(240, 210, 0)'},
-                     {rows: 3},
-                     {rows: 1, colour: 'rgb(240, 210, 0)'},
-                     {rows: 5, colour: 'rgb(195, 0, 30)'}
-                  ]
-               ],
-               backgroundColour: 'rgb(195, 0, 30)',
-               borderColour: 'rgb(240, 210, 0)'
-            }, {
                countyName: 'Dorset',
                countyCode: 'dor',
                chapmanCode: 'dor',
@@ -956,7 +916,7 @@ const counties = (function () {
                countyCode: 'cae',
                chapmanCode: 'cae',
                hcsCode: 'crn',
-               classLevel: 6,
+               classLevel: 5,
                country: 'Wales',
                colours: [
                   {rows: 5, colour: 'rgb(0, 0, 0)'},
@@ -1003,6 +963,113 @@ const counties = (function () {
                ],
                backgroundColour: 'rgb(30, 30, 180)',
                borderColour: 'rgb(0, 0, 0)'
+            }, {
+               countyName: 'Oxfordshire',
+               countyAbbreviation: 'Oxon',
+               countyCode: 'oxf',
+               chapmanCode: 'oxf',
+               hcsCode: 'oxd',
+               classLevel: 6,
+               country: 'England',
+               colours: [
+                  {rows: 6, colour: 'rgb(120, 0, 60)'},
+                  {rows: 2, colour: 'rgb(240, 225, 105)'},
+                  {rows: 6, colour: 'rgb(0, 30, 75)'}
+               ],
+               textColour: 'rgb(240, 225, 0)',
+               backgroundColour: 'rgb(120, 0, 60)',
+               borderColour: 'rgb(0, 30, 75)'
+            }, {
+               countyName: 'Berkshire',
+               countyAbbreviation: 'Berks',
+               countyCode: 'brk',
+               chapmanCode: 'brk',
+               hcsCode: 'ber',
+               classLevel: 6,
+               country: 'England',
+               colours: [
+                  {rows: 2, colour: 'rgb(255, 255, 135)'},
+                  {rows: 5, colour: 'rgb(30, 120, 60)'},
+                  {rows: 2, colour: 'rgb(255, 255, 135)'},
+                  {rows: 5, colour: 'rgb(45, 0, 90)'},
+                  {rows: 2, colour: 'rgb(255, 255, 135)'}
+               ],
+               textColour: 'rgb(255, 255, 135)',
+               backgroundColour: 'rgb(30, 120, 60)',
+               borderColour: 'rgb(45, 0, 90)'
+            }, {
+               countyName: 'Buckinghamshire',
+               countyAbbreviation: 'Bucks',
+               countyCode: 'buc',
+               chapmanCode: 'bkm',
+               hcsCode: 'buc',
+               classLevel: 6,
+               country: 'England',
+               colours: [
+                  {rows: 5, colour: 'rgb(0, 75, 30)'},
+                  {rows: 1},
+                  {rows: 3, colour: 'rgb(195, 195, 210)'},
+                  {rows: 1},
+                  {rows: 5, colour: 'rgb(0, 75, 30)'}
+               ],
+               backgroundColour: 'rgb(0, 75, 30)',
+               borderColour: 'rgb(195, 195, 210)'
+            }, {
+               countyName: 'Carmarthenshire',
+               countyAbbreviation: 'Carms',
+               countyCode: 'crm',
+               chapmanCode: 'cmn',
+               hcsCode: 'crm',
+               classLevel: 6,
+               country: 'Wales',
+               colours: [
+                  {rows: 3, colour: 'rgb(255, 225, 0)'},
+                  {rows: 8, colour: 'rgb(195, 0, 30)'},
+                  {rows: 3, colour: 'rgb(255, 225, 0)'}
+               ],
+               textColour: 'rgb(255, 225, 0)',
+               backgroundColour: 'rgb(195, 0, 30)',
+               borderColour: 'rgb(255, 225, 0)'
+            }, {
+               countyName: 'Westmorland',
+               countyAbbreviation: 'Westm',
+               countyCode: 'wml',
+               chapmanCode: 'wes',
+               hcsCode: 'wml',
+               classLevel: 6,
+               country: 'England',
+               colours: [
+                  {rows: 1, colour: 'rgb(240, 210, 0)'},
+                  {rows: 5, colour: 'rgb(195, 0, 30)'},
+                  {rows: 3},
+                  {rows: 5, colour: 'rgb(195, 0, 30)'},
+                  {rows: 1, colour: 'rgb(240, 210, 0)'}
+               ],
+               alternateColours: [
+                  [
+                     {rows: 5, colour: 'rgb(195, 0, 30)'},
+                     {rows: 1},
+                     {rows: 1, colour: 'rgb(240, 210, 0)'},
+                     {rows: 1},
+                     {rows: 5, colour: 'rgb(195, 0, 30)'}
+                  ],
+                  [
+                     {rows: 4, colour: 'rgb(195, 0, 30)'},
+                     {rows: 2},
+                     {rows: 2, colour: 'rgb(240, 210, 0)'},
+                     {rows: 2},
+                     {rows: 4, colour: 'rgb(195, 0, 30)'}
+                  ],
+                  [
+                     {rows: 5, colour: 'rgb(195, 0, 30)'},
+                     {rows: 1, colour: 'rgb(240, 210, 0)'},
+                     {rows: 3},
+                     {rows: 1, colour: 'rgb(240, 210, 0)'},
+                     {rows: 5, colour: 'rgb(195, 0, 30)'}
+                  ]
+               ],
+               backgroundColour: 'rgb(195, 0, 30)',
+               borderColour: 'rgb(240, 210, 0)'
             }, {
                countyName: 'Montgomeryshire',
                countyAbbreviation: 'Monts',
@@ -1113,40 +1180,6 @@ const counties = (function () {
                backgroundColour: 'rgb(0, 0, 0)',
                borderColour: 'rgb(135, 0, 0)'
             }, {
-               countyName: 'Oxfordshire',
-               countyAbbreviation: 'Oxon',
-               countyCode: 'oxf',
-               chapmanCode: 'oxf',
-               hcsCode: 'oxd',
-               classLevel: 6,
-               country: 'England',
-               colours: [
-                  {rows: 6, colour: 'rgb(120, 0, 60)'},
-                  {rows: 2, colour: 'rgb(240, 225, 105)'},
-                  {rows: 6, colour: 'rgb(0, 30, 75)'}
-               ],
-               textColour: 'rgb(240, 225, 0)',
-               backgroundColour: 'rgb(120, 0, 60)',
-               borderColour: 'rgb(0, 30, 75)'
-            }, {
-               countyName: 'Berkshire',
-               countyAbbreviation: 'Berks',
-               countyCode: 'brk',
-               chapmanCode: 'brk',
-               hcsCode: 'ber',
-               classLevel: 6,
-               country: 'England',
-               colours: [
-                  {rows: 2, colour: 'rgb(255, 255, 135)'},
-                  {rows: 5, colour: 'rgb(30, 120, 60)'},
-                  {rows: 2, colour: 'rgb(255, 255, 135)'},
-                  {rows: 5, colour: 'rgb(45, 0, 90)'},
-                  {rows: 2, colour: 'rgb(255, 255, 135)'}
-               ],
-               textColour: 'rgb(255, 255, 135)',
-               backgroundColour: 'rgb(30, 120, 60)',
-               borderColour: 'rgb(45, 0, 90)'
-            }, {
                countyName: 'Denbighshire',
                countyAbbreviation: 'Denbs',
                countyCode: 'den',
@@ -1197,54 +1230,6 @@ const counties = (function () {
                backgroundColour: 'rgb(210, 0, 30)',
                borderColour: 'rgb(0, 0, 0)'
             }, {
-               countyName: 'Buckinghamshire',
-               countyAbbreviation: 'Bucks',
-               countyCode: 'buc',
-               chapmanCode: 'bkm',
-               hcsCode: 'buc',
-               classLevel: 6,
-               country: 'England',
-               colours: [
-                  {rows: 5, colour: 'rgb(0, 75, 30)'},
-                  {rows: 1},
-                  {rows: 3, colour: 'rgb(195, 195, 210)'},
-                  {rows: 1},
-                  {rows: 5, colour: 'rgb(0, 75, 30)'}
-               ],
-               backgroundColour: 'rgb(0, 75, 30)',
-               borderColour: 'rgb(195, 195, 210)'
-            }, {
-               countyName: 'Cardiganshire',
-               countyAbbreviation: 'Cards',
-               countyCode: 'crd',
-               chapmanCode: 'cgn',
-               hcsCode: 'crd',
-               classLevel: 6,
-               country: 'Wales',
-               colours: [
-                  {rows: 6, colour: 'rgb(0, 0, 0)'},
-                  {rows: 3, colour: 'rgb(255, 210, 0)'},
-                  {rows: 6, colour: 'rgb(0, 0, 0)'}
-               ],
-               textColour: 'rgb(255, 210, 0)',
-               backgroundColour: 'rgb(0, 0, 0)'
-            }, {
-               countyName: 'Carmarthenshire',
-               countyAbbreviation: 'Carms',
-               countyCode: 'crm',
-               chapmanCode: 'cmn',
-               hcsCode: 'crm',
-               classLevel: 7,
-               country: 'Wales',
-               colours: [
-                  {rows: 3, colour: 'rgb(255, 225, 0)'},
-                  {rows: 8, colour: 'rgb(195, 0, 30)'},
-                  {rows: 3, colour: 'rgb(255, 225, 0)'}
-               ],
-               textColour: 'rgb(255, 225, 0)',
-               backgroundColour: 'rgb(195, 0, 30)',
-               borderColour: 'rgb(255, 225, 0)'
-            }, {
                countyName: 'Pembrokeshire',
                countyAbbreviation: 'Pembs',
                countyCode: 'pem',
@@ -1260,6 +1245,21 @@ const counties = (function () {
                textColour: 'rgb(195, 225, 255)',
                backgroundColour: 'rgb(0, 30, 90)',
                borderColour: 'rgb(195, 225, 255)'
+            }, {
+               countyName: 'Cardiganshire',
+               countyAbbreviation: 'Cards',
+               countyCode: 'crd',
+               chapmanCode: 'cgn',
+               hcsCode: 'crd',
+               classLevel: 7,
+               country: 'Wales',
+               colours: [
+                  {rows: 6, colour: 'rgb(0, 0, 0)'},
+                  {rows: 3, colour: 'rgb(255, 210, 0)'},
+                  {rows: 6, colour: 'rgb(0, 0, 0)'}
+               ],
+               textColour: 'rgb(255, 210, 0)',
+               backgroundColour: 'rgb(0, 0, 0)'
             }, {
                countyName: 'Aberdeenshire',
                countyAbbreviation: 'Aberds',
@@ -1327,7 +1327,8 @@ const counties = (function () {
                      {rows: 2, colour: 'rgb(210, 0, 15)'},
                      {rows: 2, colour: 'rgb(255, 210, 45)'},
                      {rows: 2, colour: 'rgb(0, 135, 30)'}
-                  ], [
+                  ],
+                  [
                      {rows: 2, colour: 'rgb(210, 0, 15)'},
                      {rows: 2, colour: 'rgb(255, 210, 45)'},
                      {rows: 2, colour: 'rgb(210, 0, 15)'},
@@ -1335,7 +1336,8 @@ const counties = (function () {
                      {rows: 2, colour: 'rgb(210, 0, 15)'},
                      {rows: 2, colour: 'rgb(255, 210, 45)'},
                      {rows: 2, colour: 'rgb(210, 0, 15)'}
-                  ], [
+                  ],
+                  [
                      {rows: 2, colour: 'rgb(210, 0, 15)'},
                      {rows: 2, colour: 'rgb(255, 210, 45)'},
                      {rows: 2, colour: 'rgb(210, 0, 15)'},
@@ -1343,7 +1345,8 @@ const counties = (function () {
                      {rows: 2, colour: 'rgb(0, 135, 30)'},
                      {rows: 2, colour: 'rgb(255, 210, 45)'},
                      {rows: 2, colour: 'rgb(0, 135, 30)'}
-                  ], [
+                  ],
+                  [
                      {rows: 2, colour: 'rgb(210, 0, 15)'},
                      {rows: 2, colour: 'rgb(255, 210, 45)'},
                      {rows: 2, colour: 'rgb(0, 135, 30)'},
@@ -1351,7 +1354,8 @@ const counties = (function () {
                      {rows: 2, colour: 'rgb(210, 0, 15)'},
                      {rows: 2, colour: 'rgb(255, 210, 45)'},
                      {rows: 2, colour: 'rgb(0, 135, 30)'}
-                  ], [
+                  ],
+                  [
                      {rows: 2, colour: 'rgb(210, 0, 15)'},
                      {rows: 2, colour: 'rgb(255, 210, 45)'},
                      {rows: 2, colour: 'rgb(210, 0, 15)'},
@@ -1359,7 +1363,8 @@ const counties = (function () {
                      {rows: 2, colour: 'rgb(0, 135, 30)'},
                      {rows: 2, colour: 'rgb(255, 210, 45)'},
                      {rows: 2, colour: 'rgb(210, 0, 15)'}
-                  ], [
+                  ],
+                  [
                      {rows: 2, colour: 'rgb(210, 0, 15)'},
                      {rows: 2, colour: 'rgb(255, 210, 45)'},
                      {rows: 2, colour: 'rgb(210, 0, 15)'},
@@ -1509,36 +1514,42 @@ const counties = (function () {
                      {rows: 6, colour: 'rgb(90, 15, 0)'},
                      {rows: 1, colour: 'rgb(255, 255, 75)'},
                      {rows: 3, colour: 'rgb(150, 0, 30)'}
-                  ], [
+                  ],
+                  [
                      {rows: 1, colour: 'rgb(255, 255, 75)'},
                      {rows: 4, colour: 'rgb(90, 15, 0)'},
                      {rows: 4, colour: 'rgb(150, 0, 30)'},
                      {rows: 4, colour: 'rgb(90, 15, 0)'},
                      {rows: 1, colour: 'rgb(255, 255, 75)'}
-                  ], [
+                  ],
+                  [
                      {rows: 2, colour: 'rgb(255, 255, 75)'},
                      {rows: 3, colour: 'rgb(90, 15, 0)'},
                      {rows: 3, colour: 'rgb(150, 0, 30)'},
                      {rows: 3, colour: 'rgb(90, 15, 0)'},
                      {rows: 2, colour: 'rgb(255, 255, 75)'}
-                  ], [
+                  ],
+                  [
                      {rows: 2, colour: 'rgb(150, 0, 30)'},
                      {rows: 4, colour: 'rgb(90, 15, 0)'},
                      {rows: 1, colour: 'rgb(255, 255, 75)'},
                      {rows: 4, colour: 'rgb(90, 15, 0)'},
                      {rows: 2, colour: 'rgb(150, 0, 30)'}
-                  ], [
+                  ],
+                  [
                      {rows: 2, colour: 'rgb(255, 255, 75)'},
                      {rows: 2, colour: 'rgb(150, 0, 30)'},
                      {rows: 5, colour: 'rgb(90, 15, 0)'},
                      {rows: 2, colour: 'rgb(150, 0, 30)'},
                      {rows: 2, colour: 'rgb(255, 255, 75)'}
-                  ], [
+                  ],
+                  [
                      {rows: 2, colour: 'rgb(255, 255, 75)'},
                      {rows: 5, colour: 'rgb(150, 0, 30)'},
                      {rows: 5, colour: 'rgb(90, 15, 0)'},
                      {rows: 2, colour: 'rgb(255, 255, 75)'}
-                  ], [
+                  ],
+                  [
                      {rows: 2, colour: 'rgb(255, 255, 75)'},
                      {rows: 3, colour: 'rgb(150, 0, 30)'},
                      {rows: 3, colour: 'rgb(90, 15, 0)'},
@@ -1604,34 +1615,40 @@ const counties = (function () {
                      {rows: 2},
                      {rows: 2, colour: 'rgb(0, 120, 15)'},
                      {rows: 5, colour: 'rgb(180, 0, 45)'}
-                  ], [
+                  ],
+                  [
                      {rows: 6, colour: 'rgb(180, 0, 45)'},
                      {rows: 1},
                      {rows: 1, colour: 'rgb(0, 120, 15)'},
                      {rows: 6, colour: 'rgb(180, 0, 45)'}
-                  ], [
+                  ],
+                  [
                      {rows: 5, colour: 'rgb(180, 0, 45)'},
                      {rows: 1, colour: 'rgb(0, 120, 15)'},
                      {rows: 2},
                      {rows: 1, colour: 'rgb(0, 120, 15)'},
                      {rows: 5, colour: 'rgb(180, 0, 45)'}
-                  ], [
+                  ],
+                  [
                      {rows: 5, colour: 'rgb(180, 0, 45)'},
                      {rows: 2, colour: 'rgb(210, 165, 0)'},
                      {rows: 2, colour: 'rgb(0, 120, 15)'},
                      {rows: 5, colour: 'rgb(180, 0, 45)'}
-                  ], [
+                  ],
+                  [
                      {rows: 5, colour: 'rgb(180, 0, 45)'},
                      {rows: 2, colour: 'rgb(225, 195, 0)'},
                      {rows: 2, colour: 'rgb(0, 120, 15)'},
                      {rows: 5, colour: 'rgb(180, 0, 45)'}
-                  ], [
+                  ],
+                  [
                      {rows: 5, colour: 'rgb(180, 0, 45)'},
                      {rows: 1},
                      {rows: 2, colour: 'rgb(0, 120, 15)'},
                      {rows: 1},
                      {rows: 5, colour: 'rgb(180, 0, 45)'}
-                  ], [
+                  ],
+                  [
                      {rows: 1, colour: 'rgb(0, 120, 15)'},
                      {rows: 1},
                      {rows: 4, colour: 'rgb(180, 0, 45)'},
@@ -1639,7 +1656,8 @@ const counties = (function () {
                      {rows: 4, colour: 'rgb(180, 0, 45)'},
                      {rows: 1},
                      {rows: 1, colour: 'rgb(0, 120, 15)'}
-                  ], [
+                  ],
+                  [
                      {rows: 1, colour: 'rgb(0, 120, 15)'},
                      {rows: 5, colour: 'rgb(180, 0, 45)'},
                      {rows: 2},
@@ -1718,7 +1736,8 @@ const counties = (function () {
                      {rows: 2},
                      {rows: 4, colour: 'rgb(0, 60, 180)'},
                      {rows: 2, colour: 'rgb(255, 210, 0)'}
-                  ], [
+                  ],
+                  [
                      {rows: 5, colour: 'rgb(0, 60, 180)'},
                      {rows: 2},
                      {rows: 2, colour: 'rgb(255, 210, 0)'},
