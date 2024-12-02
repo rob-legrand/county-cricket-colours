@@ -1533,12 +1533,56 @@ const counties = (function () {
             classLevel: 7,
             country: 'Scotland',
             colours: [
-               {rows: 6, colour: 'rgb(255, 150, 0)'},
+               {rows: 6, colour: 'rgb(0, 90, 45)'},
                {rows: 2},
-               {rows: 6, colour: 'rgb(0, 45, 165)'}
+               {rows: 6, colour: 'rgb(0, 0, 0)'}
             ],
-            backgroundColour: 'rgb(0, 45, 165)',
-            borderColour: 'rgb(255, 150, 0)'
+            alternateColours: [
+               [
+                  {rows: 2, colour: 'rgb(0, 0, 0)'},
+                  {rows: 2},
+                  {rows: 6, colour: 'rgb(0, 90, 45)'},
+                  {rows: 2},
+                  {rows: 2, colour: 'rgb(0, 0, 0)'}
+               ],
+               [
+                  {rows: 4, colour: 'rgb(0, 90, 45)'},
+                  {rows: 2, colour: 'rgb(0, 0, 0)'},
+                  {rows: 2},
+                  {rows: 2, colour: 'rgb(0, 0, 0)'},
+                  {rows: 4, colour: 'rgb(0, 90, 45)'}
+               ],
+               [
+                  {rows: 1, colour: 'rgb(0, 0, 0)'},
+                  {rows: 4, colour: 'rgb(0, 90, 45)'},
+                  {rows: 1, colour: 'rgb(0, 0, 0)'},
+                  {rows: 2},
+                  {rows: 1, colour: 'rgb(0, 0, 0)'},
+                  {rows: 4, colour: 'rgb(0, 90, 45)'},
+                  {rows: 1, colour: 'rgb(0, 0, 0)'}
+               ],
+               [
+                  {rows: 2, colour: 'rgb(0, 0, 0)'},
+                  {rows: 4, colour: 'rgb(0, 90, 45)'},
+                  {rows: 2},
+                  {rows: 4, colour: 'rgb(0, 90, 45)'},
+                  {rows: 2, colour: 'rgb(0, 0, 0)'}
+               ],
+               [
+                  {rows: 4, colour: 'rgb(0, 0, 0)'},
+                  {rows: 2, colour: 'rgb(255, 150, 0)'},
+                  {rows: 2},
+                  {rows: 2, colour: 'rgb(0, 45, 165)'},
+                  {rows: 4, colour: 'rgb(0, 0, 0)'}
+               ],
+               [
+                  {rows: 6, colour: 'rgb(255, 150, 0)'},
+                  {rows: 2},
+                  {rows: 6, colour: 'rgb(0, 45, 165)'}
+               ]
+            ],
+            backgroundColour: 'rgb(0, 90, 45)',
+            borderColour: 'rgb(0, 0, 0)'
          },
          {
             countyName: 'Flintshire',
