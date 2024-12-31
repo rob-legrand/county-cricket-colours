@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', function () {
          ).filter(
             (classLevel) => Number.isInteger(classLevel)
          )
-      )].sort(
+      )].toSorted(
          (x, y) => x - y
       );
       const ordinalise = (n) => (

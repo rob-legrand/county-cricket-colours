@@ -1578,6 +1578,31 @@ const counties = (function () {
                ],
                [
                   {rows: 4, colour: 'rgb(0, 90, 45)'},
+                  {rows: 2},
+                  {rows: 2, colour: 'rgb(0, 0, 0)'},
+                  {rows: 2},
+                  {rows: 4, colour: 'rgb(0, 90, 45)'}
+               ],
+               [
+                  {rows: 5, colour: 'rgb(0, 90, 45)'},
+                  {rows: 1},
+                  {rows: 1, colour: 'rgb(0, 0, 0)'},
+                  {rows: 1},
+                  {rows: 5, colour: 'rgb(0, 90, 45)'}
+               ],
+               [
+                  {rows: 1, colour: 'rgb(0, 0, 0)'},
+                  {rows: 1},
+                  {rows: 3, colour: 'rgb(0, 90, 45)'},
+                  {rows: 1},
+                  {rows: 1, colour: 'rgb(0, 0, 0)'},
+                  {rows: 1},
+                  {rows: 3, colour: 'rgb(0, 90, 45)'},
+                  {rows: 1},
+                  {rows: 1, colour: 'rgb(0, 0, 0)'}
+               ],
+               [
+                  {rows: 4, colour: 'rgb(0, 90, 45)'},
                   {rows: 2, colour: 'rgb(0, 0, 0)'},
                   {rows: 2},
                   {rows: 2, colour: 'rgb(0, 0, 0)'},
@@ -1715,16 +1740,55 @@ const counties = (function () {
             classLevel: 8,
             country: 'Scotland',
             colours: [
+               {rows: 1, colour: 'rgb(180, 180, 180)'},
                {rows: 1, colour: 'rgb(255, 255, 75)'},
-               {rows: 3, colour: 'rgb(150, 0, 30)'},
-               {rows: 6, colour: 'rgb(90, 15, 0)'},
-               {rows: 3, colour: 'rgb(150, 0, 30)'},
-               {rows: 1, colour: 'rgb(255, 255, 75)'}
+               {rows: 9, colour: 'rgb(120, 30, 0)'},
+               {rows: 1, colour: 'rgb(255, 255, 75)'},
+               {rows: 1, colour: 'rgb(180, 180, 180)'}
             ],
             alternateColours: [
                [
+                  {rows: 1, colour: 'rgb(255, 255, 75)'},
+                  {rows: 3, colour: 'rgb(150, 0, 30)'},
+                  {rows: 6, colour: 'rgb(90, 15, 0)'},
+                  {rows: 3, colour: 'rgb(150, 0, 30)'},
+                  {rows: 1, colour: 'rgb(255, 255, 75)'}
+               ],
+               [
+                  {rows: 1, colour: 'rgb(255, 255, 75)'},
+                  {rows: 1, colour: 'rgb(180, 180, 180)'},
+                  {rows: 9, colour: 'rgb(120, 30, 0)'},
+                  {rows: 1, colour: 'rgb(180, 180, 180)'},
+                  {rows: 1, colour: 'rgb(255, 255, 75)'},
+               ],
+               [
+                  {rows: 1, colour: 'rgb(255, 255, 75)'},
+                  {rows: 1, colour: 'rgb(180, 180, 180)'},
+                  {rows: 1, colour: 'rgb(255, 255, 75)'},
+                  {rows: 8, colour: 'rgb(120, 30, 0)'},
+                  {rows: 1, colour: 'rgb(255, 255, 75)'},
+                  {rows: 1, colour: 'rgb(180, 180, 180)'},
+                  {rows: 1, colour: 'rgb(255, 255, 75)'}
+               ],
+               [
+                  {rows: 5, colour: 'rgb(120, 30, 0)'},
+                  {rows: 1, colour: 'rgb(255, 255, 75)'},
+                  {rows: 2},
+                  {rows: 1, colour: 'rgb(255, 255, 75)'},
+                  {rows: 5, colour: 'rgb(120, 30, 0)'}
+               ],
+               [
+                  {rows: 1, colour: 'rgb(255, 255, 75)'},
+                  {rows: 4, colour: 'rgb(120, 30, 0)'},
+                  {rows: 1, colour: 'rgb(255, 255, 75)'},
+                  {rows: 1},
+                  {rows: 1, colour: 'rgb(255, 255, 75)'},
+                  {rows: 4, colour: 'rgb(120, 30, 0)'},
+                  {rows: 1, colour: 'rgb(255, 255, 75)'}
+               ],
+               [
                   {rows: 2, colour: 'rgb(255, 255, 75)'},
-                  {rows: 10, colour: 'rgb(120, 30, 0)'},
+                  {rows: 9, colour: 'rgb(120, 30, 0)'},
                   {rows: 2, colour: 'rgb(255, 255, 75)'}
                ],
                [
@@ -1805,8 +1869,7 @@ const counties = (function () {
                ]
             ],
             textColour: 'rgb(255, 255, 75)',
-            backgroundColour: 'rgb(90, 15, 0)',
-            borderColour: 'rgb(150, 0, 30)'
+            backgroundColour: 'rgb(120, 30, 0)'
          },
          {
             countyName: 'Lanarkshire',
