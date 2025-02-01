@@ -86,15 +86,15 @@ document.addEventListener('DOMContentLoaded', function () {
          ? n + 'rd'
          : n + 'th'
       );
-      const countiesPointsTablesElement = document.querySelector('#counties-points-tables');
-      countiesPointsTablesElement.replaceChildren(...classLevels.map(function (classLevel) {
-         const newPointsTableDiv = document.createElement('div');
-         newPointsTableDiv.classList.add('counties-points-table');
+      const countiesClassesElement = document.querySelector('#counties-classes');
+      countiesClassesElement.replaceChildren(...classLevels.map(function (classLevel) {
+         const newClassDiv = document.createElement('div');
+         newClassDiv.classList.add('counties-class');
          const newClassLevelDiv = document.createElement('div');
          newClassLevelDiv.textContent = ordinalise(classLevel) + ' class';
-         const newPointsTableUl = document.createElement('ul');
-         newPointsTableUl.classList.add('counties-list');
-         newPointsTableUl.replaceChildren(
+         const newClassUl = document.createElement('ul');
+         newClassUl.classList.add('counties-list');
+         newClassUl.replaceChildren(
             ...countiesInfo.filter(
                (county) => county.classLevel === classLevel
             ).map(function (county, rank) {
@@ -124,8 +124,8 @@ document.addEventListener('DOMContentLoaded', function () {
                return newLi;
             })
          );
-         newPointsTableDiv.replaceChildren(newClassLevelDiv, newPointsTableUl);
-         return newPointsTableDiv;
+         newClassDiv.replaceChildren(newClassLevelDiv, newClassUl);
+         return newClassDiv;
       }));
 
       const countiesListElement = document.querySelector('#counties-list');

@@ -52,7 +52,7 @@ body {
    margin: 0px 5px;
 }
 
-.counties-points-table {
+.counties-class {
    align-items: center;
    display: flex;
    flex-direction: column;
@@ -60,9 +60,10 @@ body {
    margin: 5px;
 }
 
-.counties-points-tables {
+.counties-classes {
    align-items: center;
    display: flex;
+   flex-direction: row;
    flex-wrap: wrap;
    justify-content: center;
    margin: 5px;
