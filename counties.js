@@ -1759,7 +1759,7 @@ const counties = (function () {
                   {rows: 1, colour: 'rgb(180, 180, 180)'},
                   {rows: 9, colour: 'rgb(120, 30, 0)'},
                   {rows: 1, colour: 'rgb(180, 180, 180)'},
-                  {rows: 1, colour: 'rgb(255, 255, 75)'},
+                  {rows: 1, colour: 'rgb(255, 255, 75)'}
                ],
                [
                   {rows: 1, colour: 'rgb(255, 255, 75)'},
@@ -2165,13 +2165,13 @@ const counties = (function () {
          }
          return newCanvas;
       },
-      createCountyElement: function (county) {
-         const newDiv = document.createElement('div');
-         newDiv.textContent = county.countyName;
-         newDiv.style.color = county.textColour ?? util.creamColour;
-         newDiv.style.backgroundColor = county.backgroundColour ?? util.creamColour;
-         newDiv.style.borderColor = county.borderColour ?? county.backgroundColour ?? util.creamColour;
-         return newDiv;
+      createCountyElement: function (county, elementType = 'div') {
+         const newElement = document.createElement(elementType);
+         newElement.textContent = county.countyName;
+         newElement.style.color = county.textColour ?? util.creamColour;
+         newElement.style.backgroundColor = county.backgroundColour ?? util.creamColour;
+         newElement.style.borderColor = county.borderColour ?? county.backgroundColour ?? util.creamColour;
+         return newElement;
       },
       createInfo: () => util.deepFreeze(util.createInfo()),
       getNumRows: (colours) => colours.reduce((numRowsSoFar, stripe) => numRowsSoFar + stripe.rows, 0)
