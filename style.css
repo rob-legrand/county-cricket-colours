@@ -14,10 +14,11 @@ html {
 }
 
 body {
-   align-items: center;
+   align-items: flex-start;
    background-color: rgb(255, 245, 225);
    display: flex;
-   flex-direction: column;
+   flex-direction: row;
+   flex-wrap: wrap;
    font-family: var(--serif);
    justify-content: center;
 }
@@ -72,6 +73,40 @@ body {
    flex-wrap: wrap;
    justify-content: center;
    margin: 5px;
+}
+
+.counties-points-table {
+   border-spacing: 1px;
+}
+
+.counties-points-table td {
+   border-style: solid;
+   border-width: 3px;
+   padding: 9px;
+}
+
+.counties-points-table td:nth-child(1) {
+   text-align: end;
+}
+
+.counties-points-table td:nth-child(2) {
+   text-align: start;
+}
+
+.counties-points-table td:nth-child(3) {
+   text-align: center;
+}
+
+.counties-points-table td:nth-child(4) {
+   text-align: start;
+}
+
+.counties-points-table td:nth-child(5) {
+   text-align: center;
+}
+
+.counties-points-table td:nth-child(6) {
+   text-align: end;
 }
 
 .county-code {

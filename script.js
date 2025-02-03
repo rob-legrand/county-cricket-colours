@@ -23,7 +23,9 @@ document.addEventListener('DOMContentLoaded', function () {
             (function () {
                const countyNameDiv = document.createElement('div');
                countyNameDiv.classList.add('county-name');
-               countyNameDiv.textContent = county.classLevel + ' ' + county.countyName;
+               countyNameDiv.textContent = (
+                  county.classLevel ?? '-'
+               ) + ' ' + county.countyName;
                return countyNameDiv;
             }())
          );
@@ -43,7 +45,9 @@ document.addEventListener('DOMContentLoaded', function () {
             }));
             const countyNameDiv = document.createElement('div');
             countyNameDiv.classList.add('county-name');
-            countyNameDiv.textContent = county.classLevel + ' ' + county.countyName;
+            countyNameDiv.textContent = (
+               county.classLevel ?? '-'
+            ) + ' ' + county.countyName;
             countyDiv.append(countyNameDiv);
             countiesElement.append(countyDiv);
             if (Array.isArray(county.alternateColours)) {
@@ -104,9 +108,9 @@ document.addEventListener('DOMContentLoaded', function () {
                newRankDiv.classList.add('county-rank');
                newRankDiv.textContent = rank + 1 ?? '-';
                const newCodeDiv = counties.createCountyElement(county);
-               newCodeDiv.textContent = county.countyCode.toUpperCase();
                newCodeDiv.classList.add('county-code');
                newCodeDiv.classList.add('county-colour-name');
+               newCodeDiv.textContent = county.countyCode.toUpperCase();
                const newCountyNameDiv = document.createElement('div');
                newCountyNameDiv.classList.add('county-name');
                newCountyNameDiv.textContent = county.countyName;
@@ -133,9 +137,9 @@ document.addEventListener('DOMContentLoaded', function () {
          const newLi = document.createElement('li');
          newLi.classList.add('county');
          const newCodeDiv = counties.createCountyElement(county);
-         newCodeDiv.textContent = county.countyCode.toUpperCase();
          newCodeDiv.classList.add('county-code');
          newCodeDiv.classList.add('county-colour-name');
+         newCodeDiv.textContent = county.countyCode.toUpperCase();
          const newClassDiv = document.createElement('div');
          newClassDiv.classList.add('county-name');
          newClassDiv.textContent = county.classLevel ?? '-';
@@ -213,6 +217,29 @@ document.addEventListener('DOMContentLoaded', function () {
             newColourAbbrevDiv
          );
          return newLi;
+      }));
+
+      const countiesPointsTableElement = document.querySelector('#counties-points-table');
+      countiesPointsTableElement.replaceChildren(...countiesInfo.map(function (county, rank) {
+         const newPointsTableRow = document.createElement('tr');
+         const newRankCell = counties.createCountyElement(county, 'td');
+         newRankCell.textContent = rank + 1 ?? '-';
+         const newClassCell = counties.createCountyElement(county, 'td');
+         newClassCell.textContent = ordinalise(county.classLevel ?? '-');
+         const newCodeCell = counties.createCountyElement(county, 'td');
+         newCodeCell.classList.add('county-code');
+         newCodeCell.textContent = county.countyCode.toUpperCase();
+         const newCountyNameCells = Array.from(
+            {length: 3},
+            () => counties.createCountyElement(county, 'td')
+         );
+         newPointsTableRow.replaceChildren(
+            newRankCell,
+            newClassCell,
+            newCodeCell,
+            ...newCountyNameCells
+         );
+         return newPointsTableRow;
       }));
    };
 
