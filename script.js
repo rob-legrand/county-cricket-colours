@@ -222,18 +222,36 @@ document.addEventListener('DOMContentLoaded', function () {
       const countiesPointsTableElement = document.querySelector('#counties-points-table');
       countiesPointsTableElement.replaceChildren(...countiesInfo.map(function (county, rank) {
          const newPointsTableRow = document.createElement('tr');
+         const newCanvasCell = document.createElement('td');
+         newCanvasCell.classList.add('centered');
+         newCanvasCell.replaceChildren(
+            counties.createCanvas({
+               colours: county.colours,
+               height: 40,
+               isHorizontal: true,
+               width: 40
+            })
+         );
          const newRankCell = counties.createCountyElement(county, 'td');
+         newRankCell.classList.add('county-colour-name');
          newRankCell.textContent = rank + 1 ?? '-';
          const newClassCell = counties.createCountyElement(county, 'td');
+         newClassCell.classList.add('county-colour-name');
          newClassCell.textContent = ordinalise(county.classLevel ?? '-');
          const newCodeCell = counties.createCountyElement(county, 'td');
          newCodeCell.classList.add('county-code');
+         newCodeCell.classList.add('county-colour-name');
          newCodeCell.textContent = county.countyCode.toUpperCase();
          const newCountyNameCells = Array.from(
             {length: 3},
-            () => counties.createCountyElement(county, 'td')
+            function () {
+               const newCountyNameCell = counties.createCountyElement(county, 'td');
+               newCountyNameCell.classList.add('county-colour-name');
+               return newCountyNameCell;
+            }
          );
          newPointsTableRow.replaceChildren(
+            newCanvasCell,
             newRankCell,
             newClassCell,
             newCodeCell,
