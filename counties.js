@@ -2138,30 +2138,46 @@ const counties = (function () {
          newCanvas.getContext('2d').fillStyle = util.creamColour;
          newCanvas.getContext('2d').fillRect(0, 0, newCanvas.width, newCanvas.height);
          if (args.isHorizontal) {
-            args.colours.reduce(function (totalRowsSoFar, stripe) {
-               if (stripe.hasOwnProperty('colour')) {
-                  newCanvas.getContext('2d').fillStyle = stripe.colour;
-                  newCanvas.getContext('2d').fillRect(0, totalRowsSoFar, newCanvas.width - (
-                     args.isVertical
-                     ? newCanvas.height - totalRowsSoFar - stripe.rows * pixelsPerRow
-                     : 0
-                  ), stripe.rows * pixelsPerRow);
-               }
-               return totalRowsSoFar + stripe.rows * pixelsPerRow;
-            }, Math.round(newCanvas.height - (numRows + self.getNumRows(args.colours)) * pixelsPerRow / 2));
+            args.colours.reduce(
+               function (totalRowsSoFar, stripe) {
+                  if (stripe.hasOwnProperty('colour')) {
+                     newCanvas.getContext('2d').fillStyle = stripe.colour;
+                     newCanvas.getContext('2d').fillRect(
+                        0,
+                        totalRowsSoFar,
+                        newCanvas.width - (
+                           args.isVertical
+                           ? newCanvas.height - totalRowsSoFar - stripe.rows * pixelsPerRow
+                           : 0
+                        ),
+                        stripe.rows * pixelsPerRow
+                     );
+                  }
+                  return totalRowsSoFar + stripe.rows * pixelsPerRow;
+               },
+               Math.round(newCanvas.height - (numRows + self.getNumRows(args.colours)) * pixelsPerRow / 2)
+            );
          }
          if (args.isVertical) {
-            args.colours.reduce(function (totalRowsSoFar, stripe) {
-               if (stripe.hasOwnProperty('colour')) {
-                  newCanvas.getContext('2d').fillStyle = stripe.colour;
-                  newCanvas.getContext('2d').fillRect(totalRowsSoFar, 0, stripe.rows * pixelsPerRow, newCanvas.height - (
-                     args.isHorizontal
-                     ? newCanvas.width - totalRowsSoFar - stripe.rows * pixelsPerRow
-                     : 0
-                  ));
-               }
-               return totalRowsSoFar + stripe.rows * pixelsPerRow;
-            }, Math.round(newCanvas.width - (numRows + self.getNumRows(args.colours)) * pixelsPerRow / 2));
+            args.colours.reduce(
+               function (totalRowsSoFar, stripe) {
+                  if (stripe.hasOwnProperty('colour')) {
+                     newCanvas.getContext('2d').fillStyle = stripe.colour;
+                     newCanvas.getContext('2d').fillRect(
+                        totalRowsSoFar,
+                        0,
+                        stripe.rows * pixelsPerRow,
+                        newCanvas.height - (
+                           args.isHorizontal
+                           ? newCanvas.width - totalRowsSoFar - stripe.rows * pixelsPerRow
+                           : 0
+                        )
+                     );
+                  }
+                  return totalRowsSoFar + stripe.rows * pixelsPerRow;
+               },
+               Math.round(newCanvas.width - (numRows + self.getNumRows(args.colours)) * pixelsPerRow / 2)
+            );
          }
          return newCanvas;
       },
@@ -2174,7 +2190,10 @@ const counties = (function () {
          return newElement;
       },
       createInfo: () => util.deepFreeze(util.createInfo()),
-      getNumRows: (colours) => colours.reduce((numRowsSoFar, stripe) => numRowsSoFar + stripe.rows, 0)
+      getNumRows: (colours) => colours.reduce(
+         (numRowsSoFar, stripe) => numRowsSoFar + stripe.rows,
+         0
+      )
    });
 
    return self;
