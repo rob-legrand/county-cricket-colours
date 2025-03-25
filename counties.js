@@ -1564,11 +1564,18 @@ const counties = (function () {
             classLevel: 7,
             country: 'Scotland',
             colours: [
-               {rows: 6, colour: 'rgb(0, 90, 45)'},
-               {rows: 2},
-               {rows: 6, colour: 'rgb(0, 0, 0)'}
+               {rows: 2, colour: 'rgb(0, 0, 75)'},
+               {rows: 1},
+               {rows: 7, colour: 'rgb(0, 90, 60)'},
+               {rows: 1},
+               {rows: 2, colour: 'rgb(0, 0, 75)'}
             ],
             alternateColours: [
+               [
+                  {rows: 6, colour: 'rgb(0, 90, 45)'},
+                  {rows: 2},
+                  {rows: 6, colour: 'rgb(0, 0, 0)'}
+               ],
                [
                   {rows: 2, colour: 'rgb(0, 0, 0)'},
                   {rows: 2},
@@ -1637,8 +1644,8 @@ const counties = (function () {
                   {rows: 6, colour: 'rgb(0, 45, 165)'}
                ]
             ],
-            backgroundColour: 'rgb(0, 90, 45)',
-            borderColour: 'rgb(0, 0, 0)'
+            backgroundColour: 'rgb(0, 90, 60)',
+            borderColour: 'rgb(0, 0, 75)'
          },
          {
             countyName: 'Flintshire',
