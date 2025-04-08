@@ -3,6 +3,12 @@
 const counties = (function () {
 
    const util = Object.freeze({
+      convertToRgb: (array) => (
+         'rgb('
+         + array[0] + ', '
+         + array[1] + ', '
+         + array[2] + ')'
+      ),
       creamColour: 'rgb(255, 245, 225)',
       createInfo: () => [
          {
