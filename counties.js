@@ -23,99 +23,99 @@ const counties = (function () {
             classLevel: 1,
             country: 'England',
             colours: [
-               {rows: 3, colour: 'rgb(0, 30, 90)'},
-               {rows: 2, colour: 'rgb(255, 180, 15)'},
-               {rows: 2, colour: 'rgb(60, 150, 210)'},
-               {rows: 3, colour: 'rgb(0, 30, 90)'}
+               {rows: 3, colour: util.convertToRgb(susDarkBlue)},
+               {rows: 2, colour: util.convertToRgb(susGold)},
+               {rows: 2, colour: util.convertToRgb(susLightBlue)},
+               {rows: 3, colour: util.convertToRgb(susDarkBlue)}
             ],
             alternateColours: [
                [
-                  {rows: 2, colour: 'rgb(0, 30, 90)'},
+                  {rows: 2, colour: util.convertToRgb(susDarkBlue)},
                   {rows: 1},
-                  {rows: 2, colour: 'rgb(255, 180, 15)'},
-                  {rows: 2, colour: 'rgb(60, 150, 210)'},
+                  {rows: 2, colour: util.convertToRgb(susGold)},
+                  {rows: 2, colour: util.convertToRgb(susLightBlue)},
                   {rows: 1},
-                  {rows: 2, colour: 'rgb(0, 30, 90)'}
+                  {rows: 2, colour: util.convertToRgb(susDarkBlue)}
                ],
                [
-                  {rows: 1, colour: 'rgb(0, 30, 90)'},
+                  {rows: 1, colour: util.convertToRgb(susDarkBlue)},
                   {rows: 1},
-                  {rows: 2, colour: 'rgb(255, 180, 15)'},
-                  {rows: 2, colour: 'rgb(0, 30, 90)'},
-                  {rows: 2, colour: 'rgb(60, 150, 210)'},
+                  {rows: 2, colour: util.convertToRgb(susGold)},
+                  {rows: 2, colour: util.convertToRgb(susDarkBlue)},
+                  {rows: 2, colour: util.convertToRgb(susLightBlue)},
                   {rows: 1},
-                  {rows: 1, colour: 'rgb(0, 30, 90)'}
+                  {rows: 1, colour: util.convertToRgb(susDarkBlue)}
                ],
                [
-                  {rows: 1, colour: 'rgb(0, 30, 90)'},
+                  {rows: 1, colour: util.convertToRgb(susDarkBlue)},
                   {rows: 1},
-                  {rows: 3, colour: 'rgb(255, 180, 15)'},
-                  {rows: 3, colour: 'rgb(60, 150, 210)'},
+                  {rows: 3, colour: util.convertToRgb(susGold)},
+                  {rows: 3, colour: util.convertToRgb(susLightBlue)},
                   {rows: 1},
-                  {rows: 1, colour: 'rgb(0, 30, 90)'}
+                  {rows: 1, colour: util.convertToRgb(susDarkBlue)}
                ],
                [
-                  {rows: 2, colour: 'rgb(0, 30, 90)'},
-                  {rows: 3, colour: 'rgb(255, 180, 15)'},
-                  {rows: 3, colour: 'rgb(60, 150, 210)'},
-                  {rows: 2, colour: 'rgb(0, 30, 90)'}
+                  {rows: 2, colour: util.convertToRgb(susDarkBlue)},
+                  {rows: 3, colour: util.convertToRgb(susGold)},
+                  {rows: 3, colour: util.convertToRgb(susLightBlue)},
+                  {rows: 2, colour: util.convertToRgb(susDarkBlue)}
                ],
                [
-                  {rows: 2, colour: 'rgb(0, 30, 90)'},
-                  {rows: 2, colour: 'rgb(60, 150, 210)'},
-                  {rows: 2, colour: 'rgb(255, 180, 15)'},
-                  {rows: 2, colour: 'rgb(60, 150, 210)'},
-                  {rows: 2, colour: 'rgb(0, 30, 90)'}
+                  {rows: 2, colour: util.convertToRgb(susDarkBlue)},
+                  {rows: 2, colour: util.convertToRgb(susLightBlue)},
+                  {rows: 2, colour: util.convertToRgb(susGold)},
+                  {rows: 2, colour: util.convertToRgb(susLightBlue)},
+                  {rows: 2, colour: util.convertToRgb(susDarkBlue)}
                ],
                [
-                  {rows: 3, colour: 'rgb(0, 30, 90)'},
-                  {rows: 1, colour: 'rgb(60, 150, 210)'},
-                  {rows: 2, colour: 'rgb(255, 180, 15)'},
-                  {rows: 1, colour: 'rgb(60, 150, 210)'},
-                  {rows: 3, colour: 'rgb(0, 30, 90)'}
+                  {rows: 3, colour: util.convertToRgb(susDarkBlue)},
+                  {rows: 1, colour: util.convertToRgb(susLightBlue)},
+                  {rows: 2, colour: util.convertToRgb(susGold)},
+                  {rows: 1, colour: util.convertToRgb(susLightBlue)},
+                  {rows: 3, colour: util.convertToRgb(susDarkBlue)}
                ],
                [
-                  {rows: 2, colour: 'rgb(0, 30, 90)'},
-                  {rows: 1, colour: 'rgb(255, 180, 15)'},
-                  {rows: 4, colour: 'rgb(60, 150, 210)'},
-                  {rows: 1, colour: 'rgb(255, 180, 15)'},
-                  {rows: 2, colour: 'rgb(0, 30, 90)'}
+                  {rows: 2, colour: util.convertToRgb(susDarkBlue)},
+                  {rows: 1, colour: util.convertToRgb(susGold)},
+                  {rows: 4, colour: util.convertToRgb(susLightBlue)},
+                  {rows: 1, colour: util.convertToRgb(susGold)},
+                  {rows: 2, colour: util.convertToRgb(susDarkBlue)}
                ],
                [
-                  {rows: 3, colour: 'rgb(0, 30, 90)'},
-                  {rows: 1, colour: 'rgb(255, 180, 15)'},
-                  {rows: 2, colour: 'rgb(60, 150, 210)'},
-                  {rows: 1, colour: 'rgb(255, 180, 15)'},
-                  {rows: 3, colour: 'rgb(0, 30, 90)'}
+                  {rows: 3, colour: util.convertToRgb(susDarkBlue)},
+                  {rows: 1, colour: util.convertToRgb(susGold)},
+                  {rows: 2, colour: util.convertToRgb(susLightBlue)},
+                  {rows: 1, colour: util.convertToRgb(susGold)},
+                  {rows: 3, colour: util.convertToRgb(susDarkBlue)}
                ],
                [
-                  {rows: 2, colour: 'rgb(0, 30, 90)'},
+                  {rows: 2, colour: util.convertToRgb(susDarkBlue)},
                   {rows: 1},
-                  {rows: 1, colour: 'rgb(255, 180, 15)'},
-                  {rows: 2, colour: 'rgb(60, 150, 210)'},
-                  {rows: 1, colour: 'rgb(255, 180, 15)'},
+                  {rows: 1, colour: util.convertToRgb(susGold)},
+                  {rows: 2, colour: util.convertToRgb(susLightBlue)},
+                  {rows: 1, colour: util.convertToRgb(susGold)},
                   {rows: 1},
-                  {rows: 2, colour: 'rgb(0, 30, 90)'}
+                  {rows: 2, colour: util.convertToRgb(susDarkBlue)}
                ],
                [
-                  {rows: 2, colour: 'rgb(60, 150, 210)'},
-                  {rows: 1, colour: 'rgb(255, 180, 15)'},
-                  {rows: 4, colour: 'rgb(0, 30, 90)'},
-                  {rows: 1, colour: 'rgb(255, 180, 15)'},
-                  {rows: 2, colour: 'rgb(60, 150, 210)'}
+                  {rows: 2, colour: util.convertToRgb(susLightBlue)},
+                  {rows: 1, colour: util.convertToRgb(susGold)},
+                  {rows: 4, colour: util.convertToRgb(susDarkBlue)},
+                  {rows: 1, colour: util.convertToRgb(susGold)},
+                  {rows: 2, colour: util.convertToRgb(susLightBlue)}
                ],
                [
-                  {rows: 2, colour: 'rgb(60, 150, 210)'},
+                  {rows: 2, colour: util.convertToRgb(susLightBlue)},
                   {rows: 1},
-                  {rows: 2, colour: 'rgb(255, 180, 15)'},
-                  {rows: 2, colour: 'rgb(0, 30, 90)'},
+                  {rows: 2, colour: util.convertToRgb(susGold)},
+                  {rows: 2, colour: util.convertToRgb(susDarkBlue)},
                   {rows: 1},
-                  {rows: 2, colour: 'rgb(60, 150, 210)'}
+                  {rows: 2, colour: util.convertToRgb(susLightBlue)}
                ]
             ],
-            textColour: 'rgb(255, 180, 15)',
-            backgroundColour: 'rgb(0, 30, 90)',
-            borderColour: 'rgb(60, 150, 210)'
+            textColour: util.convertToRgb(susGold),
+            backgroundColour: util.convertToRgb(susDarkBlue),
+            borderColour: util.convertToRgb(susLightBlue)
          },
          {
             countyName: 'Kent',
