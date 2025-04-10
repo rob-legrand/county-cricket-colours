@@ -233,13 +233,13 @@ const counties = (function () {
             classLevel: 1,
             country: 'England',
             colours: [
-               {rows: 4, colour: 'rgb(0, 60, 0)'},
-               {rows: 4, colour: 'rgb(255, 225, 0)'},
-               {rows: 4, colour: 'rgb(0, 60, 0)'}
+               {rows: 4, colour: util.convertToRgb(notGreen)},
+               {rows: 4, colour: util.convertToRgb(notGold)},
+               {rows: 4, colour: util.convertToRgb(notGreen)}
             ],
-            textColour: 'rgb(255, 225, 0)',
-            backgroundColour: 'rgb(0, 60, 0)',
-            borderColour: 'rgb(255, 225, 0)'
+            textColour: util.convertToRgb(notGold),
+            backgroundColour: util.convertToRgb(notGreen),
+            borderColour: util.convertToRgb(notGold)
          },
          {
             countyName: 'Yorkshire',
