@@ -216,11 +216,11 @@ const counties = (function () {
             classLevel: 1,
             country: 'England',
             colours: [
-               {rows: 6, colour: 'rgb(90, 45, 15)'},
+               {rows: 6, colour: util.convertToRgb(surChocolate)},
                {rows: 2},
-               {rows: 6, colour: 'rgb(90, 45, 15)'}
+               {rows: 6, colour: util.convertToRgb(surChocolate)}
             ],
-            backgroundColour: 'rgb(90, 45, 15)'
+            backgroundColour: util.convertToRgb(surChocolate)
          },
          {
             countyName: 'Nottinghamshire',
