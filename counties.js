@@ -4,6 +4,8 @@ const counties = (function () {
 
    const kenBlue = [0, 30, 75];
    const kenRed = [150, 0, 30];
+   const notGold = [255, 225, 0];
+   const notGreen = [0, 60, 0];
    const surChocolate = [90, 45, 15];
    const susDarkBlue = [0, 30, 90];
    const susGold = [255, 180, 15];
