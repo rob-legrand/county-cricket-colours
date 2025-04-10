@@ -10,6 +10,9 @@ const counties = (function () {
    const susDarkBlue = [0, 30, 90];
    const susGold = [255, 180, 15];
    const susLightBlue = [60, 150, 210];
+   const yrkDarkBlue = [30, 30, 60];
+   const yrkGold = [240, 225, 90];
+   const yrkLightBlue = [135, 165, 195];
 
    const util = Object.freeze({
       convertToRgb: (array) => (
