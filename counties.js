@@ -253,13 +253,13 @@ const counties = (function () {
             classLevel: 1,
             country: 'England',
             colours: [
-               {rows: 5, colour: 'rgb(135, 165, 195)'},
-               {rows: 3, colour: 'rgb(240, 225, 90)'},
-               {rows: 5, colour: 'rgb(30, 30, 60)'}
+               {rows: 5, colour: util.convertToRgb(yrkLightBlue)},
+               {rows: 3, colour: util.convertToRgb(yrkGold)},
+               {rows: 5, colour: util.convertToRgb(yrkDarkBlue)}
             ],
-            textColour: 'rgb(240, 225, 90)',
-            backgroundColour: 'rgb(30, 30, 60)',
-            borderColour: 'rgb(135, 165, 195)'
+            textColour: util.convertToRgb(yrkGold),
+            backgroundColour: util.convertToRgb(yrkDarkBlue),
+            borderColour: util.convertToRgb(yrkLightBlue)
          },
          {
             countyName: 'Middlesex',
