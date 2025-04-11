@@ -4,6 +4,9 @@ const counties = (function () {
 
    const kenBlue = [0, 30, 75];
    const kenRed = [150, 0, 30];
+   const lanBlue = [0, 30, 60];
+   const lanGreen = [0, 90, 30];
+   const lanRed = [225, 0, 30];
    const mdxBlue = [0, 0, 60];
    const notGold = [255, 225, 0];
    const notGreen = [0, 60, 0];
