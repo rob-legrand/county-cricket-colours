@@ -271,11 +271,11 @@ const counties = (function () {
             classLevel: 1,
             country: 'England',
             colours: [
-               {rows: 6, colour: 'rgb(0, 0, 60)'},
+               {rows: 6, colour: util.convertToRgb(mdxBlue)},
                {rows: 2},
-               {rows: 6, colour: 'rgb(0, 0, 60)'}
+               {rows: 6, colour: util.convertToRgb(mdxBlue)}
             ],
-            backgroundColour: 'rgb(0, 0, 60)'
+            backgroundColour: util.convertToRgb(mdxBlue)
          },
          {
             countyName: 'Lancashire',
