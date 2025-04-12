@@ -312,17 +312,17 @@ const counties = (function () {
             classLevel: 1,
             country: 'England',
             colours: [
-               {rows: 4, colour: 'rgb(0, 0, 75)'},
-               {rows: 1, colour: 'rgb(240, 210, 150)'},
-               {rows: 1, colour: 'rgb(120, 45, 15)'},
+               {rows: 4, colour: util.convertToRgb(glsBlue)},
+               {rows: 1, colour: util.convertToRgb(glsGold)},
+               {rows: 1, colour: util.convertToRgb(glsBrown)},
                {rows: 2},
-               {rows: 1, colour: 'rgb(30, 180, 60)'},
-               {rows: 1, colour: 'rgb(225, 30, 60)'},
-               {rows: 4, colour: 'rgb(0, 0, 75)'}
+               {rows: 1, colour: util.convertToRgb(glsGreen)},
+               {rows: 1, colour: util.convertToRgb(glsRed)},
+               {rows: 4, colour: util.convertToRgb(glsBlue)}
             ],
-            textColour: 'rgb(240, 210, 150)',
-            backgroundColour: 'rgb(0, 0, 75)',
-            borderColour: 'rgb(120, 45, 15)'
+            textColour: util.convertToRgb(glsGold),
+            backgroundColour: util.convertToRgb(glsBlue),
+            borderColour: util.convertToRgb(glsBrown)
          },
          {
             countyName: 'Derbyshire',
