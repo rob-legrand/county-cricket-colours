@@ -2,6 +2,11 @@
 
 const counties = (function () {
 
+   const glsBlue = [0, 0, 75];
+   const glsBrown = [120, 45, 15];
+   const glsGold = [240, 210, 150];
+   const glsGreen = [30, 180, 60];
+   const glsRed = [225, 30, 60];
    const kenBlue = [0, 30, 75];
    const kenRed = [150, 0, 30];
    const lanBlue = [0, 30, 60];
