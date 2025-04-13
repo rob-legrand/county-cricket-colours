@@ -155,37 +155,36 @@ const counties = (function () {
             ],
             alternateColours: [
                [
-                  {rows: 6, colour: util.convertToRgb(kenBlue)},
-                  {rows: 3},
-                  {rows: 6, colour: util.convertToRgb(kenBlue)}
-               ],
-               [
-                  {rows: 6, colour: util.convertToRgb(kenBlue)},
-                  {rows: 3},
-                  {rows: 6, colour: util.convertToRgb(kenRed)}
-               ],
-               [
                   {rows: 4, colour: util.convertToRgb(kenBlue)},
                   {rows: 2},
                   {rows: 4, colour: util.convertToRgb(kenRed)}
                ],
                [
-                  {rows: 1, colour: util.convertToRgb(kenBlue)},
-                  {rows: 1},
+                  {rows: 4, colour: util.convertToRgb(kenBlue)},
+                  {rows: 2},
+                  {rows: 4, colour: util.convertToRgb(kenBlue)}
+               ],
+               [
                   {rows: 4, colour: util.convertToRgb(kenRed)},
-                  {rows: 3},
-                  {rows: 4, colour: util.convertToRgb(kenRed)},
-                  {rows: 1},
-                  {rows: 1, colour: util.convertToRgb(kenBlue)}
+                  {rows: 2},
+                  {rows: 4, colour: util.convertToRgb(kenBlue)}
                ],
                [
                   {rows: 2, colour: util.convertToRgb(kenBlue)},
-                  {rows: 1},
-                  {rows: 3, colour: util.convertToRgb(kenRed)},
-                  {rows: 3},
-                  {rows: 3, colour: util.convertToRgb(kenRed)},
-                  {rows: 1},
+                  {rows: 2, colour: util.convertToRgb(kenRed)},
+                  {rows: 2},
+                  {rows: 2, colour: util.convertToRgb(kenRed)},
                   {rows: 2, colour: util.convertToRgb(kenBlue)}
+               ],
+               [
+                  {rows: 2, colour: util.convertToRgb(kenBlue)},
+                  {rows: 6, colour: util.convertToRgb(kenRed)},
+                  {rows: 2, colour: util.convertToRgb(kenBlue)}
+               ],
+               [
+                  {rows: 3, colour: util.convertToRgb(kenBlue)},
+                  {rows: 4, colour: util.convertToRgb(kenRed)},
+                  {rows: 3, colour: util.convertToRgb(kenBlue)}
                ],
                [
                   {rows: 1, colour: util.convertToRgb(kenBlue)},
