@@ -357,15 +357,15 @@ const counties = (function () {
             classLevel: 2,
             country: 'England',
             colours: [
-               {rows: 4, colour: 'rgb(0, 0, 60)'},
-               {rows: 2, colour: 'rgb(255, 225, 0)'},
+               {rows: 4, colour: util.convertToRgb(hamBlue)},
+               {rows: 2, colour: util.convertToRgb(hamGold)},
                {rows: 3},
-               {rows: 2, colour: 'rgb(255, 225, 0)'},
-               {rows: 4, colour: 'rgb(0, 0, 60)'}
+               {rows: 2, colour: util.convertToRgb(hamGold)},
+               {rows: 4, colour: util.convertToRgb(hamBlue)}
             ],
-            textColour: 'rgb(255, 225, 0)',
-            backgroundColour: 'rgb(0, 0, 60)',
-            borderColour: 'rgb(255, 225, 0)'
+            textColour: util.convertToRgb(hamGold),
+            backgroundColour: util.convertToRgb(hamBlue),
+            borderColour: util.convertToRgb(hamGold)
          },
          {
             countyName: 'Somerset',
