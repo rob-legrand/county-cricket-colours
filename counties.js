@@ -552,15 +552,15 @@ const counties = (function () {
             classLevel: 2,
             country: 'England',
             colours: [
-               {rows: 4, colour: 'rgb(30, 30, 60)'},
-               {rows: 1, colour: 'rgb(255, 225, 60)'},
-               {rows: 2, colour: 'rgb(240, 240, 240)'},
-               {rows: 1, colour: 'rgb(255, 225, 60)'},
-               {rows: 4, colour: 'rgb(30, 30, 60)'}
+               {rows: 4, colour: util.convertToRgb(warBlue)},
+               {rows: 1, colour: util.convertToRgb(warGold)},
+               {rows: 2, colour: util.convertToRgb(warSilver)},
+               {rows: 1, colour: util.convertToRgb(warGold)},
+               {rows: 4, colour: util.convertToRgb(warBlue)}
             ],
-            textColour: 'rgb(240, 240, 240)',
-            backgroundColour: 'rgb(30, 30, 60)',
-            borderColour: 'rgb(255, 225, 60)'
+            textColour: util.convertToRgb(warSilver),
+            backgroundColour: util.convertToRgb(warBlue),
+            borderColour: util.convertToRgb(warGold)
          },
          {
             countyName: 'Staffordshire',
