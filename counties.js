@@ -2,6 +2,8 @@
 
 const counties = (function () {
 
+   const cheBlack = [0, 0, 0];
+   const chePurple = [90, 0, 120];
    const drbBlue = [180, 225, 240];
    const drbBrown = [75, 30, 15];
    const drbGold = [255, 225, 0];
