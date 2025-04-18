@@ -592,12 +592,12 @@ const counties = (function () {
             classLevel: 2,
             country: 'England',
             colours: [
-               {rows: 6, colour: 'rgb(90, 0, 120)'},
+               {rows: 6, colour: util.convertToRgb(chePurple)},
                {rows: 2},
-               {rows: 6, colour: 'rgb(0, 0, 0)'}
+               {rows: 6, colour: util.convertToRgb(cheBlack)}
             ],
-            backgroundColour: 'rgb(90, 0, 120)',
-            borderColour: 'rgb(0, 0, 0)'
+            backgroundColour: util.convertToRgb(chePurple),
+            borderColour: util.convertToRgb(cheBlack)
          },
          {
             countyName: 'Norfolk',
