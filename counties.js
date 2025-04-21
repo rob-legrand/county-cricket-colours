@@ -674,13 +674,13 @@ const counties = (function () {
             classLevel: 3,
             country: 'England',
             colours: [
-               {rows: 5, colour: 'rgb(0, 0, 90)'},
-               {rows: 3, colour: 'rgb(240, 210, 0)'},
-               {rows: 5, colour: 'rgb(105, 0, 30)'}
+               {rows: 5, colour: util.convertToRgb(durBlue)},
+               {rows: 3, colour: util.convertToRgb(durGold)},
+               {rows: 5, colour: util.convertToRgb(durMaroon)}
             ],
-            textColour: 'rgb(240, 210, 0)',
-            backgroundColour: 'rgb(0, 0, 90)',
-            borderColour: 'rgb(105, 0, 30)'
+            textColour: util.convertToRgb(durGold),
+            backgroundColour: util.convertToRgb(durBlue),
+            borderColour: util.convertToRgb(durMaroon)
          },
          {
             countyName: 'Northumberland',
