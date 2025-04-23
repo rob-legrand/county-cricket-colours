@@ -4,6 +4,9 @@ const counties = (function () {
 
    const cheBlack = [0, 0, 0];
    const chePurple = [90, 0, 120];
+   const devDarkBlue = [15, 15, 60];
+   const devGold = [240, 210, 90];
+   const devLightBlue = [0, 60, 195];
    const drbBlue = [180, 225, 240];
    const drbBrown = [75, 30, 15];
    const drbGold = [255, 225, 0];
