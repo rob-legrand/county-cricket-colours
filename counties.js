@@ -733,24 +733,24 @@ const counties = (function () {
             classLevel: 3,
             country: 'England',
             colours: [
-               {rows: 3, colour: 'rgb(15, 15, 60)'},
-               {rows: 2, colour: 'rgb(240, 210, 90)'},
-               {rows: 4, colour: 'rgb(0, 60, 195)'},
-               {rows: 2, colour: 'rgb(240, 210, 90)'},
-               {rows: 3, colour: 'rgb(15, 15, 60)'}
+               {rows: 3, colour: util.convertToRgb(devDarkBlue)},
+               {rows: 2, colour: util.convertToRgb(devGold)},
+               {rows: 4, colour: util.convertToRgb(devLightBlue)},
+               {rows: 2, colour: util.convertToRgb(devGold)},
+               {rows: 3, colour: util.convertToRgb(devDarkBlue)}
             ],
             alternateColours: [
                [
-                  {rows: 3, colour: 'rgb(0, 0, 45)'},
-                  {rows: 2, colour: 'rgb(240, 210, 90)'},
-                  {rows: 4, colour: 'rgb(0, 60, 195)'},
-                  {rows: 2, colour: 'rgb(240, 210, 90)'},
-                  {rows: 3, colour: 'rgb(0, 0, 45)'}
+                  {rows: 3, colour: util.convertToRgb([0, 0, 45])},
+                  {rows: 2, colour: util.convertToRgb(devGold)},
+                  {rows: 4, colour: util.convertToRgb(devLightBlue)},
+                  {rows: 2, colour: util.convertToRgb(devGold)},
+                  {rows: 3, colour: util.convertToRgb([0, 0, 45])}
                ]
             ],
-            textColour: 'rgb(240, 210, 90)',
-            backgroundColour: 'rgb(15, 15, 60)',
-            borderColour: 'rgb(0, 60, 195)'
+            textColour: util.convertToRgb(devGold),
+            backgroundColour: util.convertToRgb(devDarkBlue),
+            borderColour: util.convertToRgb(devLightBlue)
          },
          {
             countyName: 'Lincolnshire',
