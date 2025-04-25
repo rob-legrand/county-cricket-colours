@@ -2,6 +2,9 @@
 
 const counties = (function () {
 
+   const camBlue = [165, 225, 225];
+   const camMaroon = [105, 0, 15];
+   const camStraw = [255, 225, 160];
    const cheBlack = [0, 0, 0];
    const chePurple = [90, 0, 120];
    const devDarkBlue = [15, 15, 60];
