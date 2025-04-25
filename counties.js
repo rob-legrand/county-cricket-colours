@@ -802,13 +802,13 @@ const counties = (function () {
             classLevel: 4,
             country: 'England',
             colours: [
-               {rows: 5, colour: 'rgb(0, 60, 30)'},
+               {rows: 5, colour: util.convertToRgb(worGreen)},
                {rows: 2},
-               {rows: 2, colour: 'rgb(0, 0, 0)'},
-               {rows: 5, colour: 'rgb(0, 60, 30)'}
+               {rows: 2, colour: util.convertToRgb(worBlack)},
+               {rows: 5, colour: util.convertToRgb(worGreen)}
             ],
-            backgroundColour: 'rgb(0, 60, 30)',
-            borderColour: 'rgb(0, 0, 0)'
+            backgroundColour: util.convertToRgb(worGreen),
+            borderColour: util.convertToRgb(worBlack)
          },
          {
             countyName: 'Shropshire',
