@@ -782,14 +782,14 @@ const counties = (function () {
             classLevel: 4,
             country: 'England',
             colours: [
-               {rows: 3, colour: 'rgb(105, 0, 15)'},
-               {rows: 4, colour: 'rgb(165, 225, 225)'},
-               {rows: 4, colour: 'rgb(255, 225, 160)'},
-               {rows: 3, colour: 'rgb(105, 0, 15)'}
+               {rows: 3, colour: util.convertToRgb(camMaroon)},
+               {rows: 4, colour: util.convertToRgb(camBlue)},
+               {rows: 4, colour: util.convertToRgb(camStraw)},
+               {rows: 3, colour: util.convertToRgb(camMaroon)}
             ],
-            textColour: 'rgb(255, 225, 160)',
-            backgroundColour: 'rgb(105, 0, 15)',
-            borderColour: 'rgb(165, 225, 225)'
+            textColour: util.convertToRgb(camStraw),
+            backgroundColour: util.convertToRgb(camMaroon),
+            borderColour: util.convertToRgb(camBlue)
          },
          {
             countyName: 'Worcestershire',
