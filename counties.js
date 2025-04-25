@@ -65,6 +65,7 @@ const counties = (function () {
    const warBlue = [30, 30, 60];
    const warGold = [255, 225, 60];
    const warSilver = [240, 240, 240];
+   const wilGreen = [0, 60, 30];
    const worBlack = [0, 0, 0];
    const worGreen = [0, 60, 30];
    const yrkDarkBlue = [30, 30, 60];
