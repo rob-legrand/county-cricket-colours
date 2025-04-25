@@ -821,12 +821,12 @@ const counties = (function () {
             classLevel: 4,
             country: 'England',
             colours: [
-               {rows: 7, colour: 'rgb(240, 195, 30)'},
-               {rows: 7, colour: 'rgb(0, 30, 120)'}
+               {rows: 7, colour: util.convertToRgb(salGold)},
+               {rows: 7, colour: util.convertToRgb(salBlue)}
             ],
-            textColour: 'rgb(240, 195, 30)',
-            backgroundColour: 'rgb(0, 30, 120)',
-            borderColour: 'rgb(240, 195, 30)'
+            textColour: util.convertToRgb(salGold),
+            backgroundColour: util.convertToRgb(salBlue),
+            borderColour: util.convertToRgb(salGold)
          },
          {
             countyName: 'Wiltshire',
