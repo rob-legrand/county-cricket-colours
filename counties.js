@@ -1004,6 +1004,22 @@ const counties = (function () {
                {rows: 2},
                {rows: 2, colour: 'rgb(0, 90, 30)'}
             ],
+            alternateColours: [
+               [
+                  {rows: 1, colour: 'rgb(0, 90, 30)'},
+                  {rows: 2},
+                  {rows: 2, colour: 'rgb(0, 90, 30)'},
+                  {rows: 2},
+                  {rows: 3, colour: 'rgb(0, 90, 30)'}
+               ],
+               [
+                  {rows: 2, colour: 'rgb(0, 90, 30)'},
+                  {rows: 1},
+                  {rows: 2, colour: 'rgb(0, 90, 30)'},
+                  {rows: 1},
+                  {rows: 4, colour: 'rgb(0, 90, 30)'}
+               ]
+            ],
             textColour: 'rgb(0, 90, 30)',
             borderColour: 'rgb(0, 90, 30)'
          },
