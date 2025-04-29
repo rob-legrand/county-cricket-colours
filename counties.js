@@ -512,6 +512,16 @@ const counties = (function () {
                   {rows: 3, colour: util.convertToRgb(essBlue)}
                ],
                [
+                  {rows: 4, colour: util.convertToRgb(essRed)},
+                  {rows: 2, colour: util.convertToRgb(essGold)},
+                  {rows: 4, colour: util.convertToRgb(essBlue)}
+               ],
+               [
+                  {rows: 4, colour: util.convertToRgb(essBlue)},
+                  {rows: 2, colour: util.convertToRgb(essGold)},
+                  {rows: 4, colour: util.convertToRgb(essRed)}
+               ],
+               [
                   {rows: 3, colour: util.convertToRgb(essBlue)},
                   {rows: 2, colour: util.convertToRgb(essGold)},
                   {rows: 5, colour: util.convertToRgb(essRed)}
