@@ -984,36 +984,36 @@ const counties = (function () {
             classLevel: 5,
             country: 'Wales',
             colours: [
-               {rows: 1, colour: 'rgb(225, 30, 0)'},
-               {rows: 2, colour: 'rgb(0, 0, 165)'},
-               {rows: 2, colour: 'rgb(225, 210, 30)'},
-               {rows: 2, colour: 'rgb(0, 0, 165)'},
-               {rows: 2, colour: 'rgb(225, 210, 30)'},
-               {rows: 2, colour: 'rgb(0, 0, 165)'},
-               {rows: 2, colour: 'rgb(225, 210, 30)'},
-               {rows: 1, colour: 'rgb(225, 30, 0)'}
+               {rows: 1, colour: util.convertToRgb(radRed)},
+               {rows: 2, colour: util.convertToRgb(radBlue)},
+               {rows: 2, colour: util.convertToRgb(radGold)},
+               {rows: 2, colour: util.convertToRgb(radBlue)},
+               {rows: 2, colour: util.convertToRgb(radGold)},
+               {rows: 2, colour: util.convertToRgb(radBlue)},
+               {rows: 2, colour: util.convertToRgb(radGold)},
+               {rows: 1, colour: util.convertToRgb(radRed)}
             ],
             alternateColours: [
                [
-                  {rows: 2, colour: 'rgb(0, 0, 165)'},
-                  {rows: 2, colour: 'rgb(225, 210, 30)'},
-                  {rows: 2, colour: 'rgb(0, 0, 165)'},
-                  {rows: 2, colour: 'rgb(225, 210, 30)'},
-                  {rows: 2, colour: 'rgb(0, 0, 165)'},
-                  {rows: 2, colour: 'rgb(225, 210, 30)'},
-                  {rows: 2, colour: 'rgb(0, 0, 165)'}
+                  {rows: 2, colour: util.convertToRgb(radBlue)},
+                  {rows: 2, colour: util.convertToRgb(radGold)},
+                  {rows: 2, colour: util.convertToRgb(radBlue)},
+                  {rows: 2, colour: util.convertToRgb(radGold)},
+                  {rows: 2, colour: util.convertToRgb(radBlue)},
+                  {rows: 2, colour: util.convertToRgb(radGold)},
+                  {rows: 2, colour: util.convertToRgb(radBlue)}
                ],
                [
-                  {rows: 4, colour: 'rgb(225, 30, 0)'},
-                  {rows: 2, colour: 'rgb(255, 210, 0)'},
-                  {rows: 2, colour: 'rgb(30, 45, 240)'},
-                  {rows: 2, colour: 'rgb(255, 210, 0)'},
-                  {rows: 4, colour: 'rgb(225, 30, 0)'}
+                  {rows: 4, colour: util.convertToRgb(radRed)},
+                  {rows: 2, colour: util.convertToRgb([255, 210, 0])},
+                  {rows: 2, colour: util.convertToRgb([30, 45, 240])},
+                  {rows: 2, colour: util.convertToRgb([255, 210, 0])},
+                  {rows: 4, colour: util.convertToRgb(radRed)}
                ]
             ],
-            textColour: 'rgb(225, 210, 30)',
-            backgroundColour: 'rgb(0, 0, 165)',
-            borderColour: 'rgb(225, 30, 0)'
+            textColour: util.convertToRgb(radGold),
+            backgroundColour: util.convertToRgb(radBlue),
+            borderColour: util.convertToRgb(radRed)
          },
          {
             countyName: 'Dorset',
