@@ -964,13 +964,13 @@ const counties = (function () {
             classLevel: 4,
             country: 'England',
             colours: [
-               {rows: 5, colour: 'rgb(165, 0, 30)'},
-               {rows: 4, colour: 'rgb(240, 225, 0)'},
-               {rows: 5, colour: 'rgb(0, 60, 30)'}
+               {rows: 5, colour: util.convertToRgb(cumRed)},
+               {rows: 4, colour: util.convertToRgb(cumGold)},
+               {rows: 5, colour: util.convertToRgb(cumGreen)}
             ],
-            textColour: 'rgb(240, 225, 0)',
-            backgroundColour: 'rgb(0, 60, 30)',
-            borderColour: 'rgb(165, 0, 30)'
+            textColour: util.convertToRgb(cumGold),
+            backgroundColour: util.convertToRgb(cumGreen),
+            borderColour: util.convertToRgb(cumRed)
          },
          {
             countyName: 'Radnorshire',
