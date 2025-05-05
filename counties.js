@@ -995,6 +995,38 @@ const counties = (function () {
             ],
             alternateColours: [
                [
+                  {rows: 1, colour: util.convertToRgb(radRed)},
+                  {rows: 1, colour: util.convertToRgb(radBlue)},
+                  {rows: 2, colour: util.convertToRgb(radGold)},
+                  {rows: 2, colour: util.convertToRgb(radBlue)},
+                  {rows: 2, colour: util.convertToRgb(radGold)},
+                  {rows: 2, colour: util.convertToRgb(radBlue)},
+                  {rows: 2, colour: util.convertToRgb(radGold)},
+                  {rows: 1, colour: util.convertToRgb(radBlue)},
+                  {rows: 1, colour: util.convertToRgb(radRed)}
+               ],
+               [
+                  {rows: 1, colour: util.convertToRgb(radRed)},
+                  {rows: 2, colour: util.convertToRgb(radGold)},
+                  {rows: 2, colour: util.convertToRgb(radBlue)},
+                  {rows: 2, colour: util.convertToRgb(radGold)},
+                  {rows: 2, colour: util.convertToRgb(radBlue)},
+                  {rows: 2, colour: util.convertToRgb(radGold)},
+                  {rows: 2, colour: util.convertToRgb(radBlue)},
+                  {rows: 1, colour: util.convertToRgb(radRed)}
+               ],
+               [
+                  {rows: 1, colour: util.convertToRgb(radRed)},
+                  {rows: 1, colour: util.convertToRgb(radGold)},
+                  {rows: 2, colour: util.convertToRgb(radBlue)},
+                  {rows: 2, colour: util.convertToRgb(radGold)},
+                  {rows: 2, colour: util.convertToRgb(radBlue)},
+                  {rows: 2, colour: util.convertToRgb(radGold)},
+                  {rows: 2, colour: util.convertToRgb(radBlue)},
+                  {rows: 1, colour: util.convertToRgb(radGold)},
+                  {rows: 1, colour: util.convertToRgb(radRed)}
+               ],
+               [
                   {rows: 2, colour: util.convertToRgb(radBlue)},
                   {rows: 2, colour: util.convertToRgb(radGold)},
                   {rows: 2, colour: util.convertToRgb(radBlue)},
@@ -1002,6 +1034,31 @@ const counties = (function () {
                   {rows: 2, colour: util.convertToRgb(radBlue)},
                   {rows: 2, colour: util.convertToRgb(radGold)},
                   {rows: 2, colour: util.convertToRgb(radBlue)}
+               ],
+               [
+                  {rows: 2, colour: util.convertToRgb(radRed)},
+                  {rows: 2, colour: util.convertToRgb(radBlue)},
+                  {rows: 2, colour: util.convertToRgb(radGold)},
+                  {rows: 2, colour: util.convertToRgb(radBlue)},
+                  {rows: 2, colour: util.convertToRgb(radGold)},
+                  {rows: 2, colour: util.convertToRgb(radBlue)},
+                  {rows: 2, colour: util.convertToRgb(radRed)}
+               ],
+               [
+                  {rows: 2, colour: util.convertToRgb(radRed)},
+                  {rows: 2, colour: util.convertToRgb(radGold)},
+                  {rows: 2, colour: util.convertToRgb(radBlue)},
+                  {rows: 2, colour: util.convertToRgb(radGold)},
+                  {rows: 2, colour: util.convertToRgb(radBlue)},
+                  {rows: 2, colour: util.convertToRgb(radGold)},
+                  {rows: 2, colour: util.convertToRgb(radRed)}
+               ],
+               [
+                  {rows: 4, colour: util.convertToRgb(radRed)},
+                  {rows: 2, colour: util.convertToRgb(radGold)},
+                  {rows: 2, colour: util.convertToRgb(radBlue)},
+                  {rows: 2, colour: util.convertToRgb(radGold)},
+                  {rows: 4, colour: util.convertToRgb(radRed)}
                ],
                [
                   {rows: 4, colour: util.convertToRgb(radRed)},
