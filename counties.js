@@ -1081,30 +1081,30 @@ const counties = (function () {
             classLevel: 5,
             country: 'England',
             colours: [
-               {rows: 2, colour: 'rgb(0, 90, 30)'},
+               {rows: 2, colour: util.convertToRgb(dorGreen)},
                {rows: 2},
-               {rows: 2, colour: 'rgb(0, 90, 30)'},
+               {rows: 2, colour: util.convertToRgb(dorGreen)},
                {rows: 2},
-               {rows: 2, colour: 'rgb(0, 90, 30)'}
+               {rows: 2, colour: util.convertToRgb(dorGreen)}
             ],
             alternateColours: [
                [
-                  {rows: 1, colour: 'rgb(0, 90, 30)'},
+                  {rows: 1, colour: util.convertToRgb(dorGreen)},
                   {rows: 2},
-                  {rows: 2, colour: 'rgb(0, 90, 30)'},
+                  {rows: 2, colour: util.convertToRgb(dorGreen)},
                   {rows: 2},
-                  {rows: 3, colour: 'rgb(0, 90, 30)'}
+                  {rows: 3, colour: util.convertToRgb(dorGreen)}
                ],
                [
-                  {rows: 2, colour: 'rgb(0, 90, 30)'},
+                  {rows: 2, colour: util.convertToRgb(dorGreen)},
                   {rows: 1},
-                  {rows: 2, colour: 'rgb(0, 90, 30)'},
+                  {rows: 2, colour: util.convertToRgb(dorGreen)},
                   {rows: 1},
-                  {rows: 4, colour: 'rgb(0, 90, 30)'}
+                  {rows: 4, colour: util.convertToRgb(dorGreen)}
                ]
             ],
-            textColour: 'rgb(0, 90, 30)',
-            borderColour: 'rgb(0, 90, 30)'
+            textColour: util.convertToRgb(dorGreen),
+            borderColour: util.convertToRgb(dorGreen)
          },
          {
             countyName: 'Brecknockshire',
