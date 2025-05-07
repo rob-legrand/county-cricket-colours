@@ -4,12 +4,11 @@ import {counties} from './counties.js';
 
 document.addEventListener('DOMContentLoaded', function () {
    'use strict';
+   let includeAlternateColours;
+
+   const countiesElement = document.querySelector('#counties');
 
    const updateCounties = function () {
-
-      const includeAlternateColours = false;
-
-      const countiesElement = document.querySelector('#counties');
       countiesElement.replaceChildren(...countiesInfo.map(function (county) {
          const countyDiv = document.createElement('div');
          countyDiv.classList.add('county');
@@ -261,6 +260,12 @@ document.addEventListener('DOMContentLoaded', function () {
       }));
    };
 
+   countiesElement.addEventListener('dblclick', function () {
+      includeAlternateColours = !includeAlternateColours;
+      updateCounties();
+   });
+
    const countiesInfo = counties.createInfo();
+   includeAlternateColours = false;
    updateCounties();
 });
