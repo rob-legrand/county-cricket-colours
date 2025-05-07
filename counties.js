@@ -16,6 +16,7 @@ const counties = (function () {
    const devDarkBlue = [15, 15, 60];
    const devGold = [240, 210, 90];
    const devLightBlue = [0, 60, 195];
+   const dorGreen = [0, 90, 30];
    const drbBlue = [180, 225, 240];
    const drbBrown = [75, 30, 15];
    const drbGold = [255, 225, 0];
