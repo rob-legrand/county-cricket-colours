@@ -2,6 +2,9 @@
 
 const counties = (function () {
 
+   const breBlack = [0, 0, 0];
+   const breBlue = [15, 90, 150];
+   const breGold = [255, 210, 15];
    const camBlue = [165, 225, 225];
    const camMaroon = [105, 0, 15];
    const camStraw = [255, 225, 160];
