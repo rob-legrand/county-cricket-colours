@@ -1118,19 +1118,19 @@ const counties = (function () {
             classLevel: 5,
             country: 'Wales',
             colours: [
-               {rows: 2, colour: 'rgb(0, 0, 0)'},
-               {rows: 1, colour: 'rgb(255, 210, 15)'},
-               {rows: 1, colour: 'rgb(0, 0, 0)'},
-               {rows: 2, colour: 'rgb(255, 210, 15)'},
-               {rows: 2, colour: 'rgb(15, 90, 150)'},
-               {rows: 2, colour: 'rgb(255, 210, 15)'},
-               {rows: 1, colour: 'rgb(0, 0, 0)'},
-               {rows: 1, colour: 'rgb(255, 210, 15)'},
-               {rows: 2, colour: 'rgb(0, 0, 0)'}
+               {rows: 2, colour: util.convertToRgb(breBlack)},
+               {rows: 1, colour: util.convertToRgb(breGold)},
+               {rows: 1, colour: util.convertToRgb(breBlack)},
+               {rows: 2, colour: util.convertToRgb(breGold)},
+               {rows: 2, colour: util.convertToRgb(breBlue)},
+               {rows: 2, colour: util.convertToRgb(breGold)},
+               {rows: 1, colour: util.convertToRgb(breBlack)},
+               {rows: 1, colour: util.convertToRgb(breGold)},
+               {rows: 2, colour: util.convertToRgb(breBlack)}
             ],
-            textColour: 'rgb(15, 90, 150)',
-            backgroundColour: 'rgb(255, 210, 15)',
-            borderColour: 'rgb(0, 0, 0)'
+            textColour: util.convertToRgb(breBlue),
+            backgroundColour: util.convertToRgb(breGold),
+            borderColour: util.convertToRgb(breBlack)
          },
          {
             countyName: 'Rutland',
