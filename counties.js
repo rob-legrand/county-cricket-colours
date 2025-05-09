@@ -1142,14 +1142,14 @@ const counties = (function () {
             classLevel: 5,
             country: 'England',
             colours: [
-               {rows: 4, colour: 'rgb(0, 150, 90)'},
-               {rows: 2, colour: 'rgb(255, 210, 30)'},
-               {rows: 2, colour: 'rgb(0, 150, 90)'},
-               {rows: 2, colour: 'rgb(255, 210, 30)'},
-               {rows: 4, colour: 'rgb(0, 150, 90)'}
+               {rows: 4, colour: util.convertToRgb(rutGreen)},
+               {rows: 2, colour: util.convertToRgb(rutGold)},
+               {rows: 2, colour: util.convertToRgb(rutGreen)},
+               {rows: 2, colour: util.convertToRgb(rutGold)},
+               {rows: 4, colour: util.convertToRgb(rutGreen)}
             ],
-            textColour: 'rgb(255, 210, 30)',
-            backgroundColour: 'rgb(0, 150, 90)'
+            textColour: util.convertToRgb(rutGold),
+            backgroundColour: util.convertToRgb(rutGreen)
          },
          {
             countyName: 'Suffolk',
