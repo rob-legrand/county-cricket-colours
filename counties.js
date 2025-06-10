@@ -1161,14 +1161,14 @@ const counties = (function () {
             classLevel: 5,
             country: 'England',
             colours: [
-               {rows: 2, colour: 'rgb(120, 0, 0)'},
-               {rows: 1, colour: 'rgb(255, 225, 0)'},
-               {rows: 4, colour: 'rgb(120, 0, 0)'},
-               {rows: 1, colour: 'rgb(255, 225, 0)'},
-               {rows: 2, colour: 'rgb(120, 0, 0)'}
+               {rows: 2, colour: util.convertToRgb(sfkMaroon)},
+               {rows: 1, colour: util.convertToRgb(sfkGold)},
+               {rows: 4, colour: util.convertToRgb(sfkMaroon)},
+               {rows: 1, colour: util.convertToRgb(sfkGold)},
+               {rows: 2, colour: util.convertToRgb(sfkMaroon)}
             ],
-            backgroundColour: 'rgb(120, 0, 0)',
-            borderColour: 'rgb(255, 225, 0)'
+            backgroundColour: util.convertToRgb(sfkMaroon),
+            borderColour: util.convertToRgb(sfkGold)
          },
          {
             countyName: 'Bedfordshire',
