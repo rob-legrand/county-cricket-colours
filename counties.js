@@ -1182,15 +1182,15 @@ const counties = (function () {
             classLevel: 5,
             country: 'England',
             colours: [
-               {rows: 3, colour: 'rgb(75, 0, 165)'},
-               {rows: 4, colour: 'rgb(0, 0, 0)'},
-               {rows: 1, colour: 'rgb(195, 195, 195)'},
-               {rows: 4, colour: 'rgb(0, 0, 0)'},
-               {rows: 3, colour: 'rgb(75, 0, 165)'}
+               {rows: 3, colour: util.convertToRgb(bedPurple)},
+               {rows: 4, colour: util.convertToRgb(bedBlack)},
+               {rows: 1, colour: util.convertToRgb(bedSilver)},
+               {rows: 4, colour: util.convertToRgb(bedBlack)},
+               {rows: 3, colour: util.convertToRgb(bedPurple)}
             ],
-            textColour: 'rgb(195, 195, 195)',
-            backgroundColour: 'rgb(0, 0, 0)',
-            borderColour: 'rgb(75, 0, 165)'
+            textColour: util.convertToRgb(bedSilver),
+            backgroundColour: util.convertToRgb(bedBlack),
+            borderColour: util.convertToRgb(bedPurple)
          },
          {
             countyName: 'Huntingdonshire',
