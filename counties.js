@@ -1203,12 +1203,12 @@ const counties = (function () {
             classLevel: 5,
             country: 'England',
             colours: [
-               {rows: 5, colour: 'rgb(30, 30, 60)'},
-               {rows: 4, colour: 'rgb(255, 210, 0)'},
-               {rows: 5, colour: 'rgb(30, 30, 60)'}
+               {rows: 5, colour: util.convertToRgb(hunBlue)},
+               {rows: 4, colour: util.convertToRgb(hunGold)},
+               {rows: 5, colour: util.convertToRgb(hunBlue)}
             ],
-            textColour: 'rgb(255, 210, 0)',
-            backgroundColour: 'rgb(30, 30, 60)'
+            textColour: util.convertToRgb(hunGold),
+            backgroundColour: util.convertToRgb(hunBlue)
          },
          {
             countyName: 'Caernarfonshire',
