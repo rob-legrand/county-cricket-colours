@@ -1261,14 +1261,14 @@ const counties = (function () {
             classLevel: 6,
             country: 'Scotland',
             colours: [
-               {rows: 2, colour: 'rgb(0, 0, 0)'},
+               {rows: 2, colour: util.convertToRgb(roxBlack)},
                {rows: 2},
-               {rows: 6, colour: 'rgb(30, 30, 180)'},
+               {rows: 6, colour: util.convertToRgb(roxBlue)},
                {rows: 2},
-               {rows: 2, colour: 'rgb(0, 0, 0)'}
+               {rows: 2, colour: util.convertToRgb(roxBlack)}
             ],
-            backgroundColour: 'rgb(30, 30, 180)',
-            borderColour: 'rgb(0, 0, 0)'
+            backgroundColour: util.convertToRgb(roxBlue),
+            borderColour: util.convertToRgb(roxBlack)
          },
          {
             countyName: 'Oxfordshire',
