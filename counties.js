@@ -1282,13 +1282,13 @@ const counties = (function () {
             classLevel: 6,
             country: 'England',
             colours: [
-               {rows: 6, colour: 'rgb(120, 0, 60)'},
-               {rows: 2, colour: 'rgb(240, 225, 105)'},
-               {rows: 6, colour: 'rgb(0, 30, 75)'}
+               {rows: 6, colour: util.convertToRgb(oxfMagenta)},
+               {rows: 2, colour: util.convertToRgb(oxfGold)},
+               {rows: 6, colour: util.convertToRgb(oxfBlue)}
             ],
-            textColour: 'rgb(240, 225, 0)',
-            backgroundColour: 'rgb(120, 0, 60)',
-            borderColour: 'rgb(0, 30, 75)'
+            textColour: util.convertToRgb(oxfGold),
+            backgroundColour: util.convertToRgb(oxfMagenta),
+            borderColour: util.convertToRgb(oxfBlue)
          },
          {
             countyName: 'Berkshire',
