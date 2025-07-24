@@ -1323,14 +1323,14 @@ const counties = (function () {
             classLevel: 6,
             country: 'England',
             colours: [
-               {rows: 5, colour: 'rgb(0, 75, 30)'},
+               {rows: 5, colour: util.convertToRgb(bucGreen)},
                {rows: 1},
-               {rows: 3, colour: 'rgb(195, 195, 210)'},
+               {rows: 3, colour: util.convertToRgb(bucSilver)},
                {rows: 1},
-               {rows: 5, colour: 'rgb(0, 75, 30)'}
+               {rows: 5, colour: util.convertToRgb(bucGreen)}
             ],
-            backgroundColour: 'rgb(0, 75, 30)',
-            borderColour: 'rgb(195, 195, 210)'
+            backgroundColour: util.convertToRgb(bucGreen),
+            borderColour: util.convertToRgb(bucSilver)
          },
          {
             countyName: 'Carmarthenshire',
