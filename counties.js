@@ -1362,42 +1362,42 @@ const counties = (function () {
             classLevel: 6,
             country: 'England',
             colours: [
-               {rows: 5, colour: 'rgb(195, 0, 30)'},
+               {rows: 5, colour: util.convertToRgb(wmlRed)},
                {rows: 3},
-               {rows: 5, colour: 'rgb(195, 0, 30)'}
+               {rows: 5, colour: util.convertToRgb(wmlRed)}
             ],
             alternateColours: [
                [
-                  {rows: 1, colour: 'rgb(240, 210, 0)'},
-                  {rows: 5, colour: 'rgb(195, 0, 30)'},
+                  {rows: 1, colour: util.convertToRgb(wmlGold)},
+                  {rows: 5, colour: util.convertToRgb(wmlRed)},
                   {rows: 3},
-                  {rows: 5, colour: 'rgb(195, 0, 30)'},
-                  {rows: 1, colour: 'rgb(240, 210, 0)'}
+                  {rows: 5, colour: util.convertToRgb(wmlRed)},
+                  {rows: 1, colour: util.convertToRgb(wmlGold)}
                ],
                [
-                  {rows: 5, colour: 'rgb(195, 0, 30)'},
+                  {rows: 5, colour: util.convertToRgb(wmlRed)},
                   {rows: 1},
-                  {rows: 1, colour: 'rgb(240, 210, 0)'},
+                  {rows: 1, colour: util.convertToRgb(wmlGold)},
                   {rows: 1},
-                  {rows: 5, colour: 'rgb(195, 0, 30)'}
+                  {rows: 5, colour: util.convertToRgb(wmlRed)}
                ],
                [
-                  {rows: 4, colour: 'rgb(195, 0, 30)'},
+                  {rows: 4, colour: util.convertToRgb(wmlRed)},
                   {rows: 2},
-                  {rows: 2, colour: 'rgb(240, 210, 0)'},
+                  {rows: 2, colour: util.convertToRgb(wmlGold)},
                   {rows: 2},
-                  {rows: 4, colour: 'rgb(195, 0, 30)'}
+                  {rows: 4, colour: util.convertToRgb(wmlRed)}
                ],
                [
-                  {rows: 5, colour: 'rgb(195, 0, 30)'},
-                  {rows: 1, colour: 'rgb(240, 210, 0)'},
+                  {rows: 5, colour: util.convertToRgb(wmlRed)},
+                  {rows: 1, colour: util.convertToRgb(wmlGold)},
                   {rows: 3},
-                  {rows: 1, colour: 'rgb(240, 210, 0)'},
-                  {rows: 5, colour: 'rgb(195, 0, 30)'}
+                  {rows: 1, colour: util.convertToRgb(wmlGold)},
+                  {rows: 5, colour: util.convertToRgb(wmlRed)}
                ]
             ],
-            backgroundColour: 'rgb(195, 0, 30)',
-            borderColour: 'rgb(240, 210, 0)'
+            backgroundColour: util.convertToRgb(wmlRed),
+            borderColour: util.convertToRgb(wmlGold)
          },
          {
             countyName: 'Montgomeryshire',
