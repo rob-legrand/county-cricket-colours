@@ -1412,106 +1412,106 @@ const counties = (function () {
             classLevel: 6,
             country: 'Wales',
             colours: [
-               {rows: 4, colour: 'rgb(0, 0, 0)'},
-               {rows: 2, colour: 'rgb(240, 240, 45)'},
-               {rows: 2, colour: 'rgb(135, 0, 0)'},
-               {rows: 2, colour: 'rgb(240, 240, 45)'},
-               {rows: 4, colour: 'rgb(0, 0, 0)'}
+               {rows: 4, colour: util.convertToRgb(mtgBlack)},
+               {rows: 2, colour: util.convertToRgb(mtgGold)},
+               {rows: 2, colour: util.convertToRgb(mtgRed)},
+               {rows: 2, colour: util.convertToRgb(mtgGold)},
+               {rows: 4, colour: util.convertToRgb(mtgBlack)}
             ],
             alternateColours: [
                [
-                  {rows: 1, colour: 'rgb(0, 0, 0)'},
-                  {rows: 3, colour: 'rgb(240, 240, 45)'},
-                  {rows: 2, colour: 'rgb(135, 0, 0)'},
-                  {rows: 2, colour: 'rgb(45, 90, 240)'},
-                  {rows: 2, colour: 'rgb(135, 0, 0)'},
-                  {rows: 3, colour: 'rgb(240, 240, 45)'},
-                  {rows: 1, colour: 'rgb(0, 0, 0)'}
+                  {rows: 1, colour: util.convertToRgb(mtgBlack)},
+                  {rows: 3, colour: util.convertToRgb(mtgGold)},
+                  {rows: 2, colour: util.convertToRgb(mtgRed)},
+                  {rows: 2, colour: util.convertToRgb(mtgBlue)},
+                  {rows: 2, colour: util.convertToRgb(mtgRed)},
+                  {rows: 3, colour: util.convertToRgb(mtgGold)},
+                  {rows: 1, colour: util.convertToRgb(mtgBlack)}
                ],
                [
-                  {rows: 4, colour: 'rgb(240, 240, 45)'},
-                  {rows: 1, colour: 'rgb(0, 0, 0)'},
-                  {rows: 4, colour: 'rgb(135, 0, 0)'},
-                  {rows: 1, colour: 'rgb(0, 0, 0)'},
-                  {rows: 4, colour: 'rgb(240, 240, 45)'}
+                  {rows: 4, colour: util.convertToRgb(mtgGold)},
+                  {rows: 1, colour: util.convertToRgb(mtgBlack)},
+                  {rows: 4, colour: util.convertToRgb(mtgRed)},
+                  {rows: 1, colour: util.convertToRgb(mtgBlack)},
+                  {rows: 4, colour: util.convertToRgb(mtgGold)}
                ],
                [
-                  {rows: 2, colour: 'rgb(135, 0, 0)'},
-                  {rows: 4, colour: 'rgb(240, 240, 45)'},
-                  {rows: 2, colour: 'rgb(45, 90, 240)'},
-                  {rows: 4, colour: 'rgb(240, 240, 45)'},
-                  {rows: 2, colour: 'rgb(135, 0, 0)'}
+                  {rows: 2, colour: util.convertToRgb(mtgRed)},
+                  {rows: 4, colour: util.convertToRgb(mtgGold)},
+                  {rows: 2, colour: util.convertToRgb(mtgBlue)},
+                  {rows: 4, colour: util.convertToRgb(mtgGold)},
+                  {rows: 2, colour: util.convertToRgb(mtgRed)}
                ],
                [
-                  {rows: 2, colour: 'rgb(135, 0, 0)'},
-                  {rows: 1, colour: 'rgb(240, 240, 45)'},
-                  {rows: 3, colour: 'rgb(0, 0, 0)'},
+                  {rows: 2, colour: util.convertToRgb(mtgRed)},
+                  {rows: 1, colour: util.convertToRgb(mtgGold)},
+                  {rows: 3, colour: util.convertToRgb(mtgBlack)},
                   {rows: 2},
-                  {rows: 3, colour: 'rgb(0, 0, 0)'},
-                  {rows: 1, colour: 'rgb(240, 240, 45)'},
-                  {rows: 2, colour: 'rgb(135, 0, 0)'}
+                  {rows: 3, colour: util.convertToRgb(mtgBlack)},
+                  {rows: 1, colour: util.convertToRgb(mtgGold)},
+                  {rows: 2, colour: util.convertToRgb(mtgRed)}
                ],
                [
-                  {rows: 1, colour: 'rgb(0, 0, 0)'},
+                  {rows: 1, colour: util.convertToRgb(mtgBlack)},
                   {rows: 1},
-                  {rows: 3, colour: 'rgb(0, 0, 0)'},
-                  {rows: 1, colour: 'rgb(240, 240, 45)'},
-                  {rows: 2, colour: 'rgb(135, 0, 0)'},
-                  {rows: 1, colour: 'rgb(240, 240, 45)'},
-                  {rows: 3, colour: 'rgb(0, 0, 0)'},
+                  {rows: 3, colour: util.convertToRgb(mtgBlack)},
+                  {rows: 1, colour: util.convertToRgb(mtgGold)},
+                  {rows: 2, colour: util.convertToRgb(mtgRed)},
+                  {rows: 1, colour: util.convertToRgb(mtgGold)},
+                  {rows: 3, colour: util.convertToRgb(mtgBlack)},
                   {rows: 1},
-                  {rows: 1, colour: 'rgb(0, 0, 0)'}
+                  {rows: 1, colour: util.convertToRgb(mtgBlack)}
                ],
                [
-                  {rows: 3, colour: 'rgb(0, 0, 0)'},
+                  {rows: 3, colour: util.convertToRgb(mtgBlack)},
                   {rows: 1},
-                  {rows: 2, colour: 'rgb(240, 240, 45)'},
-                  {rows: 2, colour: 'rgb(135, 0, 0)'},
-                  {rows: 2, colour: 'rgb(240, 240, 45)'},
+                  {rows: 2, colour: util.convertToRgb(mtgGold)},
+                  {rows: 2, colour: util.convertToRgb(mtgRed)},
+                  {rows: 2, colour: util.convertToRgb(mtgGold)},
                   {rows: 1},
-                  {rows: 3, colour: 'rgb(0, 0, 0)'}
+                  {rows: 3, colour: util.convertToRgb(mtgBlack)}
                ],
                [
-                  {rows: 5, colour: 'rgb(240, 240, 45)'},
-                  {rows: 2, colour: 'rgb(135, 0, 0)'},
+                  {rows: 5, colour: util.convertToRgb(mtgGold)},
+                  {rows: 2, colour: util.convertToRgb(mtgRed)},
                   {rows: 2},
-                  {rows: 5, colour: 'rgb(0, 0, 0)'}
+                  {rows: 5, colour: util.convertToRgb(mtgBlack)}
                ],
                [
-                  {rows: 2, colour: 'rgb(240, 240, 45)'},
-                  {rows: 2, colour: 'rgb(135, 0, 0)'},
-                  {rows: 3, colour: 'rgb(240, 240, 45)'},
-                  {rows: 3, colour: 'rgb(0, 0, 0)'},
+                  {rows: 2, colour: util.convertToRgb(mtgGold)},
+                  {rows: 2, colour: util.convertToRgb(mtgRed)},
+                  {rows: 3, colour: util.convertToRgb(mtgGold)},
+                  {rows: 3, colour: util.convertToRgb(mtgBlack)},
                   {rows: 2},
-                  {rows: 2, colour: 'rgb(0, 0, 0)'}
+                  {rows: 2, colour: util.convertToRgb(mtgBlack)}
                ],
                [
-                  {rows: 3, colour: 'rgb(240, 240, 45)'},
-                  {rows: 3, colour: 'rgb(135, 0, 0)'},
-                  {rows: 2, colour: 'rgb(240, 240, 45)'},
-                  {rows: 3, colour: 'rgb(0, 0, 0)'},
-                  {rows: 3, colour: 'rgb(240, 240, 45)'}
+                  {rows: 3, colour: util.convertToRgb(mtgGold)},
+                  {rows: 3, colour: util.convertToRgb(mtgRed)},
+                  {rows: 2, colour: util.convertToRgb(mtgGold)},
+                  {rows: 3, colour: util.convertToRgb(mtgBlack)},
+                  {rows: 3, colour: util.convertToRgb(mtgGold)}
                ],
                [
-                  {rows: 2, colour: 'rgb(0, 0, 0)'},
+                  {rows: 2, colour: util.convertToRgb(mtgBlack)},
                   {rows: 2},
-                  {rows: 1, colour: 'rgb(0, 0, 0)'},
-                  {rows: 2, colour: 'rgb(135, 0, 0)'},
-                  {rows: 1, colour: 'rgb(0, 0, 0)'},
-                  {rows: 2, colour: 'rgb(240, 240, 45)'},
-                  {rows: 2, colour: 'rgb(0, 0, 0)'}
+                  {rows: 1, colour: util.convertToRgb(mtgBlack)},
+                  {rows: 2, colour: util.convertToRgb(mtgRed)},
+                  {rows: 1, colour: util.convertToRgb(mtgBlack)},
+                  {rows: 2, colour: util.convertToRgb(mtgGold)},
+                  {rows: 2, colour: util.convertToRgb(mtgBlack)}
                ],
                [
-                  {rows: 3, colour: 'rgb(0, 0, 0)'},
-                  {rows: 3, colour: 'rgb(240, 240, 45)'},
-                  {rows: 2, colour: 'rgb(0, 0, 0)'},
-                  {rows: 3, colour: 'rgb(135, 0, 0)'},
-                  {rows: 3, colour: 'rgb(0, 0, 0)'}
+                  {rows: 3, colour: util.convertToRgb(mtgBlack)},
+                  {rows: 3, colour: util.convertToRgb(mtgGold)},
+                  {rows: 2, colour: util.convertToRgb(mtgBlack)},
+                  {rows: 3, colour: util.convertToRgb(mtgRed)},
+                  {rows: 3, colour: util.convertToRgb(mtgBlack)}
                ]
             ],
-            textColour: 'rgb(240, 240, 45)',
-            backgroundColour: 'rgb(0, 0, 0)',
-            borderColour: 'rgb(135, 0, 0)'
+            textColour: util.convertToRgb(mtgGold),
+            backgroundColour: util.convertToRgb(mtgBlack),
+            borderColour: util.convertToRgb(mtgRed)
          },
          {
             countyName: 'Denbighshire',
