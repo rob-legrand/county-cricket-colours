@@ -1493,6 +1493,22 @@ const counties = (function () {
                   {rows: 3, colour: util.convertToRgb(mtgGold)}
                ],
                [
+                  {rows: 2, colour: util.convertToRgb(mtgGold)},
+                  {rows: 3, colour: util.convertToRgb(mtgBlack)},
+                  {rows: 1, colour: util.convertToRgb(mtgGold)},
+                  {rows: 3, colour: util.convertToRgb(mtgRed)},
+                  {rows: 1, colour: util.convertToRgb(mtgGold)},
+                  {rows: 3, colour: util.convertToRgb(mtgBlack)},
+                  {rows: 2, colour: util.convertToRgb(mtgGold)}
+               ],
+               [
+                  {rows: 3, colour: util.convertToRgb(mtgBlack)},
+                  {rows: 3, colour: util.convertToRgb(mtgGold)},
+                  {rows: 2, colour: util.convertToRgb(mtgBlack)},
+                  {rows: 3, colour: util.convertToRgb(mtgRed)},
+                  {rows: 3, colour: util.convertToRgb(mtgBlack)}
+               ],
+               [
                   {rows: 2, colour: util.convertToRgb(mtgBlack)},
                   {rows: 2},
                   {rows: 1, colour: util.convertToRgb(mtgBlack)},
@@ -1503,10 +1519,21 @@ const counties = (function () {
                ],
                [
                   {rows: 3, colour: util.convertToRgb(mtgBlack)},
-                  {rows: 3, colour: util.convertToRgb(mtgGold)},
-                  {rows: 2, colour: util.convertToRgb(mtgBlack)},
-                  {rows: 3, colour: util.convertToRgb(mtgRed)},
+                  {rows: 2},
+                  {rows: 1, colour: util.convertToRgb(mtgBlack)},
+                  {rows: 2},
+                  {rows: 1, colour: util.convertToRgb(mtgBlack)},
+                  {rows: 2},
                   {rows: 3, colour: util.convertToRgb(mtgBlack)}
+               ],
+               [
+                  {rows: 2, colour: util.convertToRgb(mtgBlack)},
+                  {rows: 2},
+                  {rows: 2, colour: util.convertToRgb(mtgBlack)},
+                  {rows: 2},
+                  {rows: 2, colour: util.convertToRgb(mtgBlack)},
+                  {rows: 2},
+                  {rows: 2, colour: util.convertToRgb(mtgBlack)}
                ]
             ],
             textColour: util.convertToRgb(mtgGold),
