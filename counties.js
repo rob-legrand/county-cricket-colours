@@ -1551,47 +1551,47 @@ const counties = (function () {
             classLevel: 6,
             country: 'Wales',
             colours: [
-               {rows: 4, colour: 'rgb(210, 0, 30)'},
+               {rows: 4, colour: util.convertToRgb(denRed)},
                {rows: 3},
-               {rows: 3, colour: 'rgb(0, 0, 0)'},
-               {rows: 4, colour: 'rgb(210, 0, 30)'}
+               {rows: 3, colour: util.convertToRgb(denBlack)},
+               {rows: 4, colour: util.convertToRgb(denRed)}
             ],
             alternateColours: [
                [
-                  {rows: 4, colour: 'rgb(0, 0, 0)'},
+                  {rows: 4, colour: util.convertToRgb(denBlack)},
                   {rows: 2},
-                  {rows: 2, colour: 'rgb(210, 0, 30)'},
+                  {rows: 2, colour: util.convertToRgb(denRed)},
                   {rows: 2},
-                  {rows: 4, colour: 'rgb(0, 0, 0)'}
+                  {rows: 4, colour: util.convertToRgb(denBlack)}
                ],
                [
-                  {rows: 3, colour: 'rgb(210, 0, 30)'},
+                  {rows: 3, colour: util.convertToRgb(denRed)},
                   {rows: 2},
-                  {rows: 1, colour: 'rgb(210, 0, 30)'},
-                  {rows: 2, colour: 'rgb(0, 0, 0)'},
-                  {rows: 1, colour: 'rgb(210, 0, 30)'},
+                  {rows: 1, colour: util.convertToRgb(denRed)},
+                  {rows: 2, colour: util.convertToRgb(denBlack)},
+                  {rows: 1, colour: util.convertToRgb(denRed)},
                   {rows: 2},
-                  {rows: 3, colour: 'rgb(210, 0, 30)'}
+                  {rows: 3, colour: util.convertToRgb(denRed)}
                ],
                [
-                  {rows: 3, colour: 'rgb(210, 0, 30)'},
-                  {rows: 2, colour: 'rgb(0, 0, 0)'},
-                  {rows: 1, colour: 'rgb(210, 0, 30)'},
+                  {rows: 3, colour: util.convertToRgb(denRed)},
+                  {rows: 2, colour: util.convertToRgb(denBlack)},
+                  {rows: 1, colour: util.convertToRgb(denRed)},
                   {rows: 2},
-                  {rows: 1, colour: 'rgb(210, 0, 30)'},
-                  {rows: 2, colour: 'rgb(0, 0, 0)'},
-                  {rows: 3, colour: 'rgb(210, 0, 30)'}
+                  {rows: 1, colour: util.convertToRgb(denRed)},
+                  {rows: 2, colour: util.convertToRgb(denBlack)},
+                  {rows: 3, colour: util.convertToRgb(denRed)}
                ],
                [
-                  {rows: 3, colour: 'rgb(210, 0, 30)'},
+                  {rows: 3, colour: util.convertToRgb(denRed)},
                   {rows: 3},
-                  {rows: 2, colour: 'rgb(210, 0, 30)'},
-                  {rows: 3, colour: 'rgb(0, 0, 0)'},
-                  {rows: 3, colour: 'rgb(210, 0, 30)'}
+                  {rows: 2, colour: util.convertToRgb(denRed)},
+                  {rows: 3, colour: util.convertToRgb(denBlack)},
+                  {rows: 3, colour: util.convertToRgb(denRed)}
                ]
             ],
-            backgroundColour: 'rgb(210, 0, 30)',
-            borderColour: 'rgb(0, 0, 0)'
+            backgroundColour: util.convertToRgb(denRed),
+            borderColour: util.convertToRgb(denBlack)
          },
          {
             countyName: 'Pembrokeshire',
