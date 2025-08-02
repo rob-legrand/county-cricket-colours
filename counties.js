@@ -1604,13 +1604,13 @@ const counties = (function () {
             classLevel: 7,
             country: 'Wales',
             colours: [
-               {rows: 5, colour: 'rgb(0, 30, 90)'},
-               {rows: 4, colour: 'rgb(195, 225, 255)'},
-               {rows: 5, colour: 'rgb(0, 30, 90)'}
+               {rows: 5, colour: util.convertToRgb(pemDarkBlue)},
+               {rows: 4, colour: util.convertToRgb(pemLightBlue)},
+               {rows: 5, colour: util.convertToRgb(pemDarkBlue)}
             ],
-            textColour: 'rgb(195, 225, 255)',
-            backgroundColour: 'rgb(0, 30, 90)',
-            borderColour: 'rgb(195, 225, 255)'
+            textColour: util.convertToRgb(pemLightBlue),
+            backgroundColour: util.convertToRgb(pemDarkBlue),
+            borderColour: util.convertToRgb(pemLightBlue)
          },
          {
             countyName: 'Cardiganshire',
