@@ -2,6 +2,9 @@
 
 const counties = (function () {
 
+   const abdDarkBlue = [0, 0, 60];
+   const abdGold = [255, 240, 150];
+   const abdLightBlue = [105, 150, 225];
    const bedBlack = [0, 0, 0];
    const bedPurple = [75, 0, 165];
    const bedSilver = [195, 195, 195];
