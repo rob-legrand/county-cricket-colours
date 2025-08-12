@@ -1798,11 +1798,17 @@ const counties = (function () {
             classLevel: 7,
             country: 'Scotland',
             colours: [
-               {rows: 7, colour: 'rgb(165, 0, 45)'},
-               {rows: 7, colour: 'rgb(0, 0, 0)'}
+               {rows: 6, colour: 'rgb(165, 0, 45)'},
+               {rows: 6, colour: 'rgb(90, 45, 45)'}
+            ],
+            alternateColours: [
+               [
+                  {rows: 7, colour: 'rgb(165, 0, 45)'},
+                  {rows: 7, colour: 'rgb(0, 0, 0)'}
+               ]
             ],
             backgroundColour: 'rgb(165, 0, 45)',
-            borderColour: 'rgb(0, 0, 0)'
+            borderColour: 'rgb(90, 45, 45)'
          },
          {
             countyName: 'Banffshire',
