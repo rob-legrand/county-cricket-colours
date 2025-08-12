@@ -1719,75 +1719,75 @@ const counties = (function () {
             classLevel: 7,
             country: 'Scotland',
             colours: [
-               {rows: 1, colour: 'rgb(0, 135, 30)'},
-               {rows: 1, colour: 'rgb(210, 0, 15)'},
-               {rows: 2, colour: 'rgb(255, 210, 45)'},
-               {rows: 2, colour: 'rgb(210, 0, 15)'},
-               {rows: 2, colour: 'rgb(255, 210, 45)'},
-               {rows: 2, colour: 'rgb(210, 0, 15)'},
-               {rows: 2, colour: 'rgb(255, 210, 45)'},
-               {rows: 1, colour: 'rgb(210, 0, 15)'},
-               {rows: 1, colour: 'rgb(0, 135, 30)'}
+               {rows: 1, colour: util.convertToRgb(kcdGreen)},
+               {rows: 1, colour: util.convertToRgb(kcdRed)},
+               {rows: 2, colour: util.convertToRgb(kcdGold)},
+               {rows: 2, colour: util.convertToRgb(kcdRed)},
+               {rows: 2, colour: util.convertToRgb(kcdGold)},
+               {rows: 2, colour: util.convertToRgb(kcdRed)},
+               {rows: 2, colour: util.convertToRgb(kcdGold)},
+               {rows: 1, colour: util.convertToRgb(kcdRed)},
+               {rows: 1, colour: util.convertToRgb(kcdGreen)}
             ],
             alternateColours: [
                [
-                  {rows: 2, colour: 'rgb(0, 135, 30)'},
-                  {rows: 2, colour: 'rgb(255, 210, 45)'},
-                  {rows: 2, colour: 'rgb(210, 0, 15)'},
-                  {rows: 2, colour: 'rgb(255, 210, 45)'},
-                  {rows: 2, colour: 'rgb(210, 0, 15)'},
-                  {rows: 2, colour: 'rgb(255, 210, 45)'},
-                  {rows: 2, colour: 'rgb(0, 135, 30)'}
+                  {rows: 2, colour: util.convertToRgb(kcdGreen)},
+                  {rows: 2, colour: util.convertToRgb(kcdGold)},
+                  {rows: 2, colour: util.convertToRgb(kcdRed)},
+                  {rows: 2, colour: util.convertToRgb(kcdGold)},
+                  {rows: 2, colour: util.convertToRgb(kcdRed)},
+                  {rows: 2, colour: util.convertToRgb(kcdGold)},
+                  {rows: 2, colour: util.convertToRgb(kcdGreen)}
                ],
                [
-                  {rows: 2, colour: 'rgb(210, 0, 15)'},
-                  {rows: 2, colour: 'rgb(255, 210, 45)'},
-                  {rows: 2, colour: 'rgb(210, 0, 15)'},
-                  {rows: 2, colour: 'rgb(255, 210, 45)'},
-                  {rows: 2, colour: 'rgb(210, 0, 15)'},
-                  {rows: 2, colour: 'rgb(255, 210, 45)'},
-                  {rows: 2, colour: 'rgb(210, 0, 15)'}
+                  {rows: 2, colour: util.convertToRgb(kcdRed)},
+                  {rows: 2, colour: util.convertToRgb(kcdGold)},
+                  {rows: 2, colour: util.convertToRgb(kcdRed)},
+                  {rows: 2, colour: util.convertToRgb(kcdGold)},
+                  {rows: 2, colour: util.convertToRgb(kcdRed)},
+                  {rows: 2, colour: util.convertToRgb(kcdGold)},
+                  {rows: 2, colour: util.convertToRgb(kcdRed)}
                ],
                [
-                  {rows: 2, colour: 'rgb(210, 0, 15)'},
-                  {rows: 2, colour: 'rgb(255, 210, 45)'},
-                  {rows: 2, colour: 'rgb(210, 0, 15)'},
-                  {rows: 2, colour: 'rgb(255, 210, 45)'},
-                  {rows: 2, colour: 'rgb(0, 135, 30)'},
-                  {rows: 2, colour: 'rgb(255, 210, 45)'},
-                  {rows: 2, colour: 'rgb(0, 135, 30)'}
+                  {rows: 2, colour: util.convertToRgb(kcdRed)},
+                  {rows: 2, colour: util.convertToRgb(kcdGold)},
+                  {rows: 2, colour: util.convertToRgb(kcdRed)},
+                  {rows: 2, colour: util.convertToRgb(kcdGold)},
+                  {rows: 2, colour: util.convertToRgb(kcdGreen)},
+                  {rows: 2, colour: util.convertToRgb(kcdGold)},
+                  {rows: 2, colour: util.convertToRgb(kcdGreen)}
                ],
                [
-                  {rows: 2, colour: 'rgb(210, 0, 15)'},
-                  {rows: 2, colour: 'rgb(255, 210, 45)'},
-                  {rows: 2, colour: 'rgb(0, 135, 30)'},
-                  {rows: 2, colour: 'rgb(255, 210, 45)'},
-                  {rows: 2, colour: 'rgb(210, 0, 15)'},
-                  {rows: 2, colour: 'rgb(255, 210, 45)'},
-                  {rows: 2, colour: 'rgb(0, 135, 30)'}
+                  {rows: 2, colour: util.convertToRgb(kcdRed)},
+                  {rows: 2, colour: util.convertToRgb(kcdGold)},
+                  {rows: 2, colour: util.convertToRgb(kcdGreen)},
+                  {rows: 2, colour: util.convertToRgb(kcdGold)},
+                  {rows: 2, colour: util.convertToRgb(kcdRed)},
+                  {rows: 2, colour: util.convertToRgb(kcdGold)},
+                  {rows: 2, colour: util.convertToRgb(kcdGreen)}
                ],
                [
-                  {rows: 2, colour: 'rgb(210, 0, 15)'},
-                  {rows: 2, colour: 'rgb(255, 210, 45)'},
-                  {rows: 2, colour: 'rgb(210, 0, 15)'},
-                  {rows: 2, colour: 'rgb(255, 210, 45)'},
-                  {rows: 2, colour: 'rgb(0, 135, 30)'},
-                  {rows: 2, colour: 'rgb(255, 210, 45)'},
-                  {rows: 2, colour: 'rgb(210, 0, 15)'}
+                  {rows: 2, colour: util.convertToRgb(kcdRed)},
+                  {rows: 2, colour: util.convertToRgb(kcdGold)},
+                  {rows: 2, colour: util.convertToRgb(kcdRed)},
+                  {rows: 2, colour: util.convertToRgb(kcdGold)},
+                  {rows: 2, colour: util.convertToRgb(kcdGreen)},
+                  {rows: 2, colour: util.convertToRgb(kcdGold)},
+                  {rows: 2, colour: util.convertToRgb(kcdRed)}
                ],
                [
-                  {rows: 2, colour: 'rgb(210, 0, 15)'},
-                  {rows: 2, colour: 'rgb(255, 210, 45)'},
-                  {rows: 2, colour: 'rgb(210, 0, 15)'},
-                  {rows: 2, colour: 'rgb(255, 210, 45)'},
-                  {rows: 2, colour: 'rgb(210, 0, 15)'},
-                  {rows: 2, colour: 'rgb(255, 210, 45)'},
-                  {rows: 2, colour: 'rgb(0, 135, 30)'}
+                  {rows: 2, colour: util.convertToRgb(kcdRed)},
+                  {rows: 2, colour: util.convertToRgb(kcdGold)},
+                  {rows: 2, colour: util.convertToRgb(kcdRed)},
+                  {rows: 2, colour: util.convertToRgb(kcdGold)},
+                  {rows: 2, colour: util.convertToRgb(kcdRed)},
+                  {rows: 2, colour: util.convertToRgb(kcdGold)},
+                  {rows: 2, colour: util.convertToRgb(kcdGreen)}
                ]
             ],
-            textColour: 'rgb(255, 210, 45)',
-            backgroundColour: 'rgb(210, 0, 15)',
-            borderColour: 'rgb(0, 135, 30)'
+            textColour: util.convertToRgb(kcdGold),
+            backgroundColour: util.convertToRgb(kcdRed),
+            borderColour: util.convertToRgb(kcdGreen)
          },
          {
             countyName: 'Stirlingshire',
