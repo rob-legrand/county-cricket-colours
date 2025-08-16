@@ -1824,88 +1824,88 @@ const counties = (function () {
             classLevel: 7,
             country: 'Scotland',
             colours: [
-               {rows: 2, colour: 'rgb(0, 0, 75)'},
+               {rows: 2, colour: util.convertToRgb(banBlue)},
                {rows: 1},
-               {rows: 7, colour: 'rgb(0, 90, 60)'},
+               {rows: 7, colour: util.convertToRgb(banGreen)},
                {rows: 1},
-               {rows: 2, colour: 'rgb(0, 0, 75)'}
+               {rows: 2, colour: util.convertToRgb(banBlue)}
             ],
             alternateColours: [
                [
-                  {rows: 6, colour: 'rgb(0, 90, 45)'},
+                  {rows: 6, colour: util.convertToRgb(banGreen)},
                   {rows: 2},
-                  {rows: 6, colour: 'rgb(0, 0, 0)'}
+                  {rows: 6, colour: util.convertToRgb(banBlack)}
                ],
                [
-                  {rows: 2, colour: 'rgb(0, 0, 0)'},
+                  {rows: 2, colour: util.convertToRgb(banBlack)},
                   {rows: 2},
-                  {rows: 6, colour: 'rgb(0, 90, 45)'},
+                  {rows: 6, colour: util.convertToRgb(banGreen)},
                   {rows: 2},
-                  {rows: 2, colour: 'rgb(0, 0, 0)'}
+                  {rows: 2, colour: util.convertToRgb(banBlack)}
                ],
                [
-                  {rows: 4, colour: 'rgb(0, 90, 45)'},
+                  {rows: 4, colour: util.convertToRgb(banGreen)},
                   {rows: 2},
-                  {rows: 2, colour: 'rgb(0, 0, 0)'},
+                  {rows: 2, colour: util.convertToRgb(banBlack)},
                   {rows: 2},
-                  {rows: 4, colour: 'rgb(0, 90, 45)'}
+                  {rows: 4, colour: util.convertToRgb(banGreen)}
                ],
                [
-                  {rows: 5, colour: 'rgb(0, 90, 45)'},
+                  {rows: 5, colour: util.convertToRgb(banGreen)},
                   {rows: 1},
-                  {rows: 1, colour: 'rgb(0, 0, 0)'},
+                  {rows: 1, colour: util.convertToRgb(banBlack)},
                   {rows: 1},
-                  {rows: 5, colour: 'rgb(0, 90, 45)'}
+                  {rows: 5, colour: util.convertToRgb(banGreen)}
                ],
                [
-                  {rows: 1, colour: 'rgb(0, 0, 0)'},
+                  {rows: 1, colour: util.convertToRgb(banBlack)},
                   {rows: 1},
-                  {rows: 3, colour: 'rgb(0, 90, 45)'},
+                  {rows: 3, colour: util.convertToRgb(banGreen)},
                   {rows: 1},
-                  {rows: 1, colour: 'rgb(0, 0, 0)'},
+                  {rows: 1, colour: util.convertToRgb(banBlack)},
                   {rows: 1},
-                  {rows: 3, colour: 'rgb(0, 90, 45)'},
+                  {rows: 3, colour: util.convertToRgb(banGreen)},
                   {rows: 1},
-                  {rows: 1, colour: 'rgb(0, 0, 0)'}
+                  {rows: 1, colour: util.convertToRgb(banBlack)}
                ],
                [
-                  {rows: 4, colour: 'rgb(0, 90, 45)'},
-                  {rows: 2, colour: 'rgb(0, 0, 0)'},
+                  {rows: 4, colour: util.convertToRgb(banGreen)},
+                  {rows: 2, colour: util.convertToRgb(banBlack)},
                   {rows: 2},
-                  {rows: 2, colour: 'rgb(0, 0, 0)'},
-                  {rows: 4, colour: 'rgb(0, 90, 45)'}
+                  {rows: 2, colour: util.convertToRgb(banBlack)},
+                  {rows: 4, colour: util.convertToRgb(banGreen)}
                ],
                [
-                  {rows: 1, colour: 'rgb(0, 0, 0)'},
-                  {rows: 4, colour: 'rgb(0, 90, 45)'},
-                  {rows: 1, colour: 'rgb(0, 0, 0)'},
+                  {rows: 1, colour: util.convertToRgb(banBlack)},
+                  {rows: 4, colour: util.convertToRgb(banGreen)},
+                  {rows: 1, colour: util.convertToRgb(banBlack)},
                   {rows: 2},
-                  {rows: 1, colour: 'rgb(0, 0, 0)'},
-                  {rows: 4, colour: 'rgb(0, 90, 45)'},
-                  {rows: 1, colour: 'rgb(0, 0, 0)'}
+                  {rows: 1, colour: util.convertToRgb(banBlack)},
+                  {rows: 4, colour: util.convertToRgb(banGreen)},
+                  {rows: 1, colour: util.convertToRgb(banBlack)}
                ],
                [
-                  {rows: 2, colour: 'rgb(0, 0, 0)'},
-                  {rows: 4, colour: 'rgb(0, 90, 45)'},
+                  {rows: 2, colour: util.convertToRgb(banBlack)},
+                  {rows: 4, colour: util.convertToRgb(banGreen)},
                   {rows: 2},
-                  {rows: 4, colour: 'rgb(0, 90, 45)'},
-                  {rows: 2, colour: 'rgb(0, 0, 0)'}
+                  {rows: 4, colour: util.convertToRgb(banGreen)},
+                  {rows: 2, colour: util.convertToRgb(banBlack)}
                ],
                [
-                  {rows: 4, colour: 'rgb(0, 0, 0)'},
-                  {rows: 2, colour: 'rgb(255, 150, 0)'},
+                  {rows: 4, colour: util.convertToRgb(banBlack)},
+                  {rows: 2, colour: util.convertToRgb([255, 150, 0])},
                   {rows: 2},
-                  {rows: 2, colour: 'rgb(0, 45, 165)'},
-                  {rows: 4, colour: 'rgb(0, 0, 0)'}
+                  {rows: 2, colour: util.convertToRgb([0, 45, 165])},
+                  {rows: 4, colour: util.convertToRgb(banBlack)}
                ],
                [
-                  {rows: 6, colour: 'rgb(255, 150, 0)'},
+                  {rows: 6, colour: util.convertToRgb([255, 150, 0])},
                   {rows: 2},
-                  {rows: 6, colour: 'rgb(0, 45, 165)'}
+                  {rows: 6, colour: util.convertToRgb([0, 45, 165])}
                ]
             ],
-            backgroundColour: 'rgb(0, 90, 60)',
-            borderColour: 'rgb(0, 0, 75)'
+            backgroundColour: util.convertToRgb(banGreen),
+            borderColour: util.convertToRgb(banBlue)
          },
          {
             countyName: 'Flintshire',
