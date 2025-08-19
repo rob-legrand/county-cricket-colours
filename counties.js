@@ -1918,27 +1918,27 @@ const counties = (function () {
             classLevel: 7,
             country: 'Wales',
             colours: [
-               {rows: 1, colour: 'rgb(255, 45, 0)'},
-               {rows: 2, colour: 'rgb(0, 0, 0)'},
+               {rows: 1, colour: util.convertToRgb(flnRed)},
+               {rows: 2, colour: util.convertToRgb(flnBlack)},
                {rows: 2},
-               {rows: 4, colour: 'rgb(0, 0, 0)'},
+               {rows: 4, colour: util.convertToRgb(flnBlack)},
                {rows: 2},
-               {rows: 2, colour: 'rgb(0, 0, 0)'},
-               {rows: 1, colour: 'rgb(255, 45, 0)'}
+               {rows: 2, colour: util.convertToRgb(flnBlack)},
+               {rows: 1, colour: util.convertToRgb(flnRed)}
             ],
             alternateColours: [
                [
-                  {rows: 2, colour: 'rgb(0, 0, 0)'},
+                  {rows: 2, colour: util.convertToRgb(flnBlack)},
                   {rows: 2},
-                  {rows: 2, colour: 'rgb(0, 0, 0)'},
-                  {rows: 1, colour: 'rgb(255, 45, 0)'},
-                  {rows: 2, colour: 'rgb(0, 0, 0)'},
+                  {rows: 2, colour: util.convertToRgb(flnBlack)},
+                  {rows: 1, colour: util.convertToRgb(flnRed)},
+                  {rows: 2, colour: util.convertToRgb(flnBlack)},
                   {rows: 2},
-                  {rows: 2, colour: 'rgb(0, 0, 0)'}
+                  {rows: 2, colour: util.convertToRgb(flnBlack)}
                ]
             ],
-            backgroundColour: 'rgb(0, 0, 0)',
-            borderColour: 'rgb(255, 45, 0)'
+            backgroundColour: util.convertToRgb(flnBlack),
+            borderColour: util.convertToRgb(flnRed)
          },
          {
             countyName: 'Perthshire',
