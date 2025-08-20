@@ -1951,13 +1951,13 @@ const counties = (function () {
             classLevel: 8,
             country: 'Scotland',
             colours: [
-               {rows: 4, colour: 'rgb(0, 45, 15)'},
-               {rows: 5, colour: 'rgb(225, 195, 0)'},
-               {rows: 4, colour: 'rgb(0, 45, 15)'}
+               {rows: 4, colour: util.convertToRgb(perGreen)},
+               {rows: 5, colour: util.convertToRgb(perGold)},
+               {rows: 4, colour: util.convertToRgb(perGreen)}
             ],
-            textColour: 'rgb(225, 195, 0)',
-            backgroundColour: 'rgb(0, 45, 15)',
-            borderColour: 'rgb(225, 195, 0)'
+            textColour: util.convertToRgb(perGold),
+            backgroundColour: util.convertToRgb(perGreen),
+            borderColour: util.convertToRgb(perGold)
          },
          {
             countyName: 'Clackmannanshire',
