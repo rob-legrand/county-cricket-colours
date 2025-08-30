@@ -2025,9 +2025,7 @@ const counties = (function () {
             alternateColours: [
                [
                   {rows: 1, colour: 'rgb(255, 255, 75)'},
-                  {rows: 3, colour: 'rgb(150, 0, 30)'},
-                  {rows: 6, colour: 'rgb(90, 15, 0)'},
-                  {rows: 3, colour: 'rgb(150, 0, 30)'},
+                  {rows: 12, colour: 'rgb(120, 30, 0)'},
                   {rows: 1, colour: 'rgb(255, 255, 75)'}
                ],
                [
@@ -2075,73 +2073,28 @@ const counties = (function () {
                   {rows: 5, colour: 'rgb(120, 30, 0)'}
                ],
                [
+                  {rows: 3, colour: 'rgb(120, 30, 0)'},
                   {rows: 1, colour: 'rgb(255, 255, 75)'},
-                  {rows: 6, colour: 'rgb(150, 0, 30)'},
-                  {rows: 6, colour: 'rgb(90, 15, 0)'},
-                  {rows: 1, colour: 'rgb(255, 255, 75)'}
-               ],
-               [
-                  {rows: 3, colour: 'rgb(150, 0, 30)'},
+                  {rows: 6, colour: 'rgb(120, 30, 0)'},
                   {rows: 1, colour: 'rgb(255, 255, 75)'},
-                  {rows: 6, colour: 'rgb(90, 15, 0)'},
-                  {rows: 1, colour: 'rgb(255, 255, 75)'},
-                  {rows: 3, colour: 'rgb(150, 0, 30)'}
-               ],
-               [
-                  {rows: 3, colour: 'rgb(150, 0, 30)'},
-                  {rows: 1, colour: 'rgb(255, 255, 75)'},
-                  {rows: 3, colour: 'rgb(150, 0, 30)'},
-                  {rows: 3, colour: 'rgb(90, 15, 0)'},
-                  {rows: 1, colour: 'rgb(255, 255, 75)'},
-                  {rows: 3, colour: 'rgb(90, 15, 0)'}
-               ],
-               [
-                  {rows: 1, colour: 'rgb(255, 255, 75)'},
-                  {rows: 4, colour: 'rgb(90, 15, 0)'},
-                  {rows: 4, colour: 'rgb(150, 0, 30)'},
-                  {rows: 4, colour: 'rgb(90, 15, 0)'},
-                  {rows: 1, colour: 'rgb(255, 255, 75)'}
+                  {rows: 3, colour: 'rgb(120, 30, 0)'}
                ],
                [
                   {rows: 2, colour: 'rgb(255, 255, 75)'},
-                  {rows: 3, colour: 'rgb(90, 15, 0)'},
-                  {rows: 3, colour: 'rgb(150, 0, 30)'},
-                  {rows: 3, colour: 'rgb(90, 15, 0)'},
+                  {rows: 9, colour: 'rgb(120, 30, 0)'},
                   {rows: 2, colour: 'rgb(255, 255, 75)'}
                ],
                [
-                  {rows: 2, colour: 'rgb(150, 0, 30)'},
-                  {rows: 4, colour: 'rgb(90, 15, 0)'},
+                  {rows: 6, colour: 'rgb(120, 30, 0)'},
                   {rows: 1, colour: 'rgb(255, 255, 75)'},
-                  {rows: 4, colour: 'rgb(90, 15, 0)'},
-                  {rows: 2, colour: 'rgb(150, 0, 30)'}
+                  {rows: 6, colour: 'rgb(120, 30, 0)'}
                ],
                [
-                  {rows: 2, colour: 'rgb(255, 255, 75)'},
-                  {rows: 2, colour: 'rgb(150, 0, 30)'},
-                  {rows: 5, colour: 'rgb(90, 15, 0)'},
-                  {rows: 2, colour: 'rgb(150, 0, 30)'},
-                  {rows: 2, colour: 'rgb(255, 255, 75)'}
-               ],
-               [
-                  {rows: 2, colour: 'rgb(255, 255, 75)'},
-                  {rows: 5, colour: 'rgb(150, 0, 30)'},
-                  {rows: 5, colour: 'rgb(90, 15, 0)'},
-                  {rows: 2, colour: 'rgb(255, 255, 75)'}
-               ],
-               [
-                  {rows: 2, colour: 'rgb(255, 255, 75)'},
-                  {rows: 3, colour: 'rgb(150, 0, 30)'},
-                  {rows: 3, colour: 'rgb(90, 15, 0)'},
-                  {rows: 3, colour: 'rgb(150, 0, 30)'},
-                  {rows: 2, colour: 'rgb(255, 255, 75)'}
-               ],
-               [
-                  {rows: 3, colour: 'rgb(75, 0, 15)'},
+                  {rows: 3, colour: 'rgb(120, 30, 0)'},
                   {rows: 1},
-                  {rows: 6, colour: 'rgb(75, 0, 15)'},
+                  {rows: 6, colour: 'rgb(120, 30, 0)'},
                   {rows: 1},
-                  {rows: 3, colour: 'rgb(75, 0, 15)'}
+                  {rows: 3, colour: 'rgb(120, 30, 0)'}
                ]
             ],
             textColour: 'rgb(255, 255, 75)',
