@@ -2019,89 +2019,89 @@ const counties = (function () {
             classLevel: 8,
             country: 'Scotland',
             colours: [
-               {rows: 1, colour: 'rgb(180, 180, 180)'},
-               {rows: 1, colour: 'rgb(255, 255, 75)'},
-               {rows: 9, colour: 'rgb(120, 30, 0)'},
-               {rows: 1, colour: 'rgb(255, 255, 75)'},
-               {rows: 1, colour: 'rgb(180, 180, 180)'}
+               {rows: 1, colour: util.convertToRgb(ayrSilver)},
+               {rows: 1, colour: util.convertToRgb(ayrYellow)},
+               {rows: 9, colour: util.convertToRgb(ayrRed)},
+               {rows: 1, colour: util.convertToRgb(ayrYellow)},
+               {rows: 1, colour: util.convertToRgb(ayrSilver)}
             ],
             alternateColours: [
                [
-                  {rows: 1, colour: 'rgb(255, 255, 75)'},
-                  {rows: 12, colour: 'rgb(120, 30, 0)'},
-                  {rows: 1, colour: 'rgb(255, 255, 75)'}
+                  {rows: 1, colour: util.convertToRgb(ayrYellow)},
+                  {rows: 12, colour: util.convertToRgb(ayrRed)},
+                  {rows: 1, colour: util.convertToRgb(ayrYellow)}
                ],
                [
-                  {rows: 1, colour: 'rgb(255, 255, 75)'},
-                  {rows: 1, colour: 'rgb(180, 180, 180)'},
-                  {rows: 9, colour: 'rgb(120, 30, 0)'},
-                  {rows: 1, colour: 'rgb(180, 180, 180)'},
-                  {rows: 1, colour: 'rgb(255, 255, 75)'}
+                  {rows: 1, colour: util.convertToRgb(ayrYellow)},
+                  {rows: 1, colour: util.convertToRgb(ayrSilver)},
+                  {rows: 9, colour: util.convertToRgb(ayrRed)},
+                  {rows: 1, colour: util.convertToRgb(ayrSilver)},
+                  {rows: 1, colour: util.convertToRgb(ayrYellow)}
                ],
                [
-                  {rows: 1, colour: 'rgb(255, 255, 75)'},
-                  {rows: 1, colour: 'rgb(180, 180, 180)'},
-                  {rows: 1, colour: 'rgb(255, 255, 75)'},
-                  {rows: 8, colour: 'rgb(120, 30, 0)'},
-                  {rows: 1, colour: 'rgb(255, 255, 75)'},
-                  {rows: 1, colour: 'rgb(180, 180, 180)'},
-                  {rows: 1, colour: 'rgb(255, 255, 75)'}
+                  {rows: 1, colour: util.convertToRgb(ayrYellow)},
+                  {rows: 1, colour: util.convertToRgb(ayrSilver)},
+                  {rows: 1, colour: util.convertToRgb(ayrYellow)},
+                  {rows: 8, colour: util.convertToRgb(ayrRed)},
+                  {rows: 1, colour: util.convertToRgb(ayrYellow)},
+                  {rows: 1, colour: util.convertToRgb(ayrSilver)},
+                  {rows: 1, colour: util.convertToRgb(ayrYellow)}
                ],
                [
-                  {rows: 5, colour: 'rgb(120, 30, 0)'},
-                  {rows: 1, colour: 'rgb(255, 255, 75)'},
+                  {rows: 5, colour: util.convertToRgb(ayrRed)},
+                  {rows: 1, colour: util.convertToRgb(ayrYellow)},
                   {rows: 2},
-                  {rows: 1, colour: 'rgb(255, 255, 75)'},
-                  {rows: 5, colour: 'rgb(120, 30, 0)'}
+                  {rows: 1, colour: util.convertToRgb(ayrYellow)},
+                  {rows: 5, colour: util.convertToRgb(ayrRed)}
                ],
                [
-                  {rows: 1, colour: 'rgb(255, 255, 75)'},
-                  {rows: 4, colour: 'rgb(120, 30, 0)'},
-                  {rows: 1, colour: 'rgb(255, 255, 75)'},
+                  {rows: 1, colour: util.convertToRgb(ayrYellow)},
+                  {rows: 4, colour: util.convertToRgb(ayrRed)},
+                  {rows: 1, colour: util.convertToRgb(ayrYellow)},
                   {rows: 1},
-                  {rows: 1, colour: 'rgb(255, 255, 75)'},
-                  {rows: 4, colour: 'rgb(120, 30, 0)'},
-                  {rows: 1, colour: 'rgb(255, 255, 75)'}
+                  {rows: 1, colour: util.convertToRgb(ayrYellow)},
+                  {rows: 4, colour: util.convertToRgb(ayrRed)},
+                  {rows: 1, colour: util.convertToRgb(ayrYellow)}
                ],
                [
-                  {rows: 2, colour: 'rgb(255, 255, 75)'},
-                  {rows: 9, colour: 'rgb(120, 30, 0)'},
-                  {rows: 2, colour: 'rgb(255, 255, 75)'}
+                  {rows: 2, colour: util.convertToRgb(ayrYellow)},
+                  {rows: 9, colour: util.convertToRgb(ayrRed)},
+                  {rows: 2, colour: util.convertToRgb(ayrYellow)}
                ],
                [
-                  {rows: 5, colour: 'rgb(120, 30, 0)'},
-                  {rows: 1, colour: 'rgb(255, 255, 75)'},
-                  {rows: 1, colour: 'rgb(180, 180, 180)'},
-                  {rows: 1, colour: 'rgb(255, 255, 75)'},
-                  {rows: 5, colour: 'rgb(120, 30, 0)'}
+                  {rows: 5, colour: util.convertToRgb(ayrRed)},
+                  {rows: 1, colour: util.convertToRgb(ayrYellow)},
+                  {rows: 1, colour: util.convertToRgb(ayrSilver)},
+                  {rows: 1, colour: util.convertToRgb(ayrYellow)},
+                  {rows: 5, colour: util.convertToRgb(ayrRed)}
                ],
                [
-                  {rows: 3, colour: 'rgb(120, 30, 0)'},
-                  {rows: 1, colour: 'rgb(255, 255, 75)'},
-                  {rows: 6, colour: 'rgb(120, 30, 0)'},
-                  {rows: 1, colour: 'rgb(255, 255, 75)'},
-                  {rows: 3, colour: 'rgb(120, 30, 0)'}
+                  {rows: 3, colour: util.convertToRgb(ayrRed)},
+                  {rows: 1, colour: util.convertToRgb(ayrYellow)},
+                  {rows: 6, colour: util.convertToRgb(ayrRed)},
+                  {rows: 1, colour: util.convertToRgb(ayrYellow)},
+                  {rows: 3, colour: util.convertToRgb(ayrRed)}
                ],
                [
-                  {rows: 2, colour: 'rgb(255, 255, 75)'},
-                  {rows: 9, colour: 'rgb(120, 30, 0)'},
-                  {rows: 2, colour: 'rgb(255, 255, 75)'}
+                  {rows: 2, colour: util.convertToRgb(ayrYellow)},
+                  {rows: 9, colour: util.convertToRgb(ayrRed)},
+                  {rows: 2, colour: util.convertToRgb(ayrYellow)}
                ],
                [
-                  {rows: 6, colour: 'rgb(120, 30, 0)'},
-                  {rows: 1, colour: 'rgb(255, 255, 75)'},
-                  {rows: 6, colour: 'rgb(120, 30, 0)'}
+                  {rows: 6, colour: util.convertToRgb(ayrRed)},
+                  {rows: 1, colour: util.convertToRgb(ayrYellow)},
+                  {rows: 6, colour: util.convertToRgb(ayrRed)}
                ],
                [
-                  {rows: 3, colour: 'rgb(120, 30, 0)'},
+                  {rows: 3, colour: util.convertToRgb(ayrRed)},
                   {rows: 1},
-                  {rows: 6, colour: 'rgb(120, 30, 0)'},
+                  {rows: 6, colour: util.convertToRgb(ayrRed)},
                   {rows: 1},
-                  {rows: 3, colour: 'rgb(120, 30, 0)'}
+                  {rows: 3, colour: util.convertToRgb(ayrRed)}
                ]
             ],
-            textColour: 'rgb(255, 255, 75)',
-            backgroundColour: 'rgb(120, 30, 0)'
+            textColour: util.convertToRgb(ayrYellow),
+            backgroundColour: util.convertToRgb(ayrRed)
          },
          {
             countyName: 'Lanarkshire',
