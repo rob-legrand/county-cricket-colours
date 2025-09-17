@@ -2134,15 +2134,15 @@ const counties = (function () {
             classLevel: 8,
             country: 'Scotland',
             colours: [
-               {rows: 4, colour: 'rgb(90, 0, 30)'},
-               {rows: 1, colour: 'rgb(225, 195, 30)'},
-               {rows: 4, colour: 'rgb(0, 30, 90)'},
-               {rows: 1, colour: 'rgb(225, 195, 30)'},
-               {rows: 4, colour: 'rgb(90, 0, 30)'}
+               {rows: 4, colour: util.convertToRgb(rnfMaroon)},
+               {rows: 1, colour: util.convertToRgb(rnfGold)},
+               {rows: 4, colour: util.convertToRgb(rnfBlue)},
+               {rows: 1, colour: util.convertToRgb(rnfGold)},
+               {rows: 4, colour: util.convertToRgb(rnfMaroon)}
             ],
-            textColour: 'rgb(225, 195, 30)',
-            backgroundColour: 'rgb(90, 0, 30)',
-            borderColour: 'rgb(0, 30, 90)'
+            textColour: util.convertToRgb(rnfGold),
+            backgroundColour: util.convertToRgb(rnfMaroon),
+            borderColour: util.convertToRgb(rnfBlue)
          },
          {
             countyName: 'Dunbartonshire',
