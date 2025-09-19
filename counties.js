@@ -2232,15 +2232,15 @@ const counties = (function () {
             classLevel: 8,
             country: 'Scotland',
             colours: [
-               {rows: 3, colour: 'rgb(255, 210, 0)'},
-               {rows: 2, colour: 'rgb(225, 0, 15)'},
-               {rows: 4, colour: 'rgb(0, 0, 0)'},
-               {rows: 2, colour: 'rgb(225, 0, 15)'},
-               {rows: 3, colour: 'rgb(255, 210, 0)'}
+               {rows: 3, colour: util.convertToRgb(dmfGold)},
+               {rows: 2, colour: util.convertToRgb(dmfRed)},
+               {rows: 4, colour: util.convertToRgb(dmfBlack)},
+               {rows: 2, colour: util.convertToRgb(dmfRed)},
+               {rows: 3, colour: util.convertToRgb(dmfGold)}
             ],
-            textColour: 'rgb(0, 0, 0)',
-            backgroundColour: 'rgb(255, 210, 0)',
-            borderColour: 'rgb(225, 0, 15)'
+            textColour: util.convertToRgb(dmfBlack),
+            backgroundColour: util.convertToRgb(dmfGold),
+            borderColour: util.convertToRgb(dmfRed)
          },
          {
             countyName: 'West Lothian',
