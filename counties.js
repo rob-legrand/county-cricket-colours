@@ -2251,10 +2251,38 @@ const counties = (function () {
             country: 'Scotland',
             colours: [
                {rows: 5, colour: 'rgb(135, 0, 30)'},
-               {rows: 1},
-               {rows: 2, colour: 'rgb(255, 210, 45)'},
-               {rows: 1},
+               {rows: 4, colour: 'rgb(255, 210, 45)'},
                {rows: 5, colour: 'rgb(135, 0, 30)'}
+            ],
+            alternateColours: [
+               [
+                  {rows: 5, colour: 'rgb(135, 0, 30)'},
+                  {rows: 1, colour: 'rgb(240, 240, 240)'},
+                  {rows: 2, colour: 'rgb(255, 210, 45)'},
+                  {rows: 1, colour: 'rgb(240, 240, 240)'},
+                  {rows: 5, colour: 'rgb(135, 0, 30)'}
+               ],
+               [
+                  {rows: 5, colour: 'rgb(135, 0, 30)'},
+                  {rows: 1},
+                  {rows: 2, colour: 'rgb(255, 210, 45)'},
+                  {rows: 1},
+                  {rows: 5, colour: 'rgb(135, 0, 30)'}
+               ],
+               [
+                  {rows: 5, colour: 'rgb(135, 0, 30)'},
+                  {rows: 1, colour: 'rgb(255, 210, 45)'},
+                  {rows: 2},
+                  {rows: 1, colour: 'rgb(255, 210, 45)'},
+                  {rows: 5, colour: 'rgb(135, 0, 30)'}
+               ],
+               [
+                  {rows: 5, colour: 'rgb(135, 0, 30)'},
+                  {rows: 1, colour: 'rgb(255, 210, 45)'},
+                  {rows: 2, colour: 'rgb(240, 240, 240)'},
+                  {rows: 1, colour: 'rgb(255, 210, 45)'},
+                  {rows: 5, colour: 'rgb(135, 0, 30)'}
+               ]
             ],
             backgroundColour: 'rgb(135, 0, 30)',
             borderColour: 'rgb(255, 210, 45)'
