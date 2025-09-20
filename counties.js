@@ -2287,6 +2287,7 @@ const counties = (function () {
                   {rows: 5, colour: util.convertToRgb(wlnMaroon)}
                ]
             ],
+            textColour: util.convertToRgb(wlnSilver),
             backgroundColour: util.convertToRgb(wlnMaroon),
             borderColour: util.convertToRgb(wlnGold)
          },
