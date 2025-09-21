@@ -2301,12 +2301,12 @@ const counties = (function () {
             classLevel: 9,
             country: 'Wales',
             colours: [
-               {rows: 5, colour: 'rgb(225, 45, 60)'},
-               {rows: 3, colour: 'rgb(255, 225, 15)'},
-               {rows: 5, colour: 'rgb(225, 45, 60)'}
+               {rows: 5, colour: util.convertToRgb(agyRed)},
+               {rows: 3, colour: util.convertToRgb(agyGold)},
+               {rows: 5, colour: util.convertToRgb(agyRed)}
             ],
-            textColour: 'rgb(255, 225, 15)',
-            backgroundColour: 'rgb(225, 45, 60)'
+            textColour: util.convertToRgb(agyGold),
+            backgroundColour: util.convertToRgb(agyRed)
          },
          {
             countyName: 'Merioneth',
