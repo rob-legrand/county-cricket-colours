@@ -2305,6 +2305,23 @@ const counties = (function () {
                {rows: 3, colour: util.convertToRgb(agyGold)},
                {rows: 5, colour: util.convertToRgb(agyRed)}
             ],
+            alternateColours: [
+               [
+                  {rows: 6, colour: util.convertToRgb(agyRed)},
+                  {rows: 3, colour: util.convertToRgb(agyGold)},
+                  {rows: 6, colour: util.convertToRgb(agyRed)}
+               ],
+               [
+                  {rows: 6, colour: util.convertToRgb(agyRed)},
+                  {rows: 2, colour: util.convertToRgb(agyGold)},
+                  {rows: 6, colour: util.convertToRgb(agyRed)}
+               ],
+               [
+                  {rows: 5, colour: util.convertToRgb(agyRed)},
+                  {rows: 2, colour: util.convertToRgb(agyGold)},
+                  {rows: 5, colour: util.convertToRgb(agyRed)}
+               ]
+            ],
             textColour: util.convertToRgb(agyGold),
             backgroundColour: util.convertToRgb(agyRed)
          },
