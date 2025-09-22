@@ -2335,29 +2335,29 @@ const counties = (function () {
             classLevel: 9,
             country: 'Wales',
             colours: [
-               {rows: 4, colour: 'rgb(0, 60, 180)'},
+               {rows: 4, colour: util.convertToRgb(merBlue)},
                {rows: 2},
-               {rows: 2, colour: 'rgb(0, 60, 180)'},
-               {rows: 2, colour: 'rgb(255, 210, 0)'},
-               {rows: 4, colour: 'rgb(0, 60, 180)'}
+               {rows: 2, colour: util.convertToRgb(merBlue)},
+               {rows: 2, colour: util.convertToRgb(merGold)},
+               {rows: 4, colour: util.convertToRgb(merBlue)}
             ],
             alternateColours: [
                [
-                  {rows: 2, colour: 'rgb(255, 210, 0)'},
-                  {rows: 4, colour: 'rgb(0, 60, 180)'},
+                  {rows: 2, colour: util.convertToRgb(merGold)},
+                  {rows: 4, colour: util.convertToRgb(merBlue)},
                   {rows: 2},
-                  {rows: 4, colour: 'rgb(0, 60, 180)'},
-                  {rows: 2, colour: 'rgb(255, 210, 0)'}
+                  {rows: 4, colour: util.convertToRgb(merBlue)},
+                  {rows: 2, colour: util.convertToRgb(merGold)}
                ],
                [
-                  {rows: 5, colour: 'rgb(0, 60, 180)'},
+                  {rows: 5, colour: util.convertToRgb(merBlue)},
                   {rows: 2},
-                  {rows: 2, colour: 'rgb(255, 210, 0)'},
-                  {rows: 5, colour: 'rgb(0, 60, 180)'}
+                  {rows: 2, colour: util.convertToRgb(merGold)},
+                  {rows: 5, colour: util.convertToRgb(merBlue)}
                ]
             ],
-            backgroundColour: 'rgb(0, 60, 180)',
-            borderColour: 'rgb(255, 210, 0)'
+            backgroundColour: util.convertToRgb(merBlue),
+            borderColour: util.convertToRgb(merGold)
          },
          {
             countyName: 'Midlothian',
