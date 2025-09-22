@@ -2368,12 +2368,12 @@ const counties = (function () {
             classLevel: 9,
             country: 'Scotland',
             colours: [
-               {rows: 5, colour: 'rgb(0, 30, 60)'},
+               {rows: 5, colour: util.convertToRgb(mlnBlue)},
                {rows: 4},
-               {rows: 5, colour: 'rgb(0, 30, 60)'}
+               {rows: 5, colour: util.convertToRgb(mlnBlue)}
             ],
-            textColour: 'rgb(0, 30, 60)',
-            borderColour: 'rgb(0, 30, 60)'
+            textColour: util.convertToRgb(mlnBlue),
+            borderColour: util.convertToRgb(mlnBlue)
          }
       ],
       deepFreeze: (oldThing) => Object.freeze(
