@@ -2304,16 +2304,11 @@ const counties = (function () {
             classLevel: 9,
             country: 'Wales',
             colours: [
-               {rows: 5, colour: util.convertToRgb(agyRed)},
+               {rows: 6, colour: util.convertToRgb(agyRed)},
                {rows: 3, colour: util.convertToRgb(agyGold)},
-               {rows: 5, colour: util.convertToRgb(agyRed)}
+               {rows: 6, colour: util.convertToRgb(agyRed)}
             ],
             alternateColours: [
-               [
-                  {rows: 6, colour: util.convertToRgb(agyRed)},
-                  {rows: 3, colour: util.convertToRgb(agyGold)},
-                  {rows: 6, colour: util.convertToRgb(agyRed)}
-               ],
                [
                   {rows: 6, colour: util.convertToRgb(agyRed)},
                   {rows: 2, colour: util.convertToRgb(agyGold)},
@@ -2322,6 +2317,11 @@ const counties = (function () {
                [
                   {rows: 5, colour: util.convertToRgb(agyRed)},
                   {rows: 2, colour: util.convertToRgb(agyGold)},
+                  {rows: 5, colour: util.convertToRgb(agyRed)}
+               ],
+               [
+                  {rows: 5, colour: util.convertToRgb(agyRed)},
+                  {rows: 3, colour: util.convertToRgb(agyGold)},
                   {rows: 5, colour: util.convertToRgb(agyRed)}
                ]
             ],
