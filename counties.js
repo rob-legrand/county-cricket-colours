@@ -2506,7 +2506,7 @@ const counties = (function () {
          newElement.style.borderColor = county.borderColour ?? county.backgroundColour ?? util.creamColour;
          return newElement;
       },
-      createInfo: () => util.deepFreeze(util.createInfo()),
+      createInfo: () => util.deepCopy(util.createInfo(), Object.freeze),
       getNumRows: (colours) => colours.reduce(
          (numRowsSoFar, stripe) => numRowsSoFar + stripe.rows,
          0
