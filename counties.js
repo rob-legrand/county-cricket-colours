@@ -2396,21 +2396,6 @@ const counties = (function () {
          )
          // Otherwise, no recursion is required.
          : oldThing
-      ),
-      deepFreeze: (oldThing) => Object.freeze(
-         Array.isArray(oldThing)
-         ? oldThing.map(
-            (currentValue) => util.deepFreeze(currentValue)
-         )
-         : typeof oldThing === 'object'
-         ? Object.keys(oldThing).reduce(
-            function (newObject, prop) {
-               newObject[prop] = util.deepFreeze(oldThing[prop]);
-               return newObject;
-            },
-            {}
-         )
-         : oldThing
       )
    });
 
