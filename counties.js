@@ -192,99 +192,99 @@ const counties = (function () {
             classLevel: 1,
             country: 'England',
             colours: [
-               {rows: 3, colour: util.convertToRgb(susDarkBlue)},
-               {rows: 2, colour: util.convertToRgb(susGold)},
-               {rows: 2, colour: util.convertToRgb(susLightBlue)},
-               {rows: 3, colour: util.convertToRgb(susDarkBlue)}
+               {rows: 3, colour: susDarkBlue},
+               {rows: 2, colour: susGold},
+               {rows: 2, colour: susLightBlue},
+               {rows: 3, colour: susDarkBlue}
             ],
             alternateColours: [
                [
-                  {rows: 2, colour: util.convertToRgb(susDarkBlue)},
+                  {rows: 2, colour: susDarkBlue},
                   {rows: 1},
-                  {rows: 2, colour: util.convertToRgb(susGold)},
-                  {rows: 2, colour: util.convertToRgb(susLightBlue)},
+                  {rows: 2, colour: susGold},
+                  {rows: 2, colour: susLightBlue},
                   {rows: 1},
-                  {rows: 2, colour: util.convertToRgb(susDarkBlue)}
+                  {rows: 2, colour: susDarkBlue}
                ],
                [
-                  {rows: 1, colour: util.convertToRgb(susDarkBlue)},
+                  {rows: 1, colour: susDarkBlue},
                   {rows: 1},
-                  {rows: 2, colour: util.convertToRgb(susGold)},
-                  {rows: 2, colour: util.convertToRgb(susDarkBlue)},
-                  {rows: 2, colour: util.convertToRgb(susLightBlue)},
+                  {rows: 2, colour: susGold},
+                  {rows: 2, colour: susDarkBlue},
+                  {rows: 2, colour: susLightBlue},
                   {rows: 1},
-                  {rows: 1, colour: util.convertToRgb(susDarkBlue)}
+                  {rows: 1, colour: susDarkBlue}
                ],
                [
-                  {rows: 1, colour: util.convertToRgb(susDarkBlue)},
+                  {rows: 1, colour: susDarkBlue},
                   {rows: 1},
-                  {rows: 3, colour: util.convertToRgb(susGold)},
-                  {rows: 3, colour: util.convertToRgb(susLightBlue)},
+                  {rows: 3, colour: susGold},
+                  {rows: 3, colour: susLightBlue},
                   {rows: 1},
-                  {rows: 1, colour: util.convertToRgb(susDarkBlue)}
+                  {rows: 1, colour: susDarkBlue}
                ],
                [
-                  {rows: 2, colour: util.convertToRgb(susDarkBlue)},
-                  {rows: 3, colour: util.convertToRgb(susGold)},
-                  {rows: 3, colour: util.convertToRgb(susLightBlue)},
-                  {rows: 2, colour: util.convertToRgb(susDarkBlue)}
+                  {rows: 2, colour: susDarkBlue},
+                  {rows: 3, colour: susGold},
+                  {rows: 3, colour: susLightBlue},
+                  {rows: 2, colour: susDarkBlue}
                ],
                [
-                  {rows: 2, colour: util.convertToRgb(susDarkBlue)},
-                  {rows: 2, colour: util.convertToRgb(susLightBlue)},
-                  {rows: 2, colour: util.convertToRgb(susGold)},
-                  {rows: 2, colour: util.convertToRgb(susLightBlue)},
-                  {rows: 2, colour: util.convertToRgb(susDarkBlue)}
+                  {rows: 2, colour: susDarkBlue},
+                  {rows: 2, colour: susLightBlue},
+                  {rows: 2, colour: susGold},
+                  {rows: 2, colour: susLightBlue},
+                  {rows: 2, colour: susDarkBlue}
                ],
                [
-                  {rows: 3, colour: util.convertToRgb(susDarkBlue)},
-                  {rows: 1, colour: util.convertToRgb(susLightBlue)},
-                  {rows: 2, colour: util.convertToRgb(susGold)},
-                  {rows: 1, colour: util.convertToRgb(susLightBlue)},
-                  {rows: 3, colour: util.convertToRgb(susDarkBlue)}
+                  {rows: 3, colour: susDarkBlue},
+                  {rows: 1, colour: susLightBlue},
+                  {rows: 2, colour: susGold},
+                  {rows: 1, colour: susLightBlue},
+                  {rows: 3, colour: susDarkBlue}
                ],
                [
-                  {rows: 2, colour: util.convertToRgb(susDarkBlue)},
-                  {rows: 1, colour: util.convertToRgb(susGold)},
-                  {rows: 4, colour: util.convertToRgb(susLightBlue)},
-                  {rows: 1, colour: util.convertToRgb(susGold)},
-                  {rows: 2, colour: util.convertToRgb(susDarkBlue)}
+                  {rows: 2, colour: susDarkBlue},
+                  {rows: 1, colour: susGold},
+                  {rows: 4, colour: susLightBlue},
+                  {rows: 1, colour: susGold},
+                  {rows: 2, colour: susDarkBlue}
                ],
                [
-                  {rows: 3, colour: util.convertToRgb(susDarkBlue)},
-                  {rows: 1, colour: util.convertToRgb(susGold)},
-                  {rows: 2, colour: util.convertToRgb(susLightBlue)},
-                  {rows: 1, colour: util.convertToRgb(susGold)},
-                  {rows: 3, colour: util.convertToRgb(susDarkBlue)}
+                  {rows: 3, colour: susDarkBlue},
+                  {rows: 1, colour: susGold},
+                  {rows: 2, colour: susLightBlue},
+                  {rows: 1, colour: susGold},
+                  {rows: 3, colour: susDarkBlue}
                ],
                [
-                  {rows: 2, colour: util.convertToRgb(susDarkBlue)},
+                  {rows: 2, colour: susDarkBlue},
                   {rows: 1},
-                  {rows: 1, colour: util.convertToRgb(susGold)},
-                  {rows: 2, colour: util.convertToRgb(susLightBlue)},
-                  {rows: 1, colour: util.convertToRgb(susGold)},
+                  {rows: 1, colour: susGold},
+                  {rows: 2, colour: susLightBlue},
+                  {rows: 1, colour: susGold},
                   {rows: 1},
-                  {rows: 2, colour: util.convertToRgb(susDarkBlue)}
+                  {rows: 2, colour: susDarkBlue}
                ],
                [
-                  {rows: 2, colour: util.convertToRgb(susLightBlue)},
-                  {rows: 1, colour: util.convertToRgb(susGold)},
-                  {rows: 4, colour: util.convertToRgb(susDarkBlue)},
-                  {rows: 1, colour: util.convertToRgb(susGold)},
-                  {rows: 2, colour: util.convertToRgb(susLightBlue)}
+                  {rows: 2, colour: susLightBlue},
+                  {rows: 1, colour: susGold},
+                  {rows: 4, colour: susDarkBlue},
+                  {rows: 1, colour: susGold},
+                  {rows: 2, colour: susLightBlue}
                ],
                [
-                  {rows: 2, colour: util.convertToRgb(susLightBlue)},
+                  {rows: 2, colour: susLightBlue},
                   {rows: 1},
-                  {rows: 2, colour: util.convertToRgb(susGold)},
-                  {rows: 2, colour: util.convertToRgb(susDarkBlue)},
+                  {rows: 2, colour: susGold},
+                  {rows: 2, colour: susDarkBlue},
                   {rows: 1},
-                  {rows: 2, colour: util.convertToRgb(susLightBlue)}
+                  {rows: 2, colour: susLightBlue}
                ]
             ],
-            textColour: util.convertToRgb(susGold),
-            backgroundColour: util.convertToRgb(susDarkBlue),
-            borderColour: util.convertToRgb(susLightBlue)
+            textColour: susGold,
+            backgroundColour: susDarkBlue,
+            borderColour: susLightBlue
          },
          {
             countyName: 'Kent',
