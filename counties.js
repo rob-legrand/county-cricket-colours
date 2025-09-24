@@ -2441,13 +2441,13 @@ const counties = (function () {
                newCanvas.height = Math.round(args.height);
             }
          }
-         newCanvas.getContext('2d').fillStyle = util.creamColour;
+         newCanvas.getContext('2d').fillStyle = util.convertToRgb(util.creamColour);
          newCanvas.getContext('2d').fillRect(0, 0, newCanvas.width, newCanvas.height);
          if (args.isHorizontal) {
             args.colours.reduce(
                function (totalRowsSoFar, stripe) {
                   if (stripe.hasOwnProperty('colour')) {
-                     newCanvas.getContext('2d').fillStyle = stripe.colour;
+                     newCanvas.getContext('2d').fillStyle = util.convertToRgb(stripe.colour);
                      newCanvas.getContext('2d').fillRect(
                         0,
                         totalRowsSoFar,
@@ -2468,7 +2468,7 @@ const counties = (function () {
             args.colours.reduce(
                function (totalRowsSoFar, stripe) {
                   if (stripe.hasOwnProperty('colour')) {
-                     newCanvas.getContext('2d').fillStyle = stripe.colour;
+                     newCanvas.getContext('2d').fillStyle = util.convertToRgb(stripe.colour);
                      newCanvas.getContext('2d').fillRect(
                         totalRowsSoFar,
                         0,
@@ -2490,9 +2490,15 @@ const counties = (function () {
       createCountyElement: function (county, elementType = 'div') {
          const newElement = document.createElement(elementType);
          newElement.textContent = county.countyName;
-         newElement.style.color = county.textColour ?? util.creamColour;
-         newElement.style.backgroundColor = county.backgroundColour ?? util.creamColour;
-         newElement.style.borderColor = county.borderColour ?? county.backgroundColour ?? util.creamColour;
+         newElement.style.color = util.convertToRgb(
+            county.textColour ?? util.creamColour
+         );
+         newElement.style.backgroundColor = util.convertToRgb(
+            county.backgroundColour ?? util.creamColour
+         );
+         newElement.style.borderColor = util.convertToRgb(
+            county.borderColour ?? county.backgroundColour ?? util.creamColour
+         );
          return newElement;
       },
       createInfo: () => util.deepCopy(util.createInfo(), Object.freeze),
