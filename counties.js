@@ -172,11 +172,15 @@ const counties = (function () {
    const yrkLightBlue = [135, 165, 195];
 
    const util = Object.freeze({
-      convertToRgb: (array) => (
-         'rgb('
-         + array[0] + ', '
-         + array[1] + ', '
-         + array[2] + ')'
+      convertToRgb: (colour) => (
+         Array.isArray(colour)
+         ? (
+            'rgb('
+            + colour[0] + ', '
+            + colour[1] + ', '
+            + colour[2] + ')'
+         )
+         : colour
       ),
       creamColour: 'rgb(255, 245, 225)',
       createInfo: () => [
