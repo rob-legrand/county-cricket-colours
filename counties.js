@@ -182,7 +182,7 @@ const counties = (function () {
          )
          : colour
       ),
-      creamColour: 'rgb(255, 245, 225)',
+      creamColour: [255, 245, 225],
       createInfo: () => [
          {
             countyName: 'Sussex',
