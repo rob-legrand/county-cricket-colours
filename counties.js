@@ -294,84 +294,84 @@ const counties = (function () {
             classLevel: 1,
             country: 'England',
             colours: [
-               {rows: 2, colour: util.convertToRgb(kenBlue)},
+               {rows: 2, colour: kenBlue},
                {rows: 1},
-               {rows: 4, colour: util.convertToRgb(kenRed)},
+               {rows: 4, colour: kenRed},
                {rows: 1},
-               {rows: 2, colour: util.convertToRgb(kenBlue)}
+               {rows: 2, colour: kenBlue}
             ],
             alternateColours: [
                [
-                  {rows: 4, colour: util.convertToRgb(kenBlue)},
+                  {rows: 4, colour: kenBlue},
                   {rows: 2},
-                  {rows: 4, colour: util.convertToRgb(kenRed)}
+                  {rows: 4, colour: kenRed}
                ],
                [
-                  {rows: 4, colour: util.convertToRgb(kenBlue)},
+                  {rows: 4, colour: kenBlue},
                   {rows: 2},
-                  {rows: 4, colour: util.convertToRgb(kenBlue)}
+                  {rows: 4, colour: kenBlue}
                ],
                [
-                  {rows: 4, colour: util.convertToRgb(kenRed)},
+                  {rows: 4, colour: kenRed},
                   {rows: 2},
-                  {rows: 4, colour: util.convertToRgb(kenBlue)}
+                  {rows: 4, colour: kenBlue}
                ],
                [
-                  {rows: 2, colour: util.convertToRgb(kenBlue)},
-                  {rows: 2, colour: util.convertToRgb(kenRed)},
+                  {rows: 2, colour: kenBlue},
+                  {rows: 2, colour: kenRed},
                   {rows: 2},
-                  {rows: 2, colour: util.convertToRgb(kenRed)},
-                  {rows: 2, colour: util.convertToRgb(kenBlue)}
+                  {rows: 2, colour: kenRed},
+                  {rows: 2, colour: kenBlue}
                ],
                [
-                  {rows: 2, colour: util.convertToRgb(kenBlue)},
-                  {rows: 6, colour: util.convertToRgb(kenRed)},
-                  {rows: 2, colour: util.convertToRgb(kenBlue)}
+                  {rows: 2, colour: kenBlue},
+                  {rows: 6, colour: kenRed},
+                  {rows: 2, colour: kenBlue}
                ],
                [
-                  {rows: 3, colour: util.convertToRgb(kenBlue)},
-                  {rows: 4, colour: util.convertToRgb(kenRed)},
-                  {rows: 3, colour: util.convertToRgb(kenBlue)}
+                  {rows: 3, colour: kenBlue},
+                  {rows: 4, colour: kenRed},
+                  {rows: 3, colour: kenBlue}
                ],
                [
-                  {rows: 1, colour: util.convertToRgb(kenBlue)},
+                  {rows: 1, colour: kenBlue},
                   {rows: 1},
-                  {rows: 2, colour: util.convertToRgb(kenRed)},
+                  {rows: 2, colour: kenRed},
                   {rows: 2},
-                  {rows: 2, colour: util.convertToRgb(kenRed)},
+                  {rows: 2, colour: kenRed},
                   {rows: 1},
-                  {rows: 1, colour: util.convertToRgb(kenBlue)}
+                  {rows: 1, colour: kenBlue}
                ],
                [
-                  {rows: 2, colour: util.convertToRgb(kenRed)},
+                  {rows: 2, colour: kenRed},
                   {rows: 1},
-                  {rows: 4, colour: util.convertToRgb(kenBlue)},
+                  {rows: 4, colour: kenBlue},
                   {rows: 1},
-                  {rows: 2, colour: util.convertToRgb(kenRed)}
+                  {rows: 2, colour: kenRed}
                ],
                [
-                  {rows: 3, colour: util.convertToRgb(kenBlue)},
+                  {rows: 3, colour: kenBlue},
                   {rows: 1},
-                  {rows: 2, colour: util.convertToRgb(kenRed)},
+                  {rows: 2, colour: kenRed},
                   {rows: 1},
-                  {rows: 3, colour: util.convertToRgb(kenBlue)}
+                  {rows: 3, colour: kenBlue}
                ],
                [
-                  {rows: 2, colour: util.convertToRgb(kenBlue)},
+                  {rows: 2, colour: kenBlue},
                   {rows: 2},
-                  {rows: 2, colour: util.convertToRgb(kenRed)},
+                  {rows: 2, colour: kenRed},
                   {rows: 2},
-                  {rows: 2, colour: util.convertToRgb(kenBlue)}
+                  {rows: 2, colour: kenBlue}
                ],
                [
-                  {rows: 2, colour: util.convertToRgb(kenBlue)},
+                  {rows: 2, colour: kenBlue},
                   {rows: 2},
-                  {rows: 4, colour: util.convertToRgb(kenRed)},
-                  {rows: 2, colour: util.convertToRgb(kenBlue)}
+                  {rows: 4, colour: kenRed},
+                  {rows: 2, colour: kenBlue}
                ]
             ],
-            backgroundColour: util.convertToRgb(kenRed),
-            borderColour: util.convertToRgb(kenBlue)
+            backgroundColour: kenRed,
+            borderColour: kenBlue
          },
          {
             countyName: 'Surrey',
