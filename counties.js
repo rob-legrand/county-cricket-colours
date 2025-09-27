@@ -445,14 +445,14 @@ const counties = (function () {
             classLevel: 1,
             country: 'England',
             colours: [
-               {rows: 5, colour: util.convertToRgb(lanBlue)},
-               {rows: 2, colour: util.convertToRgb(lanRed)},
-               {rows: 2, colour: util.convertToRgb(lanGreen)},
-               {rows: 5, colour: util.convertToRgb(lanBlue)}
+               {rows: 5, colour: lanBlue},
+               {rows: 2, colour: lanRed},
+               {rows: 2, colour: lanGreen},
+               {rows: 5, colour: lanBlue}
             ],
-            textColour: util.convertToRgb(lanRed),
-            backgroundColour: util.convertToRgb(lanBlue),
-            borderColour: util.convertToRgb(lanGreen)
+            textColour: lanRed,
+            backgroundColour: lanBlue,
+            borderColour: lanGreen
          },
          {
             countyName: 'Gloucestershire',
