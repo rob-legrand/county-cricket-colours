@@ -484,15 +484,15 @@ const counties = (function () {
             classLevel: 2,
             country: 'England',
             colours: [
-               {rows: 1, colour: util.convertToRgb(drbGold)},
-               {rows: 6, colour: util.convertToRgb(drbBlue)},
-               {rows: 1, colour: util.convertToRgb(drbGold)},
-               {rows: 6, colour: util.convertToRgb(drbBrown)},
-               {rows: 1, colour: util.convertToRgb(drbGold)}
+               {rows: 1, colour: drbGold},
+               {rows: 6, colour: drbBlue},
+               {rows: 1, colour: drbGold},
+               {rows: 6, colour: drbBrown},
+               {rows: 1, colour: drbGold}
             ],
-            textColour: util.convertToRgb(drbGold),
-            backgroundColour: util.convertToRgb(drbBrown),
-            borderColour: util.convertToRgb(drbBlue)
+            textColour: drbGold,
+            backgroundColour: drbBrown,
+            borderColour: drbBlue
          },
          {
             countyName: 'Hampshire',
