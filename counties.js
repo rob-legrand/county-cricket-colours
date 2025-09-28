@@ -539,137 +539,137 @@ const counties = (function () {
             classLevel: 2,
             country: 'England',
             colours: [
-               {rows: 2, colour: util.convertToRgb(essBlue)},
-               {rows: 2, colour: util.convertToRgb(essGold)},
-               {rows: 4, colour: util.convertToRgb(essRed)},
-               {rows: 2, colour: util.convertToRgb(essBlue)}
+               {rows: 2, colour: essBlue},
+               {rows: 2, colour: essGold},
+               {rows: 4, colour: essRed},
+               {rows: 2, colour: essBlue}
             ],
             alternateColours: [
                [
-                  {rows: 1, colour: util.convertToRgb(essGold)},
-                  {rows: 2, colour: util.convertToRgb(essBlue)},
-                  {rows: 4, colour: util.convertToRgb(essRed)},
-                  {rows: 2, colour: util.convertToRgb(essBlue)},
-                  {rows: 1, colour: util.convertToRgb(essGold)}
+                  {rows: 1, colour: essGold},
+                  {rows: 2, colour: essBlue},
+                  {rows: 4, colour: essRed},
+                  {rows: 2, colour: essBlue},
+                  {rows: 1, colour: essGold}
                ],
                [
-                  {rows: 3, colour: util.convertToRgb(essRed)},
-                  {rows: 1, colour: util.convertToRgb(essBlue)},
-                  {rows: 2, colour: util.convertToRgb(essGold)},
-                  {rows: 1, colour: util.convertToRgb(essBlue)},
-                  {rows: 3, colour: util.convertToRgb(essRed)}
+                  {rows: 3, colour: essRed},
+                  {rows: 1, colour: essBlue},
+                  {rows: 2, colour: essGold},
+                  {rows: 1, colour: essBlue},
+                  {rows: 3, colour: essRed}
                ],
                [
-                  {rows: 1, colour: util.convertToRgb(essBlue)},
-                  {rows: 3, colour: util.convertToRgb(essRed)},
-                  {rows: 2, colour: util.convertToRgb(essGold)},
-                  {rows: 3, colour: util.convertToRgb(essRed)},
-                  {rows: 1, colour: util.convertToRgb(essBlue)}
+                  {rows: 1, colour: essBlue},
+                  {rows: 3, colour: essRed},
+                  {rows: 2, colour: essGold},
+                  {rows: 3, colour: essRed},
+                  {rows: 1, colour: essBlue}
                ],
                [
-                  {rows: 2, colour: util.convertToRgb(essBlue)},
-                  {rows: 2, colour: util.convertToRgb(essRed)},
-                  {rows: 2, colour: util.convertToRgb(essGold)},
-                  {rows: 2, colour: util.convertToRgb(essRed)},
-                  {rows: 2, colour: util.convertToRgb(essBlue)}
+                  {rows: 2, colour: essBlue},
+                  {rows: 2, colour: essRed},
+                  {rows: 2, colour: essGold},
+                  {rows: 2, colour: essRed},
+                  {rows: 2, colour: essBlue}
                ],
                [
-                  {rows: 1, colour: util.convertToRgb(essBlue)},
-                  {rows: 1, colour: util.convertToRgb(essGold)},
-                  {rows: 6, colour: util.convertToRgb(essRed)},
-                  {rows: 1, colour: util.convertToRgb(essGold)},
-                  {rows: 1, colour: util.convertToRgb(essBlue)}
+                  {rows: 1, colour: essBlue},
+                  {rows: 1, colour: essGold},
+                  {rows: 6, colour: essRed},
+                  {rows: 1, colour: essGold},
+                  {rows: 1, colour: essBlue}
                ],
                [
-                  {rows: 2, colour: util.convertToRgb(essBlue)},
-                  {rows: 1, colour: util.convertToRgb(essGold)},
-                  {rows: 4, colour: util.convertToRgb(essRed)},
-                  {rows: 1, colour: util.convertToRgb(essGold)},
-                  {rows: 2, colour: util.convertToRgb(essBlue)}
+                  {rows: 2, colour: essBlue},
+                  {rows: 1, colour: essGold},
+                  {rows: 4, colour: essRed},
+                  {rows: 1, colour: essGold},
+                  {rows: 2, colour: essBlue}
                ],
                [
-                  {rows: 2, colour: util.convertToRgb(essRed)},
-                  {rows: 1, colour: util.convertToRgb(essGold)},
-                  {rows: 4, colour: util.convertToRgb(essBlue)},
-                  {rows: 1, colour: util.convertToRgb(essGold)},
-                  {rows: 2, colour: util.convertToRgb(essRed)}
+                  {rows: 2, colour: essRed},
+                  {rows: 1, colour: essGold},
+                  {rows: 4, colour: essBlue},
+                  {rows: 1, colour: essGold},
+                  {rows: 2, colour: essRed}
                ],
                [
-                  {rows: 3, colour: util.convertToRgb(essRed)},
-                  {rows: 1, colour: util.convertToRgb(essGold)},
-                  {rows: 2, colour: util.convertToRgb(essBlue)},
-                  {rows: 1, colour: util.convertToRgb(essGold)},
-                  {rows: 3, colour: util.convertToRgb(essRed)}
+                  {rows: 3, colour: essRed},
+                  {rows: 1, colour: essGold},
+                  {rows: 2, colour: essBlue},
+                  {rows: 1, colour: essGold},
+                  {rows: 3, colour: essRed}
                ],
                [
-                  {rows: 3, colour: util.convertToRgb(essBlue)},
-                  {rows: 1, colour: util.convertToRgb(essGold)},
-                  {rows: 2, colour: util.convertToRgb(essRed)},
-                  {rows: 1, colour: util.convertToRgb(essGold)},
-                  {rows: 3, colour: util.convertToRgb(essBlue)}
+                  {rows: 3, colour: essBlue},
+                  {rows: 1, colour: essGold},
+                  {rows: 2, colour: essRed},
+                  {rows: 1, colour: essGold},
+                  {rows: 3, colour: essBlue}
                ],
                [
-                  {rows: 4, colour: util.convertToRgb(essRed)},
-                  {rows: 2, colour: util.convertToRgb(essGold)},
-                  {rows: 4, colour: util.convertToRgb(essBlue)}
+                  {rows: 4, colour: essRed},
+                  {rows: 2, colour: essGold},
+                  {rows: 4, colour: essBlue}
                ],
                [
-                  {rows: 4, colour: util.convertToRgb(essBlue)},
-                  {rows: 2, colour: util.convertToRgb(essGold)},
-                  {rows: 4, colour: util.convertToRgb(essRed)}
+                  {rows: 4, colour: essBlue},
+                  {rows: 2, colour: essGold},
+                  {rows: 4, colour: essRed}
                ],
                [
-                  {rows: 3, colour: util.convertToRgb(essBlue)},
-                  {rows: 2, colour: util.convertToRgb(essGold)},
-                  {rows: 5, colour: util.convertToRgb(essRed)}
+                  {rows: 3, colour: essBlue},
+                  {rows: 2, colour: essGold},
+                  {rows: 5, colour: essRed}
                ],
                [
-                  {rows: 3, colour: util.convertToRgb(essRed)},
-                  {rows: 2, colour: util.convertToRgb(essGold)},
-                  {rows: 2, colour: util.convertToRgb(essBlue)},
-                  {rows: 3, colour: util.convertToRgb(essRed)}
+                  {rows: 3, colour: essRed},
+                  {rows: 2, colour: essGold},
+                  {rows: 2, colour: essBlue},
+                  {rows: 3, colour: essRed}
                ],
                [
-                  {rows: 2, colour: util.convertToRgb(essRed)},
-                  {rows: 3, colour: util.convertToRgb(essGold)},
-                  {rows: 3, colour: util.convertToRgb(essBlue)},
-                  {rows: 2, colour: util.convertToRgb(essRed)}
+                  {rows: 2, colour: essRed},
+                  {rows: 3, colour: essGold},
+                  {rows: 3, colour: essBlue},
+                  {rows: 2, colour: essRed}
                ],
                [
-                  {rows: 2, colour: util.convertToRgb(essBlue)},
-                  {rows: 3, colour: util.convertToRgb(essGold)},
-                  {rows: 3, colour: util.convertToRgb(essRed)},
-                  {rows: 2, colour: util.convertToRgb(essBlue)}
+                  {rows: 2, colour: essBlue},
+                  {rows: 3, colour: essGold},
+                  {rows: 3, colour: essRed},
+                  {rows: 2, colour: essBlue}
                ],
                [
-                  {rows: 1, colour: util.convertToRgb(essBlue)},
-                  {rows: 4, colour: util.convertToRgb(essGold)},
-                  {rows: 4, colour: util.convertToRgb(essRed)},
-                  {rows: 1, colour: util.convertToRgb(essBlue)}
+                  {rows: 1, colour: essBlue},
+                  {rows: 4, colour: essGold},
+                  {rows: 4, colour: essRed},
+                  {rows: 1, colour: essBlue}
                ],
                [
-                  {rows: 2, colour: util.convertToRgb(essGold)},
-                  {rows: 6, colour: util.convertToRgb(essRed)},
-                  {rows: 2, colour: util.convertToRgb(essBlue)}
+                  {rows: 2, colour: essGold},
+                  {rows: 6, colour: essRed},
+                  {rows: 2, colour: essBlue}
                ],
                [
-                  {rows: 3, colour: util.convertToRgb(essGold)},
-                  {rows: 4, colour: util.convertToRgb(essRed)},
-                  {rows: 3, colour: util.convertToRgb(essBlue)}
+                  {rows: 3, colour: essGold},
+                  {rows: 4, colour: essRed},
+                  {rows: 3, colour: essBlue}
                ],
                [
-                  {rows: 1, colour: util.convertToRgb(essBlue)},
-                  {rows: 1, colour: util.convertToRgb(essGold)},
-                  {rows: 1, colour: util.convertToRgb(essRed)},
-                  {rows: 1, colour: util.convertToRgb(essGold)},
-                  {rows: 2, colour: util.convertToRgb(essBlue)},
-                  {rows: 3, colour: util.convertToRgb(essRed)},
-                  {rows: 1, colour: util.convertToRgb(essBlue)}
+                  {rows: 1, colour: essBlue},
+                  {rows: 1, colour: essGold},
+                  {rows: 1, colour: essRed},
+                  {rows: 1, colour: essGold},
+                  {rows: 2, colour: essBlue},
+                  {rows: 3, colour: essRed},
+                  {rows: 1, colour: essBlue}
                ]
             ],
-            textColour: util.convertToRgb(essGold),
-            backgroundColour: util.convertToRgb(essRed),
-            borderColour: util.convertToRgb(essBlue)
+            textColour: essGold,
+            backgroundColour: essRed,
+            borderColour: essBlue
          },
          {
             countyName: 'Leicestershire',
