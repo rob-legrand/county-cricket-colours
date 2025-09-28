@@ -521,15 +521,15 @@ const counties = (function () {
             classLevel: 2,
             country: 'England',
             colours: [
-               {rows: 4, colour: util.convertToRgb(somMaroon)},
-               {rows: 2, colour: util.convertToRgb(somGrey)},
-               {rows: 2, colour: util.convertToRgb(somBlack)},
-               {rows: 2, colour: util.convertToRgb(somGrey)},
-               {rows: 4, colour: util.convertToRgb(somMaroon)}
+               {rows: 4, colour: somMaroon},
+               {rows: 2, colour: somGrey},
+               {rows: 2, colour: somBlack},
+               {rows: 2, colour: somGrey},
+               {rows: 4, colour: somMaroon}
             ],
-            textColour: util.convertToRgb(somGrey),
-            backgroundColour: util.convertToRgb(somMaroon),
-            borderColour: util.convertToRgb(somBlack)
+            textColour: somGrey,
+            backgroundColour: somMaroon,
+            borderColour: somBlack
          },
          {
             countyName: 'Essex',
