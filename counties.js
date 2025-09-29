@@ -680,14 +680,14 @@ const counties = (function () {
             classLevel: 2,
             country: 'England',
             colours: [
-               {rows: 2, colour: util.convertToRgb(leiRed)},
+               {rows: 2, colour: leiRed},
                {rows: 2},
-               {rows: 5, colour: util.convertToRgb(leiGreen)},
+               {rows: 5, colour: leiGreen},
                {rows: 2},
-               {rows: 2, colour: util.convertToRgb(leiRed)}
+               {rows: 2, colour: leiRed}
             ],
-            backgroundColour: util.convertToRgb(leiGreen),
-            borderColour: util.convertToRgb(leiRed)
+            backgroundColour: leiGreen,
+            borderColour: leiRed
          },
          {
             countyName: 'Warwickshire',
