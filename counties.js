@@ -98,7 +98,7 @@ const counties = (function () {
    const lanGreen = [0, 90, 30];
    const lanRed = [225, 0, 30];
    const leiGreen = [0, 60, 0];
-   const leiRed = [210, 0, 0];
+   const leiScarlet = [210, 0, 0];
    const linGold = [255, 225, 0];
    const linGreen = [0, 60, 0];
    const lnkBrown = [60, 30, 15];
@@ -680,14 +680,14 @@ const counties = (function () {
             classLevel: 2,
             country: 'England',
             colours: [
-               {rows: 2, colour: leiRed},
+               {rows: 2, colour: leiScarlet},
                {rows: 2},
                {rows: 5, colour: leiGreen},
                {rows: 2},
-               {rows: 2, colour: leiRed}
+               {rows: 2, colour: leiScarlet}
             ],
             backgroundColour: leiGreen,
-            borderColour: leiRed
+            borderColour: leiScarlet
          },
          {
             countyName: 'Warwickshire',
