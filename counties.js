@@ -749,20 +749,20 @@ const counties = (function () {
             classLevel: 3,
             country: 'England',
             colours: [
-               {rows: 5, colour: util.convertToRgb(nfkDarkBlue)},
-               {rows: 2, colour: util.convertToRgb(nfkLightBlue)},
-               {rows: 5, colour: util.convertToRgb(nfkDarkBlue)}
+               {rows: 5, colour: nfkDarkBlue},
+               {rows: 2, colour: nfkLightBlue},
+               {rows: 5, colour: nfkDarkBlue}
             ],
             alternateColours: [
                [
-                  {rows: 5, colour: util.convertToRgb(nfkDarkBlue)},
-                  {rows: 2, colour: util.convertToRgb([255, 225, 0])},
-                  {rows: 2, colour: util.convertToRgb([195, 0, 0])},
-                  {rows: 5, colour: util.convertToRgb(nfkDarkBlue)}
+                  {rows: 5, colour: nfkDarkBlue},
+                  {rows: 2, colour: [255, 225, 0]},
+                  {rows: 2, colour: [195, 0, 0]},
+                  {rows: 5, colour: nfkDarkBlue}
                ]
             ],
-            backgroundColour: util.convertToRgb(nfkDarkBlue),
-            borderColour: util.convertToRgb(nfkLightBlue)
+            backgroundColour: nfkDarkBlue,
+            borderColour: nfkLightBlue
          },
          {
             countyName: 'Northamptonshire',
