@@ -717,13 +717,13 @@ const counties = (function () {
             classLevel: 2,
             country: 'England',
             colours: [
-               {rows: 5, colour: util.convertToRgb(stfGreen)},
-               {rows: 4, colour: util.convertToRgb(stfGold)},
-               {rows: 5, colour: util.convertToRgb(stfGreen)}
+               {rows: 5, colour: stfGreen},
+               {rows: 4, colour: stfGold},
+               {rows: 5, colour: stfGreen}
             ],
-            textColour: util.convertToRgb(stfGold),
-            backgroundColour: util.convertToRgb(stfGreen),
-            borderColour: util.convertToRgb(stfGold)
+            textColour: stfGold,
+            backgroundColour: stfGreen,
+            borderColour: stfGold
          },
          {
             countyName: 'Cheshire',
