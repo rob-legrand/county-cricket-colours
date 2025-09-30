@@ -773,12 +773,12 @@ const counties = (function () {
             classLevel: 3,
             country: 'England',
             colours: [
-               {rows: 6, colour: util.convertToRgb(nthMaroon)},
-               {rows: 3, colour: util.convertToRgb(nthGold)},
-               {rows: 6, colour: util.convertToRgb(nthMaroon)}
+               {rows: 6, colour: nthMaroon},
+               {rows: 3, colour: nthGold},
+               {rows: 6, colour: nthMaroon}
             ],
-            textColour: util.convertToRgb(nthGold),
-            backgroundColour: util.convertToRgb(nthMaroon)
+            textColour: nthGold,
+            backgroundColour: nthMaroon
          },
          {
             countyName: 'Glamorgan',
