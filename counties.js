@@ -840,13 +840,13 @@ const counties = (function () {
             classLevel: 3,
             country: 'England',
             colours: [
-               {rows: 6, colour: util.convertToRgb(hrtGreen)},
-               {rows: 2, colour: util.convertToRgb(hrtGold)},
-               {rows: 6, colour: util.convertToRgb(hrtBlue)}
+               {rows: 6, colour: hrtGreen},
+               {rows: 2, colour: hrtGold},
+               {rows: 6, colour: hrtBlue}
             ],
-            textColour: util.convertToRgb(hrtGold),
-            backgroundColour: util.convertToRgb(hrtGreen),
-            borderColour: util.convertToRgb(hrtBlue)
+            textColour: hrtGold,
+            backgroundColour: hrtGreen,
+            borderColour: hrtBlue
          },
          {
             countyName: 'Devon',
