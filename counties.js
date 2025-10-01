@@ -823,13 +823,13 @@ const counties = (function () {
             classLevel: 3,
             country: 'England',
             colours: [
-               {rows: 5, colour: util.convertToRgb(nblRed)},
-               {rows: 5, colour: util.convertToRgb(nblGreen)},
-               {rows: 5, colour: util.convertToRgb(nblGold)}
+               {rows: 5, colour: nblRed},
+               {rows: 5, colour: nblGreen},
+               {rows: 5, colour: nblGold}
             ],
-            textColour: util.convertToRgb(nblRed),
-            backgroundColour: util.convertToRgb(nblGreen),
-            borderColour: util.convertToRgb(nblGold)
+            textColour: nblRed,
+            backgroundColour: nblGreen,
+            borderColour: nblGold
          },
          {
             countyName: 'Hertfordshire',
