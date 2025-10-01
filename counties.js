@@ -788,15 +788,15 @@ const counties = (function () {
             classLevel: 3,
             country: 'Wales',
             colours: [
-               {rows: 5, colour: util.convertToRgb(glaBlue)},
-               {rows: 2, colour: util.convertToRgb(glaYellow)},
-               {rows: 2, colour: util.convertToRgb(glaBlue)},
-               {rows: 2, colour: util.convertToRgb(glaYellow)},
-               {rows: 5, colour: util.convertToRgb(glaBlue)}
+               {rows: 5, colour: glaBlue},
+               {rows: 2, colour: glaYellow},
+               {rows: 2, colour: glaBlue},
+               {rows: 2, colour: glaYellow},
+               {rows: 5, colour: glaBlue}
             ],
-            textColour: util.convertToRgb(glaYellow),
-            backgroundColour: util.convertToRgb(glaBlue),
-            borderColour: util.convertToRgb(glaGreen)
+            textColour: glaYellow,
+            backgroundColour: glaBlue,
+            borderColour: glaGreen
          },
          {
             countyName: 'Durham',
