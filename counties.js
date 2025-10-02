@@ -856,24 +856,24 @@ const counties = (function () {
             classLevel: 3,
             country: 'England',
             colours: [
-               {rows: 3, colour: util.convertToRgb(devDarkBlue)},
-               {rows: 2, colour: util.convertToRgb(devGold)},
-               {rows: 4, colour: util.convertToRgb(devLightBlue)},
-               {rows: 2, colour: util.convertToRgb(devGold)},
-               {rows: 3, colour: util.convertToRgb(devDarkBlue)}
+               {rows: 3, colour: devDarkBlue},
+               {rows: 2, colour: devGold},
+               {rows: 4, colour: devLightBlue},
+               {rows: 2, colour: devGold},
+               {rows: 3, colour: devDarkBlue}
             ],
             alternateColours: [
                [
-                  {rows: 3, colour: util.convertToRgb([0, 0, 45])},
-                  {rows: 2, colour: util.convertToRgb(devGold)},
-                  {rows: 4, colour: util.convertToRgb(devLightBlue)},
-                  {rows: 2, colour: util.convertToRgb(devGold)},
-                  {rows: 3, colour: util.convertToRgb([0, 0, 45])}
+                  {rows: 3, colour: [0, 0, 45]},
+                  {rows: 2, colour: devGold},
+                  {rows: 4, colour: devLightBlue},
+                  {rows: 2, colour: devGold},
+                  {rows: 3, colour: [0, 0, 45]}
                ]
             ],
-            textColour: util.convertToRgb(devGold),
-            backgroundColour: util.convertToRgb(devDarkBlue),
-            borderColour: util.convertToRgb(devLightBlue)
+            textColour: devGold,
+            backgroundColour: devDarkBlue,
+            borderColour: devLightBlue
          },
          {
             countyName: 'Lincolnshire',
