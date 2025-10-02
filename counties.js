@@ -884,12 +884,12 @@ const counties = (function () {
             classLevel: 3,
             country: 'England',
             colours: [
-               {rows: 6, colour: util.convertToRgb(linGreen)},
-               {rows: 2, colour: util.convertToRgb(linGold)},
-               {rows: 6, colour: util.convertToRgb(linGreen)}
+               {rows: 6, colour: linGreen},
+               {rows: 2, colour: linGold},
+               {rows: 6, colour: linGreen}
             ],
-            textColour: util.convertToRgb(linGold),
-            backgroundColour: util.convertToRgb(linGreen)
+            textColour: linGold,
+            backgroundColour: linGreen
          },
          {
             countyName: 'Cambridgeshire',
