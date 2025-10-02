@@ -900,14 +900,14 @@ const counties = (function () {
             classLevel: 4,
             country: 'England',
             colours: [
-               {rows: 3, colour: util.convertToRgb(camMaroon)},
-               {rows: 4, colour: util.convertToRgb(camBlue)},
-               {rows: 4, colour: util.convertToRgb(camStraw)},
-               {rows: 3, colour: util.convertToRgb(camMaroon)}
+               {rows: 3, colour: camMaroon},
+               {rows: 4, colour: camBlue},
+               {rows: 4, colour: camStraw},
+               {rows: 3, colour: camMaroon}
             ],
-            textColour: util.convertToRgb(camStraw),
-            backgroundColour: util.convertToRgb(camMaroon),
-            borderColour: util.convertToRgb(camBlue)
+            textColour: camStraw,
+            backgroundColour: camMaroon,
+            borderColour: camBlue
          },
          {
             countyName: 'Worcestershire',
