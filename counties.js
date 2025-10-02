@@ -918,13 +918,13 @@ const counties = (function () {
             classLevel: 4,
             country: 'England',
             colours: [
-               {rows: 5, colour: util.convertToRgb(worGreen)},
+               {rows: 5, colour: worGreen},
                {rows: 2},
-               {rows: 2, colour: util.convertToRgb(worBlack)},
-               {rows: 5, colour: util.convertToRgb(worGreen)}
+               {rows: 2, colour: worBlack},
+               {rows: 5, colour: worGreen}
             ],
-            backgroundColour: util.convertToRgb(worGreen),
-            borderColour: util.convertToRgb(worBlack)
+            backgroundColour: worGreen,
+            borderColour: worBlack
          },
          {
             countyName: 'Shropshire',
