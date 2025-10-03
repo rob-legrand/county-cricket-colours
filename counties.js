@@ -935,12 +935,12 @@ const counties = (function () {
             classLevel: 4,
             country: 'England',
             colours: [
-               {rows: 7, colour: util.convertToRgb(salGold)},
-               {rows: 7, colour: util.convertToRgb(salBlue)}
+               {rows: 7, colour: salGold},
+               {rows: 7, colour: salBlue}
             ],
-            textColour: util.convertToRgb(salGold),
-            backgroundColour: util.convertToRgb(salBlue),
-            borderColour: util.convertToRgb(salGold)
+            textColour: salGold,
+            backgroundColour: salBlue,
+            borderColour: salGold
          },
          {
             countyName: 'Wiltshire',
