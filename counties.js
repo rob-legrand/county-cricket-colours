@@ -951,11 +951,11 @@ const counties = (function () {
             classLevel: 4,
             country: 'England',
             colours: [
-               {rows: 6, colour: util.convertToRgb(wilGreen)},
+               {rows: 6, colour: wilGreen},
                {rows: 2},
-               {rows: 6, colour: util.convertToRgb(wilGreen)}
+               {rows: 6, colour: wilGreen}
             ],
-            backgroundColour: util.convertToRgb(wilGreen)
+            backgroundColour: wilGreen
          },
          {
             countyName: 'Cornwall',
