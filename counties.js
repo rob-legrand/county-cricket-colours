@@ -965,14 +965,14 @@ const counties = (function () {
             classLevel: 4,
             country: 'England',
             colours: [
-               {rows: 4, colour: util.convertToRgb(cnwBlack)},
-               {rows: 1, colour: util.convertToRgb(cnwRed)},
-               {rows: 1, colour: util.convertToRgb(cnwGold)},
-               {rows: 4, colour: util.convertToRgb(cnwBlack)}
+               {rows: 4, colour: cnwBlack},
+               {rows: 1, colour: cnwRed},
+               {rows: 1, colour: cnwGold},
+               {rows: 4, colour: cnwBlack}
             ],
-            textColour: util.convertToRgb(cnwGold),
-            backgroundColour: util.convertToRgb(cnwBlack),
-            borderColour: util.convertToRgb(cnwRed)
+            textColour: cnwGold,
+            backgroundColour: cnwBlack,
+            borderColour: cnwRed
          },
          {
             countyName: 'Herefordshire',
