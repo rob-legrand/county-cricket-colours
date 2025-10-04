@@ -983,31 +983,31 @@ const counties = (function () {
             classLevel: 4,
             country: 'England',
             colours: [
-               {rows: 4, colour: util.convertToRgb(hefRed)},
-               {rows: 1, colour: util.convertToRgb(hefLightBlue)},
-               {rows: 3, colour: util.convertToRgb(hefDarkBlue)},
-               {rows: 1, colour: util.convertToRgb(hefLightBlue)},
-               {rows: 4, colour: util.convertToRgb(hefRed)}
+               {rows: 4, colour: hefRed},
+               {rows: 1, colour: hefLightBlue},
+               {rows: 3, colour: hefDarkBlue},
+               {rows: 1, colour: hefLightBlue},
+               {rows: 4, colour: hefRed}
             ],
             alternateColours: [
                [
-                  {rows: 4, colour: util.convertToRgb([165, 0, 0])},
-                  {rows: 1, colour: util.convertToRgb(hefLightBlue)},
-                  {rows: 3, colour: util.convertToRgb(hefDarkBlue)},
-                  {rows: 1, colour: util.convertToRgb(hefLightBlue)},
-                  {rows: 4, colour: util.convertToRgb([165, 0, 0])}
+                  {rows: 4, colour: [165, 0, 0]},
+                  {rows: 1, colour: hefLightBlue},
+                  {rows: 3, colour: hefDarkBlue},
+                  {rows: 1, colour: hefLightBlue},
+                  {rows: 4, colour: [165, 0, 0]}
                ],
                [
-                  {rows: 4, colour: util.convertToRgb([150, 15, 30])},
-                  {rows: 1, colour: util.convertToRgb(hefLightBlue)},
-                  {rows: 3, colour: util.convertToRgb(hefDarkBlue)},
-                  {rows: 1, colour: util.convertToRgb(hefLightBlue)},
-                  {rows: 4, colour: util.convertToRgb([150, 15, 30])}
+                  {rows: 4, colour: [150, 15, 30]},
+                  {rows: 1, colour: hefLightBlue},
+                  {rows: 3, colour: hefDarkBlue},
+                  {rows: 1, colour: hefLightBlue},
+                  {rows: 4, colour: [150, 15, 30]}
                ]
             ],
-            textColour: util.convertToRgb(hefLightBlue),
-            backgroundColour: util.convertToRgb(hefRed),
-            borderColour: util.convertToRgb(hefDarkBlue)
+            textColour: hefLightBlue,
+            backgroundColour: hefRed,
+            borderColour: hefDarkBlue
          },
          {
             countyName: 'Monmouthshire',
