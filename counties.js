@@ -1018,33 +1018,33 @@ const counties = (function () {
             classLevel: 4,
             country: 'Wales',
             colours: [
-               {rows: 6, colour: util.convertToRgb(mnmBlue)},
-               {rows: 2, colour: util.convertToRgb(mnmGold)},
-               {rows: 6, colour: util.convertToRgb(mnmBlack)}
+               {rows: 6, colour: mnmBlue},
+               {rows: 2, colour: mnmGold},
+               {rows: 6, colour: mnmBlack}
             ],
             alternateColours: [
                [
-                  {rows: 3, colour: util.convertToRgb(mnmBlue)},
-                  {rows: 1, colour: util.convertToRgb(mnmGold)},
-                  {rows: 3, colour: util.convertToRgb(mnmBlue)},
-                  {rows: 1, colour: util.convertToRgb(mnmGold)},
-                  {rows: 3, colour: util.convertToRgb(mnmBlack)},
-                  {rows: 1, colour: util.convertToRgb(mnmGold)},
-                  {rows: 3, colour: util.convertToRgb(mnmBlack)}
+                  {rows: 3, colour: mnmBlue},
+                  {rows: 1, colour: mnmGold},
+                  {rows: 3, colour: mnmBlue},
+                  {rows: 1, colour: mnmGold},
+                  {rows: 3, colour: mnmBlack},
+                  {rows: 1, colour: mnmGold},
+                  {rows: 3, colour: mnmBlack}
                ],
                [
-                  {rows: 4, colour: util.convertToRgb(mnmBlue)},
-                  {rows: 1, colour: util.convertToRgb(mnmGold)},
-                  {rows: 2, colour: util.convertToRgb(mnmBlue)},
-                  {rows: 1, colour: util.convertToRgb(mnmGold)},
-                  {rows: 2, colour: util.convertToRgb(mnmBlack)},
-                  {rows: 1, colour: util.convertToRgb(mnmGold)},
-                  {rows: 4, colour: util.convertToRgb(mnmBlack)}
+                  {rows: 4, colour: mnmBlue},
+                  {rows: 1, colour: mnmGold},
+                  {rows: 2, colour: mnmBlue},
+                  {rows: 1, colour: mnmGold},
+                  {rows: 2, colour: mnmBlack},
+                  {rows: 1, colour: mnmGold},
+                  {rows: 4, colour: mnmBlack}
                ]
             ],
-            textColour: util.convertToRgb(mnmGold),
-            backgroundColour: util.convertToRgb(mnmBlue),
-            borderColour: util.convertToRgb(mnmBlack)
+            textColour: mnmGold,
+            backgroundColour: mnmBlue,
+            borderColour: mnmBlack
          },
          {
             countyName: 'Cumberland',
