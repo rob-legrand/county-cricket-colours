@@ -1202,19 +1202,19 @@ const counties = (function () {
             classLevel: 5,
             country: 'Wales',
             colours: [
-               {rows: 2, colour: util.convertToRgb(breBlack)},
-               {rows: 1, colour: util.convertToRgb(breGold)},
-               {rows: 1, colour: util.convertToRgb(breBlack)},
-               {rows: 2, colour: util.convertToRgb(breGold)},
-               {rows: 2, colour: util.convertToRgb(breBlue)},
-               {rows: 2, colour: util.convertToRgb(breGold)},
-               {rows: 1, colour: util.convertToRgb(breBlack)},
-               {rows: 1, colour: util.convertToRgb(breGold)},
-               {rows: 2, colour: util.convertToRgb(breBlack)}
+               {rows: 2, colour: breBlack},
+               {rows: 1, colour: breGold},
+               {rows: 1, colour: breBlack},
+               {rows: 2, colour: breGold},
+               {rows: 2, colour: breBlue},
+               {rows: 2, colour: breGold},
+               {rows: 1, colour: breBlack},
+               {rows: 1, colour: breGold},
+               {rows: 2, colour: breBlack}
             ],
-            textColour: util.convertToRgb(breBlue),
-            backgroundColour: util.convertToRgb(breGold),
-            borderColour: util.convertToRgb(breBlack)
+            textColour: breBlue,
+            backgroundColour: breGold,
+            borderColour: breBlack
          },
          {
             countyName: 'Rutland',
