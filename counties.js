@@ -1168,30 +1168,30 @@ const counties = (function () {
             classLevel: 5,
             country: 'England',
             colours: [
-               {rows: 2, colour: util.convertToRgb(dorGreen)},
+               {rows: 2, colour: dorGreen},
                {rows: 2},
-               {rows: 2, colour: util.convertToRgb(dorGreen)},
+               {rows: 2, colour: dorGreen},
                {rows: 2},
-               {rows: 2, colour: util.convertToRgb(dorGreen)}
+               {rows: 2, colour: dorGreen}
             ],
             alternateColours: [
                [
-                  {rows: 1, colour: util.convertToRgb(dorGreen)},
+                  {rows: 1, colour: dorGreen},
                   {rows: 2},
-                  {rows: 2, colour: util.convertToRgb(dorGreen)},
+                  {rows: 2, colour: dorGreen},
                   {rows: 2},
-                  {rows: 3, colour: util.convertToRgb(dorGreen)}
+                  {rows: 3, colour: dorGreen}
                ],
                [
-                  {rows: 2, colour: util.convertToRgb(dorGreen)},
+                  {rows: 2, colour: dorGreen},
                   {rows: 1},
-                  {rows: 2, colour: util.convertToRgb(dorGreen)},
+                  {rows: 2, colour: dorGreen},
                   {rows: 1},
-                  {rows: 4, colour: util.convertToRgb(dorGreen)}
+                  {rows: 4, colour: dorGreen}
                ]
             ],
-            textColour: util.convertToRgb(dorGreen),
-            borderColour: util.convertToRgb(dorGreen)
+            textColour: dorGreen,
+            borderColour: dorGreen
          },
          {
             countyName: 'Brecknockshire',
