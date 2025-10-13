@@ -1241,14 +1241,14 @@ const counties = (function () {
             classLevel: 5,
             country: 'England',
             colours: [
-               {rows: 2, colour: util.convertToRgb(sfkMaroon)},
-               {rows: 1, colour: util.convertToRgb(sfkGold)},
-               {rows: 4, colour: util.convertToRgb(sfkMaroon)},
-               {rows: 1, colour: util.convertToRgb(sfkGold)},
-               {rows: 2, colour: util.convertToRgb(sfkMaroon)}
+               {rows: 2, colour: sfkMaroon},
+               {rows: 1, colour: sfkGold},
+               {rows: 4, colour: sfkMaroon},
+               {rows: 1, colour: sfkGold},
+               {rows: 2, colour: sfkMaroon}
             ],
-            backgroundColour: util.convertToRgb(sfkMaroon),
-            borderColour: util.convertToRgb(sfkGold)
+            backgroundColour: sfkMaroon,
+            borderColour: sfkGold
          },
          {
             countyName: 'Bedfordshire',
