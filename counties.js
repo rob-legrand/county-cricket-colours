@@ -1072,93 +1072,93 @@ const counties = (function () {
             classLevel: 5,
             country: 'Wales',
             colours: [
-               {rows: 1, colour: util.convertToRgb(radRed)},
-               {rows: 2, colour: util.convertToRgb(radBlue)},
-               {rows: 2, colour: util.convertToRgb(radGold)},
-               {rows: 2, colour: util.convertToRgb(radBlue)},
-               {rows: 2, colour: util.convertToRgb(radGold)},
-               {rows: 2, colour: util.convertToRgb(radBlue)},
-               {rows: 2, colour: util.convertToRgb(radGold)},
-               {rows: 1, colour: util.convertToRgb(radRed)}
+               {rows: 1, colour: radRed},
+               {rows: 2, colour: radBlue},
+               {rows: 2, colour: radGold},
+               {rows: 2, colour: radBlue},
+               {rows: 2, colour: radGold},
+               {rows: 2, colour: radBlue},
+               {rows: 2, colour: radGold},
+               {rows: 1, colour: radRed}
             ],
             alternateColours: [
                [
-                  {rows: 1, colour: util.convertToRgb(radRed)},
-                  {rows: 1, colour: util.convertToRgb(radBlue)},
-                  {rows: 2, colour: util.convertToRgb(radGold)},
-                  {rows: 2, colour: util.convertToRgb(radBlue)},
-                  {rows: 2, colour: util.convertToRgb(radGold)},
-                  {rows: 2, colour: util.convertToRgb(radBlue)},
-                  {rows: 2, colour: util.convertToRgb(radGold)},
-                  {rows: 1, colour: util.convertToRgb(radBlue)},
-                  {rows: 1, colour: util.convertToRgb(radRed)}
+                  {rows: 1, colour: radRed},
+                  {rows: 1, colour: radBlue},
+                  {rows: 2, colour: radGold},
+                  {rows: 2, colour: radBlue},
+                  {rows: 2, colour: radGold},
+                  {rows: 2, colour: radBlue},
+                  {rows: 2, colour: radGold},
+                  {rows: 1, colour: radBlue},
+                  {rows: 1, colour: radRed}
                ],
                [
-                  {rows: 1, colour: util.convertToRgb(radRed)},
-                  {rows: 2, colour: util.convertToRgb(radGold)},
-                  {rows: 2, colour: util.convertToRgb(radBlue)},
-                  {rows: 2, colour: util.convertToRgb(radGold)},
-                  {rows: 2, colour: util.convertToRgb(radBlue)},
-                  {rows: 2, colour: util.convertToRgb(radGold)},
-                  {rows: 2, colour: util.convertToRgb(radBlue)},
-                  {rows: 1, colour: util.convertToRgb(radRed)}
+                  {rows: 1, colour: radRed},
+                  {rows: 2, colour: radGold},
+                  {rows: 2, colour: radBlue},
+                  {rows: 2, colour: radGold},
+                  {rows: 2, colour: radBlue},
+                  {rows: 2, colour: radGold},
+                  {rows: 2, colour: radBlue},
+                  {rows: 1, colour: radRed}
                ],
                [
-                  {rows: 1, colour: util.convertToRgb(radRed)},
-                  {rows: 1, colour: util.convertToRgb(radGold)},
-                  {rows: 2, colour: util.convertToRgb(radBlue)},
-                  {rows: 2, colour: util.convertToRgb(radGold)},
-                  {rows: 2, colour: util.convertToRgb(radBlue)},
-                  {rows: 2, colour: util.convertToRgb(radGold)},
-                  {rows: 2, colour: util.convertToRgb(radBlue)},
-                  {rows: 1, colour: util.convertToRgb(radGold)},
-                  {rows: 1, colour: util.convertToRgb(radRed)}
+                  {rows: 1, colour: radRed},
+                  {rows: 1, colour: radGold},
+                  {rows: 2, colour: radBlue},
+                  {rows: 2, colour: radGold},
+                  {rows: 2, colour: radBlue},
+                  {rows: 2, colour: radGold},
+                  {rows: 2, colour: radBlue},
+                  {rows: 1, colour: radGold},
+                  {rows: 1, colour: radRed}
                ],
                [
-                  {rows: 2, colour: util.convertToRgb(radBlue)},
-                  {rows: 2, colour: util.convertToRgb(radGold)},
-                  {rows: 2, colour: util.convertToRgb(radBlue)},
-                  {rows: 2, colour: util.convertToRgb(radGold)},
-                  {rows: 2, colour: util.convertToRgb(radBlue)},
-                  {rows: 2, colour: util.convertToRgb(radGold)},
-                  {rows: 2, colour: util.convertToRgb(radBlue)}
+                  {rows: 2, colour: radBlue},
+                  {rows: 2, colour: radGold},
+                  {rows: 2, colour: radBlue},
+                  {rows: 2, colour: radGold},
+                  {rows: 2, colour: radBlue},
+                  {rows: 2, colour: radGold},
+                  {rows: 2, colour: radBlue}
                ],
                [
-                  {rows: 2, colour: util.convertToRgb(radRed)},
-                  {rows: 2, colour: util.convertToRgb(radBlue)},
-                  {rows: 2, colour: util.convertToRgb(radGold)},
-                  {rows: 2, colour: util.convertToRgb(radBlue)},
-                  {rows: 2, colour: util.convertToRgb(radGold)},
-                  {rows: 2, colour: util.convertToRgb(radBlue)},
-                  {rows: 2, colour: util.convertToRgb(radRed)}
+                  {rows: 2, colour: radRed},
+                  {rows: 2, colour: radBlue},
+                  {rows: 2, colour: radGold},
+                  {rows: 2, colour: radBlue},
+                  {rows: 2, colour: radGold},
+                  {rows: 2, colour: radBlue},
+                  {rows: 2, colour: radRed}
                ],
                [
-                  {rows: 2, colour: util.convertToRgb(radRed)},
-                  {rows: 2, colour: util.convertToRgb(radGold)},
-                  {rows: 2, colour: util.convertToRgb(radBlue)},
-                  {rows: 2, colour: util.convertToRgb(radGold)},
-                  {rows: 2, colour: util.convertToRgb(radBlue)},
-                  {rows: 2, colour: util.convertToRgb(radGold)},
-                  {rows: 2, colour: util.convertToRgb(radRed)}
+                  {rows: 2, colour: radRed},
+                  {rows: 2, colour: radGold},
+                  {rows: 2, colour: radBlue},
+                  {rows: 2, colour: radGold},
+                  {rows: 2, colour: radBlue},
+                  {rows: 2, colour: radGold},
+                  {rows: 2, colour: radRed}
                ],
                [
-                  {rows: 4, colour: util.convertToRgb(radRed)},
-                  {rows: 2, colour: util.convertToRgb(radGold)},
-                  {rows: 2, colour: util.convertToRgb(radBlue)},
-                  {rows: 2, colour: util.convertToRgb(radGold)},
-                  {rows: 4, colour: util.convertToRgb(radRed)}
+                  {rows: 4, colour: radRed},
+                  {rows: 2, colour: radGold},
+                  {rows: 2, colour: radBlue},
+                  {rows: 2, colour: radGold},
+                  {rows: 4, colour: radRed}
                ],
                [
-                  {rows: 4, colour: util.convertToRgb(radRed)},
-                  {rows: 2, colour: util.convertToRgb([255, 210, 0])},
-                  {rows: 2, colour: util.convertToRgb([30, 45, 240])},
-                  {rows: 2, colour: util.convertToRgb([255, 210, 0])},
-                  {rows: 4, colour: util.convertToRgb(radRed)}
+                  {rows: 4, colour: radRed},
+                  {rows: 2, colour: [255, 210, 0]},
+                  {rows: 2, colour: [30, 45, 240]},
+                  {rows: 2, colour: [255, 210, 0]},
+                  {rows: 4, colour: radRed}
                ]
             ],
-            textColour: util.convertToRgb(radGold),
-            backgroundColour: util.convertToRgb(radBlue),
-            borderColour: util.convertToRgb(radRed)
+            textColour: radGold,
+            backgroundColour: radBlue,
+            borderColour: radRed
          },
          {
             countyName: 'Dorset',
