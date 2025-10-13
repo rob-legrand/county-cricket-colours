@@ -1224,14 +1224,14 @@ const counties = (function () {
             classLevel: 5,
             country: 'England',
             colours: [
-               {rows: 4, colour: util.convertToRgb(rutGreen)},
-               {rows: 2, colour: util.convertToRgb(rutGold)},
-               {rows: 2, colour: util.convertToRgb(rutGreen)},
-               {rows: 2, colour: util.convertToRgb(rutGold)},
-               {rows: 4, colour: util.convertToRgb(rutGreen)}
+               {rows: 4, colour: rutGreen},
+               {rows: 2, colour: rutGold},
+               {rows: 2, colour: rutGreen},
+               {rows: 2, colour: rutGold},
+               {rows: 4, colour: rutGreen}
             ],
-            textColour: util.convertToRgb(rutGold),
-            backgroundColour: util.convertToRgb(rutGreen)
+            textColour: rutGold,
+            backgroundColour: rutGreen
          },
          {
             countyName: 'Suffolk',
