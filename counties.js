@@ -1294,33 +1294,33 @@ const counties = (function () {
             classLevel: 5,
             country: 'Wales',
             colours: [
-               {rows: 5, colour: util.convertToRgb(caeBlack)},
-               {rows: 3, colour: util.convertToRgb(caeGold)},
-               {rows: 5, colour: util.convertToRgb(caeGreen)}
+               {rows: 5, colour: caeBlack},
+               {rows: 3, colour: caeGold},
+               {rows: 5, colour: caeGreen}
             ],
             alternateColours: [
                [
-                  {rows: 2, colour: util.convertToRgb(caeGreen)},
-                  {rows: 1, colour: util.convertToRgb(caeGold)},
-                  {rows: 3, colour: util.convertToRgb(caeGreen)},
-                  {rows: 1, colour: util.convertToRgb(caeGold)},
-                  {rows: 3, colour: util.convertToRgb(caeGreen)},
-                  {rows: 1, colour: util.convertToRgb(caeGold)},
-                  {rows: 2, colour: util.convertToRgb(caeGreen)}
+                  {rows: 2, colour: caeGreen},
+                  {rows: 1, colour: caeGold},
+                  {rows: 3, colour: caeGreen},
+                  {rows: 1, colour: caeGold},
+                  {rows: 3, colour: caeGreen},
+                  {rows: 1, colour: caeGold},
+                  {rows: 2, colour: caeGreen}
                ],
                [
-                  {rows: 3, colour: util.convertToRgb(caeGreen)},
-                  {rows: 1, colour: util.convertToRgb(caeGold)},
-                  {rows: 2, colour: util.convertToRgb(caeGreen)},
-                  {rows: 1, colour: util.convertToRgb(caeGold)},
-                  {rows: 2, colour: util.convertToRgb(caeGreen)},
-                  {rows: 1, colour: util.convertToRgb(caeGold)},
-                  {rows: 3, colour: util.convertToRgb(caeGreen)}
+                  {rows: 3, colour: caeGreen},
+                  {rows: 1, colour: caeGold},
+                  {rows: 2, colour: caeGreen},
+                  {rows: 1, colour: caeGold},
+                  {rows: 2, colour: caeGreen},
+                  {rows: 1, colour: caeGold},
+                  {rows: 3, colour: caeGreen}
                ]
             ],
-            textColour: util.convertToRgb(caeGold),
-            backgroundColour: util.convertToRgb(caeGreen),
-            borderColour: util.convertToRgb(caeBlack)
+            textColour: caeGold,
+            backgroundColour: caeGreen,
+            borderColour: caeBlack
          },
          {
             countyName: 'Roxburghshire',
