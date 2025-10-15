@@ -1366,15 +1366,15 @@ const counties = (function () {
             classLevel: 6,
             country: 'England',
             colours: [
-               {rows: 2, colour: util.convertToRgb(brkYellow)},
-               {rows: 5, colour: util.convertToRgb(brkGreen)},
-               {rows: 2, colour: util.convertToRgb(brkYellow)},
-               {rows: 5, colour: util.convertToRgb(brkPurple)},
-               {rows: 2, colour: util.convertToRgb(brkYellow)}
+               {rows: 2, colour: brkYellow},
+               {rows: 5, colour: brkGreen},
+               {rows: 2, colour: brkYellow},
+               {rows: 5, colour: brkPurple},
+               {rows: 2, colour: brkYellow}
             ],
-            textColour: util.convertToRgb(brkYellow),
-            backgroundColour: util.convertToRgb(brkGreen),
-            borderColour: util.convertToRgb(brkPurple)
+            textColour: brkYellow,
+            backgroundColour: brkGreen,
+            borderColour: brkPurple
          },
          {
             countyName: 'Buckinghamshire',
