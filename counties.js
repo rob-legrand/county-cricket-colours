@@ -1349,13 +1349,13 @@ const counties = (function () {
             classLevel: 6,
             country: 'England',
             colours: [
-               {rows: 6, colour: util.convertToRgb(oxfMagenta)},
-               {rows: 2, colour: util.convertToRgb(oxfGold)},
-               {rows: 6, colour: util.convertToRgb(oxfBlue)}
+               {rows: 6, colour: oxfMagenta},
+               {rows: 2, colour: oxfGold},
+               {rows: 6, colour: oxfBlue}
             ],
-            textColour: util.convertToRgb(oxfGold),
-            backgroundColour: util.convertToRgb(oxfMagenta),
-            borderColour: util.convertToRgb(oxfBlue)
+            textColour: oxfGold,
+            backgroundColour: oxfMagenta,
+            borderColour: oxfBlue
          },
          {
             countyName: 'Berkshire',
