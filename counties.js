@@ -1403,13 +1403,13 @@ const counties = (function () {
             classLevel: 6,
             country: 'Wales',
             colours: [
-               {rows: 3, colour: util.convertToRgb(crmGold)},
-               {rows: 8, colour: util.convertToRgb(crmRed)},
-               {rows: 3, colour: util.convertToRgb(crmGold)}
+               {rows: 3, colour: crmGold},
+               {rows: 8, colour: crmRed},
+               {rows: 3, colour: crmGold}
             ],
-            textColour: util.convertToRgb(crmGold),
-            backgroundColour: util.convertToRgb(crmRed),
-            borderColour: util.convertToRgb(crmGold)
+            textColour: crmGold,
+            backgroundColour: crmRed,
+            borderColour: crmGold
          },
          {
             countyName: 'Westmorland',
