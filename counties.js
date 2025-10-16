@@ -1603,47 +1603,47 @@ const counties = (function () {
             classLevel: 6,
             country: 'Wales',
             colours: [
-               {rows: 4, colour: util.convertToRgb(denRed)},
+               {rows: 4, colour: denRed},
                {rows: 3},
-               {rows: 3, colour: util.convertToRgb(denBlack)},
-               {rows: 4, colour: util.convertToRgb(denRed)}
+               {rows: 3, colour: denBlack},
+               {rows: 4, colour: denRed}
             ],
             alternateColours: [
                [
-                  {rows: 4, colour: util.convertToRgb(denBlack)},
+                  {rows: 4, colour: denBlack},
                   {rows: 2},
-                  {rows: 2, colour: util.convertToRgb(denRed)},
+                  {rows: 2, colour: denRed},
                   {rows: 2},
-                  {rows: 4, colour: util.convertToRgb(denBlack)}
+                  {rows: 4, colour: denBlack}
                ],
                [
-                  {rows: 3, colour: util.convertToRgb(denRed)},
+                  {rows: 3, colour: denRed},
                   {rows: 2},
-                  {rows: 1, colour: util.convertToRgb(denRed)},
-                  {rows: 2, colour: util.convertToRgb(denBlack)},
-                  {rows: 1, colour: util.convertToRgb(denRed)},
+                  {rows: 1, colour: denRed},
+                  {rows: 2, colour: denBlack},
+                  {rows: 1, colour: denRed},
                   {rows: 2},
-                  {rows: 3, colour: util.convertToRgb(denRed)}
+                  {rows: 3, colour: denRed}
                ],
                [
-                  {rows: 3, colour: util.convertToRgb(denRed)},
-                  {rows: 2, colour: util.convertToRgb(denBlack)},
-                  {rows: 1, colour: util.convertToRgb(denRed)},
+                  {rows: 3, colour: denRed},
+                  {rows: 2, colour: denBlack},
+                  {rows: 1, colour: denRed},
                   {rows: 2},
-                  {rows: 1, colour: util.convertToRgb(denRed)},
-                  {rows: 2, colour: util.convertToRgb(denBlack)},
-                  {rows: 3, colour: util.convertToRgb(denRed)}
+                  {rows: 1, colour: denRed},
+                  {rows: 2, colour: denBlack},
+                  {rows: 3, colour: denRed}
                ],
                [
-                  {rows: 3, colour: util.convertToRgb(denRed)},
+                  {rows: 3, colour: denRed},
                   {rows: 3},
-                  {rows: 2, colour: util.convertToRgb(denRed)},
-                  {rows: 3, colour: util.convertToRgb(denBlack)},
-                  {rows: 3, colour: util.convertToRgb(denRed)}
+                  {rows: 2, colour: denRed},
+                  {rows: 3, colour: denBlack},
+                  {rows: 3, colour: denRed}
                ]
             ],
-            backgroundColour: util.convertToRgb(denRed),
-            borderColour: util.convertToRgb(denBlack)
+            backgroundColour: denRed,
+            borderColour: denBlack
          },
          {
             countyName: 'Pembrokeshire',
