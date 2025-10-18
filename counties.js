@@ -1687,20 +1687,20 @@ const counties = (function () {
             classLevel: 7,
             country: 'Scotland',
             colours: [
-               {rows: 6, colour: util.convertToRgb(abdLightBlue)},
-               {rows: 1, colour: util.convertToRgb(abdGold)},
-               {rows: 6, colour: util.convertToRgb(abdDarkBlue)}
+               {rows: 6, colour: abdLightBlue},
+               {rows: 1, colour: abdGold},
+               {rows: 6, colour: abdDarkBlue}
             ],
             alternateColours: [
                [
-                  {rows: 6, colour: util.convertToRgb([255, 150, 0])},
+                  {rows: 6, colour: [255, 150, 0]},
                   {rows: 2},
-                  {rows: 6, colour: util.convertToRgb([90, 30, 90])}
+                  {rows: 6, colour: [90, 30, 90]}
                ]
             ],
-            textColour: util.convertToRgb(abdGold),
-            backgroundColour: util.convertToRgb(abdLightBlue),
-            borderColour: util.convertToRgb(abdDarkBlue)
+            textColour: abdGold,
+            backgroundColour: abdLightBlue,
+            borderColour: abdDarkBlue
          },
          {
             countyName: 'Angus',
