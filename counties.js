@@ -1671,12 +1671,12 @@ const counties = (function () {
             classLevel: 7,
             country: 'Wales',
             colours: [
-               {rows: 6, colour: util.convertToRgb(crdBlack)},
-               {rows: 3, colour: util.convertToRgb(crdGold)},
-               {rows: 6, colour: util.convertToRgb(crdBlack)}
+               {rows: 6, colour: crdBlack},
+               {rows: 3, colour: crdGold},
+               {rows: 6, colour: crdBlack}
             ],
-            textColour: util.convertToRgb(crdGold),
-            backgroundColour: util.convertToRgb(crdBlack)
+            textColour: crdGold,
+            backgroundColour: crdBlack
          },
          {
             countyName: 'Aberdeenshire',
