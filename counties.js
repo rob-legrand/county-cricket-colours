@@ -1710,45 +1710,45 @@ const counties = (function () {
             classLevel: 7,
             country: 'Scotland',
             colours: [
-               {rows: 5, colour: util.convertToRgb(ansBlue)},
+               {rows: 5, colour: ansBlue},
                {rows: 1},
-               {rows: 1, colour: util.convertToRgb(ansRed)},
+               {rows: 1, colour: ansRed},
                {rows: 1},
-               {rows: 5, colour: util.convertToRgb(ansBlue)}
+               {rows: 5, colour: ansBlue}
             ],
             alternateColours: [
                [
-                  {rows: 4, colour: util.convertToRgb(ansBlue)},
+                  {rows: 4, colour: ansBlue},
                   {rows: 1},
-                  {rows: 1, colour: util.convertToRgb(ansRed)},
+                  {rows: 1, colour: ansRed},
                   {rows: 1},
-                  {rows: 1, colour: util.convertToRgb(ansRed)},
+                  {rows: 1, colour: ansRed},
                   {rows: 1},
-                  {rows: 4, colour: util.convertToRgb(ansBlue)}
+                  {rows: 4, colour: ansBlue}
                ],
                [
-                  {rows: 2, colour: util.convertToRgb(ansBlue)},
+                  {rows: 2, colour: ansBlue},
                   {rows: 1},
-                  {rows: 1, colour: util.convertToRgb(ansRed)},
+                  {rows: 1, colour: ansRed},
                   {rows: 1},
-                  {rows: 1, colour: util.convertToRgb(ansRed)},
+                  {rows: 1, colour: ansRed},
                   {rows: 1},
-                  {rows: 1, colour: util.convertToRgb(ansRed)},
+                  {rows: 1, colour: ansRed},
                   {rows: 1},
-                  {rows: 5, colour: util.convertToRgb(ansBlue)}
+                  {rows: 5, colour: ansBlue}
                ],
                [
-                  {rows: 1, colour: util.convertToRgb(ansRed)},
+                  {rows: 1, colour: ansRed},
                   {rows: 1},
-                  {rows: 1, colour: util.convertToRgb(ansRed)},
+                  {rows: 1, colour: ansRed},
                   {rows: 1},
-                  {rows: 1, colour: util.convertToRgb(ansRed)},
+                  {rows: 1, colour: ansRed},
                   {rows: 1},
-                  {rows: 8, colour: util.convertToRgb(ansBlue)}
+                  {rows: 8, colour: ansBlue}
                ]
             ],
-            backgroundColour: util.convertToRgb(ansBlue),
-            borderColour: util.convertToRgb(ansRed)
+            backgroundColour: ansBlue,
+            borderColour: ansRed
          },
          {
             countyName: 'Kincardineshire',
