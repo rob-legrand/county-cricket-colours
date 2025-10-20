@@ -1838,17 +1838,17 @@ const counties = (function () {
             classLevel: 7,
             country: 'Scotland',
             colours: [
-               {rows: 6, colour: util.convertToRgb(stiRed)},
-               {rows: 6, colour: util.convertToRgb(stiBrown)}
+               {rows: 6, colour: stiRed},
+               {rows: 6, colour: stiBrown}
             ],
             alternateColours: [
                [
-                  {rows: 7, colour: util.convertToRgb(stiRed)},
-                  {rows: 7, colour: util.convertToRgb(stiBlack)}
+                  {rows: 7, colour: stiRed},
+                  {rows: 7, colour: stiBlack}
                ]
             ],
-            backgroundColour: util.convertToRgb(stiRed),
-            borderColour: util.convertToRgb(stiBrown)
+            backgroundColour: stiRed,
+            borderColour: stiBrown
          },
          {
             countyName: 'Banffshire',
