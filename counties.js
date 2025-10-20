@@ -1950,27 +1950,27 @@ const counties = (function () {
             classLevel: 7,
             country: 'Wales',
             colours: [
-               {rows: 1, colour: util.convertToRgb(flnRed)},
-               {rows: 2, colour: util.convertToRgb(flnBlack)},
+               {rows: 1, colour: flnRed},
+               {rows: 2, colour: flnBlack},
                {rows: 2},
-               {rows: 4, colour: util.convertToRgb(flnBlack)},
+               {rows: 4, colour: flnBlack},
                {rows: 2},
-               {rows: 2, colour: util.convertToRgb(flnBlack)},
-               {rows: 1, colour: util.convertToRgb(flnRed)}
+               {rows: 2, colour: flnBlack},
+               {rows: 1, colour: flnRed}
             ],
             alternateColours: [
                [
-                  {rows: 2, colour: util.convertToRgb(flnBlack)},
+                  {rows: 2, colour: flnBlack},
                   {rows: 2},
-                  {rows: 2, colour: util.convertToRgb(flnBlack)},
-                  {rows: 1, colour: util.convertToRgb(flnRed)},
-                  {rows: 2, colour: util.convertToRgb(flnBlack)},
+                  {rows: 2, colour: flnBlack},
+                  {rows: 1, colour: flnRed},
+                  {rows: 2, colour: flnBlack},
                   {rows: 2},
-                  {rows: 2, colour: util.convertToRgb(flnBlack)}
+                  {rows: 2, colour: flnBlack}
                ]
             ],
-            backgroundColour: util.convertToRgb(flnBlack),
-            borderColour: util.convertToRgb(flnRed)
+            backgroundColour: flnBlack,
+            borderColour: flnRed
          },
          {
             countyName: 'Perthshire',
