@@ -1981,13 +1981,13 @@ const counties = (function () {
             classLevel: 8,
             country: 'Scotland',
             colours: [
-               {rows: 4, colour: util.convertToRgb(perGreen)},
-               {rows: 5, colour: util.convertToRgb(perGold)},
-               {rows: 4, colour: util.convertToRgb(perGreen)}
+               {rows: 4, colour: perGreen},
+               {rows: 5, colour: perGold},
+               {rows: 4, colour: perGreen}
             ],
-            textColour: util.convertToRgb(perGold),
-            backgroundColour: util.convertToRgb(perGreen),
-            borderColour: util.convertToRgb(perGold)
+            textColour: perGold,
+            backgroundColour: perGreen,
+            borderColour: perGold
          },
          {
             countyName: 'Clackmannanshire',
