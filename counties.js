@@ -2015,22 +2015,22 @@ const counties = (function () {
             classLevel: 8,
             country: 'Scotland',
             colours: [
-               {rows: 4, colour: util.convertToRgb(fifDarkBlue)},
-               {rows: 1, colour: util.convertToRgb(fifGold)},
-               {rows: 4, colour: util.convertToRgb(fifLightBlue)},
-               {rows: 1, colour: util.convertToRgb(fifGold)},
-               {rows: 4, colour: util.convertToRgb(fifDarkBlue)}
+               {rows: 4, colour: fifDarkBlue},
+               {rows: 1, colour: fifGold},
+               {rows: 4, colour: fifLightBlue},
+               {rows: 1, colour: fifGold},
+               {rows: 4, colour: fifDarkBlue}
             ],
             alternateColours: [
                [
-                  {rows: 6, colour: util.convertToRgb(fifGold)},
-                  {rows: 2, colour: util.convertToRgb([225, 45, 45])},
-                  {rows: 6, colour: util.convertToRgb(fifDarkBlue)}
+                  {rows: 6, colour: fifGold},
+                  {rows: 2, colour: [225, 45, 45]},
+                  {rows: 6, colour: fifDarkBlue}
                ]
             ],
-            textColour: util.convertToRgb(fifGold),
-            backgroundColour: util.convertToRgb(fifDarkBlue),
-            borderColour: util.convertToRgb(fifLightBlue)
+            textColour: fifGold,
+            backgroundColour: fifDarkBlue,
+            borderColour: fifLightBlue
          },
          {
             countyName: 'Ayrshire',
