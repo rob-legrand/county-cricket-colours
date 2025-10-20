@@ -1998,14 +1998,14 @@ const counties = (function () {
             classLevel: 8,
             country: 'Scotland',
             colours: [
-               {rows: 4, colour: util.convertToRgb(clkGreen)},
+               {rows: 4, colour: clkGreen},
                {rows: 1},
-               {rows: 3, colour: util.convertToRgb(clkBlack)},
+               {rows: 3, colour: clkBlack},
                {rows: 1},
-               {rows: 4, colour: util.convertToRgb(clkGreen)}
+               {rows: 4, colour: clkGreen}
             ],
-            backgroundColour: util.convertToRgb(clkGreen),
-            borderColour: util.convertToRgb(clkBlack)
+            backgroundColour: clkGreen,
+            borderColour: clkBlack
          },
          {
             countyName: 'Fife',
