@@ -2170,70 +2170,70 @@ const counties = (function () {
             classLevel: 8,
             country: 'Scotland',
             colours: [
-               {rows: 5, colour: util.convertToRgb(dunRed)},
+               {rows: 5, colour: dunRed},
                {rows: 1},
-               {rows: 1, colour: util.convertToRgb(dunGreen)},
+               {rows: 1, colour: dunGreen},
                {rows: 1},
-               {rows: 5, colour: util.convertToRgb(dunRed)}
+               {rows: 5, colour: dunRed}
             ],
             alternateColours: [
                [
-                  {rows: 5, colour: util.convertToRgb(dunRed)},
+                  {rows: 5, colour: dunRed},
                   {rows: 2},
-                  {rows: 2, colour: util.convertToRgb(dunGreen)},
-                  {rows: 5, colour: util.convertToRgb(dunRed)}
+                  {rows: 2, colour: dunGreen},
+                  {rows: 5, colour: dunRed}
                ],
                [
-                  {rows: 6, colour: util.convertToRgb(dunRed)},
+                  {rows: 6, colour: dunRed},
                   {rows: 1},
-                  {rows: 1, colour: util.convertToRgb(dunGreen)},
-                  {rows: 6, colour: util.convertToRgb(dunRed)}
+                  {rows: 1, colour: dunGreen},
+                  {rows: 6, colour: dunRed}
                ],
                [
-                  {rows: 5, colour: util.convertToRgb(dunRed)},
-                  {rows: 1, colour: util.convertToRgb(dunGreen)},
+                  {rows: 5, colour: dunRed},
+                  {rows: 1, colour: dunGreen},
                   {rows: 2},
-                  {rows: 1, colour: util.convertToRgb(dunGreen)},
-                  {rows: 5, colour: util.convertToRgb(dunRed)}
+                  {rows: 1, colour: dunGreen},
+                  {rows: 5, colour: dunRed}
                ],
                [
-                  {rows: 5, colour: util.convertToRgb(dunRed)},
-                  {rows: 2, colour: util.convertToRgb([210, 165, 0])},
-                  {rows: 2, colour: util.convertToRgb(dunGreen)},
-                  {rows: 5, colour: util.convertToRgb(dunRed)}
+                  {rows: 5, colour: dunRed},
+                  {rows: 2, colour: [210, 165, 0]},
+                  {rows: 2, colour: dunGreen},
+                  {rows: 5, colour: dunRed}
                ],
                [
-                  {rows: 5, colour: util.convertToRgb(dunRed)},
-                  {rows: 2, colour: util.convertToRgb([225, 195, 0])},
-                  {rows: 2, colour: util.convertToRgb(dunGreen)},
-                  {rows: 5, colour: util.convertToRgb(dunRed)}
+                  {rows: 5, colour: dunRed},
+                  {rows: 2, colour: [225, 195, 0]},
+                  {rows: 2, colour: dunGreen},
+                  {rows: 5, colour: dunRed}
                ],
                [
-                  {rows: 5, colour: util.convertToRgb(dunRed)},
+                  {rows: 5, colour: dunRed},
                   {rows: 1},
-                  {rows: 2, colour: util.convertToRgb(dunGreen)},
+                  {rows: 2, colour: dunGreen},
                   {rows: 1},
-                  {rows: 5, colour: util.convertToRgb(dunRed)}
+                  {rows: 5, colour: dunRed}
                ],
                [
-                  {rows: 1, colour: util.convertToRgb(dunGreen)},
+                  {rows: 1, colour: dunGreen},
                   {rows: 1},
-                  {rows: 4, colour: util.convertToRgb(dunRed)},
+                  {rows: 4, colour: dunRed},
                   {rows: 2},
-                  {rows: 4, colour: util.convertToRgb(dunRed)},
+                  {rows: 4, colour: dunRed},
                   {rows: 1},
-                  {rows: 1, colour: util.convertToRgb(dunGreen)}
+                  {rows: 1, colour: dunGreen}
                ],
                [
-                  {rows: 1, colour: util.convertToRgb(dunGreen)},
-                  {rows: 5, colour: util.convertToRgb(dunRed)},
+                  {rows: 1, colour: dunGreen},
+                  {rows: 5, colour: dunRed},
                   {rows: 2},
-                  {rows: 5, colour: util.convertToRgb(dunRed)},
-                  {rows: 1, colour: util.convertToRgb(dunGreen)}
+                  {rows: 5, colour: dunRed},
+                  {rows: 1, colour: dunGreen}
                ]
             ],
-            backgroundColour: util.convertToRgb(dunRed),
-            borderColour: util.convertToRgb(dunGreen)
+            backgroundColour: dunRed,
+            borderColour: dunGreen
          },
          {
             countyName: 'Dumfriesshire',
