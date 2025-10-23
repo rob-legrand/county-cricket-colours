@@ -2134,13 +2134,13 @@ const counties = (function () {
             classLevel: 8,
             country: 'Scotland',
             colours: [
-               {rows: 4, colour: util.convertToRgb(lnkGold)},
-               {rows: 5, colour: util.convertToRgb(lnkBrown)},
-               {rows: 4, colour: util.convertToRgb(lnkGold)}
+               {rows: 4, colour: lnkGold},
+               {rows: 5, colour: lnkBrown},
+               {rows: 4, colour: lnkGold}
             ],
-            textColour: util.convertToRgb(lnkBrown),
-            backgroundColour: util.convertToRgb(lnkGold),
-            borderColour: util.convertToRgb(lnkBrown)
+            textColour: lnkBrown,
+            backgroundColour: lnkGold,
+            borderColour: lnkBrown
          },
          {
             countyName: 'Renfrewshire',
