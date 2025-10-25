@@ -2262,43 +2262,43 @@ const counties = (function () {
             classLevel: 9,
             country: 'Scotland',
             colours: [
-               {rows: 5, colour: util.convertToRgb(wlnMaroon)},
-               {rows: 4, colour: util.convertToRgb(wlnGold)},
-               {rows: 5, colour: util.convertToRgb(wlnMaroon)}
+               {rows: 5, colour: wlnMaroon},
+               {rows: 4, colour: wlnGold},
+               {rows: 5, colour: wlnMaroon}
             ],
             alternateColours: [
                [
-                  {rows: 5, colour: util.convertToRgb(wlnMaroon)},
-                  {rows: 1, colour: util.convertToRgb(wlnSilver)},
-                  {rows: 2, colour: util.convertToRgb(wlnGold)},
-                  {rows: 1, colour: util.convertToRgb(wlnSilver)},
-                  {rows: 5, colour: util.convertToRgb(wlnMaroon)}
+                  {rows: 5, colour: wlnMaroon},
+                  {rows: 1, colour: wlnSilver},
+                  {rows: 2, colour: wlnGold},
+                  {rows: 1, colour: wlnSilver},
+                  {rows: 5, colour: wlnMaroon}
                ],
                [
-                  {rows: 5, colour: util.convertToRgb(wlnMaroon)},
+                  {rows: 5, colour: wlnMaroon},
                   {rows: 1},
-                  {rows: 2, colour: util.convertToRgb(wlnGold)},
+                  {rows: 2, colour: wlnGold},
                   {rows: 1},
-                  {rows: 5, colour: util.convertToRgb(wlnMaroon)}
+                  {rows: 5, colour: wlnMaroon}
                ],
                [
-                  {rows: 5, colour: util.convertToRgb(wlnMaroon)},
-                  {rows: 1, colour: util.convertToRgb(wlnGold)},
+                  {rows: 5, colour: wlnMaroon},
+                  {rows: 1, colour: wlnGold},
                   {rows: 2},
-                  {rows: 1, colour: util.convertToRgb(wlnGold)},
-                  {rows: 5, colour: util.convertToRgb(wlnMaroon)}
+                  {rows: 1, colour: wlnGold},
+                  {rows: 5, colour: wlnMaroon}
                ],
                [
-                  {rows: 5, colour: util.convertToRgb(wlnMaroon)},
-                  {rows: 1, colour: util.convertToRgb(wlnGold)},
-                  {rows: 2, colour: util.convertToRgb(wlnSilver)},
-                  {rows: 1, colour: util.convertToRgb(wlnGold)},
-                  {rows: 5, colour: util.convertToRgb(wlnMaroon)}
+                  {rows: 5, colour: wlnMaroon},
+                  {rows: 1, colour: wlnGold},
+                  {rows: 2, colour: wlnSilver},
+                  {rows: 1, colour: wlnGold},
+                  {rows: 5, colour: wlnMaroon}
                ]
             ],
-            textColour: util.convertToRgb(wlnSilver),
-            backgroundColour: util.convertToRgb(wlnMaroon),
-            borderColour: util.convertToRgb(wlnGold)
+            textColour: wlnSilver,
+            backgroundColour: wlnMaroon,
+            borderColour: wlnGold
          },
          {
             countyName: 'Anglesey',
