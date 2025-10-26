@@ -2308,29 +2308,29 @@ const counties = (function () {
             classLevel: 9,
             country: 'Wales',
             colours: [
-               {rows: 6, colour: util.convertToRgb(agyRed)},
-               {rows: 3, colour: util.convertToRgb(agyGold)},
-               {rows: 6, colour: util.convertToRgb(agyRed)}
+               {rows: 6, colour: agyRed},
+               {rows: 3, colour: agyGold},
+               {rows: 6, colour: agyRed}
             ],
             alternateColours: [
                [
-                  {rows: 6, colour: util.convertToRgb(agyRed)},
-                  {rows: 2, colour: util.convertToRgb(agyGold)},
-                  {rows: 6, colour: util.convertToRgb(agyRed)}
+                  {rows: 6, colour: agyRed},
+                  {rows: 2, colour: agyGold},
+                  {rows: 6, colour: agyRed}
                ],
                [
-                  {rows: 5, colour: util.convertToRgb(agyRed)},
-                  {rows: 2, colour: util.convertToRgb(agyGold)},
-                  {rows: 5, colour: util.convertToRgb(agyRed)}
+                  {rows: 5, colour: agyRed},
+                  {rows: 2, colour: agyGold},
+                  {rows: 5, colour: agyRed}
                ],
                [
-                  {rows: 5, colour: util.convertToRgb(agyRed)},
-                  {rows: 3, colour: util.convertToRgb(agyGold)},
-                  {rows: 5, colour: util.convertToRgb(agyRed)}
+                  {rows: 5, colour: agyRed},
+                  {rows: 3, colour: agyGold},
+                  {rows: 5, colour: agyRed}
                ]
             ],
-            textColour: util.convertToRgb(agyGold),
-            backgroundColour: util.convertToRgb(agyRed)
+            textColour: agyGold,
+            backgroundColour: agyRed
          },
          {
             countyName: 'Merioneth',
