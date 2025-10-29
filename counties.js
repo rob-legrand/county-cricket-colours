@@ -2340,29 +2340,29 @@ const counties = (function () {
             classLevel: 9,
             country: 'Wales',
             colours: [
-               {rows: 4, colour: util.convertToRgb(merBlue)},
+               {rows: 4, colour: merBlue},
                {rows: 2},
-               {rows: 2, colour: util.convertToRgb(merBlue)},
-               {rows: 2, colour: util.convertToRgb(merGold)},
-               {rows: 4, colour: util.convertToRgb(merBlue)}
+               {rows: 2, colour: merBlue},
+               {rows: 2, colour: merGold},
+               {rows: 4, colour: merBlue}
             ],
             alternateColours: [
                [
-                  {rows: 2, colour: util.convertToRgb(merGold)},
-                  {rows: 4, colour: util.convertToRgb(merBlue)},
+                  {rows: 2, colour: merGold},
+                  {rows: 4, colour: merBlue},
                   {rows: 2},
-                  {rows: 4, colour: util.convertToRgb(merBlue)},
-                  {rows: 2, colour: util.convertToRgb(merGold)}
+                  {rows: 4, colour: merBlue},
+                  {rows: 2, colour: merGold}
                ],
                [
-                  {rows: 5, colour: util.convertToRgb(merBlue)},
+                  {rows: 5, colour: merBlue},
                   {rows: 2},
-                  {rows: 2, colour: util.convertToRgb(merGold)},
-                  {rows: 5, colour: util.convertToRgb(merBlue)}
+                  {rows: 2, colour: merGold},
+                  {rows: 5, colour: merBlue}
                ]
             ],
-            backgroundColour: util.convertToRgb(merBlue),
-            borderColour: util.convertToRgb(merGold)
+            backgroundColour: merBlue,
+            borderColour: merGold
          },
          {
             countyName: 'Midlothian',
