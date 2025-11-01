@@ -272,11 +272,6 @@ document.addEventListener('DOMContentLoaded', function () {
       updateCounties();
    });
 
-   countiesElement.addEventListener('dblclick', function () {
-      includeAlternateColours = !includeAlternateColours;
-      updateCounties();
-   });
-
    const countiesInfo = counties.createInfo();
    includeAlternateColours = false;
    updateCounties();
