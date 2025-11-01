@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
    let includeAlternateColours;
 
    const countiesElement = document.querySelector('#counties');
+   const toggleAlternateColoursButton = document.querySelector('#toggle-alternate-colours');
 
    const updateCounties = function () {
       countiesElement.replaceChildren(...countiesInfo.map(function (county) {
@@ -68,6 +69,12 @@ document.addEventListener('DOMContentLoaded', function () {
             }
          });
       }
+
+      toggleAlternateColoursButton.textContent = (
+         includeAlternateColours
+         ? 'Hide alternate colours'
+         : 'Show alternate colours'
+      );
 
       const classLevels = [...new Set(
          countiesInfo.map(
@@ -259,6 +266,11 @@ document.addEventListener('DOMContentLoaded', function () {
          return newPointsTableRow;
       }));
    };
+
+   toggleAlternateColoursButton.addEventListener('click', function () {
+      includeAlternateColours = !includeAlternateColours;
+      updateCounties();
+   });
 
    countiesElement.addEventListener('dblclick', function () {
       includeAlternateColours = !includeAlternateColours;
