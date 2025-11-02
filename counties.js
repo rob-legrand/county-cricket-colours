@@ -390,6 +390,7 @@ const counties = (function () {
          },
          {
             countyName: 'Nottinghamshire',
+            countyNameInWelsh: 'Swydd Nottingham',
             countyAbbreviation: 'Notts',
             countyCode: 'not',
             chapmanCode: 'ntt',
