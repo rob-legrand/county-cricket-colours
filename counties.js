@@ -288,6 +288,7 @@ const counties = (function () {
          },
          {
             countyName: 'Kent',
+            countyNameInWelsh: 'Caint',
             countyCode: 'ken',
             chapmanCode: 'ken',
             hcsCode: 'knt',
