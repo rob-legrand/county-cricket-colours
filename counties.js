@@ -482,6 +482,7 @@ const counties = (function () {
          },
          {
             countyName: 'Derbyshire',
+            countyNameInWelsh: 'Swydd Derby',
             countyAbbreviation: 'Derbys',
             countyCode: 'drb',
             chapmanCode: 'dby',
