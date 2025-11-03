@@ -408,6 +408,7 @@ const counties = (function () {
          },
          {
             countyName: 'Yorkshire',
+            countyNameInWelsh: 'Swydd Efrog',
             countyAbbreviation: 'Yorks',
             countyCode: 'yrk',
             chapmanCode: 'yks',
