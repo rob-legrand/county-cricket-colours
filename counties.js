@@ -460,6 +460,7 @@ const counties = (function () {
          },
          {
             countyName: 'Gloucestershire',
+            countyNameInWelsh: 'Swydd Gaerloyw',
             countyAbbreviation: 'Glos',
             countyCode: 'gls',
             chapmanCode: 'gls',
