@@ -441,6 +441,7 @@ const counties = (function () {
          },
          {
             countyName: 'Lancashire',
+            countyNameInWelsh: 'Swydd Gaerhirfryn',
             countyAbbreviation: 'Lancs',
             countyCode: 'lan',
             chapmanCode: 'lan',
