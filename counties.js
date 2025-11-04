@@ -680,6 +680,7 @@ const counties = (function () {
          },
          {
             countyName: 'Leicestershire',
+            countyNameInWelsh: 'Swydd Gaerl\u0177r',
             countyAbbreviation: 'Leics',
             countyCode: 'lei',
             chapmanCode: 'lei',
