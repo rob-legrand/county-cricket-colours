@@ -719,6 +719,7 @@ const counties = (function () {
          },
          {
             countyName: 'Staffordshire',
+            countyNameInWelsh: 'Swydd Stafford',
             countyAbbreviation: 'Staffs',
             countyCode: 'stf',
             chapmanCode: 'sts',
