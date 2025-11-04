@@ -521,6 +521,7 @@ const counties = (function () {
          },
          {
             countyName: 'Somerset',
+            countyNameInWelsh: 'Gwlad yr Haf',
             countyCode: 'som',
             chapmanCode: 'som',
             hcsCode: 'sms',
