@@ -699,6 +699,7 @@ const counties = (function () {
          },
          {
             countyName: 'Warwickshire',
+            countyNameInWelsh: 'Swydd Warwick',
             countyAbbreviation: 'Warks',
             countyCode: 'war',
             chapmanCode: 'war',
