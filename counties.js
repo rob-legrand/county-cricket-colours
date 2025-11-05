@@ -777,6 +777,7 @@ const counties = (function () {
          },
          {
             countyName: 'Northamptonshire',
+            countyNameInWelsh: 'Swydd Northampton',
             countyAbbreviation: 'Northants',
             countyCode: 'nth',
             chapmanCode: 'nth',
