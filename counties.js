@@ -794,6 +794,7 @@ const counties = (function () {
          },
          {
             countyName: 'Glamorgan',
+            countyNameInWelsh: 'Morgannwg',
             countyCode: 'gla',
             chapmanCode: 'gla',
             hcsCode: 'glm',
