@@ -737,6 +737,7 @@ const counties = (function () {
          },
          {
             countyName: 'Cheshire',
+            countyNameInWelsh: 'Swydd Gaer',
             countyAbbreviation: 'Ches',
             countyCode: 'che',
             chapmanCode: 'chs',
