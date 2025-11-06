@@ -865,6 +865,7 @@ const counties = (function () {
          },
          {
             countyName: 'Devon',
+            countyNameInWelsh: 'Dyfnaint',
             countyCode: 'dev',
             chapmanCode: 'dev',
             hcsCode: 'dvn',
