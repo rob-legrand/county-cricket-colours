@@ -847,6 +847,7 @@ const counties = (function () {
          },
          {
             countyName: 'Hertfordshire',
+            countyNameInWelsh: 'Swydd Hertford',
             countyAbbreviation: 'Herts',
             countyCode: 'hrt',
             chapmanCode: 'hrt',
