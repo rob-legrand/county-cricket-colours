@@ -893,6 +893,7 @@ const counties = (function () {
          },
          {
             countyName: 'Lincolnshire',
+            countyNameInWelsh: 'Swydd Lincoln',
             countyAbbreviation: 'Lincs',
             countyCode: 'lin',
             chapmanCode: 'lin',
