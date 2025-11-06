@@ -813,6 +813,7 @@ const counties = (function () {
          },
          {
             countyName: 'Durham',
+            countyNameInWelsh: 'Swydd Durham',
             countyCode: 'dur',
             chapmanCode: 'dur',
             hcsCode: 'drh',
