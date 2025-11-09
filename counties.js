@@ -947,6 +947,7 @@ const counties = (function () {
          },
          {
             countyName: 'Shropshire',
+            countyNameInWelsh: 'Swydd Amwythig',
             countyAbbreviation: 'Salop',
             countyCode: 'sal',
             chapmanCode: 'sal',
