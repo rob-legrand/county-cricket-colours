@@ -910,6 +910,7 @@ const counties = (function () {
          },
          {
             countyName: 'Cambridgeshire',
+            countyNameInWelsh: 'Swydd Gaergrawnt',
             countyAbbreviation: 'Cambs',
             countyCode: 'cam',
             chapmanCode: 'cam',
