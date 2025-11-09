@@ -929,6 +929,7 @@ const counties = (function () {
          },
          {
             countyName: 'Worcestershire',
+            countyNameInWelsh: 'Swydd Gaerwrangon',
             countyAbbreviation: 'Worcs',
             countyCode: 'wor',
             chapmanCode: 'wor',
