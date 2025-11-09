@@ -262,20 +262,28 @@ document.addEventListener('DOMContentLoaded', function () {
                width: 40
             })
          );
-         const newRankCell = counties.createCountyElement(county, 'td');
+         const newRankCell = counties.createCountyElement(county, {
+            elementType: 'td'
+         });
          newRankCell.classList.add('county-colour-name');
          newRankCell.textContent = rank + 1 ?? '-';
-         const newClassCell = counties.createCountyElement(county, 'td');
+         const newClassCell = counties.createCountyElement(county, {
+            elementType: 'td'
+         });
          newClassCell.classList.add('county-colour-name');
          newClassCell.textContent = ordinalise(county.classLevel ?? '-');
-         const newCodeCell = counties.createCountyElement(county, 'td');
+         const newCodeCell = counties.createCountyElement(county, {
+            elementType: 'td'
+         });
          newCodeCell.classList.add('county-code');
          newCodeCell.classList.add('county-colour-name');
          newCodeCell.textContent = county.countyCode.toUpperCase();
          const newCountyNameCells = Array.from(
             {length: 3},
             function () {
-               const newCountyNameCell = counties.createCountyElement(county, 'td');
+               const newCountyNameCell = counties.createCountyElement(county, {
+                  elementType: 'td'
+               });
                newCountyNameCell.classList.add('county-colour-name');
                return newCountyNameCell;
             }

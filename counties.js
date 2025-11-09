@@ -2504,8 +2504,8 @@ const counties = (function () {
          }
          return newCanvas;
       },
-      createCountyElement: function (county, elementType = 'div') {
-         const newElement = document.createElement(elementType);
+      createCountyElement: function (county, options) {
+         const newElement = document.createElement(options?.elementType ?? 'div');
          newElement.textContent = county.countyName;
          newElement.style.color = util.convertToRgb(
             county.textColour ?? util.creamColour
