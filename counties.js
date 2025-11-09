@@ -2506,7 +2506,11 @@ const counties = (function () {
       },
       createCountyElement: function (county, options) {
          const newElement = document.createElement(options?.elementType ?? 'div');
-         newElement.textContent = county.countyName;
+         newElement.textContent = (
+            options?.useWelshCountyNames
+            ? county.countyNameInWelsh ?? county.countyName
+            : county.countyName
+         );
          newElement.style.color = util.convertToRgb(
             county.textColour ?? util.creamColour
          );
