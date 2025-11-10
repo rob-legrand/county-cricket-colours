@@ -980,6 +980,7 @@ const counties = (function () {
          },
          {
             countyName: 'Cornwall',
+            countyNameInWelsh: 'Cernyw',
             countyCode: 'cnw',
             chapmanCode: 'con',
             hcsCode: 'cnw',
