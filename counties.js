@@ -964,6 +964,7 @@ const counties = (function () {
          },
          {
             countyName: 'Wiltshire',
+            countyNameInWelsh: 'Swydd Wilton',
             countyAbbreviation: 'Wilts',
             countyCode: 'wil',
             chapmanCode: 'wil',
