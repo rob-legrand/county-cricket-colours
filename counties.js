@@ -1089,6 +1089,7 @@ const counties = (function () {
          },
          {
             countyName: 'Radnorshire',
+            countyNameInWelsh: 'Sir Faesyfed',
             countyAbbreviation: 'Rads',
             countyCode: 'rad',
             chapmanCode: 'rad',
