@@ -998,6 +998,7 @@ const counties = (function () {
          },
          {
             countyName: 'Herefordshire',
+            countyNameInWelsh: 'Swydd Henffordd',
             countyAbbreviation: 'Herefs',
             countyCode: 'hef',
             chapmanCode: 'hef',
