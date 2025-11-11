@@ -1034,6 +1034,7 @@ const counties = (function () {
          },
          {
             countyName: 'Monmouthshire',
+            countyNameInWelsh: 'Sir Fynwy',
             countyAbbreviation: 'Monmouths',
             countyCode: 'mnm',
             chapmanCode: 'mon',
