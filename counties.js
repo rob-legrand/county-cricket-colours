@@ -1220,6 +1220,7 @@ const counties = (function () {
          },
          {
             countyName: 'Brecknockshire',
+            countyNameInWelsh: 'Sir Frycheiniog',
             countyAbbreviation: 'Brecons',
             countyCode: 'bre',
             chapmanCode: 'bre',
