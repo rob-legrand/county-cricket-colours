@@ -1409,6 +1409,7 @@ const counties = (function () {
          },
          {
             countyName: 'Buckinghamshire',
+            countyNameInWelsh: 'Swydd Buckingham',
             countyAbbreviation: 'Bucks',
             countyCode: 'buc',
             chapmanCode: 'bkm',
