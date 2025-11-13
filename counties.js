@@ -1428,6 +1428,7 @@ const counties = (function () {
          },
          {
             countyName: 'Carmarthenshire',
+            countyNameInWelsh: 'Sir Gaerfyrddin',
             countyAbbreviation: 'Carms',
             countyCode: 'crm',
             chapmanCode: 'cmn',
