@@ -1315,6 +1315,7 @@ const counties = (function () {
          },
          {
             countyName: 'Caernarfonshire',
+            countyNameInWelsh: 'Sir Gaernarfon',
             countyAbbreviation: 'Caerns',
             countyCode: 'cae',
             chapmanCode: 'cae',
