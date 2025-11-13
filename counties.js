@@ -1492,6 +1492,7 @@ const counties = (function () {
          },
          {
             countyName: 'Montgomeryshire',
+            countyNameInWelsh: 'Sir Drefaldwyn',
             countyAbbreviation: 'Monts',
             countyCode: 'mtg',
             chapmanCode: 'mgy',
