@@ -1372,6 +1372,7 @@ const counties = (function () {
          },
          {
             countyName: 'Oxfordshire',
+            countyNameInWelsh: 'Swydd Rydychen',
             countyAbbreviation: 'Oxon',
             countyCode: 'oxf',
             chapmanCode: 'oxf',
