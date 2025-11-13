@@ -1298,6 +1298,7 @@ const counties = (function () {
          },
          {
             countyName: 'Huntingdonshire',
+            countyNameInWelsh: 'Swydd Huntingdon',
             countyAbbreviation: 'Hunts',
             countyCode: 'hun',
             chapmanCode: 'hun',
