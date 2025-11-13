@@ -1353,6 +1353,7 @@ const counties = (function () {
          },
          {
             countyName: 'Roxburghshire',
+            countyNameInWelsh: 'Swydd Roxburgh',
             countyAbbreviation: 'Roxbs',
             countyCode: 'rox',
             chapmanCode: 'rox',
