@@ -1278,6 +1278,7 @@ const counties = (function () {
          },
          {
             countyName: 'Bedfordshire',
+            countyNameInWelsh: 'Swydd Bedford',
             countyAbbreviation: 'Beds',
             countyCode: 'bed',
             chapmanCode: 'bdf',
