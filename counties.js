@@ -1682,6 +1682,7 @@ const counties = (function () {
          },
          {
             countyName: 'Pembrokeshire',
+            countyNameInWelsh: 'Sir Benfro',
             countyAbbreviation: 'Pembs',
             countyCode: 'pem',
             chapmanCode: 'pem',
