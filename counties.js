@@ -1630,6 +1630,7 @@ const counties = (function () {
          },
          {
             countyName: 'Denbighshire',
+            countyNameInWelsh: 'Sir Ddinbych',
             countyAbbreviation: 'Denbs',
             countyCode: 'den',
             chapmanCode: 'den',
