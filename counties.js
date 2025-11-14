@@ -1700,6 +1700,7 @@ const counties = (function () {
          },
          {
             countyName: 'Cardiganshire',
+            countyNameInWelsh: 'Sir Aberteifi',
             countyAbbreviation: 'Cards',
             countyCode: 'crd',
             chapmanCode: 'cgn',
