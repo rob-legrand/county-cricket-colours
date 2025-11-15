@@ -1717,6 +1717,7 @@ const counties = (function () {
          },
          {
             countyName: 'Aberdeenshire',
+            countyNameInWelsh: 'Swydd Aberdeen',
             countyAbbreviation: 'Aberds',
             countyCode: 'abd',
             chapmanCode: 'abd',
