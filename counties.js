@@ -1870,6 +1870,7 @@ const counties = (function () {
          },
          {
             countyName: 'Stirlingshire',
+            countyNameInWelsh: 'Swydd Stirling',
             countyAbbreviation: 'Stirls',
             countyCode: 'sti',
             chapmanCode: 'sti',
