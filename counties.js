@@ -1790,6 +1790,7 @@ const counties = (function () {
          },
          {
             countyName: 'Kincardineshire',
+            countyNameInWelsh: 'Swydd Kincardine',
             countyAbbreviation: 'Kincards',
             countyCode: 'kcd',
             chapmanCode: 'kcd',
