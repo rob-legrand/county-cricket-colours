@@ -1892,6 +1892,7 @@ const counties = (function () {
          },
          {
             countyName: 'Banffshire',
+            countyNameInWelsh: 'Swydd Banff',
             countyCode: 'ban',
             chapmanCode: 'ban',
             hcsCode: 'bnf',
