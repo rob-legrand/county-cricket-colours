@@ -1984,6 +1984,7 @@ const counties = (function () {
          },
          {
             countyName: 'Flintshire',
+            countyNameInWelsh: 'Sir y Fflint',
             countyAbbreviation: 'Flints',
             countyCode: 'fln',
             chapmanCode: 'fln',
