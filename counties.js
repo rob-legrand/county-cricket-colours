@@ -2034,6 +2034,7 @@ const counties = (function () {
          },
          {
             countyName: 'Clackmannanshire',
+            countyNameInWelsh: 'Swydd Clackmannan',
             countyAbbreviation: 'Clacks',
             countyCode: 'clk',
             chapmanCode: 'clk',
