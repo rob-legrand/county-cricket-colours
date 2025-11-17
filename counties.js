@@ -2078,6 +2078,7 @@ const counties = (function () {
          },
          {
             countyName: 'Ayrshire',
+            countyNameInWelsh: 'Swydd Ayr',
             countyAbbreviation: 'Ayrs',
             countyCode: 'ayr',
             chapmanCode: 'ayr',
