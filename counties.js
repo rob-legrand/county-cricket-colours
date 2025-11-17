@@ -2016,6 +2016,7 @@ const counties = (function () {
          },
          {
             countyName: 'Perthshire',
+            countyNameInWelsh: 'Swydd Perth',
             countyAbbreviation: 'Perths',
             countyCode: 'per',
             chapmanCode: 'per',
