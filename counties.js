@@ -2285,6 +2285,7 @@ const counties = (function () {
          },
          {
             countyName: 'Dumfriesshire',
+            countyNameInWelsh: 'Swydd Dumfries',
             countyAbbreviation: 'Dumfs',
             countyCode: 'dmf',
             chapmanCode: 'dfs',
