@@ -2172,6 +2172,7 @@ const counties = (function () {
          },
          {
             countyName: 'Lanarkshire',
+            countyNameInWelsh: 'Swydd Lanark',
             countyAbbreviation: 'Lanarks',
             countyCode: 'lnk',
             chapmanCode: 'lks',
