@@ -2190,6 +2190,7 @@ const counties = (function () {
          },
          {
             countyName: 'Renfrewshire',
+            countyNameInWelsh: 'Swydd Renfrew',
             countyAbbreviation: 'Renfrews',
             countyCode: 'rnf',
             chapmanCode: 'rfw',
