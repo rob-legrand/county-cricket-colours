@@ -2210,6 +2210,7 @@ const counties = (function () {
          },
          {
             countyName: 'Dunbartonshire',
+            countyNameInWelsh: 'Swydd Dunbarton',
             countyAbbreviation: 'Dunbarts',
             countyCode: 'dun',
             chapmanCode: 'dnb',
