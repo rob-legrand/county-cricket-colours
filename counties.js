@@ -2385,6 +2385,7 @@ const counties = (function () {
          },
          {
             countyName: 'Merioneth',
+            countyNameInWelsh: 'Meirionnydd',
             countyCode: 'mer',
             chapmanCode: 'mer',
             hcsCode: 'mrn',
