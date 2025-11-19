@@ -2305,6 +2305,7 @@ const counties = (function () {
          },
          {
             countyName: 'West Lothian',
+            countyNameInWelsh: 'Gorllewin Lothian',
             countyCode: 'wln',
             chapmanCode: 'wln',
             hcsCode: 'wlt',
