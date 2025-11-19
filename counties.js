@@ -2352,6 +2352,7 @@ const counties = (function () {
          },
          {
             countyName: 'Anglesey',
+            countyNameInWelsh: 'Sir F\u00f4n',
             countyCode: 'agy',
             chapmanCode: 'agy',
             hcsCode: 'agl',
