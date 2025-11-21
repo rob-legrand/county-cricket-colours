@@ -120,6 +120,13 @@ body {
    padding: 9px;
 }
 
-.options label {
-   margin: 1em;
+.options {
+   background-color: rgb(255, 245, 225);
+   bottom: 0px;
+   display: flex;
+   flex-direction: row;
+   gap: 10px;
+   right: 0px;
+   padding: 5px;
+   position: fixed;
 }
