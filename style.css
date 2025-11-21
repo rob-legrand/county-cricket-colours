@@ -119,3 +119,7 @@ body {
    margin: 5px;
    padding: 9px;
 }
+
+.options label {
+   margin: 1em;
+}
