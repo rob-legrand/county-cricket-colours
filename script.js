@@ -4,8 +4,11 @@ import {counties} from './counties.js';
 
 document.addEventListener('DOMContentLoaded', function () {
    'use strict';
-   let includeAlternateColours;
-   let useWelshCountyNames;
+
+   const options = {
+      includeAlternateColours: false,
+      useWelshCountyNames: false
+   };
 
    const countiesElement = document.querySelector('#counties');
    const toggleAlternateColoursButton = document.querySelector('#toggle-alternate-colours');
@@ -28,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function () {
                countyNameDiv.textContent = (
                   county.classLevel ?? '-'
                ) + ' ' + (
-                  useWelshCountyNames
+                  options.useWelshCountyNames
                   ? county.countyNameInWelsh ?? county.countyName
                   : county.countyName
                );
@@ -38,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function () {
          return countyDiv;
       }));
 
-      if (includeAlternateColours) {
+      if (options.includeAlternateColours) {
          countiesElement.replaceChildren();
          countiesInfo.forEach(function (county) {
             const countyDiv = document.createElement('div');
@@ -54,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function () {
             countyNameDiv.textContent = (
                county.classLevel ?? '-'
             ) + ' ' + (
-               useWelshCountyNames
+               options.useWelshCountyNames
                ? county.countyNameInWelsh ?? county.countyName
                : county.countyName
             );
@@ -73,7 +76,7 @@ document.addEventListener('DOMContentLoaded', function () {
                   const countyNameAlternateDiv = document.createElement('div');
                   countyNameAlternateDiv.classList.add('county-name');
                   countyNameAlternateDiv.textContent = (
-                     useWelshCountyNames
+                     options.useWelshCountyNames
                      ? county.countyNameInWelsh ?? county.countyName
                      : county.countyName
                   );
@@ -85,13 +88,13 @@ document.addEventListener('DOMContentLoaded', function () {
       }
 
       toggleAlternateColoursButton.textContent = (
-         includeAlternateColours
+         options.includeAlternateColours
          ? 'Hide alternate colours'
          : 'Show alternate colours'
       );
 
       toggleWelshNamesButton.textContent = (
-         useWelshCountyNames
+         options.useWelshCountyNames
          ? 'Use English county names'
          : 'Use Welsh county names'
       );
@@ -134,7 +137,7 @@ document.addEventListener('DOMContentLoaded', function () {
                newRankDiv.classList.add('county-rank');
                newRankDiv.textContent = rank + 1 ?? '-';
                const newCodeDiv = counties.createCountyElement(county, {
-                  useWelshCountyNames: useWelshCountyNames
+                  useWelshCountyNames: options.useWelshCountyNames
                });
                newCodeDiv.classList.add('county-code');
                newCodeDiv.classList.add('county-colour-name');
@@ -142,7 +145,7 @@ document.addEventListener('DOMContentLoaded', function () {
                const newCountyNameDiv = document.createElement('div');
                newCountyNameDiv.classList.add('county-name');
                newCountyNameDiv.textContent = (
-                  useWelshCountyNames
+                  options.useWelshCountyNames
                   ? county.countyNameInWelsh ?? county.countyName
                   : county.countyName
                );
@@ -169,7 +172,7 @@ document.addEventListener('DOMContentLoaded', function () {
          const newLi = document.createElement('li');
          newLi.classList.add('county');
          const newCodeDiv = counties.createCountyElement(county, {
-            useWelshCountyNames: useWelshCountyNames
+            useWelshCountyNames: options.useWelshCountyNames
          });
          newCodeDiv.classList.add('county-code');
          newCodeDiv.classList.add('county-colour-name');
@@ -178,11 +181,11 @@ document.addEventListener('DOMContentLoaded', function () {
          newClassDiv.classList.add('county-name');
          newClassDiv.textContent = county.classLevel ?? '-';
          const newColourDiv = counties.createCountyElement(county, {
-            useWelshCountyNames: useWelshCountyNames
+            useWelshCountyNames: options.useWelshCountyNames
          });
          newColourDiv.classList.add('county-colour-name');
          const newColourAbbrevDiv = counties.createCountyElement(county, {
-            useWelshCountyNames: useWelshCountyNames
+            useWelshCountyNames: options.useWelshCountyNames
          });
          newColourAbbrevDiv.classList.add('county-colour-name');
          newColourAbbrevDiv.textContent = county.countyAbbreviation ?? county.countyName;
@@ -272,19 +275,19 @@ document.addEventListener('DOMContentLoaded', function () {
          );
          const newRankCell = counties.createCountyElement(county, {
             elementType: 'td',
-            useWelshCountyNames: useWelshCountyNames
+            useWelshCountyNames: options.useWelshCountyNames
          });
          newRankCell.classList.add('county-colour-name');
          newRankCell.textContent = rank + 1 ?? '-';
          const newClassCell = counties.createCountyElement(county, {
             elementType: 'td',
-            useWelshCountyNames: useWelshCountyNames
+            useWelshCountyNames: options.useWelshCountyNames
          });
          newClassCell.classList.add('county-colour-name');
          newClassCell.textContent = ordinalise(county.classLevel ?? '-');
          const newCodeCell = counties.createCountyElement(county, {
             elementType: 'td',
-            useWelshCountyNames: useWelshCountyNames
+            useWelshCountyNames: options.useWelshCountyNames
          });
          newCodeCell.classList.add('county-code');
          newCodeCell.classList.add('county-colour-name');
@@ -294,7 +297,7 @@ document.addEventListener('DOMContentLoaded', function () {
             function () {
                const newCountyNameCell = counties.createCountyElement(county, {
                   elementType: 'td',
-                  useWelshCountyNames: useWelshCountyNames
+                  useWelshCountyNames: options.useWelshCountyNames
                });
                newCountyNameCell.classList.add('county-colour-name');
                return newCountyNameCell;
@@ -312,17 +315,15 @@ document.addEventListener('DOMContentLoaded', function () {
    };
 
    toggleAlternateColoursButton.addEventListener('click', function () {
-      includeAlternateColours = !includeAlternateColours;
+      options.includeAlternateColours = !options.includeAlternateColours;
       updateCounties();
    });
 
    toggleWelshNamesButton.addEventListener('click', function () {
-      useWelshCountyNames = !useWelshCountyNames;
+      options.useWelshCountyNames = !options.useWelshCountyNames;
       updateCounties();
    });
 
    const countiesInfo = counties.createInfo();
-   includeAlternateColours = false;
-   useWelshCountyNames = false;
    updateCounties();
 });
