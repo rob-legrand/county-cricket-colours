@@ -13,8 +13,8 @@ document.addEventListener('DOMContentLoaded', function () {
    const localStorageKey = 'county-cricket-colours';
 
    const countiesElement = document.querySelector('#counties');
-   const toggleAlternateColoursButton = document.querySelector('#toggle-alternate-colours');
-   const toggleWelshNamesButton = document.querySelector('#toggle-welsh-names');
+   const toggleAlternateColoursCheckbox = document.querySelector('#toggle-alternate-colours');
+   const toggleWelshNamesCheckbox = document.querySelector('#toggle-welsh-names');
 
    const updateCounties = function () {
       localStorage.setItem(localStorageKey, JSON.stringify(options));
@@ -90,17 +90,8 @@ document.addEventListener('DOMContentLoaded', function () {
          });
       }
 
-      toggleAlternateColoursButton.textContent = (
-         options.includeAlternateColours
-         ? 'Hide alternate colours'
-         : 'Show alternate colours'
-      );
-
-      toggleWelshNamesButton.textContent = (
-         options.useWelshCountyNames
-         ? 'Use English county names'
-         : 'Use Welsh county names'
-      );
+      toggleAlternateColoursCheckbox.checked = options.includeAlternateColours;
+      toggleWelshNamesCheckbox.checked = options.useWelshCountyNames;
 
       const classLevels = [...new Set(
          countiesInfo.map(
@@ -317,12 +308,12 @@ document.addEventListener('DOMContentLoaded', function () {
       }));
    };
 
-   toggleAlternateColoursButton.addEventListener('click', function () {
+   toggleAlternateColoursCheckbox.addEventListener('click', function () {
       options.includeAlternateColours = !options.includeAlternateColours;
       updateCounties();
    });
 
-   toggleWelshNamesButton.addEventListener('click', function () {
+   toggleWelshNamesCheckbox.addEventListener('click', function () {
       options.useWelshCountyNames = !options.useWelshCountyNames;
       updateCounties();
    });
