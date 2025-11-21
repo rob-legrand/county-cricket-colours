@@ -4,17 +4,20 @@ import {counties} from './counties.js';
 
 document.addEventListener('DOMContentLoaded', function () {
    'use strict';
+   let options;
 
-   const options = {
+   const defaultOptions = {
       includeAlternateColours: false,
       useWelshCountyNames: false
    };
+   const localStorageKey = 'county-cricket-colours';
 
    const countiesElement = document.querySelector('#counties');
    const toggleAlternateColoursButton = document.querySelector('#toggle-alternate-colours');
    const toggleWelshNamesButton = document.querySelector('#toggle-welsh-names');
 
    const updateCounties = function () {
+      localStorage.setItem(localStorageKey, JSON.stringify(options));
       countiesElement.replaceChildren(...countiesInfo.map(function (county) {
          const countyDiv = document.createElement('div');
          countyDiv.classList.add('county');
@@ -325,5 +328,11 @@ document.addEventListener('DOMContentLoaded', function () {
    });
 
    const countiesInfo = counties.createInfo();
+   options = (function () {
+      try {
+         return JSON.parse(localStorage.getItem(localStorageKey));
+      } catch (ignore) {
+      }
+   }()) ?? defaultOptions;
    updateCounties();
 });
