@@ -1159,6 +1159,16 @@ const counties = (function () {
                ],
                [
                   {rows: 2, colour: radRed},
+                  {rows: 1, colour: radBlue},
+                  {rows: 2, colour: radGold},
+                  {rows: 2, colour: radBlue},
+                  {rows: 2, colour: radGold},
+                  {rows: 2, colour: radBlue},
+                  {rows: 1, colour: radGold},
+                  {rows: 2, colour: radRed}
+               ],
+               [
+                  {rows: 2, colour: radRed},
                   {rows: 2, colour: radGold},
                   {rows: 2, colour: radBlue},
                   {rows: 2, colour: radGold},
@@ -1171,13 +1181,6 @@ const counties = (function () {
                   {rows: 2, colour: radGold},
                   {rows: 2, colour: radBlue},
                   {rows: 2, colour: radGold},
-                  {rows: 4, colour: radRed}
-               ],
-               [
-                  {rows: 4, colour: radRed},
-                  {rows: 2, colour: [255, 210, 0]},
-                  {rows: 2, colour: [30, 45, 240]},
-                  {rows: 2, colour: [255, 210, 0]},
                   {rows: 4, colour: radRed}
                ]
             ],
