@@ -2544,6 +2544,11 @@ const counties = (function () {
       },
       createCountyElement: function (county, options) {
          const newElement = document.createElement(options?.elementType ?? 'div');
+         if (Array.isArray(options?.classList)) {
+            options.classList.forEach(function (aClass) {
+               newElement.classList.add(aClass);
+            });
+         }
          newElement.textContent = (
             options?.useWelshCountyNames
             ? county.countyNameInWelsh ?? county.countyName
