@@ -90,9 +90,6 @@ document.addEventListener('DOMContentLoaded', function () {
          });
       }
 
-      toggleAlternateColoursCheckbox.checked = options.includeAlternateColours;
-      toggleWelshNamesCheckbox.checked = options.useWelshCountyNames;
-
       const classLevels = [...new Set(
          countiesInfo.map(
             (county) => county.classLevel
@@ -303,6 +300,9 @@ document.addEventListener('DOMContentLoaded', function () {
          );
          return newPointsTableRow;
       }));
+
+      toggleAlternateColoursCheckbox.checked = options.includeAlternateColours;
+      toggleWelshNamesCheckbox.checked = options.useWelshCountyNames;
    };
 
    toggleAlternateColoursCheckbox.addEventListener('click', function () {
