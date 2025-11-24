@@ -2550,7 +2550,9 @@ const counties = (function () {
             });
          }
          newElement.textContent = (
-            options?.useWelshCountyNames
+            options?.hasOwnProperty('textContent')
+            ? options.textContent
+            : options?.useWelshCountyNames
             ? county.countyNameInWelsh ?? county.countyName
             : county.countyName
          );
