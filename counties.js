@@ -2501,7 +2501,7 @@ const counties = (function () {
          if (args.isHorizontal) {
             args.colours.reduce(
                function (totalRowsSoFar, stripe) {
-                  if (stripe.hasOwnProperty('colour')) {
+                  if (Object.hasOwn(stripe, 'colour')) {
                      newCanvas.getContext('2d').fillStyle = util.convertToRgb(stripe.colour);
                      newCanvas.getContext('2d').fillRect(
                         0,
@@ -2522,7 +2522,7 @@ const counties = (function () {
          if (args.isVertical) {
             args.colours.reduce(
                function (totalRowsSoFar, stripe) {
-                  if (stripe.hasOwnProperty('colour')) {
+                  if (Object.hasOwn(stripe, 'colour')) {
                      newCanvas.getContext('2d').fillStyle = util.convertToRgb(stripe.colour);
                      newCanvas.getContext('2d').fillRect(
                         totalRowsSoFar,
@@ -2550,7 +2550,7 @@ const counties = (function () {
             });
          }
          newElement.textContent = (
-            options?.hasOwnProperty('textContent')
+            Object.hasOwn(options, 'textContent')
             ? options.textContent
             : options?.useWelshCountyNames
             ? county.countyNameInWelsh ?? county.countyName
