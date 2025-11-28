@@ -122,11 +122,14 @@ body {
 }
 
 .options {
+   align-items: center;
    background-color: var(--background-color);
    bottom: 0px;
    display: flex;
    flex-direction: row;
-   gap: 10px;
+   flex-wrap: wrap;
+   gap: 0px 10px;
+   justify-content: flex-start;
    right: 0px;
    padding: 5px;
    position: fixed;
