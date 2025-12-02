@@ -2556,6 +2556,9 @@ const counties = (function () {
             ? county.countyNameInWelsh ?? county.countyName
             : county.countyName
          );
+         if (Array.isArray(options?.children)) {
+            newElement.replaceChildren(...options.children);
+         }
          newElement.style.color = util.convertToRgb(
             county.textColour ?? util.creamColour
          );
