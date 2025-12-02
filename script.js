@@ -304,16 +304,8 @@ document.addEventListener('DOMContentLoaded', function () {
       options.useWelshCountyNames = toggleWelshNamesCheckbox.checked;
       updateCounties();
    };
-
-   toggleAlternateColoursCheckbox.addEventListener('click', function () {
-      options.includeAlternateColours = !options.includeAlternateColours;
-      updateCounties();
-   });
-
-   toggleWelshNamesCheckbox.addEventListener('click', function () {
-      options.useWelshCountyNames = !options.useWelshCountyNames;
-      updateCounties();
-   });
+   toggleAlternateColoursCheckbox.addEventListener('change', readOptions);
+   toggleWelshNamesCheckbox.addEventListener('change', readOptions);
 
    const countiesInfo = counties.createInfo();
    options = (function () {
