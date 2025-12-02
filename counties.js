@@ -2550,7 +2550,7 @@ const counties = (function () {
             });
          }
          newElement.textContent = (
-            Object.hasOwn(options, 'textContent')
+            typeof options?.textContent === 'string'
             ? options.textContent
             : options?.useWelshCountyNames
             ? county.countyNameInWelsh ?? county.countyName
