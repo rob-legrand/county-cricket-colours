@@ -2559,6 +2559,9 @@ const counties = (function () {
          if (Array.isArray(options?.children)) {
             newElement.replaceChildren(...options.children);
          }
+         if (typeof options?.title === 'string') {
+            newElement.title = options.title;
+         }
          newElement.style.color = util.convertToRgb(
             county.textColour ?? util.creamColour
          );
