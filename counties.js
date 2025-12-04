@@ -2550,13 +2550,13 @@ const counties = (function () {
                newElement.classList.add(aClass);
             });
          }
-         newElement.textContent = (
+         newElement.replaceChildren(document.createTextNode(
             typeof options?.textContent === 'string'
             ? options.textContent
             : options?.useWelshCountyNames
             ? county.countyNameInWelsh ?? county.countyName
             : county.countyName
-         );
+         ));
          if (Array.isArray(options?.children)) {
             newElement.replaceChildren(...options.children);
          }
