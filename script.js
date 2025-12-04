@@ -128,6 +128,7 @@ document.addEventListener('DOMContentLoaded', function () {
                newRankDiv.classList.add('county-rank');
                newRankDiv.textContent = rank + 1 ?? '-';
                const newCodeDiv = counties.createCountyElement(county, {
+                  county: county,
                   classList: ['county-code', 'county-colour-name'],
                   textContent: county.countyCode.toUpperCase()
                });
@@ -161,6 +162,7 @@ document.addEventListener('DOMContentLoaded', function () {
          const newLi = document.createElement('li');
          newLi.classList.add('county');
          const newCodeDiv = counties.createCountyElement(county, {
+            county: county,
             classList: ['county-code', 'county-colour-name'],
             textContent: county.countyCode.toUpperCase()
          });
@@ -168,10 +170,12 @@ document.addEventListener('DOMContentLoaded', function () {
          newClassDiv.classList.add('county-name');
          newClassDiv.textContent = county.classLevel ?? '-';
          const newColourDiv = counties.createCountyElement(county, {
+            county: county,
             classList: ['county-colour-name'],
             useWelshCountyNames: options.useWelshCountyNames
          });
          const newColourAbbrevDiv = counties.createCountyElement(county, {
+            county: county,
             classList: ['county-colour-name'],
             textContent: county.countyAbbreviation ?? county.countyName
          });
@@ -261,16 +265,19 @@ document.addEventListener('DOMContentLoaded', function () {
          );
          const newRankCell = counties.createCountyElement(county, {
             elementType: 'td',
+            county: county,
             classList: ['county-colour-name'],
             textContent: rank + 1 ?? '-'
          });
          const newClassCell = counties.createCountyElement(county, {
             elementType: 'td',
+            county: county,
             classList: ['county-colour-name'],
             textContent: ordinalise(county.classLevel ?? '-')
          });
          const newCodeCell = counties.createCountyElement(county, {
             elementType: 'td',
+            county: county,
             classList: ['county-code', 'county-colour-name'],
             textContent: county.countyCode.toUpperCase()
          });
@@ -279,6 +286,7 @@ document.addEventListener('DOMContentLoaded', function () {
             function () {
                const newCountyNameCell = counties.createCountyElement(county, {
                   elementType: 'td',
+                  county: county,
                   classList: ['county-colour-name'],
                   useWelshCountyNames: options.useWelshCountyNames
                });
