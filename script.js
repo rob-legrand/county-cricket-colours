@@ -127,7 +127,11 @@ document.addEventListener('DOMContentLoaded', function () {
                const newRankDiv = document.createElement('div');
                newRankDiv.classList.add('county-rank');
                newRankDiv.textContent = rank + 1 ?? '-';
-               const newCodeDiv = counties.createCountyElement(county, {
+               const newCodeDiv = counties.createCountyElement({
+                  county: county,
+                  classList: ['county-code', 'county-colour-name'],
+                  textContent: county.countyCode.toUpperCase()
+               }, {
                   county: county,
                   classList: ['county-code', 'county-colour-name'],
                   textContent: county.countyCode.toUpperCase()
@@ -161,7 +165,11 @@ document.addEventListener('DOMContentLoaded', function () {
       countiesListElement.replaceChildren(...countiesInfo.map(function (county) {
          const newLi = document.createElement('li');
          newLi.classList.add('county');
-         const newCodeDiv = counties.createCountyElement(county, {
+         const newCodeDiv = counties.createCountyElement({
+            county: county,
+            classList: ['county-code', 'county-colour-name'],
+            textContent: county.countyCode.toUpperCase()
+         }, {
             county: county,
             classList: ['county-code', 'county-colour-name'],
             textContent: county.countyCode.toUpperCase()
@@ -169,12 +177,20 @@ document.addEventListener('DOMContentLoaded', function () {
          const newClassDiv = document.createElement('div');
          newClassDiv.classList.add('county-name');
          newClassDiv.textContent = county.classLevel ?? '-';
-         const newColourDiv = counties.createCountyElement(county, {
+         const newColourDiv = counties.createCountyElement({
+            county: county,
+            classList: ['county-colour-name'],
+            useWelshCountyNames: options.useWelshCountyNames
+         }, {
             county: county,
             classList: ['county-colour-name'],
             useWelshCountyNames: options.useWelshCountyNames
          });
-         const newColourAbbrevDiv = counties.createCountyElement(county, {
+         const newColourAbbrevDiv = counties.createCountyElement({
+            county: county,
+            classList: ['county-colour-name'],
+            textContent: county.countyAbbreviation ?? county.countyName
+         }, {
             county: county,
             classList: ['county-colour-name'],
             textContent: county.countyAbbreviation ?? county.countyName
@@ -263,19 +279,34 @@ document.addEventListener('DOMContentLoaded', function () {
                width: 40
             })
          );
-         const newRankCell = counties.createCountyElement(county, {
+         const newRankCell = counties.createCountyElement({
+            elementType: 'td',
+            county: county,
+            classList: ['county-colour-name'],
+            textContent: rank + 1 ?? '-'
+         }, {
             elementType: 'td',
             county: county,
             classList: ['county-colour-name'],
             textContent: rank + 1 ?? '-'
          });
-         const newClassCell = counties.createCountyElement(county, {
+         const newClassCell = counties.createCountyElement({
+            elementType: 'td',
+            county: county,
+            classList: ['county-colour-name'],
+            textContent: ordinalise(county.classLevel ?? '-')
+         }, {
             elementType: 'td',
             county: county,
             classList: ['county-colour-name'],
             textContent: ordinalise(county.classLevel ?? '-')
          });
-         const newCodeCell = counties.createCountyElement(county, {
+         const newCodeCell = counties.createCountyElement({
+            elementType: 'td',
+            county: county,
+            classList: ['county-code', 'county-colour-name'],
+            textContent: county.countyCode.toUpperCase()
+         }, {
             elementType: 'td',
             county: county,
             classList: ['county-code', 'county-colour-name'],
@@ -284,7 +315,12 @@ document.addEventListener('DOMContentLoaded', function () {
          const newCountyNameCells = Array.from(
             {length: 3},
             function () {
-               const newCountyNameCell = counties.createCountyElement(county, {
+               const newCountyNameCell = counties.createCountyElement({
+                  elementType: 'td',
+                  county: county,
+                  classList: ['county-colour-name'],
+                  useWelshCountyNames: options.useWelshCountyNames
+               }, {
                   elementType: 'td',
                   county: county,
                   classList: ['county-colour-name'],
