@@ -2542,8 +2542,7 @@ const counties = (function () {
          }
          return newCanvas;
       },
-      createCountyElement: function (countyArg, options) {
-         const county = options?.county ?? countyArg?.county ?? countyArg;
+      createCountyElement: function (options) {
          const newElement = document.createElement(options?.elementType ?? 'div');
          if (Array.isArray(options?.classList)) {
             options.classList.forEach(function (aClass) {
@@ -2554,8 +2553,8 @@ const counties = (function () {
             typeof options?.textContent === 'string'
             ? options.textContent
             : options?.useWelshCountyNames
-            ? county.countyNameInWelsh ?? county.countyName
-            : county.countyName
+            ? options.county?.countyNameInWelsh ?? options.county?.countyName ?? ''
+            : options?.county?.countyName ?? ''
          ));
          if (Array.isArray(options?.children)) {
             newElement.replaceChildren(...options.children);
@@ -2564,13 +2563,13 @@ const counties = (function () {
             newElement.title = options.title;
          }
          newElement.style.color = util.convertToRgb(
-            county.textColour ?? util.creamColour
+            options?.county?.textColour ?? util.creamColour
          );
          newElement.style.backgroundColor = util.convertToRgb(
-            county.backgroundColour ?? util.creamColour
+            options?.county?.backgroundColour ?? util.creamColour
          );
          newElement.style.borderColor = util.convertToRgb(
-            county.borderColour ?? county.backgroundColour ?? util.creamColour
+            options?.county?.borderColour ?? options?.county?.backgroundColour ?? util.creamColour
          );
          return newElement;
       },
