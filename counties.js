@@ -2567,13 +2567,19 @@ const counties = (function () {
             newElement.title = options.title;
          }
          newElement.style.color = util.convertToRgb(
-            options?.county?.textColour ?? util.creamColour
+            typeof options?.county === 'object'
+            ? options.county.textColour ?? util.creamColour
+            : ''
          );
          newElement.style.backgroundColor = util.convertToRgb(
-            options?.county?.backgroundColour ?? util.creamColour
+            typeof options?.county === 'object'
+            ? options.county.backgroundColour ?? util.creamColour
+            : ''
          );
          newElement.style.borderColor = util.convertToRgb(
-            options?.county?.borderColour ?? options?.county?.backgroundColour ?? util.creamColour
+            typeof options?.county === 'object'
+            ? options.county.borderColour ?? options.county.backgroundColour ?? util.creamColour
+            : ''
          );
          return newElement;
       },
