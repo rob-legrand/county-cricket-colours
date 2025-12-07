@@ -2568,17 +2568,29 @@ const counties = (function () {
          }
          newElement.style.color = util.convertToRgb(
             typeof options?.county === 'object'
-            ? options.county.textColour ?? util.creamColour
+            ? (
+               options?.colourStyle === 'none'
+               ? ''
+               : options.county.textColour ?? util.creamColour
+            )
             : ''
          );
          newElement.style.backgroundColor = util.convertToRgb(
             typeof options?.county === 'object'
-            ? options.county.backgroundColour ?? util.creamColour
+            ? (
+               options?.colourStyle === 'none'
+               ? ''
+               : options.county.backgroundColour ?? util.creamColour
+            )
             : ''
          );
          newElement.style.borderColor = util.convertToRgb(
             typeof options?.county === 'object'
-            ? options.county.borderColour ?? options.county.backgroundColour ?? util.creamColour
+            ? (
+               options?.colourStyle === 'none'
+               ? ''
+               : options.county.borderColour ?? options.county.backgroundColour ?? util.creamColour
+            )
             : ''
          );
          return newElement;
