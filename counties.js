@@ -2553,7 +2553,10 @@ const counties = (function () {
             Array.isArray(options?.children)
             ? options.children
             : [document.createTextNode(
-               typeof options?.textContent === 'string'
+               (
+                  typeof options?.textContent === 'string'
+                  || Number.isFinite(options?.textContent)
+               )
                ? options.textContent
                : options?.useWelshCountyNames
                ? options.county?.countyNameInWelsh ?? options.county?.countyName ?? ''
