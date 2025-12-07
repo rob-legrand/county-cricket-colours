@@ -2544,6 +2544,11 @@ const counties = (function () {
       },
       createCountyElement: function (options) {
          const newElement = document.createElement(options?.elementType ?? 'div');
+         if (typeof options?.attributes === 'object') {
+            Object.entries(options.attributes).forEach(function (attribute) {
+               newElement.setAttribute(attribute[0], attribute[1]);
+            });
+         }
          if (Array.isArray(options?.classList)) {
             options.classList.forEach(function (aClass) {
                newElement.classList.add(aClass);
