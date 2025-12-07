@@ -2549,16 +2549,17 @@ const counties = (function () {
                newElement.classList.add(aClass);
             });
          }
-         newElement.replaceChildren(document.createTextNode(
-            typeof options?.textContent === 'string'
-            ? options.textContent
-            : options?.useWelshCountyNames
-            ? options.county?.countyNameInWelsh ?? options.county?.countyName ?? ''
-            : options?.county?.countyName ?? ''
+         newElement.replaceChildren(...(
+            Array.isArray(options?.children)
+            ? options.children
+            : [document.createTextNode(
+               typeof options?.textContent === 'string'
+               ? options.textContent
+               : options?.useWelshCountyNames
+               ? options.county?.countyNameInWelsh ?? options.county?.countyName ?? ''
+               : options?.county?.countyName ?? ''
+            )]
          ));
-         if (Array.isArray(options?.children)) {
-            newElement.replaceChildren(...options.children);
-         }
          if (typeof options?.title === 'string') {
             newElement.title = options.title;
          }
