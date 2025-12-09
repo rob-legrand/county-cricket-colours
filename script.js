@@ -293,12 +293,19 @@ document.addEventListener('DOMContentLoaded', function () {
                return newCountyNameCell;
             }
          );
+         const newCountryCell = counties.createCountyElement({
+            elementType: 'td',
+            county: county,
+            classList: ['county-colour-name'],
+            textContent: county.country
+         });
          newPointsTableRow.replaceChildren(
             newCanvasCell,
             newRankCell,
             newClassCell,
             newCodeCell,
-            ...newCountyNameCells
+            ...newCountyNameCells,
+            newCountryCell
          );
          return newPointsTableRow;
       }));
