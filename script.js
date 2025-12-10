@@ -172,7 +172,11 @@ document.addEventListener('DOMContentLoaded', function () {
          const newColourDiv = counties.createCountyElement({
             county: county,
             classList: ['county-colour-name'],
-            useWelshCountyNames: options.useWelshCountyNames
+            textType: (
+               options.useWelshCountyNames
+               ? 'countyNameInWelsh'
+               : 'countyName'
+            )
          });
          const newColourAbbrevDiv = counties.createCountyElement({
             county: county,
@@ -288,7 +292,11 @@ document.addEventListener('DOMContentLoaded', function () {
                   elementType: 'td',
                   county: county,
                   classList: ['county-colour-name'],
-                  useWelshCountyNames: options.useWelshCountyNames
+                  textType: (
+                     options.useWelshCountyNames
+                     ? 'countyNameInWelsh'
+                     : 'countyName'
+                  )
                });
                return newCountyNameCell;
             }
