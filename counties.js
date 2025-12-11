@@ -2563,6 +2563,8 @@ const counties = (function () {
                   || Number.isFinite(options?.textContent)
                )
                ? options.textContent
+               : options?.textType === 'countyName'
+               ? options.county?.countyName ?? ''
                : options?.textType === 'countyNameInWelsh'
                ? options.county?.countyNameInWelsh ?? options.county?.countyName ?? ''
                : options?.textType === 'countyAbbreviation'
