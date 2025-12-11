@@ -29,18 +29,16 @@ document.addEventListener('DOMContentLoaded', function () {
                isHorizontal: true,
                width: 144
             }),
-            (function () {
-               const countyNameDiv = document.createElement('div');
-               countyNameDiv.classList.add('county-name');
-               countyNameDiv.textContent = (
+            counties.createCountyElement({
+               classList: ['county-name'],
+               textContent: (
                   county.classLevel ?? '-'
                ) + ' ' + (
                   options.useWelshCountyNames
                   ? county.countyNameInWelsh ?? county.countyName
                   : county.countyName
-               );
-               return countyNameDiv;
-            }())
+               )
+            })
          );
          return countyDiv;
       }));
