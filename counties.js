@@ -2564,7 +2564,11 @@ const counties = (function () {
                )
                ? options.textContent
                : options?.textType === 'countyName'
-               ? options.county?.countyName ?? ''
+               ? (
+                  options?.useWelsh
+                  ? options.county?.countyNameInWelsh
+                  : undefined
+               ) ?? options.county?.countyName ?? ''
                : options?.textType === 'countyNameInWelsh'
                ? options.county?.countyNameInWelsh ?? options.county?.countyName ?? ''
                : options?.textType === 'countyAbbreviation'
