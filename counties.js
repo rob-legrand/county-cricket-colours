@@ -2573,6 +2573,8 @@ const counties = (function () {
                ? options.county?.countyNameInWelsh ?? options.county?.countyName ?? ''
                : options?.textType === 'countyAbbreviation'
                ? options.county?.countyAbbreviation ?? options.county?.countyName ?? ''
+               : options?.textType === 'countyCode'
+               ? options.county?.countyCode?.toUpperCase?.() ?? ''
                : options?.textType === 'classLevel'
                ? options.county?.classLevel ?? '-'
                : options?.county?.countyName ?? ''
