@@ -282,16 +282,13 @@ document.addEventListener('DOMContentLoaded', function () {
          });
          const newCountyNameCells = Array.from(
             {length: 3},
-            function () {
-               const newCountyNameCell = counties.createCountyElement({
-                  elementType: 'td',
-                  county: county,
-                  classList: ['county-colour-name'],
-                  textType: 'countyName',
-                  useWelsh: options.useWelshCountyNames
-               });
-               return newCountyNameCell;
-            }
+            () => counties.createCountyElement({
+               elementType: 'td',
+               county: county,
+               classList: ['county-colour-name'],
+               textType: 'countyName',
+               useWelsh: options.useWelshCountyNames
+            })
          );
          const newCountryCell = counties.createCountyElement({
             elementType: 'td',
