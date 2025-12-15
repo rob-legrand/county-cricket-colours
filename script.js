@@ -128,7 +128,7 @@ document.addEventListener('DOMContentLoaded', function () {
                const newCodeDiv = counties.createCountyElement({
                   county: county,
                   classList: ['county-code', 'county-colour-name'],
-                  textContent: county.countyCode.toUpperCase()
+                  textType: 'countyCode'
                });
                const newCountyNameDiv = document.createElement('div');
                newCountyNameDiv.classList.add('county-name');
@@ -162,7 +162,7 @@ document.addEventListener('DOMContentLoaded', function () {
          const newCodeDiv = counties.createCountyElement({
             county: county,
             classList: ['county-code', 'county-colour-name'],
-            textContent: county.countyCode.toUpperCase()
+            textType: 'countyCode'
          });
          const newClassDiv = document.createElement('div');
          newClassDiv.classList.add('county-name');
@@ -278,7 +278,7 @@ document.addEventListener('DOMContentLoaded', function () {
             elementType: 'td',
             county: county,
             classList: ['county-code', 'county-colour-name'],
-            textContent: county.countyCode.toUpperCase()
+            textType: 'countyCode'
          });
          const newCountyNameCells = Array.from(
             {length: 3},
