@@ -2573,6 +2573,12 @@ const counties = (function () {
                ? options.county?.countyAbbreviation ?? options.county?.countyName ?? ''
                : options?.textType === 'countyCode'
                ? options.county?.countyCode?.toUpperCase?.() ?? ''
+               : options?.textType === 'chapmanCode'
+               ? (
+                  options.county?.chapmanCode?.toUpperCase?.()
+                  ?? options.county?.countyCode?.toUpperCase?.()
+                  ?? ''
+               )
                : options?.textType === 'classLevel'
                ? options.county?.classLevel ?? '-'
                : options?.county?.countyName ?? ''
