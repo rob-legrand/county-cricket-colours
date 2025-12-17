@@ -2579,6 +2579,12 @@ const counties = (function () {
                   ?? options.county?.countyCode?.toUpperCase?.()
                   ?? ''
                )
+               : options?.textType === 'hcsCode'
+               ? (
+                  options.county?.hcsCode?.toUpperCase?.()
+                  ?? options.county?.countyCode?.toUpperCase?.()
+                  ?? ''
+               )
                : options?.textType === 'classLevel'
                ? options.county?.classLevel ?? '-'
                : options?.county?.countyName ?? ''
