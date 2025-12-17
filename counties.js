@@ -2587,6 +2587,8 @@ const counties = (function () {
                )
                : options?.textType === 'classLevel'
                ? options.county?.classLevel ?? '-'
+               : options?.textType === 'country'
+               ? options.county?.country ?? '-'
                : options?.county?.countyName ?? ''
             )]
          ));
