@@ -294,7 +294,7 @@ document.addEventListener('DOMContentLoaded', function () {
             elementType: 'td',
             county: county,
             classList: ['county-colour-name'],
-            textContent: county.country
+            textType: 'country'
          });
          newPointsTableRow.replaceChildren(
             newCanvasCell,
