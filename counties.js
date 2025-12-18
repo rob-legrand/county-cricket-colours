@@ -2459,6 +2459,11 @@ const counties = (function () {
    });
 
    const self = Object.freeze({
+      calcSquaredDistanceBetweenColours: (colorA, colorB) => (
+         (colorA[0] - colorB[0]) ** 2
+         + (colorA[1] - colorB[1]) ** 2
+         + (colorA[2] - colorB[2]) ** 2
+      ),
       createCanvas: function (args) {
          const numRows = 20;
          const pixelsPerRow = Math.ceil(Math.min(
