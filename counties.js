@@ -2623,6 +2623,8 @@ const counties = (function () {
             ? (
                options?.colourStyle === 'none'
                ? ''
+               : options?.colourStyle === 'scoreboard'
+               ? options.county.backgroundColour ?? util.creamColour
                : options.county.borderColour ?? options.county.backgroundColour ?? util.creamColour
             )
             : ''
