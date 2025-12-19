@@ -110,6 +110,27 @@ body {
    text-align: end;
 }
 
+.counties-scoreboards {
+   align-items: flex-start;
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   gap: 10px;
+   justify-content: flex-start;
+   margin: 5px;
+}
+
+.counties-scoreboards .matchup {
+   display: flex;
+   flex-direction: row;
+   margin: 5px;
+}
+
+.counties-scoreboards .matchup .county-colour-name {
+   border-width: 0px;
+   margin: 0px;
+}
+
 .county-code {
    font-family: var(--monospace);
 }
