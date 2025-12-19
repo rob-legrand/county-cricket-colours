@@ -307,6 +307,30 @@ document.addEventListener('DOMContentLoaded', function () {
          return newPointsTableRow;
       }));
 
+      const countiesScoreboardsElement = document.querySelector('#counties-scoreboards');
+      const countyMatchups = countiesInfo.map(
+         (ignore, indexLeft) => countiesInfo.map(
+            (ignore0, indexRight) => [indexLeft, indexRight]
+         )
+      ).flat().filter(
+         (indices) => indices[0] !== indices[1]
+      );
+      countiesScoreboardsElement.replaceChildren(
+         ...countyMatchups.map(
+            (indices) => counties.createCountyElement({
+               classList: ['matchup'],
+               children: indices.map(
+                  (index) => counties.createCountyElement({
+                     county: countiesInfo[index],
+                     classList: ['county-code', 'county-colour-name'],
+                     textType: 'countyCode',
+                     colourStyle: 'scoreboard'
+                  })
+               )
+            })
+         )
+      );
+
       toggleAlternateColoursCheckbox.checked = options.includeAlternateColours;
       toggleWelshNamesCheckbox.checked = options.useWelshCountyNames;
    };
