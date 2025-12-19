@@ -2458,6 +2458,7 @@ const counties = (function () {
    });
 
    const self = Object.freeze({
+      blackColour: [0, 0, 0],
       calcSquaredDistanceBetweenColours: (colorA, colorB) => (
          (colorA[0] - colorB[0]) ** 2
          + (colorA[1] - colorB[1]) ** 2
@@ -2635,7 +2636,8 @@ const counties = (function () {
       getNumRows: (colours) => colours.reduce(
          (numRowsSoFar, stripe) => numRowsSoFar + stripe.rows,
          0
-      )
+      ),
+      whiteColour: [255, 255, 255]
    });
 
    return self;
