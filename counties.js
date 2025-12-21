@@ -2458,13 +2458,11 @@ const counties = (function () {
    });
 
    const self = Object.freeze({
-      blackColour: [0, 0, 0],
       calcSquaredDistanceBetweenColours: (colorA, colorB) => (
          (colorA[0] - colorB[0]) ** 2
          + (colorA[1] - colorB[1]) ** 2
          + (colorA[2] - colorB[2]) ** 2
       ),
-      creamColour: [255, 245, 225],
       createCanvas: function (args) {
          const numRows = 20;
          const pixelsPerRow = Math.ceil(Math.min(
@@ -2502,7 +2500,7 @@ const counties = (function () {
                newCanvas.height = Math.round(args.height);
             }
          }
-         newCanvas.getContext('2d').fillStyle = util.convertToRgb(self.creamColour);
+         newCanvas.getContext('2d').fillStyle = util.convertToRgb(self.namedColours.cream);
          newCanvas.getContext('2d').fillRect(0, 0, newCanvas.width, newCanvas.height);
          if (args.isHorizontal) {
             args.colours.reduce(
@@ -2606,7 +2604,7 @@ const counties = (function () {
             ? (
                options?.colourStyle === 'none'
                ? ''
-               : options.county.textColour ?? self.creamColour
+               : options.county.textColour ?? self.namedColours.cream
             )
             : ''
          );
@@ -2615,7 +2613,7 @@ const counties = (function () {
             ? (
                options?.colourStyle === 'none'
                ? ''
-               : options.county.backgroundColour ?? self.creamColour
+               : options.county.backgroundColour ?? self.namedColours.cream
             )
             : ''
          );
@@ -2625,8 +2623,8 @@ const counties = (function () {
                options?.colourStyle === 'none'
                ? ''
                : options?.colourStyle === 'scoreboard'
-               ? options.county.backgroundColour ?? self.creamColour
-               : options.county.borderColour ?? options.county.backgroundColour ?? self.creamColour
+               ? options.county.backgroundColour ?? self.namedColours.cream
+               : options.county.borderColour ?? options.county.backgroundColour ?? self.namedColours.cream
             )
             : ''
          );
@@ -2637,7 +2635,11 @@ const counties = (function () {
          (numRowsSoFar, stripe) => numRowsSoFar + stripe.rows,
          0
       ),
-      whiteColour: [255, 255, 255]
+      namedColours: {
+         black: [0, 0, 0],
+         cream: [255, 245, 225],
+         white: [255, 255, 255]
+      }
    });
 
    return self;
