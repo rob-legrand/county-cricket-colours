@@ -2610,11 +2610,19 @@ const counties = (function () {
          if (typeof options?.title === 'string') {
             newElement.title = options.title;
          }
+         const primaryColour = (
+            options?.county?.backgroundColour
+            ?? options?.county?.borderColour
+            ?? options?.county?.textColour
+            ?? self.namedColours.cream
+         );
          newElement.style.color = util.convertToRgb(
             typeof options?.county === 'object'
             ? (
                options?.colourStyle === 'none'
                ? ''
+               : options?.colourStyle === 'scoreboard'
+               ? self.chooseContrastingColour(primaryColour)
                : options.county.textColour ?? self.namedColours.cream
             )
             : ''
@@ -2624,6 +2632,8 @@ const counties = (function () {
             ? (
                options?.colourStyle === 'none'
                ? ''
+               : options?.colourStyle === 'scoreboard'
+               ? primaryColour
                : options.county.backgroundColour ?? self.namedColours.cream
             )
             : ''
@@ -2634,7 +2644,7 @@ const counties = (function () {
                options?.colourStyle === 'none'
                ? ''
                : options?.colourStyle === 'scoreboard'
-               ? options.county.backgroundColour ?? self.namedColours.cream
+               ? primaryColour
                : options.county.borderColour ?? options.county.backgroundColour ?? self.namedColours.cream
             )
             : ''
