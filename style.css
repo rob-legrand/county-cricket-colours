@@ -2,6 +2,7 @@
 
 :root {
    --background-color: rgb(255, 245, 225);
+   --menu-size: 30px;
    --monospace: Inconsolata, Consolas, "Andale Mono", AndaleMono, monospace;
    --serif: Georgia, Palatino, "Palatino Linotype", "Book Antiqua", Garamond, "Goudy Old Style", Perpetua, Baskerville, Gentium, serif;
 }
@@ -22,6 +23,7 @@ body {
    flex-wrap: wrap;
    font-family: var(--serif);
    justify-content: center;
+   margin-bottom: var(--menu-size);
 }
 
 .counties {
@@ -142,6 +144,22 @@ body {
    padding: 9px;
 }
 
+.menu {
+   align-items: center;
+   background-color: var(--background-color);
+   color: rgb(0, 0, 0);
+   cursor: pointer;
+   display: flex;
+   font-family: sans-serif;
+   font-size: var(--menu-size);
+   height: var(--menu-size);
+   justify-content: center;
+   position: fixed;
+   right: 0px;
+   bottom: 0px;
+   width: var(--menu-size);
+}
+
 .options {
    align-items: center;
    background-color: var(--background-color);
@@ -151,7 +169,7 @@ body {
    flex-wrap: wrap;
    gap: 0px 10px;
    justify-content: flex-start;
-   right: 0px;
+   right: var(--menu-size);
    padding: 5px;
    position: fixed;
 }
