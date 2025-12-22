@@ -4,6 +4,7 @@ import {counties} from './counties.js';
 
 document.addEventListener('DOMContentLoaded', function () {
    'use strict';
+   let isMenuOpen;
    let options;
 
    const defaultOptions = {
@@ -331,9 +332,19 @@ document.addEventListener('DOMContentLoaded', function () {
          )
       );
 
+      document.querySelector('#options').style.display = (
+         isMenuOpen
+         ? ''
+         : 'none'
+      );
       toggleAlternateColoursCheckbox.checked = options.includeAlternateColours;
       toggleWelshNamesCheckbox.checked = options.useWelshCountyNames;
    };
+
+   document.querySelector('#menu').addEventListener('click', function () {
+      isMenuOpen = !isMenuOpen;
+      updateCounties();
+   });
 
    const readOptions = function () {
       options.includeAlternateColours = toggleAlternateColoursCheckbox.checked;
@@ -344,6 +355,7 @@ document.addEventListener('DOMContentLoaded', function () {
    toggleWelshNamesCheckbox.addEventListener('change', readOptions);
 
    const countiesInfo = counties.createInfo();
+   isMenuOpen = false;
    options = (function () {
       try {
          return JSON.parse(localStorage.getItem(localStorageKey));
