@@ -8,14 +8,14 @@ document.addEventListener('DOMContentLoaded', function () {
    let options;
 
    const defaultOptions = {
-      includeAlternateColours: false,
+      showAlternateColours: false,
       useWelshCountyNames: false
    };
    const localStorageKey = 'county-cricket-colours';
 
    const countiesElement = document.querySelector('#counties');
-   const toggleAlternateColoursCheckbox = document.querySelector('#toggle-alternate-colours');
-   const toggleWelshNamesCheckbox = document.querySelector('#toggle-welsh-names');
+   const showAlternateColoursCheckbox = document.querySelector('#show-alternate-colours');
+   const useWelshCountyNamesCheckbox = document.querySelector('#use-welsh-county-names');
 
    const updateCounties = function () {
       localStorage.setItem(localStorageKey, JSON.stringify(options));
@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function () {
          );
          return countyDiv;
       }));
-      if (options.includeAlternateColours) {
+      if (options.showAlternateColours) {
          countiesElement.replaceChildren();
          countiesInfo.forEach(function (county) {
             const countyDiv = document.createElement('div');
@@ -337,8 +337,8 @@ document.addEventListener('DOMContentLoaded', function () {
          ? ''
          : 'none'
       );
-      toggleAlternateColoursCheckbox.checked = options.includeAlternateColours;
-      toggleWelshNamesCheckbox.checked = options.useWelshCountyNames;
+      showAlternateColoursCheckbox.checked = options.showAlternateColours;
+      useWelshCountyNamesCheckbox.checked = options.useWelshCountyNames;
    };
 
    document.querySelector('#menu').addEventListener('click', function () {
@@ -347,12 +347,12 @@ document.addEventListener('DOMContentLoaded', function () {
    });
 
    const readOptions = function () {
-      options.includeAlternateColours = toggleAlternateColoursCheckbox.checked;
-      options.useWelshCountyNames = toggleWelshNamesCheckbox.checked;
+      options.showAlternateColours = showAlternateColoursCheckbox.checked;
+      options.useWelshCountyNames = useWelshCountyNamesCheckbox.checked;
       updateCounties();
    };
-   toggleAlternateColoursCheckbox.addEventListener('change', readOptions);
-   toggleWelshNamesCheckbox.addEventListener('change', readOptions);
+   showAlternateColoursCheckbox.addEventListener('change', readOptions);
+   useWelshCountyNamesCheckbox.addEventListener('change', readOptions);
 
    const countiesInfo = counties.createInfo();
    isMenuOpen = false;
