@@ -17,6 +17,25 @@ document.addEventListener('DOMContentLoaded', function () {
    const showAlternateColoursCheckbox = document.querySelector('#show-alternate-colours');
    const useWelshCountyNamesCheckbox = document.querySelector('#use-welsh-county-names');
 
+   const fitToPrototype = (thingToFit, prototypeThing) => (
+      Array.isArray(prototypeThing)
+      ? prototypeThing.map(
+         (x, index) => fitToPrototype(thingToFit?.[index], x)
+      )
+      : typeof prototypeThing === 'object'
+      ? Object.fromEntries(
+         Object.entries(prototypeThing).map(
+            (x) => [
+               x[0],
+               fitToPrototype(thingToFit?.[x[0]], x[1])
+            ]
+         )
+      )
+      : typeof thingToFit === typeof prototypeThing
+      ? thingToFit
+      : prototypeThing
+   );
+
    const updateCounties = function () {
       localStorage.setItem(localStorageKey, JSON.stringify(options));
 
