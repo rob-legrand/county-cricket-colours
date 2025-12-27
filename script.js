@@ -375,11 +375,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
    const countiesInfo = counties.createInfo();
    isMenuOpen = false;
-   options = (function () {
-      try {
-         return JSON.parse(localStorage.getItem(localStorageKey));
-      } catch (ignore) {
-      }
-   }()) ?? defaultOptions;
+   options = fitToPrototype(
+      (function () {
+         try {
+            return JSON.parse(localStorage.getItem(localStorageKey));
+         } catch (ignore) {
+         }
+      }()),
+      defaultOptions
+   );
    updateCounties();
 });
