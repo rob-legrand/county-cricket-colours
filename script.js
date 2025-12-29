@@ -8,12 +8,20 @@ document.addEventListener('DOMContentLoaded', function () {
    let options;
 
    const defaultOptions = {
+      includeCountries: {
+         england: true,
+         wales: true,
+         scotland: true
+      },
       showAlternateColours: false,
       useWelshCountyNames: false
    };
    const localStorageKey = 'county-cricket-colours';
 
    const countiesElement = document.querySelector('#counties');
+   const includeEnglandCheckbox = document.querySelector('#include-england');
+   const includeWalesCheckbox = document.querySelector('#include-wales');
+   const includeScotlandCheckbox = document.querySelector('#include-scotland');
    const showAlternateColoursCheckbox = document.querySelector('#show-alternate-colours');
    const useWelshCountyNamesCheckbox = document.querySelector('#use-welsh-county-names');
 
@@ -39,7 +47,9 @@ document.addEventListener('DOMContentLoaded', function () {
    const updateCounties = function () {
       localStorage.setItem(localStorageKey, JSON.stringify(options));
 
-      countiesElement.replaceChildren(...countiesInfo.map(function (county) {
+      countiesElement.replaceChildren(...countiesInfo.filter(
+         (county) => options.includeCountries[county.country.toLowerCase()]
+      ).map(function (county) {
          const countyDiv = document.createElement('div');
          countyDiv.classList.add('county');
          countyDiv.replaceChildren(
@@ -64,7 +74,9 @@ document.addEventListener('DOMContentLoaded', function () {
       }));
       if (options.showAlternateColours) {
          countiesElement.replaceChildren();
-         countiesInfo.forEach(function (county) {
+         countiesInfo.filter(
+            (county) => options.includeCountries[county.country.toLowerCase()]
+         ).forEach(function (county) {
             const countyDiv = document.createElement('div');
             countyDiv.classList.add('county');
             countyDiv.append(counties.createCanvas({
@@ -109,7 +121,9 @@ document.addEventListener('DOMContentLoaded', function () {
       }
 
       const classLevels = [...new Set(
-         countiesInfo.map(
+         countiesInfo.filter(
+            (county) => options.includeCountries[county.country.toLowerCase()]
+         ).map(
             (county) => county.classLevel
          ).filter(
             (classLevel) => Number.isInteger(classLevel)
@@ -138,7 +152,10 @@ document.addEventListener('DOMContentLoaded', function () {
          newClassUl.classList.add('counties-list');
          newClassUl.replaceChildren(
             ...countiesInfo.filter(
-               (county) => county.classLevel === classLevel
+               (county) => (
+                  county.classLevel === classLevel
+                  && options.includeCountries[county.country.toLowerCase()]
+               )
             ).map(function (county, rank) {
                const newLi = document.createElement('li');
                newLi.classList.add('county');
@@ -176,7 +193,9 @@ document.addEventListener('DOMContentLoaded', function () {
       }));
 
       const countiesListElement = document.querySelector('#counties-list');
-      countiesListElement.replaceChildren(...countiesInfo.map(function (county) {
+      countiesListElement.replaceChildren(...countiesInfo.filter(
+         (county) => options.includeCountries[county.country.toLowerCase()]
+      ).map(function (county) {
          const newLi = document.createElement('li');
          newLi.classList.add('county');
          const newCodeDiv = counties.createCountyElement({
@@ -270,7 +289,9 @@ document.addEventListener('DOMContentLoaded', function () {
       }));
 
       const countiesPointsTableElement = document.querySelector('#counties-points-table');
-      countiesPointsTableElement.replaceChildren(...countiesInfo.map(function (county, rank) {
+      countiesPointsTableElement.replaceChildren(...countiesInfo.filter(
+         (county) => options.includeCountries[county.country.toLowerCase()]
+      ).map(function (county, rank) {
          const newPointsTableRow = document.createElement('tr');
          const newCanvasCell = document.createElement('td');
          newCanvasCell.classList.add('centered');
@@ -328,8 +349,12 @@ document.addEventListener('DOMContentLoaded', function () {
       }));
 
       const countiesScoreboardsElement = document.querySelector('#counties-scoreboards');
-      const countyMatchups = countiesInfo.map(
-         (ignore, indexLeft) => countiesInfo.map(
+      const countyMatchups = countiesInfo.filter(
+         (county) => options.includeCountries[county.country.toLowerCase()]
+      ).map(
+         (ignore, indexLeft) => countiesInfo.filter(
+            (county) => options.includeCountries[county.country.toLowerCase()]
+         ).map(
             (ignore0, indexRight) => [indexLeft, indexRight]
          )
       ).flat().filter(
@@ -356,6 +381,9 @@ document.addEventListener('DOMContentLoaded', function () {
          ? ''
          : 'none'
       );
+      includeEnglandCheckbox.checked = options.includeCountries.england;
+      includeWalesCheckbox.checked = options.includeCountries.wales;
+      includeScotlandCheckbox.checked = options.includeCountries.scotland;
       showAlternateColoursCheckbox.checked = options.showAlternateColours;
       useWelshCountyNamesCheckbox.checked = options.useWelshCountyNames;
    };
@@ -366,10 +394,16 @@ document.addEventListener('DOMContentLoaded', function () {
    });
 
    const readOptions = function () {
+      options.includeCountries.england = includeEnglandCheckbox.checked;
+      options.includeCountries.wales = includeWalesCheckbox.checked;
+      options.includeCountries.scotland = includeScotlandCheckbox.checked;
       options.showAlternateColours = showAlternateColoursCheckbox.checked;
       options.useWelshCountyNames = useWelshCountyNamesCheckbox.checked;
       updateCounties();
    };
+   includeEnglandCheckbox.addEventListener('change', readOptions);
+   includeWalesCheckbox.addEventListener('change', readOptions);
+   includeScotlandCheckbox.addEventListener('change', readOptions);
    showAlternateColoursCheckbox.addEventListener('change', readOptions);
    useWelshCountyNamesCheckbox.addEventListener('change', readOptions);
 
