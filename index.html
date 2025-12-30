@@ -12,11 +12,17 @@
 <div class="menu" id="menu">&equiv;</div>
 
 <div class="options" id="options">
-   <label><input id="include-england" type="checkbox" />&nbsp;Include English counties</label>
-   <label><input id="include-wales" type="checkbox" />&nbsp;Include Welsh counties</label>
-   <label><input id="include-scotland" type="checkbox" />&nbsp;Include Scottish counties</label>
-   <label><input id="show-alternate-colours" type="checkbox" />&nbsp;Show alternate colours</label>
-   <label><input id="use-welsh-county-names" type="checkbox" />&nbsp;Use Welsh county names</label>
+   <fieldset>
+      <legend>Include countries</legend>
+      <label><input id="include-england" type="checkbox" />&nbsp;England</label>
+      <label><input id="include-wales" type="checkbox" />&nbsp;Wales</label>
+      <label><input id="include-scotland" type="checkbox" />&nbsp;Scotland</label>
+   </fieldset>
+   <fieldset>
+      <legend>Other options</legend>
+      <label><input id="show-alternate-colours" type="checkbox" />&nbsp;Show alternate colours</label>
+      <label><input id="use-welsh-county-names" type="checkbox" />&nbsp;Use Welsh county names</label>
+   </fieldset>
 </div>
 
 <div class="counties" id="counties"></div>
