@@ -161,7 +161,7 @@ body {
 }
 
 .options {
-   align-items: center;
+   align-items: flex-start;
    background-color: var(--background-color);
    display: flex;
    flex-direction: row;
@@ -172,4 +172,11 @@ body {
    padding: 5px;
    position: fixed;
    top: 0px;
+}
+
+.options fieldset {
+   align-items: flex-start;
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
 }
