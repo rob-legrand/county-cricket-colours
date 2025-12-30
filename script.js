@@ -366,7 +366,9 @@ document.addEventListener('DOMContentLoaded', function () {
                classList: ['matchup'],
                children: indices.map(
                   (index) => counties.createCountyElement({
-                     county: countiesInfo[index],
+                     county: countiesInfo.filter(
+                        (county) => options.includeCountries[county.country.toLowerCase()]
+                     )[index],
                      classList: ['county-code', 'county-colour-name'],
                      textType: 'countyCode',
                      colourStyle: 'scoreboard'
