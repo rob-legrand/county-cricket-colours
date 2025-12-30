@@ -47,9 +47,11 @@ document.addEventListener('DOMContentLoaded', function () {
    const updateCounties = function () {
       localStorage.setItem(localStorageKey, JSON.stringify(options));
 
-      countiesElement.replaceChildren(...countiesInfo.filter(
+      const includedCountiesInfo = countiesInfo.filter(
          (county) => options.includeCountries[county.country.toLowerCase()]
-      ).map(function (county) {
+      );
+
+      countiesElement.replaceChildren(...includedCountiesInfo.map(function (county) {
          const countyDiv = document.createElement('div');
          countyDiv.classList.add('county');
          countyDiv.replaceChildren(
@@ -74,9 +76,7 @@ document.addEventListener('DOMContentLoaded', function () {
       }));
       if (options.showAlternateColours) {
          countiesElement.replaceChildren();
-         countiesInfo.filter(
-            (county) => options.includeCountries[county.country.toLowerCase()]
-         ).forEach(function (county) {
+         includedCountiesInfo.forEach(function (county) {
             const countyDiv = document.createElement('div');
             countyDiv.classList.add('county');
             countyDiv.append(counties.createCanvas({
@@ -121,9 +121,7 @@ document.addEventListener('DOMContentLoaded', function () {
       }
 
       const classLevels = [...new Set(
-         countiesInfo.filter(
-            (county) => options.includeCountries[county.country.toLowerCase()]
-         ).map(
+         includedCountiesInfo.map(
             (county) => county.classLevel
          ).filter(
             (classLevel) => Number.isInteger(classLevel)
@@ -151,11 +149,8 @@ document.addEventListener('DOMContentLoaded', function () {
          const newClassUl = document.createElement('ul');
          newClassUl.classList.add('counties-list');
          newClassUl.replaceChildren(
-            ...countiesInfo.filter(
-               (county) => (
-                  county.classLevel === classLevel
-                  && options.includeCountries[county.country.toLowerCase()]
-               )
+            ...includedCountiesInfo.filter(
+               (county) => county.classLevel === classLevel
             ).map(function (county, rank) {
                const newLi = document.createElement('li');
                newLi.classList.add('county');
@@ -193,9 +188,7 @@ document.addEventListener('DOMContentLoaded', function () {
       }));
 
       const countiesListElement = document.querySelector('#counties-list');
-      countiesListElement.replaceChildren(...countiesInfo.filter(
-         (county) => options.includeCountries[county.country.toLowerCase()]
-      ).map(function (county) {
+      countiesListElement.replaceChildren(...includedCountiesInfo.map(function (county) {
          const newLi = document.createElement('li');
          newLi.classList.add('county');
          const newCodeDiv = counties.createCountyElement({
@@ -289,9 +282,7 @@ document.addEventListener('DOMContentLoaded', function () {
       }));
 
       const countiesPointsTableElement = document.querySelector('#counties-points-table');
-      countiesPointsTableElement.replaceChildren(...countiesInfo.filter(
-         (county) => options.includeCountries[county.country.toLowerCase()]
-      ).map(function (county, rank) {
+      countiesPointsTableElement.replaceChildren(...includedCountiesInfo.map(function (county, rank) {
          const newPointsTableRow = document.createElement('tr');
          const newCanvasCell = document.createElement('td');
          newCanvasCell.classList.add('centered');
@@ -349,12 +340,8 @@ document.addEventListener('DOMContentLoaded', function () {
       }));
 
       const countiesScoreboardsElement = document.querySelector('#counties-scoreboards');
-      const countyMatchups = countiesInfo.filter(
-         (county) => options.includeCountries[county.country.toLowerCase()]
-      ).map(
-         (ignore, indexLeft) => countiesInfo.filter(
-            (county) => options.includeCountries[county.country.toLowerCase()]
-         ).map(
+      const countyMatchups = includedCountiesInfo.map(
+         (ignore, indexLeft) => includedCountiesInfo.map(
             (ignore0, indexRight) => [indexLeft, indexRight]
          )
       ).flat().filter(
@@ -366,9 +353,7 @@ document.addEventListener('DOMContentLoaded', function () {
                classList: ['matchup'],
                children: indices.map(
                   (index) => counties.createCountyElement({
-                     county: countiesInfo.filter(
-                        (county) => options.includeCountries[county.country.toLowerCase()]
-                     )[index],
+                     county: includedCountiesInfo[index],
                      classList: ['county-code', 'county-colour-name'],
                      textType: 'countyCode',
                      colourStyle: 'scoreboard'
