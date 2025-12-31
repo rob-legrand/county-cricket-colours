@@ -8,6 +8,15 @@ document.addEventListener('DOMContentLoaded', function () {
    let options;
 
    const countiesInfo = counties.createInfo();
+   const allClassLevels = [...new Set(
+      countiesInfo.map(
+         (county) => county.classLevel
+      ).filter(
+         (classLevel) => Number.isInteger(classLevel)
+      )
+   )].toSorted(
+      (x, y) => x - y
+   );
 
    const ordinalise = (n) => (
       (!Number.isInteger(n) || n < 0)
@@ -22,6 +31,9 @@ document.addEventListener('DOMContentLoaded', function () {
    );
 
    const defaultOptions = {
+      includeClasses: allClassLevels.map(
+         () => true
+      ),
       includeCountries: {
          england: true,
          wales: true,
@@ -31,6 +43,26 @@ document.addEventListener('DOMContentLoaded', function () {
       useWelshCountyNames: false
    };
    const localStorageKey = 'county-cricket-colours';
+
+   const includeClassesFieldset = document.querySelector('#include-classes');
+   includeClassesFieldset.replaceChildren(
+      (function () {
+         const newLegend = document.createElement('legend');
+         newLegend.replaceChildren(document.createTextNode('Include classes'));
+         return newLegend;
+      }()),
+      ...allClassLevels.map(function (classLevel) {
+         const newClassLabel = document.createElement('label');
+         const newClassCheckbox = document.createElement('input');
+         newClassCheckbox.setAttribute('type', 'checkbox');
+         newClassLabel.replaceChildren(
+            newClassCheckbox,
+            document.createTextNode('\u00a0' + ordinalise(classLevel))
+         );
+         return newClassLabel;
+      })
+   );
+   const includeClassCheckboxes = [...includeClassesFieldset.querySelectorAll('input')];
 
    const countiesElement = document.querySelector('#counties');
    const includeEnglandCheckbox = document.querySelector('#include-england');
@@ -62,7 +94,12 @@ document.addEventListener('DOMContentLoaded', function () {
       localStorage.setItem(localStorageKey, JSON.stringify(options));
 
       const includedCountiesInfo = countiesInfo.filter(
-         (county) => options.includeCountries[county.country.toLowerCase()]
+         (county) => (
+            options.includeClasses[allClassLevels.findIndex(
+               (classLevel) => classLevel === county.classLevel
+            )]
+            && options.includeCountries[county.country.toLowerCase()]
+         )
       );
       const includedClassLevels = [...new Set(
          includedCountiesInfo.map(
@@ -73,6 +110,10 @@ document.addEventListener('DOMContentLoaded', function () {
       )].toSorted(
          (x, y) => x - y
       );
+
+      includeClassCheckboxes.forEach(function (includeClassCheckbox, whichClassLevel) {
+         includeClassCheckbox.checked = options.includeClasses[whichClassLevel];
+      });
 
       countiesElement.replaceChildren(...includedCountiesInfo.map(function (county) {
          const countyDiv = document.createElement('div');
@@ -384,6 +425,9 @@ document.addEventListener('DOMContentLoaded', function () {
    });
 
    const readOptions = function () {
+      options.includeClasses = includeClassCheckboxes.map(
+         (includeClassCheckbox) => includeClassCheckbox.checked
+      );
       options.includeCountries.england = includeEnglandCheckbox.checked;
       options.includeCountries.wales = includeWalesCheckbox.checked;
       options.includeCountries.scotland = includeScotlandCheckbox.checked;
@@ -391,6 +435,9 @@ document.addEventListener('DOMContentLoaded', function () {
       options.useWelshCountyNames = useWelshCountyNamesCheckbox.checked;
       updateCounties();
    };
+   includeClassCheckboxes.forEach(function (includeClassCheckbox) {
+      includeClassCheckbox.addEventListener('change', readOptions);
+   });
    includeEnglandCheckbox.addEventListener('change', readOptions);
    includeWalesCheckbox.addEventListener('change', readOptions);
    includeScotlandCheckbox.addEventListener('change', readOptions);
