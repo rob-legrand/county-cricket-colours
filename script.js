@@ -7,6 +7,20 @@ document.addEventListener('DOMContentLoaded', function () {
    let isMenuOpen;
    let options;
 
+   const countiesInfo = counties.createInfo();
+
+   const ordinalise = (n) => (
+      (!Number.isInteger(n) || n < 0)
+      ? n
+      : (Math.floor(n / 10) % 10 !== 1 && n % 10 === 1)
+      ? n + 'st'
+      : (Math.floor(n / 10) % 10 !== 1 && n % 10 === 2)
+      ? n + 'nd'
+      : (Math.floor(n / 10) % 10 !== 1 && n % 10 === 3)
+      ? n + 'rd'
+      : n + 'th'
+   );
+
    const defaultOptions = {
       includeCountries: {
          england: true,
@@ -49,6 +63,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
       const includedCountiesInfo = countiesInfo.filter(
          (county) => options.includeCountries[county.country.toLowerCase()]
+      );
+      const includedClassLevels = [...new Set(
+         includedCountiesInfo.map(
+            (county) => county.classLevel
+         ).filter(
+            (classLevel) => Number.isInteger(classLevel)
+         )
+      )].toSorted(
+         (x, y) => x - y
       );
 
       countiesElement.replaceChildren(...includedCountiesInfo.map(function (county) {
@@ -120,28 +143,8 @@ document.addEventListener('DOMContentLoaded', function () {
          });
       }
 
-      const classLevels = [...new Set(
-         includedCountiesInfo.map(
-            (county) => county.classLevel
-         ).filter(
-            (classLevel) => Number.isInteger(classLevel)
-         )
-      )].toSorted(
-         (x, y) => x - y
-      );
-      const ordinalise = (n) => (
-         (!Number.isInteger(n) || n < 0)
-         ? n
-         : (Math.floor(n / 10) % 10 !== 1 && n % 10 === 1)
-         ? n + 'st'
-         : (Math.floor(n / 10) % 10 !== 1 && n % 10 === 2)
-         ? n + 'nd'
-         : (Math.floor(n / 10) % 10 !== 1 && n % 10 === 3)
-         ? n + 'rd'
-         : n + 'th'
-      );
       const countiesClassesElement = document.querySelector('#counties-classes');
-      countiesClassesElement.replaceChildren(...classLevels.map(function (classLevel) {
+      countiesClassesElement.replaceChildren(...includedClassLevels.map(function (classLevel) {
          const newClassDiv = document.createElement('div');
          newClassDiv.classList.add('counties-class');
          const newClassLevelDiv = document.createElement('div');
@@ -394,7 +397,6 @@ document.addEventListener('DOMContentLoaded', function () {
    showAlternateColoursCheckbox.addEventListener('change', readOptions);
    useWelshCountyNamesCheckbox.addEventListener('change', readOptions);
 
-   const countiesInfo = counties.createInfo();
    isMenuOpen = false;
    options = fitToPrototype(
       (function () {
