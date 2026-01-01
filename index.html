@@ -37,34 +37,83 @@
    </fieldset>
 </div>
 
-<div class="counties" id="counties"></div>
+<div class="counties" id="counties">
+   <!--
+   <div class="county">
+      <canvas height="120" width="144"></canvas>
+      <div class="county-name">1 Sussex</div>
+   </div>
+   . . .
+   -->
+</div>
 
 <div class="counties-classes" id="counties-classes">
    <!--
    <div class="counties-class">
       <div>1st class</div>
       <ul class="counties-list">
+      <li class="county">
+         <div class="county-rank">1</div>
+         <div class="county-code county-colour-name">SUS</div>
+         <canvas height="40" width="40"></canvas>
+         <div class="county-name">Sussex</div>
+      </li>
+      . . .
       </ul>
    </div>
+   . . .
    -->
 </div>
 
-<ul class="counties-list" id="counties-list"></ul>
+<ul class="counties-list" id="counties-list">
+<!--
+<li class="county">
+   <canvas height="20" width="80"></canvas>
+   <canvas height="20" width="80"></canvas>
+   <canvas height="40" width="80"></canvas>
+   <canvas height="80" width="40"></canvas>
+   <canvas height="1" width="1"></canvas>
+   <canvas height="20" width="20"></canvas>
+   <canvas height="20" width="20"></canvas>
+   <canvas height="20" width="20"></canvas>
+   <canvas height="20" width="1"></canvas>
+   <canvas height="1" width="20"></canvas>
+   <div class="county-code county-colour-name">SUS</div>
+   <div class="county-name">1</div>
+   <div class="county-colour-name">Sussex</div>
+   <div class="county-colour-name">Sussex</div>
+</li>
+. . .
+-->
+</ul>
 
 <table class="counties-points-table" id="counties-points-table">
    <!--
    <tr>
-      <td>3</td>
-      <td>1st</td>
-      <td>SUR</td>
-      <td>Surrey</td>
-      <td>Surrey</td>
-      <td>Surrey</td>
+      <td class="centered">
+         <canvas height="40" width="40"></canvas>
+      </td>
+      <td class="county-colour-name">1</td>
+      <td class="county-colour-name">1st</td>
+      <td class="county-code county-colour-name">SUS</td>
+      <td class="county-colour-name">Sussex</td>
+      <td class="county-colour-name">Sussex</td>
+      <td class="county-colour-name">Sussex</td>
+      <td class="county-colour-name">England</td>
    </tr>
+   . . .
    -->
 </table>
 
-<div class="counties-scoreboards" id="counties-scoreboards"></div>
+<div class="counties-scoreboards" id="counties-scoreboards">
+   <!--
+   <div class="matchup">
+      <div class="county-code county-colour-name">SUS</div>
+      <div class="county-code county-colour-name">KEN</div>
+   </div>
+   . . .
+   -->
+</div>
 
 <script src="script.js" type="module"></script>
 
