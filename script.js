@@ -435,14 +435,16 @@ document.addEventListener('DOMContentLoaded', function () {
       options.useWelshCountyNames = useWelshCountyNamesCheckbox.checked;
       updateCounties();
    };
-   includeClassCheckboxes.forEach(function (includeClassCheckbox) {
-      includeClassCheckbox.addEventListener('change', readOptions);
+   [
+      ...includeClassCheckboxes,
+      includeEnglandCheckbox,
+      includeWalesCheckbox,
+      includeScotlandCheckbox,
+      showAlternateColoursCheckbox,
+      useWelshCountyNamesCheckbox
+   ].forEach(function (checkbox) {
+      checkbox.addEventListener('change', readOptions);
    });
-   includeEnglandCheckbox.addEventListener('change', readOptions);
-   includeWalesCheckbox.addEventListener('change', readOptions);
-   includeScotlandCheckbox.addEventListener('change', readOptions);
-   showAlternateColoursCheckbox.addEventListener('change', readOptions);
-   useWelshCountyNamesCheckbox.addEventListener('change', readOptions);
 
    isMenuOpen = false;
    options = fitToPrototype(
