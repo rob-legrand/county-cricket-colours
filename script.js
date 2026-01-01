@@ -111,9 +111,19 @@ document.addEventListener('DOMContentLoaded', function () {
          (x, y) => x - y
       );
 
+      document.querySelector('#options').style.display = (
+         isMenuOpen
+         ? ''
+         : 'none'
+      );
       includeClassCheckboxes.forEach(function (includeClassCheckbox, whichClassLevel) {
          includeClassCheckbox.checked = options.includeClasses[whichClassLevel];
       });
+      includeEnglandCheckbox.checked = options.includeCountries.england;
+      includeWalesCheckbox.checked = options.includeCountries.wales;
+      includeScotlandCheckbox.checked = options.includeCountries.scotland;
+      showAlternateColoursCheckbox.checked = options.showAlternateColours;
+      useWelshCountyNamesCheckbox.checked = options.useWelshCountyNames;
 
       countiesElement.replaceChildren(...includedCountiesInfo.map(function (county) {
          const countyDiv = document.createElement('div');
@@ -406,17 +416,6 @@ document.addEventListener('DOMContentLoaded', function () {
             })
          )
       );
-
-      document.querySelector('#options').style.display = (
-         isMenuOpen
-         ? ''
-         : 'none'
-      );
-      includeEnglandCheckbox.checked = options.includeCountries.england;
-      includeWalesCheckbox.checked = options.includeCountries.wales;
-      includeScotlandCheckbox.checked = options.includeCountries.scotland;
-      showAlternateColoursCheckbox.checked = options.showAlternateColours;
-      useWelshCountyNamesCheckbox.checked = options.useWelshCountyNames;
    };
 
    document.querySelector('#menu').addEventListener('click', function () {
