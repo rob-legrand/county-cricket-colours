@@ -31,6 +31,13 @@ document.addEventListener('DOMContentLoaded', function () {
    );
 
    const defaultOptions = {
+      includeSections: {
+         colours: true,
+         classes: true,
+         graphics: true,
+         pointsTable: true,
+         scoreboardMatchups: true
+      },
       includeClasses: allClassLevels.map(
          () => true
       ),
@@ -65,6 +72,11 @@ document.addEventListener('DOMContentLoaded', function () {
    const includeClassCheckboxes = [...includeClassesFieldset.querySelectorAll('input')];
 
    const countiesElement = document.querySelector('#counties');
+   const includeColoursCheckbox = document.querySelector('#include-county-colours');
+   const includeClassesCheckbox = document.querySelector('#include-class-levels');
+   const includeGraphicsCheckbox = document.querySelector('#include-graphics');
+   const includePointsTableCheckbox = document.querySelector('#include-points-table');
+   const includeScoreboardMatchupsCheckbox = document.querySelector('#include-scoreboard-matchups');
    const includeEnglandCheckbox = document.querySelector('#include-england');
    const includeWalesCheckbox = document.querySelector('#include-wales');
    const includeScotlandCheckbox = document.querySelector('#include-scotland');
@@ -133,6 +145,11 @@ document.addEventListener('DOMContentLoaded', function () {
          ? ''
          : 'none'
       );
+      includeColoursCheckbox.checked = options.includeSections.colours;
+      includeClassesCheckbox.checked = options.includeSections.classes;
+      includeGraphicsCheckbox.checked = options.includeSections.graphics;
+      includePointsTableCheckbox.checked = options.includeSections.pointsTable;
+      includeScoreboardMatchupsCheckbox.checked = options.includeSections.scoreboardMatchups;
       includeClassCheckboxes.forEach(function (includeClassCheckbox, whichClassLevel) {
          includeClassCheckbox.checked = options.includeClasses[whichClassLevel];
       });
@@ -142,7 +159,11 @@ document.addEventListener('DOMContentLoaded', function () {
       showAlternateColoursCheckbox.checked = options.showAlternateColours;
       useWelshCountyNamesCheckbox.checked = options.useWelshCountyNames;
 
-      countiesElement.replaceChildren(...includedCountiesInfo.map(function (county) {
+      countiesElement.replaceChildren(...(
+         options.includeSections.colours
+         ? includedCountiesInfo
+         : []
+      ).map(function (county) {
          const countyDiv = document.createElement('div');
          countyDiv.classList.add('county');
          countyDiv.replaceChildren(
@@ -212,7 +233,11 @@ document.addEventListener('DOMContentLoaded', function () {
       }
 
       const countiesClassesElement = document.querySelector('#counties-classes');
-      countiesClassesElement.replaceChildren(...includedClassLevels.map(function (classLevel) {
+      countiesClassesElement.replaceChildren(...(
+         options.includeSections.classes
+         ? includedClassLevels
+         : []
+      ).map(function (classLevel) {
          const newClassDiv = document.createElement('div');
          newClassDiv.classList.add('counties-class');
          const newClassLevelDiv = document.createElement('div');
@@ -259,7 +284,11 @@ document.addEventListener('DOMContentLoaded', function () {
       }));
 
       const countiesListElement = document.querySelector('#counties-list');
-      countiesListElement.replaceChildren(...includedCountiesInfo.map(function (county) {
+      countiesListElement.replaceChildren(...(
+         options.includeSections.graphics
+         ? includedCountiesInfo
+         : []
+      ).map(function (county) {
          const newLi = document.createElement('li');
          newLi.classList.add('county');
          const newCodeDiv = counties.createCountyElement({
@@ -353,7 +382,11 @@ document.addEventListener('DOMContentLoaded', function () {
       }));
 
       const countiesPointsTableElement = document.querySelector('#counties-points-table');
-      countiesPointsTableElement.replaceChildren(...includedCountiesInfo.map(function (county, rank) {
+      countiesPointsTableElement.replaceChildren(...(
+         options.includeSections.pointsTable
+         ? includedCountiesInfo
+         : []
+      ).map(function (county, rank) {
          const newPointsTableRow = document.createElement('tr');
          const newCanvasCell = document.createElement('td');
          newCanvasCell.classList.add('centered');
@@ -418,21 +451,23 @@ document.addEventListener('DOMContentLoaded', function () {
       ).flat().filter(
          (indices) => indices[0] !== indices[1]
       );
-      countiesScoreboardsElement.replaceChildren(
-         ...countyMatchups.map(
-            (indices) => counties.createCountyElement({
-               classList: ['matchup'],
-               children: indices.map(
-                  (index) => counties.createCountyElement({
-                     county: includedCountiesInfo[index],
-                     classList: ['county-code', 'county-colour-name'],
-                     textType: 'countyCode',
-                     colourStyle: 'scoreboard'
-                  })
-               )
-            })
-         )
-      );
+      countiesScoreboardsElement.replaceChildren(...(
+         options.includeSections.scoreboardMatchups
+         ? countyMatchups
+         : []
+      ).map(
+         (indices) => counties.createCountyElement({
+            classList: ['matchup'],
+            children: indices.map(
+               (index) => counties.createCountyElement({
+                  county: includedCountiesInfo[index],
+                  classList: ['county-code', 'county-colour-name'],
+                  textType: 'countyCode',
+                  colourStyle: 'scoreboard'
+               })
+            )
+         })
+      ));
    };
 
    document.querySelector('#menu').addEventListener('click', function () {
@@ -441,6 +476,11 @@ document.addEventListener('DOMContentLoaded', function () {
    });
 
    const readOptions = function () {
+      options.includeSections.colours = includeColoursCheckbox.checked;
+      options.includeSections.classes = includeClassesCheckbox.checked;
+      options.includeSections.graphics = includeGraphicsCheckbox.checked;
+      options.includeSections.pointsTable = includePointsTableCheckbox.checked;
+      options.includeSections.scoreboardMatchups = includeScoreboardMatchupsCheckbox.checked;
       options.includeClasses = includeClassCheckboxes.map(
          (includeClassCheckbox) => includeClassCheckbox.checked
       );
@@ -452,6 +492,11 @@ document.addEventListener('DOMContentLoaded', function () {
       updateCounties();
    };
    [
+      includeColoursCheckbox,
+      includeClassesCheckbox,
+      includeGraphicsCheckbox,
+      includePointsTableCheckbox,
+      includeScoreboardMatchupsCheckbox,
       ...includeClassCheckboxes,
       includeEnglandCheckbox,
       includeWalesCheckbox,
