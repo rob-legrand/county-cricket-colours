@@ -73,15 +73,32 @@ document.addEventListener('DOMContentLoaded', function () {
 
    const fitToPrototype = (thingToFit, prototypeThing) => (
       Array.isArray(prototypeThing)
-      ? prototypeThing.map(
-         (x, index) => fitToPrototype(thingToFit?.[index], x)
+      ? (
+         Array.isArray(thingToFit)
+         ? thingToFit.map(
+            (x, index) => fitToPrototype(
+               x,
+               prototypeThing?.[
+                  index % prototypeThing.length
+               ]
+            )
+         )
+         : prototypeThing.map(
+            (x, index) => fitToPrototype(
+               thingToFit?.[index],
+               x
+            )
+         )
       )
       : typeof prototypeThing === 'object'
       ? Object.fromEntries(
          Object.entries(prototypeThing).map(
             (x) => [
                x[0],
-               fitToPrototype(thingToFit?.[x[0]], x[1])
+               fitToPrototype(
+                  thingToFit?.[x[0]],
+                  x[1]
+               )
             ]
          )
       )
