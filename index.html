@@ -15,10 +15,10 @@
    <fieldset>
       <legend>Include sections</legend>
       <label><input id="include-county-colours" type="checkbox" />&nbsp;County colours</label>
-      <label><input id="include-class-levels" type="checkbox" />&nbsp;Classes</label>
-      <label><input id="include-graphics" type="checkbox" />&nbsp;Graphics</label>
-      <label><input id="include-points-table" type="checkbox" />&nbsp;Points table</label>
-      <label><input id="include-scoreboard-matchups" type="checkbox" />&nbsp;Scoreboard matchups</label>
+      <label><input id="include-county-classes" type="checkbox" />&nbsp;County classes</label>
+      <label><input id="include-county-graphics" type="checkbox" />&nbsp;County graphics</label>
+      <label><input id="include-county-table" type="checkbox" />&nbsp;County table</label>
+      <label><input id="include-county-matchups" type="checkbox" />&nbsp;County matchups</label>
    </fieldset>
    <fieldset id="include-classes">
       <!--
@@ -40,7 +40,7 @@
    </fieldset>
 </div>
 
-<div class="counties" id="counties">
+<div class="county-colours" id="county-colours">
    <!--
    <div class="county">
       <canvas height="120" width="144"></canvas>
@@ -50,11 +50,11 @@
    -->
 </div>
 
-<div class="counties-classes" id="counties-classes">
+<div class="county-classes" id="county-classes">
    <!--
-   <div class="counties-class">
+   <div class="county-class">
       <div>1st class</div>
-      <ul class="counties-list">
+      <ul class="county-list">
       <li class="county">
          <div class="county-rank">1</div>
          <div class="county-code county-colour-name">SUS</div>
@@ -68,7 +68,7 @@
    -->
 </div>
 
-<ul class="counties-list" id="counties-list">
+<ul class="county-list" id="county-graphics">
 <!--
 <li class="county">
    <canvas height="20" width="80"></canvas>
@@ -90,7 +90,7 @@
 -->
 </ul>
 
-<table class="counties-points-table" id="counties-points-table">
+<table class="county-table" id="county-table">
    <!--
    <tr>
       <td class="centered">
@@ -108,7 +108,7 @@
    -->
 </table>
 
-<div class="counties-scoreboards" id="counties-scoreboards">
+<div class="county-matchups" id="county-matchups">
    <!--
    <div class="matchup">
       <div class="county-code county-colour-name">SUS</div>
