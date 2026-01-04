@@ -506,6 +506,19 @@ document.addEventListener('DOMContentLoaded', function () {
       checkbox.addEventListener('change', readOptions);
    });
 
+   [
+      countyColoursElement,
+      countyClassesElement,
+      countyGraphicsElement,
+      countyTableElement,
+      countyMatchupsElement
+   ].forEach(function (section) {
+      section.addEventListener('click', function () {
+         isMenuOpen = false;
+         updateCounties();
+      });
+   });
+
    isMenuOpen = false;
    options = fitToPrototype(
       (function () {
