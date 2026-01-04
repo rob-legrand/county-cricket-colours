@@ -51,6 +51,11 @@ document.addEventListener('DOMContentLoaded', function () {
    };
    const localStorageKey = 'county-cricket-colours';
 
+   const includeColoursCheckbox = document.querySelector('#include-county-colours');
+   const includeClassesCheckbox = document.querySelector('#include-county-classes');
+   const includeGraphicsCheckbox = document.querySelector('#include-county-graphics');
+   const includeTableCheckbox = document.querySelector('#include-county-table');
+   const includeMatchupsCheckbox = document.querySelector('#include-county-matchups');
    const includeClassesFieldset = document.querySelector('#include-classes');
    includeClassesFieldset.replaceChildren(
       (function () {
@@ -70,17 +75,16 @@ document.addEventListener('DOMContentLoaded', function () {
       })
    );
    const includeClassCheckboxes = [...includeClassesFieldset.querySelectorAll('input')];
-
-   const includeColoursCheckbox = document.querySelector('#include-county-colours');
-   const includeClassesCheckbox = document.querySelector('#include-county-classes');
-   const includeGraphicsCheckbox = document.querySelector('#include-county-graphics');
-   const includeTableCheckbox = document.querySelector('#include-county-table');
-   const includeMatchupsCheckbox = document.querySelector('#include-county-matchups');
    const includeEnglandCheckbox = document.querySelector('#include-england');
    const includeWalesCheckbox = document.querySelector('#include-wales');
    const includeScotlandCheckbox = document.querySelector('#include-scotland');
    const showAlternateColoursCheckbox = document.querySelector('#show-alternate-colours');
    const useWelshCountyNamesCheckbox = document.querySelector('#use-welsh-county-names');
+   const countyColoursElement = document.querySelector('#county-colours');
+   const countyClassesElement = document.querySelector('#county-classes');
+   const countyGraphicsElement = document.querySelector('#county-graphics');
+   const countyTableElement = document.querySelector('#county-table');
+   const countyMatchupsElement = document.querySelector('#county-matchups');
 
    const fitToPrototype = (thingToFit, prototypeThing) => (
       Array.isArray(prototypeThing)
@@ -158,7 +162,6 @@ document.addEventListener('DOMContentLoaded', function () {
       showAlternateColoursCheckbox.checked = options.showAlternateColours;
       useWelshCountyNamesCheckbox.checked = options.useWelshCountyNames;
 
-      const countyColoursElement = document.querySelector('#county-colours');
       countyColoursElement.replaceChildren(...(
          options.includeSections.colours
          ? includedCountiesInfo
@@ -232,7 +235,6 @@ document.addEventListener('DOMContentLoaded', function () {
          });
       }
 
-      const countyClassesElement = document.querySelector('#county-classes');
       countyClassesElement.replaceChildren(...(
          options.includeSections.classes
          ? includedClassLevels
@@ -283,7 +285,6 @@ document.addEventListener('DOMContentLoaded', function () {
          return newClassDiv;
       }));
 
-      const countyGraphicsElement = document.querySelector('#county-graphics');
       countyGraphicsElement.replaceChildren(...(
          options.includeSections.graphics
          ? includedCountiesInfo
@@ -381,7 +382,6 @@ document.addEventListener('DOMContentLoaded', function () {
          return newLi;
       }));
 
-      const countyTableElement = document.querySelector('#county-table');
       countyTableElement.replaceChildren(...(
          options.includeSections.table
          ? includedCountiesInfo
@@ -443,7 +443,6 @@ document.addEventListener('DOMContentLoaded', function () {
          return newPointsTableRow;
       }));
 
-      const countyMatchupsElement = document.querySelector('#county-matchups');
       const countyMatchups = includedCountiesInfo.map(
          (ignore, indexLeft) => includedCountiesInfo.map(
             (ignore0, indexRight) => [indexLeft, indexRight]
