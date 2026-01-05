@@ -469,27 +469,17 @@ document.addEventListener('DOMContentLoaded', function () {
       ));
    };
 
-   document.querySelector('#menu').addEventListener('click', function () {
+   document.querySelector('body').addEventListener('click', function () {
+      if (isMenuOpen) {
+         isMenuOpen = false;
+         updateCounties();
+      }
+   });
+   document.querySelector('#menu').addEventListener('click', function (ev) {
       isMenuOpen = !isMenuOpen;
       updateCounties();
+      ev.stopPropagation();
    });
-
-   const readOptions = function () {
-      options.includeSections.colours = includeColoursCheckbox.checked;
-      options.includeSections.classes = includeClassesCheckbox.checked;
-      options.includeSections.graphics = includeGraphicsCheckbox.checked;
-      options.includeSections.table = includeTableCheckbox.checked;
-      options.includeSections.matchups = includeMatchupsCheckbox.checked;
-      options.includeClasses = includeClassCheckboxes.map(
-         (includeClassCheckbox) => includeClassCheckbox.checked
-      );
-      options.includeCountries.england = includeEnglandCheckbox.checked;
-      options.includeCountries.wales = includeWalesCheckbox.checked;
-      options.includeCountries.scotland = includeScotlandCheckbox.checked;
-      options.showAlternateColours = showAlternateColoursCheckbox.checked;
-      options.useWelshCountyNames = useWelshCountyNamesCheckbox.checked;
-      updateCounties();
-   };
    [
       includeColoursCheckbox,
       includeClassesCheckbox,
@@ -503,20 +493,25 @@ document.addEventListener('DOMContentLoaded', function () {
       showAlternateColoursCheckbox,
       useWelshCountyNamesCheckbox
    ].forEach(function (checkbox) {
-      checkbox.addEventListener('change', readOptions);
-   });
-
-   [
-      coloursSection,
-      classesSection,
-      graphicsSection,
-      tableSection,
-      matchupsSection
-   ].forEach(function (section) {
-      section.addEventListener('click', function () {
-         isMenuOpen = false;
+      checkbox.addEventListener('change', function () {
+         options.includeSections.colours = includeColoursCheckbox.checked;
+         options.includeSections.classes = includeClassesCheckbox.checked;
+         options.includeSections.graphics = includeGraphicsCheckbox.checked;
+         options.includeSections.table = includeTableCheckbox.checked;
+         options.includeSections.matchups = includeMatchupsCheckbox.checked;
+         options.includeClasses = includeClassCheckboxes.map(
+            (includeClassCheckbox) => includeClassCheckbox.checked
+         );
+         options.includeCountries.england = includeEnglandCheckbox.checked;
+         options.includeCountries.wales = includeWalesCheckbox.checked;
+         options.includeCountries.scotland = includeScotlandCheckbox.checked;
+         options.showAlternateColours = showAlternateColoursCheckbox.checked;
+         options.useWelshCountyNames = useWelshCountyNamesCheckbox.checked;
          updateCounties();
       });
+   });
+   document.querySelector('#options').addEventListener('click', function (ev) {
+      ev.stopPropagation();
    });
 
    isMenuOpen = false;
