@@ -51,11 +51,11 @@ document.addEventListener('DOMContentLoaded', function () {
    };
    const localStorageKey = 'county-cricket-colours';
 
-   const includeColoursCheckbox = document.querySelector('#include-county-colours');
-   const includeClassesCheckbox = document.querySelector('#include-county-classes');
-   const includeGraphicsCheckbox = document.querySelector('#include-county-graphics');
-   const includeTableCheckbox = document.querySelector('#include-county-table');
-   const includeMatchupsCheckbox = document.querySelector('#include-county-matchups');
+   const includeColoursCheckbox = document.querySelector('#include-colours-section');
+   const includeClassesCheckbox = document.querySelector('#include-classes-section');
+   const includeGraphicsCheckbox = document.querySelector('#include-graphics-section');
+   const includeTableCheckbox = document.querySelector('#include-table-section');
+   const includeMatchupsCheckbox = document.querySelector('#include-matchups-section');
    const includeClassesFieldset = document.querySelector('#include-classes');
    includeClassesFieldset.replaceChildren(
       (function () {
@@ -80,11 +80,11 @@ document.addEventListener('DOMContentLoaded', function () {
    const includeScotlandCheckbox = document.querySelector('#include-scotland');
    const showAlternateColoursCheckbox = document.querySelector('#show-alternate-colours');
    const useWelshCountyNamesCheckbox = document.querySelector('#use-welsh-county-names');
-   const countyColoursElement = document.querySelector('#county-colours');
-   const countyClassesElement = document.querySelector('#county-classes');
-   const countyGraphicsElement = document.querySelector('#county-graphics');
-   const countyTableElement = document.querySelector('#county-table');
-   const countyMatchupsElement = document.querySelector('#county-matchups');
+   const coloursSection = document.querySelector('#colours-section');
+   const classesSection = document.querySelector('#classes-section');
+   const graphicsSection = document.querySelector('#graphics-section');
+   const tableSection = document.querySelector('#table-section');
+   const matchupsSection = document.querySelector('#matchups-section');
 
    const fitToPrototype = (thingToFit, prototypeThing) => (
       Array.isArray(prototypeThing)
@@ -162,7 +162,7 @@ document.addEventListener('DOMContentLoaded', function () {
       showAlternateColoursCheckbox.checked = options.showAlternateColours;
       useWelshCountyNamesCheckbox.checked = options.useWelshCountyNames;
 
-      countyColoursElement.replaceChildren(...(
+      coloursSection.replaceChildren(...(
          options.includeSections.colours
          ? includedCountiesInfo
          : []
@@ -190,7 +190,7 @@ document.addEventListener('DOMContentLoaded', function () {
          return countyDiv;
       }));
       if (options.showAlternateColours) {
-         countyColoursElement.replaceChildren();
+         coloursSection.replaceChildren();
          includedCountiesInfo.forEach(function (county) {
             const countyDiv = document.createElement('div');
             countyDiv.classList.add('county');
@@ -210,7 +210,7 @@ document.addEventListener('DOMContentLoaded', function () {
                : county.countyName
             );
             countyDiv.append(countyNameDiv);
-            countyColoursElement.append(countyDiv);
+            coloursSection.append(countyDiv);
             if (Array.isArray(county.alternateColours)) {
                county.alternateColours.forEach(function (colours) {
                   const countyAlternateDiv = document.createElement('div');
@@ -229,13 +229,13 @@ document.addEventListener('DOMContentLoaded', function () {
                      : county.countyName
                   );
                   countyAlternateDiv.append(countyNameAlternateDiv);
-                  countyColoursElement.append(countyAlternateDiv);
+                  coloursSection.append(countyAlternateDiv);
                });
             }
          });
       }
 
-      countyClassesElement.replaceChildren(...(
+      classesSection.replaceChildren(...(
          options.includeSections.classes
          ? includedClassLevels
          : []
@@ -285,7 +285,7 @@ document.addEventListener('DOMContentLoaded', function () {
          return newClassDiv;
       }));
 
-      countyGraphicsElement.replaceChildren(...(
+      graphicsSection.replaceChildren(...(
          options.includeSections.graphics
          ? includedCountiesInfo
          : []
@@ -382,7 +382,7 @@ document.addEventListener('DOMContentLoaded', function () {
          return newLi;
       }));
 
-      countyTableElement.replaceChildren(...(
+      tableSection.replaceChildren(...(
          options.includeSections.table
          ? includedCountiesInfo
          : []
@@ -443,16 +443,16 @@ document.addEventListener('DOMContentLoaded', function () {
          return newPointsTableRow;
       }));
 
-      const countyMatchups = includedCountiesInfo.map(
+      const scoreboardMatchups = includedCountiesInfo.map(
          (ignore, indexLeft) => includedCountiesInfo.map(
             (ignore0, indexRight) => [indexLeft, indexRight]
          )
       ).flat().filter(
          (indices) => indices[0] !== indices[1]
       );
-      countyMatchupsElement.replaceChildren(...(
+      matchupsSection.replaceChildren(...(
          options.includeSections.matchups
-         ? countyMatchups
+         ? scoreboardMatchups
          : []
       ).map(
          (indices) => counties.createCountyElement({
@@ -507,11 +507,11 @@ document.addEventListener('DOMContentLoaded', function () {
    });
 
    [
-      countyColoursElement,
-      countyClassesElement,
-      countyGraphicsElement,
-      countyTableElement,
-      countyMatchupsElement
+      coloursSection,
+      classesSection,
+      graphicsSection,
+      tableSection,
+      matchupsSection
    ].forEach(function (section) {
       section.addEventListener('click', function () {
          isMenuOpen = false;
