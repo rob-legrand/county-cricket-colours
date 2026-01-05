@@ -480,19 +480,7 @@ document.addEventListener('DOMContentLoaded', function () {
       updateCounties();
       ev.stopPropagation();
    });
-   [
-      includeColoursCheckbox,
-      includeClassesCheckbox,
-      includeGraphicsCheckbox,
-      includeTableCheckbox,
-      includeMatchupsCheckbox,
-      ...includeClassCheckboxes,
-      includeEnglandCheckbox,
-      includeWalesCheckbox,
-      includeScotlandCheckbox,
-      showAlternateColoursCheckbox,
-      useWelshCountyNamesCheckbox
-   ].forEach(function (checkbox) {
+   [...document.querySelectorAll('#options input')].forEach(function (checkbox) {
       checkbox.addEventListener('change', function () {
          options.includeSections.colours = includeColoursCheckbox.checked;
          options.includeSections.classes = includeClassesCheckbox.checked;
