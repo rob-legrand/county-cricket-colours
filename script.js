@@ -467,6 +467,32 @@ document.addEventListener('DOMContentLoaded', function () {
             )
          })
       ));
+
+      coloursSection.style.display = (
+         options.includeSections.colours
+         ? ''
+         : 'none'
+      );
+      classesSection.style.display = (
+         options.includeSections.classes
+         ? ''
+         : 'none'
+      );
+      graphicsSection.style.display = (
+         options.includeSections.graphics
+         ? ''
+         : 'none'
+      );
+      tableSection.style.display = (
+         options.includeSections.table
+         ? ''
+         : 'none'
+      );
+      matchupsSection.style.display = (
+         options.includeSections.matchups
+         ? ''
+         : 'none'
+      );
    };
 
    document.querySelector('body').addEventListener('click', function () {
