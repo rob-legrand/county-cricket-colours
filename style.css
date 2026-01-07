@@ -4,7 +4,9 @@
    --background-color: rgb(255, 245, 225);
    --menu-size: 30px;
    --monospace: Inconsolata, Consolas, "Andale Mono", AndaleMono, monospace;
-   --serif: Georgia, Palatino, "Palatino Linotype", "Book Antiqua", Garamond, "Goudy Old Style", Perpetua, Baskerville, Gentium, serif;
+   --serif:
+      Georgia, Palatino, "Palatino Linotype", "Book Antiqua", Garamond,
+      "Goudy Old Style", Perpetua, Baskerville, Gentium, serif;
 }
 
 html {
