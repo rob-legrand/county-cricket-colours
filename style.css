@@ -23,7 +23,8 @@ body {
    flex-wrap: wrap;
    font-family: var(--serif);
    justify-content: center;
-   margin-bottom: var(--menu-size);
+   margin: 0px;
+   padding-top: var(--menu-size);
 }
 
 .county-class {
