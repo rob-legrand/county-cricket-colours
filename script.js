@@ -341,11 +341,6 @@ document.addEventListener('DOMContentLoaded', function () {
             counties.createCanvas({
                colours: county.colours,
                height: 1,
-               width: 1
-            }),
-            counties.createCanvas({
-               colours: county.colours,
-               height: 1,
                isHorizontal: true,
                width: 20
             }),
@@ -372,6 +367,11 @@ document.addEventListener('DOMContentLoaded', function () {
                colours: county.colours,
                height: 1,
                isVertical: true,
+               width: 1
+            }),
+            counties.createCanvas({
+               colours: county.colours,
+               height: 1,
                width: 1
             }),
             newCodeDiv,
