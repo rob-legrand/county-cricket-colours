@@ -24,6 +24,7 @@ body {
    flex-direction: row;
    flex-wrap: wrap;
    font-family: var(--serif);
+   gap: 40px;
    justify-content: center;
    margin: 0px;
    padding-top: var(--menu-size);
@@ -34,7 +35,6 @@ body {
    display: flex;
    flex-direction: column;
    justify-content: center;
-   margin: 5px;
 }
 
 .county-classes {
@@ -42,8 +42,8 @@ body {
    display: flex;
    flex-direction: row;
    flex-wrap: wrap;
+   gap: 40px;
    justify-content: center;
-   margin: 5px;
 }
 
 .county-code {
@@ -61,8 +61,8 @@ body {
    align-items: flex-start;
    display: flex;
    flex-wrap: wrap;
+   gap: 40px;
    justify-content: center;
-   margin: 10px;
 }
 
 .county-colours .county {
@@ -70,7 +70,6 @@ body {
    display: flex;
    flex-direction: column;
    justify-content: center;
-   margin: 20px;
 }
 
 .county-list {
@@ -97,15 +96,13 @@ body {
    display: flex;
    flex-direction: row;
    flex-wrap: wrap;
-   gap: 10px;
+   gap: 20px;
    justify-content: flex-start;
-   margin: 5px;
 }
 
 .county-matchups .matchup {
    display: flex;
    flex-direction: row;
-   margin: 5px;
 }
 
 .county-matchups .matchup .county-colour-name {
