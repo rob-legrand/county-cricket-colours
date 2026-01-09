@@ -153,6 +153,7 @@ const counties = (function () {
    const stiBrown = [90, 45, 45];
    const stiRed = [165, 0, 45];
    const surChocolate = [90, 45, 15];
+   const surTurquoise = [150, 225, 225];
    const susDarkBlue = [0, 30, 90];
    const susGold = [255, 180, 15];
    const susLightBlue = [60, 150, 210];
