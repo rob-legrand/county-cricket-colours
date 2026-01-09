@@ -104,6 +104,7 @@ const counties = (function () {
    const lnkBrown = [60, 30, 15];
    const lnkGold = [240, 195, 15];
    const mdxBlue = [0, 0, 60];
+   const mdxPink = [240, 180, 195];
    const merBlue = [0, 60, 180];
    const merGold = [255, 210, 0];
    const mlnBlue = [0, 30, 60];
