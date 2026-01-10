@@ -2661,6 +2661,8 @@ const counties = (function () {
       namedColours: {
          black: [0, 0, 0],
          cream: [255, 245, 225],
+         darkGrey: [75, 75, 75],
+         lightGrey: [180, 180, 180],
          white: [255, 255, 255]
       }
    });
