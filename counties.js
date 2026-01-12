@@ -442,7 +442,11 @@ const counties = (function () {
                {rows: 2},
                {rows: 6, colour: mdxBlue}
             ],
-            backgroundColour: mdxBlue
+            backgroundColour: mdxBlue,
+            scoreboardColours: [
+               mdxBlue,
+               mdxPink
+            ]
          },
          {
             countyName: 'Lancashire',
