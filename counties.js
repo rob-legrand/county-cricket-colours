@@ -387,7 +387,11 @@ const counties = (function () {
                {rows: 2},
                {rows: 6, colour: surChocolate}
             ],
-            backgroundColour: surChocolate
+            backgroundColour: surChocolate,
+            scoreboardColours: [
+               surChocolate,
+               surTurquoise
+            ]
          },
          {
             countyName: 'Nottinghamshire',
