@@ -458,11 +458,15 @@ document.addEventListener('DOMContentLoaded', function () {
          (indices) => counties.createCountyElement({
             classList: ['matchup'],
             children: indices.map(
-               (index) => counties.createCountyElement({
+               (index, which) => counties.createCountyElement({
                   county: includedCountiesInfo[index],
                   classList: ['county-code', 'county-colour-name'],
                   textType: 'countyCode',
-                  colourStyle: 'scoreboard'
+                  colourStyle: 'scoreboard',
+                  opponentCounty: (
+                     which === 1
+                     && includedCountiesInfo[indices[0]]
+                  )
                })
             )
          })
