@@ -2650,11 +2650,9 @@ const counties = (function () {
          if (typeof options?.title === 'string') {
             newElement.title = options.title;
          }
-         const primaryColour = (
-            options?.county?.backgroundColour
-            ?? options?.county?.borderColour
-            ?? options?.county?.textColour
-            ?? self.namedColours.cream
+         const scoreboardColour = self.chooseScoreboardColour(
+            options?.county,
+            options?.opponentCounty
          );
          newElement.style.color = util.convertToRgb(
             typeof options?.county === 'object'
@@ -2662,7 +2660,7 @@ const counties = (function () {
                options?.colourStyle === 'none'
                ? ''
                : options?.colourStyle === 'scoreboard'
-               ? self.chooseContrastingColour(primaryColour)
+               ? self.chooseContrastingColour(scoreboardColour)
                : options.county.textColour ?? self.namedColours.cream
             )
             : ''
@@ -2673,7 +2671,7 @@ const counties = (function () {
                options?.colourStyle === 'none'
                ? ''
                : options?.colourStyle === 'scoreboard'
-               ? primaryColour
+               ? scoreboardColour
                : options.county.backgroundColour ?? self.namedColours.cream
             )
             : ''
@@ -2684,7 +2682,7 @@ const counties = (function () {
                options?.colourStyle === 'none'
                ? ''
                : options?.colourStyle === 'scoreboard'
-               ? primaryColour
+               ? scoreboardColour
                : options.county.borderColour ?? options.county.backgroundColour ?? self.namedColours.cream
             )
             : ''
