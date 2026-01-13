@@ -2484,6 +2484,28 @@ const counties = (function () {
          ? self.namedColours.black
          : self.namedColours.white
       ),
+      chooseContrastingScoreboardColour: (scoreboardColours, colourToAvoid) => (
+         (
+            !Array.isArray(scoreboardColours)
+            || scoreboardColours.length < 1
+            || !Array.isArray(scoreboardColours[0])
+            || scoreboardColours[0].length < 3
+         )
+         ? self.namedColours.cream
+         : (
+            !Array.isArray(colourToAvoid)
+            || scoreboardColours.length < 2
+            || self.calcSquaredDistanceBetweenColours(
+               scoreboardColours[0],
+               colourToAvoid
+            ) > 5175
+         )
+         ? scoreboardColours[0]
+         : self.chooseContrastingScoreboardColour(
+            scoreboardColours.slice(1),
+            colourToAvoid
+         )
+      ),
       createCanvas: function (args) {
          const numRows = 20;
          const pixelsPerRow = Math.ceil(Math.min(
