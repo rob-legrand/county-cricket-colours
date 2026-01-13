@@ -2506,6 +2506,14 @@ const counties = (function () {
             colourToAvoid
          )
       ),
+      chooseScoreboardColour: (county, otherCounty) => (
+         typeof otherCounty === 'object'
+         ? self.chooseContrastingScoreboardColour(
+            self.listScoreboardColours(county),
+            self.chooseScoreboardColour(otherCounty)
+         )
+         : self.listScoreboardColours(county)[0]
+      ),
       createCanvas: function (args) {
          const numRows = 20;
          const pixelsPerRow = Math.ceil(Math.min(
