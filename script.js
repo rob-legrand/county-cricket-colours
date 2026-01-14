@@ -449,6 +449,14 @@ document.addEventListener('DOMContentLoaded', function () {
          )
       ).flat().filter(
          (indices) => indices[0] !== indices[1]
+      ).toSorted(
+         (i1, i2) => counties.calcSquaredDistanceBetweenColours(
+            counties.chooseScoreboardColour(includedCountiesInfo[i1[0]]),
+            counties.chooseScoreboardColour(includedCountiesInfo[i1[1]])
+         ) - counties.calcSquaredDistanceBetweenColours(
+            counties.chooseScoreboardColour(includedCountiesInfo[i2[0]]),
+            counties.chooseScoreboardColour(includedCountiesInfo[i2[1]])
+         )
       );
       matchupsSection.replaceChildren(...(
          options.includeSections.matchups
