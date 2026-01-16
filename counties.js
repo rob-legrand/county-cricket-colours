@@ -1229,7 +1229,11 @@ const counties = (function () {
                ]
             ],
             textColour: dorGreen,
-            borderColour: dorGreen
+            borderColour: dorGreen,
+            scoreboardColours: [
+               dorGreen,
+               dorGrey
+            ]
          },
          {
             countyName: 'Brecknockshire',
