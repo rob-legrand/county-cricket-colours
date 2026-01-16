@@ -55,6 +55,7 @@ const counties = (function () {
    const dmfGold = [255, 210, 0];
    const dmfRed = [225, 0, 15];
    const dorGreen = [0, 90, 30];
+   const dorGrey = [45, 45, 45];
    const drbBlue = [180, 225, 240];
    const drbBrown = [75, 30, 15];
    const drbGold = [255, 225, 0];
