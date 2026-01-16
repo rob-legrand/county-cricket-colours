@@ -466,7 +466,12 @@ const counties = (function () {
             ],
             textColour: lanRed,
             backgroundColour: lanBlue,
-            borderColour: lanGreen
+            borderColour: lanGreen,
+            scoreboardColours: [
+               lanBlue,
+               lanRed,
+               lanGreen
+            ]
          },
          {
             countyName: 'Gloucestershire',
