@@ -824,7 +824,12 @@ const counties = (function () {
             ],
             textColour: glaYellow,
             backgroundColour: glaBlue,
-            borderColour: glaGreen
+            borderColour: glaGreen,
+            scoreboardColours: [
+               glaBlue,
+               glaYellow,
+               glaGreen
+            ]
          },
          {
             countyName: 'Durham',
