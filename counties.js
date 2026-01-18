@@ -1014,7 +1014,12 @@ const counties = (function () {
             ],
             textColour: cnwGold,
             backgroundColour: cnwBlack,
-            borderColour: cnwRed
+            borderColour: cnwRed,
+            scoreboardColours: [
+               cnwBlack,
+               cnwGold,
+               cnwRed
+            ]
          },
          {
             countyName: 'Herefordshire',
