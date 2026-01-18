@@ -1110,7 +1110,12 @@ const counties = (function () {
             ],
             textColour: cumGold,
             backgroundColour: cumGreen,
-            borderColour: cumRed
+            borderColour: cumRed,
+            scoreboardColours: [
+               cumGreen,
+               cumGold,
+               cumRed
+            ]
          },
          {
             countyName: 'Radnorshire',
