@@ -64,10 +64,11 @@ document.addEventListener('DOMContentLoaded', function () {
       }),
       ...allClassLevels.map(function (classLevel) {
          const newClassLabel = document.createElement('label');
-         const newClassCheckbox = document.createElement('input');
-         newClassCheckbox.setAttribute('type', 'checkbox');
          newClassLabel.replaceChildren(
-            newClassCheckbox,
+            counties.createCountyElement({
+               elementType: 'input',
+               attributes: {type: 'checkbox'}
+            }),
             document.createTextNode('\u00a0' + ordinalise(classLevel))
          );
          return newClassLabel;
