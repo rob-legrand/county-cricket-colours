@@ -58,11 +58,10 @@ document.addEventListener('DOMContentLoaded', function () {
    const includeMatchupsCheckbox = document.querySelector('#include-matchups-section');
    const includeClassesFieldset = document.querySelector('#include-classes');
    includeClassesFieldset.replaceChildren(
-      (function () {
-         const newLegend = document.createElement('legend');
-         newLegend.replaceChildren(document.createTextNode('Include classes'));
-         return newLegend;
-      }()),
+      counties.createCountyElement({
+         elementType: 'legend',
+         textContent: 'Include classes'
+      }),
       ...allClassLevels.map(function (classLevel) {
          const newClassLabel = document.createElement('label');
          const newClassCheckbox = document.createElement('input');
