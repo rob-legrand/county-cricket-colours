@@ -62,17 +62,18 @@ document.addEventListener('DOMContentLoaded', function () {
          elementType: 'legend',
          textContent: 'Include classes'
       }),
-      ...allClassLevels.map(function (classLevel) {
-         const newClassLabel = document.createElement('label');
-         newClassLabel.replaceChildren(
-            counties.createCountyElement({
-               elementType: 'input',
-               attributes: {type: 'checkbox'}
-            }),
-            document.createTextNode('\u00a0' + ordinalise(classLevel))
-         );
-         return newClassLabel;
-      })
+      ...allClassLevels.map(
+         (classLevel) => counties.createCountyElement({
+            elementType: 'label',
+            children: [
+               counties.createCountyElement({
+                  elementType: 'input',
+                  attributes: {type: 'checkbox'}
+               }),
+               document.createTextNode('\u00a0' + ordinalise(classLevel))
+            ]
+         })
+      )
    );
    const includeClassCheckboxes = [...includeClassesFieldset.querySelectorAll('input')];
    const includeEnglandCheckbox = document.querySelector('#include-england');
