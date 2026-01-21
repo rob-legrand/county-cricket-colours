@@ -214,51 +214,6 @@ document.addEventListener('DOMContentLoaded', function () {
             ]
          })
       ));
-      if (options.showAlternateColours) {
-         coloursSection.replaceChildren();
-         includedCountiesInfo.forEach(function (county) {
-            const countyDiv = document.createElement('div');
-            countyDiv.classList.add('county');
-            countyDiv.append(counties.createCanvas({
-               colours: county.colours,
-               height: 120,
-               isHorizontal: true,
-               width: 144
-            }));
-            const countyNameDiv = document.createElement('div');
-            countyNameDiv.classList.add('county-name');
-            countyNameDiv.textContent = (
-               county.classLevel ?? '-'
-            ) + ' ' + (
-               options.useWelshCountyNames
-               ? county.countyNameInWelsh ?? county.countyName
-               : county.countyName
-            );
-            countyDiv.append(countyNameDiv);
-            coloursSection.append(countyDiv);
-            if (Array.isArray(county.alternateColours)) {
-               county.alternateColours.forEach(function (colours) {
-                  const countyAlternateDiv = document.createElement('div');
-                  countyAlternateDiv.classList.add('county');
-                  countyAlternateDiv.append(counties.createCanvas({
-                     colours: colours,
-                     height: 120,
-                     isHorizontal: true,
-                     width: 144
-                  }));
-                  const countyNameAlternateDiv = document.createElement('div');
-                  countyNameAlternateDiv.classList.add('county-name');
-                  countyNameAlternateDiv.textContent = (
-                     options.useWelshCountyNames
-                     ? county.countyNameInWelsh ?? county.countyName
-                     : county.countyName
-                  );
-                  countyAlternateDiv.append(countyNameAlternateDiv);
-                  coloursSection.append(countyAlternateDiv);
-               });
-            }
-         });
-      }
 
       classesSection.replaceChildren(...(
          options.includeSections.classes
