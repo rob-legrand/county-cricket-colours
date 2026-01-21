@@ -168,24 +168,48 @@ document.addEventListener('DOMContentLoaded', function () {
          ? includedCountiesInfo
          : []
       ).map(
-         (county) => counties.createCountyElement({
+         (county) => [
+            {
+               colours: county.colours,
+               text: (
+                  county.classLevel ?? '-'
+               ) + ' ' + (
+                  options.useWelshCountyNames
+                  ? county.countyNameInWelsh ?? county.countyName
+                  : county.countyName
+               )
+            },
+            ...(
+               (
+                  options.showAlternateColours
+                  && Array.isArray(county.alternateColours)
+               )
+               ? county.alternateColours.map(
+                  (colours) => ({
+                     colours: colours,
+                     text: (
+                        options.useWelshCountyNames
+                        ? county.countyNameInWelsh ?? county.countyName
+                        : county.countyName
+                     )
+                  })
+               )
+               : []
+            )
+         ]
+      ).flat().map(
+         (colours) => counties.createCountyElement({
             classList: ['county'],
             children: [
                counties.createCanvas({
-                  colours: county.colours,
+                  colours: colours.colours,
                   height: 120,
                   isHorizontal: true,
                   width: 144
                }),
                counties.createCountyElement({
                   classList: ['county-name'],
-                  textContent: (
-                     county.classLevel ?? '-'
-                  ) + ' ' + (
-                     options.useWelshCountyNames
-                     ? county.countyNameInWelsh ?? county.countyName
-                     : county.countyName
-                  )
+                  textContent: colours.text
                })
             ]
          })
