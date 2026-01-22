@@ -1331,7 +1331,12 @@ const counties = (function () {
             ],
             textColour: bedSilver,
             backgroundColour: bedBlack,
-            borderColour: bedPurple
+            borderColour: bedPurple,
+            scoreboardColours: [
+               bedPurple,
+               bedBlack,
+               bedSilver
+            ]
          },
          {
             countyName: 'Huntingdonshire',
