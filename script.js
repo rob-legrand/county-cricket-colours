@@ -240,13 +240,13 @@ document.addEventListener('DOMContentLoaded', function () {
                   classList: ['county-code', 'county-colour-name'],
                   textType: 'countyCode'
                });
-               const newCountyNameDiv = document.createElement('div');
-               newCountyNameDiv.classList.add('county-name');
-               newCountyNameDiv.textContent = (
-                  options.useWelshCountyNames
-                  ? county.countyNameInWelsh ?? county.countyName
-                  : county.countyName
-               );
+               const newCountyNameDiv = counties.createCountyElement({
+                  county: county,
+                  classList: ['county-name'],
+                  textType: 'countyName',
+                  useWelsh: options.useWelshCountyNames,
+                  colourStyle: 'none'
+               });
                newLi.replaceChildren(
                   newRankDiv,
                   newCodeDiv,
