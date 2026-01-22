@@ -232,9 +232,10 @@ document.addEventListener('DOMContentLoaded', function () {
             ).map(function (county, rank) {
                const newLi = document.createElement('li');
                newLi.classList.add('county');
-               const newRankDiv = document.createElement('div');
-               newRankDiv.classList.add('county-rank');
-               newRankDiv.textContent = rank + 1 ?? '-';
+               const newRankDiv = counties.createCountyElement({
+                  classList: ['county-rank'],
+                  textContent: rank + 1 ?? '-'
+               });
                const newCodeDiv = counties.createCountyElement({
                   county: county,
                   classList: ['county-code', 'county-colour-name'],
