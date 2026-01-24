@@ -229,35 +229,36 @@ document.addEventListener('DOMContentLoaded', function () {
          newClassUl.replaceChildren(
             ...includedCountiesInfo.filter(
                (county) => county.classLevel === classLevel
-            ).map(function (county, rank) {
-               const newLi = document.createElement('li');
-               newLi.classList.add('county');
-               newLi.replaceChildren(
-                  counties.createCountyElement({
-                     classList: ['county-rank'],
-                     textContent: rank + 1 ?? '-'
-                  }),
-                  counties.createCountyElement({
-                     county: county,
-                     classList: ['county-code', 'county-colour-name'],
-                     textType: 'countyCode'
-                  }),
-                  counties.createCanvas({
-                     colours: county.colours,
-                     height: 40,
-                     isHorizontal: true,
-                     width: 40
-                  }),
-                  counties.createCountyElement({
-                     county: county,
-                     classList: ['county-name'],
-                     textType: 'countyName',
-                     useWelsh: options.useWelshCountyNames,
-                     colourStyle: 'none'
-                  })
-               );
-               return newLi;
-            })
+            ).map(
+               (county, rank) => counties.createCountyElement({
+                  elementType: 'li',
+                  classList: ['county'],
+                  children: [
+                     counties.createCountyElement({
+                        classList: ['county-rank'],
+                        textContent: rank + 1 ?? '-'
+                     }),
+                     counties.createCountyElement({
+                        county: county,
+                        classList: ['county-code', 'county-colour-name'],
+                        textType: 'countyCode'
+                     }),
+                     counties.createCanvas({
+                        colours: county.colours,
+                        height: 40,
+                        isHorizontal: true,
+                        width: 40
+                     }),
+                     counties.createCountyElement({
+                        county: county,
+                        classList: ['county-name'],
+                        textType: 'countyName',
+                        useWelsh: options.useWelshCountyNames,
+                        colourStyle: 'none'
+                     })
+                  ]
+               })
+            )
          );
          newClassDiv.replaceChildren(newClassLevelDiv, newClassUl);
          return newClassDiv;
