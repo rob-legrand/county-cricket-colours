@@ -1216,7 +1216,12 @@ const counties = (function () {
             ],
             textColour: radGold,
             backgroundColour: radBlue,
-            borderColour: radRed
+            borderColour: radRed,
+            scoreboardColours: [
+               radBlue,
+               radGold,
+               radRed
+            ]
          },
          {
             countyName: 'Dorset',
