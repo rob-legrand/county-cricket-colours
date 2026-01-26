@@ -219,52 +219,52 @@ document.addEventListener('DOMContentLoaded', function () {
          options.includeSections.classes
          ? includedClassLevels
          : []
-      ).map(function (classLevel) {
-         const newClassDiv = document.createElement('div');
-         newClassDiv.classList.add('county-class');
-         newClassDiv.replaceChildren(
-            counties.createCountyElement({
-               textContent: ordinalise(classLevel) + ' class'
-            }),
-            counties.createCountyElement({
-               elementType: 'ul',
-               classList: ['county-list'],
-               children: includedCountiesInfo.filter(
-                  (county) => county.classLevel === classLevel
-               ).map(
-                  (county, rank) => counties.createCountyElement({
-                     elementType: 'li',
-                     classList: ['county'],
-                     children: [
-                        counties.createCountyElement({
-                           classList: ['county-rank'],
-                           textContent: rank + 1 ?? '-'
-                        }),
-                        counties.createCountyElement({
-                           county: county,
-                           classList: ['county-code', 'county-colour-name'],
-                           textType: 'countyCode'
-                        }),
-                        counties.createCanvas({
-                           colours: county.colours,
-                           height: 40,
-                           isHorizontal: true,
-                           width: 40
-                        }),
-                        counties.createCountyElement({
-                           county: county,
-                           classList: ['county-name'],
-                           textType: 'countyName',
-                           useWelsh: options.useWelshCountyNames,
-                           colourStyle: 'none'
-                        })
-                     ]
-                  })
-               )
-            })
-         );
-         return newClassDiv;
-      }));
+      ).map(
+         (classLevel) => counties.createCountyElement({
+            classList: ['county-class'],
+            children: [
+               counties.createCountyElement({
+                  textContent: ordinalise(classLevel) + ' class'
+               }),
+               counties.createCountyElement({
+                  elementType: 'ul',
+                  classList: ['county-list'],
+                  children: includedCountiesInfo.filter(
+                     (county) => county.classLevel === classLevel
+                  ).map(
+                     (county, rank) => counties.createCountyElement({
+                        elementType: 'li',
+                        classList: ['county'],
+                        children: [
+                           counties.createCountyElement({
+                              classList: ['county-rank'],
+                              textContent: rank + 1 ?? '-'
+                           }),
+                           counties.createCountyElement({
+                              county: county,
+                              classList: ['county-code', 'county-colour-name'],
+                              textType: 'countyCode'
+                           }),
+                           counties.createCanvas({
+                              colours: county.colours,
+                              height: 40,
+                              isHorizontal: true,
+                              width: 40
+                           }),
+                           counties.createCountyElement({
+                              county: county,
+                              classList: ['county-name'],
+                              textType: 'countyName',
+                              useWelsh: options.useWelshCountyNames,
+                              colourStyle: 'none'
+                           })
+                        ]
+                     })
+                  )
+               })
+            ]
+         })
+      ));
 
       graphicsSection.replaceChildren(...(
          options.includeSections.graphics
