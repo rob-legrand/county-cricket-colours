@@ -278,9 +278,10 @@ document.addEventListener('DOMContentLoaded', function () {
             classList: ['county-code', 'county-colour-name'],
             textType: 'countyCode'
          });
-         const newClassDiv = document.createElement('div');
-         newClassDiv.classList.add('county-name');
-         newClassDiv.textContent = county.classLevel ?? '-';
+         const newClassDiv = counties.createCountyElement({
+            classList: ['county-name'],
+            textContent: county.classLevel ?? '-'
+         });
          const newColourDiv = counties.createCountyElement({
             county: county,
             classList: ['county-colour-name'],
