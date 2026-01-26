@@ -222,46 +222,47 @@ document.addEventListener('DOMContentLoaded', function () {
       ).map(function (classLevel) {
          const newClassDiv = document.createElement('div');
          newClassDiv.classList.add('county-class');
-         const newClassLevelDiv = counties.createCountyElement({
-            textContent: ordinalise(classLevel) + ' class'
-         });
-         const newClassUl = counties.createCountyElement({
-            elementType: 'ul',
-            classList: ['county-list'],
-            children: includedCountiesInfo.filter(
-               (county) => county.classLevel === classLevel
-            ).map(
-               (county, rank) => counties.createCountyElement({
-                  elementType: 'li',
-                  classList: ['county'],
-                  children: [
-                     counties.createCountyElement({
-                        classList: ['county-rank'],
-                        textContent: rank + 1 ?? '-'
-                     }),
-                     counties.createCountyElement({
-                        county: county,
-                        classList: ['county-code', 'county-colour-name'],
-                        textType: 'countyCode'
-                     }),
-                     counties.createCanvas({
-                        colours: county.colours,
-                        height: 40,
-                        isHorizontal: true,
-                        width: 40
-                     }),
-                     counties.createCountyElement({
-                        county: county,
-                        classList: ['county-name'],
-                        textType: 'countyName',
-                        useWelsh: options.useWelshCountyNames,
-                        colourStyle: 'none'
-                     })
-                  ]
-               })
-            )
-         });
-         newClassDiv.replaceChildren(newClassLevelDiv, newClassUl);
+         newClassDiv.replaceChildren(
+            counties.createCountyElement({
+               textContent: ordinalise(classLevel) + ' class'
+            }),
+            counties.createCountyElement({
+               elementType: 'ul',
+               classList: ['county-list'],
+               children: includedCountiesInfo.filter(
+                  (county) => county.classLevel === classLevel
+               ).map(
+                  (county, rank) => counties.createCountyElement({
+                     elementType: 'li',
+                     classList: ['county'],
+                     children: [
+                        counties.createCountyElement({
+                           classList: ['county-rank'],
+                           textContent: rank + 1 ?? '-'
+                        }),
+                        counties.createCountyElement({
+                           county: county,
+                           classList: ['county-code', 'county-colour-name'],
+                           textType: 'countyCode'
+                        }),
+                        counties.createCanvas({
+                           colours: county.colours,
+                           height: 40,
+                           isHorizontal: true,
+                           width: 40
+                        }),
+                        counties.createCountyElement({
+                           county: county,
+                           classList: ['county-name'],
+                           textType: 'countyName',
+                           useWelsh: options.useWelshCountyNames,
+                           colourStyle: 'none'
+                        })
+                     ]
+                  })
+               )
+            })
+         );
          return newClassDiv;
       }));
 
