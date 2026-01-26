@@ -222,8 +222,9 @@ document.addEventListener('DOMContentLoaded', function () {
       ).map(function (classLevel) {
          const newClassDiv = document.createElement('div');
          newClassDiv.classList.add('county-class');
-         const newClassLevelDiv = document.createElement('div');
-         newClassLevelDiv.textContent = ordinalise(classLevel) + ' class';
+         const newClassLevelDiv = counties.createCountyElement({
+            textContent: ordinalise(classLevel) + ' class'
+         });
          const newClassUl = counties.createCountyElement({
             elementType: 'ul',
             classList: ['county-list'],
