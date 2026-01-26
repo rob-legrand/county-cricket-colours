@@ -224,10 +224,10 @@ document.addEventListener('DOMContentLoaded', function () {
          newClassDiv.classList.add('county-class');
          const newClassLevelDiv = document.createElement('div');
          newClassLevelDiv.textContent = ordinalise(classLevel) + ' class';
-         const newClassUl = document.createElement('ul');
-         newClassUl.classList.add('county-list');
-         newClassUl.replaceChildren(
-            ...includedCountiesInfo.filter(
+         const newClassUl = counties.createCountyElement({
+            elementType: 'ul',
+            classList: ['county-list'],
+            children: includedCountiesInfo.filter(
                (county) => county.classLevel === classLevel
             ).map(
                (county, rank) => counties.createCountyElement({
@@ -259,7 +259,7 @@ document.addEventListener('DOMContentLoaded', function () {
                   ]
                })
             )
-         );
+         });
          newClassDiv.replaceChildren(newClassLevelDiv, newClassUl);
          return newClassDiv;
       }));
