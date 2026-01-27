@@ -367,16 +367,18 @@ document.addEventListener('DOMContentLoaded', function () {
          : []
       ).map(function (county, rank) {
          const newPointsTableRow = document.createElement('tr');
-         const newCanvasCell = document.createElement('td');
-         newCanvasCell.classList.add('centered');
-         newCanvasCell.replaceChildren(
-            counties.createCanvas({
-               colours: county.colours,
-               height: 40,
-               isHorizontal: true,
-               width: 40
-            })
-         );
+         const newCanvasCell = counties.createCountyElement({
+            elementType: 'td',
+            classList: ['centered'],
+            children: [
+               counties.createCanvas({
+                  colours: county.colours,
+                  height: 40,
+                  isHorizontal: true,
+                  width: 40
+               })
+            ]
+         });
          const newRankCell = counties.createCountyElement({
             elementType: 'td',
             county: county,
