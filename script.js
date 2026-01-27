@@ -354,7 +354,7 @@ document.addEventListener('DOMContentLoaded', function () {
             counties.createCountyElement({
                county: county,
                classList: ['county-colour-name'],
-               textContent: county.countyAbbreviation ?? county.countyName
+               textType: 'countyAbbreviation'
             })
          );
          return newLi;
