@@ -270,95 +270,96 @@ document.addEventListener('DOMContentLoaded', function () {
          options.includeSections.graphics
          ? includedCountiesInfo
          : []
-      ).map(function (county) {
-         const newLi = document.createElement('li');
-         newLi.classList.add('county');
-         newLi.replaceChildren(
-            counties.createCanvas({
-               colours: county.colours,
-               height: 20,
-               isHorizontal: true,
-               width: 80
-            }),
-            counties.createCanvas({
-               colours: county.colours,
-               height: 20,
-               isVertical: true,
-               width: 80
-            }),
-            counties.createCanvas({
-               colours: county.colours,
-               height: 40,
-               isHorizontal: true,
-               isVertical: true,
-               width: 80
-            }),
-            counties.createCanvas({
-               colours: county.colours,
-               height: 80,
-               isHorizontal: true,
-               isVertical: true,
-               width: 40
-            }),
-            counties.createCanvas({
-               colours: county.colours,
-               height: 1,
-               isHorizontal: true,
-               width: 20
-            }),
-            counties.createCanvas({
-               colours: county.colours,
-               height: 20,
-               isVertical: true,
-               width: 1
-            }),
-            counties.createCanvas({
-               colours: county.colours,
-               height: 1,
-               isHorizontal: true,
-               isVertical: true,
-               width: 1
-            }),
-            counties.createCanvas({
-               colours: county.colours,
-               height: 1,
-               isHorizontal: true,
-               width: 1
-            }),
-            counties.createCanvas({
-               colours: county.colours,
-               height: 1,
-               isVertical: true,
-               width: 1
-            }),
-            counties.createCanvas({
-               colours: county.colours,
-               height: 1,
-               width: 1
-            }),
-            counties.createCountyElement({
-               county: county,
-               classList: ['county-code', 'county-colour-name'],
-               textType: 'countyCode'
-            }),
-            counties.createCountyElement({
-               classList: ['county-name'],
-               textContent: county.classLevel ?? '-'
-            }),
-            counties.createCountyElement({
-               county: county,
-               classList: ['county-colour-name'],
-               textType: 'countyName',
-               useWelsh: options.useWelshCountyNames
-            }),
-            counties.createCountyElement({
-               county: county,
-               classList: ['county-colour-name'],
-               textType: 'countyAbbreviation'
-            })
-         );
-         return newLi;
-      }));
+      ).map(
+         (county) => counties.createCountyElement({
+            elementType: 'li',
+            classList: ['county'],
+            children: [
+               counties.createCanvas({
+                  colours: county.colours,
+                  height: 20,
+                  isHorizontal: true,
+                  width: 80
+               }),
+               counties.createCanvas({
+                  colours: county.colours,
+                  height: 20,
+                  isVertical: true,
+                  width: 80
+               }),
+               counties.createCanvas({
+                  colours: county.colours,
+                  height: 40,
+                  isHorizontal: true,
+                  isVertical: true,
+                  width: 80
+               }),
+               counties.createCanvas({
+                  colours: county.colours,
+                  height: 80,
+                  isHorizontal: true,
+                  isVertical: true,
+                  width: 40
+               }),
+               counties.createCanvas({
+                  colours: county.colours,
+                  height: 1,
+                  isHorizontal: true,
+                  width: 20
+               }),
+               counties.createCanvas({
+                  colours: county.colours,
+                  height: 20,
+                  isVertical: true,
+                  width: 1
+               }),
+               counties.createCanvas({
+                  colours: county.colours,
+                  height: 1,
+                  isHorizontal: true,
+                  isVertical: true,
+                  width: 1
+               }),
+               counties.createCanvas({
+                  colours: county.colours,
+                  height: 1,
+                  isHorizontal: true,
+                  width: 1
+               }),
+               counties.createCanvas({
+                  colours: county.colours,
+                  height: 1,
+                  isVertical: true,
+                  width: 1
+               }),
+               counties.createCanvas({
+                  colours: county.colours,
+                  height: 1,
+                  width: 1
+               }),
+               counties.createCountyElement({
+                  county: county,
+                  classList: ['county-code', 'county-colour-name'],
+                  textType: 'countyCode'
+               }),
+               counties.createCountyElement({
+                  classList: ['county-name'],
+                  textContent: county.classLevel ?? '-'
+               }),
+               counties.createCountyElement({
+                  county: county,
+                  classList: ['county-colour-name'],
+                  textType: 'countyName',
+                  useWelsh: options.useWelshCountyNames
+               }),
+               counties.createCountyElement({
+                  county: county,
+                  classList: ['county-colour-name'],
+                  textType: 'countyAbbreviation'
+               })
+            ]
+         })
+      ));
 
       tableSection.replaceChildren(...(
          options.includeSections.table
