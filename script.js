@@ -273,26 +273,6 @@ document.addEventListener('DOMContentLoaded', function () {
       ).map(function (county) {
          const newLi = document.createElement('li');
          newLi.classList.add('county');
-         const newCodeDiv = counties.createCountyElement({
-            county: county,
-            classList: ['county-code', 'county-colour-name'],
-            textType: 'countyCode'
-         });
-         const newClassDiv = counties.createCountyElement({
-            classList: ['county-name'],
-            textContent: county.classLevel ?? '-'
-         });
-         const newColourDiv = counties.createCountyElement({
-            county: county,
-            classList: ['county-colour-name'],
-            textType: 'countyName',
-            useWelsh: options.useWelshCountyNames
-         });
-         const newColourAbbrevDiv = counties.createCountyElement({
-            county: county,
-            classList: ['county-colour-name'],
-            textContent: county.countyAbbreviation ?? county.countyName
-         });
          newLi.replaceChildren(
             counties.createCanvas({
                colours: county.colours,
@@ -356,10 +336,26 @@ document.addEventListener('DOMContentLoaded', function () {
                height: 1,
                width: 1
             }),
-            newCodeDiv,
-            newClassDiv,
-            newColourDiv,
-            newColourAbbrevDiv
+            counties.createCountyElement({
+               county: county,
+               classList: ['county-code', 'county-colour-name'],
+               textType: 'countyCode'
+            }),
+            counties.createCountyElement({
+               classList: ['county-name'],
+               textContent: county.classLevel ?? '-'
+            }),
+            counties.createCountyElement({
+               county: county,
+               classList: ['county-colour-name'],
+               textType: 'countyName',
+               useWelsh: options.useWelshCountyNames
+            }),
+            counties.createCountyElement({
+               county: county,
+               classList: ['county-colour-name'],
+               textContent: county.countyAbbreviation ?? county.countyName
+            })
          );
          return newLi;
       }));
