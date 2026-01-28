@@ -367,59 +367,53 @@ document.addEventListener('DOMContentLoaded', function () {
          : []
       ).map(function (county, rank) {
          const newPointsTableRow = document.createElement('tr');
-         const newCanvasCell = counties.createCountyElement({
-            elementType: 'td',
-            classList: ['centered'],
-            children: [
-               counties.createCanvas({
-                  colours: county.colours,
-                  height: 40,
-                  isHorizontal: true,
-                  width: 40
-               })
-            ]
-         });
-         const newRankCell = counties.createCountyElement({
-            elementType: 'td',
-            county: county,
-            classList: ['county-colour-name'],
-            textContent: rank + 1 ?? '-'
-         });
-         const newClassCell = counties.createCountyElement({
-            elementType: 'td',
-            county: county,
-            classList: ['county-colour-name'],
-            textContent: ordinalise(county.classLevel ?? '-')
-         });
-         const newCodeCell = counties.createCountyElement({
-            elementType: 'td',
-            county: county,
-            classList: ['county-code', 'county-colour-name'],
-            textType: 'countyCode'
-         });
-         const newCountyNameCells = Array.from(
-            {length: 3},
-            () => counties.createCountyElement({
+         newPointsTableRow.replaceChildren(
+            counties.createCountyElement({
+               elementType: 'td',
+               classList: ['centered'],
+               children: [
+                  counties.createCanvas({
+                     colours: county.colours,
+                     height: 40,
+                     isHorizontal: true,
+                     width: 40
+                  })
+               ]
+            }),
+            counties.createCountyElement({
                elementType: 'td',
                county: county,
                classList: ['county-colour-name'],
-               textType: 'countyName',
-               useWelsh: options.useWelshCountyNames
+               textContent: rank + 1 ?? '-'
+            }),
+            counties.createCountyElement({
+               elementType: 'td',
+               county: county,
+               classList: ['county-colour-name'],
+               textContent: ordinalise(county.classLevel ?? '-')
+            }),
+            counties.createCountyElement({
+               elementType: 'td',
+               county: county,
+               classList: ['county-code', 'county-colour-name'],
+               textType: 'countyCode'
+            }),
+            ...Array.from(
+               {length: 3},
+               () => counties.createCountyElement({
+                  elementType: 'td',
+                  county: county,
+                  classList: ['county-colour-name'],
+                  textType: 'countyName',
+                  useWelsh: options.useWelshCountyNames
+               })
+            ),
+            counties.createCountyElement({
+               elementType: 'td',
+               county: county,
+               classList: ['county-colour-name'],
+               textType: 'country'
             })
-         );
-         const newCountryCell = counties.createCountyElement({
-            elementType: 'td',
-            county: county,
-            classList: ['county-colour-name'],
-            textType: 'country'
-         });
-         newPointsTableRow.replaceChildren(
-            newCanvasCell,
-            newRankCell,
-            newClassCell,
-            newCodeCell,
-            ...newCountyNameCells,
-            newCountryCell
          );
          return newPointsTableRow;
       }));
