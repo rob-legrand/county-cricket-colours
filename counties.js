@@ -2640,9 +2640,7 @@ const counties = (function () {
             });
          }
          if (Array.isArray(options?.classList)) {
-            options.classList.forEach(function (aClass) {
-               newElement.classList.add(aClass);
-            });
+            newElement.classList.add(...options.classList);
          }
          newElement.replaceChildren(...(
             Array.isArray(options?.children)
