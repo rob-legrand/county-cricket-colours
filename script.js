@@ -365,58 +365,59 @@ document.addEventListener('DOMContentLoaded', function () {
          options.includeSections.table
          ? includedCountiesInfo
          : []
-      ).map(function (county, rank) {
-         const newPointsTableRow = document.createElement('tr');
-         newPointsTableRow.replaceChildren(
-            counties.createCountyElement({
-               elementType: 'td',
-               classList: ['centered'],
-               children: [
-                  counties.createCanvas({
-                     colours: county.colours,
-                     height: 40,
-                     isHorizontal: true,
-                     width: 40
-                  })
-               ]
-            }),
-            counties.createCountyElement({
-               elementType: 'td',
-               county: county,
-               classList: ['county-colour-name'],
-               textContent: rank + 1 ?? '-'
-            }),
-            counties.createCountyElement({
-               elementType: 'td',
-               county: county,
-               classList: ['county-colour-name'],
-               textContent: ordinalise(county.classLevel ?? '-')
-            }),
-            counties.createCountyElement({
-               elementType: 'td',
-               county: county,
-               classList: ['county-code', 'county-colour-name'],
-               textType: 'countyCode'
-            }),
-            ...Array.from(
-               {length: 3},
-               () => counties.createCountyElement({
+      ).map(
+         (county, rank) => counties.createCountyElement({
+            elementType: 'tr',
+            children: [
+               counties.createCountyElement({
+                  elementType: 'td',
+                  classList: ['centered'],
+                  children: [
+                     counties.createCanvas({
+                        colours: county.colours,
+                        height: 40,
+                        isHorizontal: true,
+                        width: 40
+                     })
+                  ]
+               }),
+               counties.createCountyElement({
                   elementType: 'td',
                   county: county,
                   classList: ['county-colour-name'],
-                  textType: 'countyName',
-                  useWelsh: options.useWelshCountyNames
+                  textContent: rank + 1 ?? '-'
+               }),
+               counties.createCountyElement({
+                  elementType: 'td',
+                  county: county,
+                  classList: ['county-colour-name'],
+                  textContent: ordinalise(county.classLevel ?? '-')
+               }),
+               counties.createCountyElement({
+                  elementType: 'td',
+                  county: county,
+                  classList: ['county-code', 'county-colour-name'],
+                  textType: 'countyCode'
+               }),
+               ...Array.from(
+                  {length: 3},
+                  () => counties.createCountyElement({
+                     elementType: 'td',
+                     county: county,
+                     classList: ['county-colour-name'],
+                     textType: 'countyName',
+                     useWelsh: options.useWelshCountyNames
+                  })
+               ),
+               counties.createCountyElement({
+                  elementType: 'td',
+                  county: county,
+                  classList: ['county-colour-name'],
+                  textType: 'country'
                })
-            ),
-            counties.createCountyElement({
-               elementType: 'td',
-               county: county,
-               classList: ['county-colour-name'],
-               textType: 'country'
-            })
-         );
-         return newPointsTableRow;
-      }));
+            ]
+         })
+      ));
 
       const scoreboardMatchups = includedCountiesInfo.map(
          (ignore, indexRight) => includedCountiesInfo.map(
