@@ -2739,11 +2739,28 @@ const counties = (function () {
          county?.backgroundColour,
          county?.borderColour,
          county?.textColour,
-         ...(
-            Array.isArray(county?.scoreboardColours)
-            ? county.scoreboardColours.map(self.flipLightness)
-            : []
-         ),
+         ...[
+            ...(
+               Array.isArray(county?.scoreboardColours)
+               ? county.scoreboardColours
+               : []
+            ),
+            ...(
+               Array.isArray(county?.backgroundColour)
+               ? [county.backgroundColour]
+               : []
+            ),
+            ...(
+               Array.isArray(county?.borderColour)
+               ? [county.borderColour]
+               : []
+            ),
+            ...(
+               Array.isArray(county?.textColour)
+               ? [county.textColour]
+               : []
+            )
+         ].map(self.flipLightness),
          self.namedColours.darkGrey,
          self.namedColours.lightGrey,
          self.namedColours.cream,
