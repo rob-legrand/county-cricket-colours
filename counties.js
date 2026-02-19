@@ -2723,6 +2723,9 @@ const counties = (function () {
          return newElement;
       },
       createInfo: () => util.deepCopy(util.createInfo(), Object.freeze),
+      flipLightness: (colour) => colour.map(
+         (colourLevel) => colourLevel + 255 - Math.max(...colour) - Math.min(...colour)
+      ),
       getNumRows: (colours) => colours.reduce(
          (numRowsSoFar, stripe) => numRowsSoFar + stripe.rows,
          0
