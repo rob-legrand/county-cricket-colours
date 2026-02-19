@@ -2739,6 +2739,11 @@ const counties = (function () {
          county?.backgroundColour,
          county?.borderColour,
          county?.textColour,
+         ...(
+            Array.isArray(county?.scoreboardColours)
+            ? county.scoreboardColours.map(self.flipLightness)
+            : []
+         ),
          self.namedColours.darkGrey,
          self.namedColours.lightGrey,
          self.namedColours.cream,
