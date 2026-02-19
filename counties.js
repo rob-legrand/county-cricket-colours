@@ -846,7 +846,12 @@ const counties = (function () {
             ],
             textColour: durGold,
             backgroundColour: durBlue,
-            borderColour: durMaroon
+            borderColour: durMaroon,
+            scoreboardColours: [
+               durBlue,
+               durGold,
+               durMaroon
+            ]
          },
          {
             countyName: 'Northumberland',
