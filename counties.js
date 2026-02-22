@@ -2764,6 +2764,12 @@ const counties = (function () {
             : county?.backgroundColour
          )
       ].filter(Array.isArray),
+      listVariedLightnesses: (colour) => Array.from(
+         {length: 256 - Math.max(...colour) + Math.min(...colour)},
+         (ignore, index) => colour.map(
+            (colourLevel) => colourLevel + index - Math.min(...colour)
+         )
+      ),
       namedColours: {
          black: [0, 0, 0],
          cream: [255, 245, 225],
