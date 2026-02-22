@@ -2753,6 +2753,26 @@ const counties = (function () {
             county?.backgroundColour,
             county?.borderColour,
             county?.textColour
+         ].filter(Array.isArray).map(
+            (colour) => self.listVariedLightnesses(colour).toSorted(
+               (colourX, colourY) => self.calcSquaredDistanceBetweenColours(
+                  colourX,
+                  colour
+               ) - self.calcSquaredDistanceBetweenColours(
+                  colourY,
+                  colour
+               )
+            )
+         ).flat(),
+         ...[
+            ...(
+               Array.isArray(county?.scoreboardColours)
+               ? county.scoreboardColours
+               : []
+            ),
+            county?.backgroundColour,
+            county?.borderColour,
+            county?.textColour
          ].filter(Array.isArray).map(self.flipLightness),
          self.namedColours.darkGrey,
          self.namedColours.lightGrey,
