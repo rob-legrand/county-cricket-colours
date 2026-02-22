@@ -2754,15 +2754,7 @@ const counties = (function () {
             county?.borderColour,
             county?.textColour
          ].filter(Array.isArray).map(
-            (colour) => self.listVariedLightnesses(colour).toSorted(
-               (colourX, colourY) => self.calcSquaredDistanceBetweenColours(
-                  colourX,
-                  colour
-               ) - self.calcSquaredDistanceBetweenColours(
-                  colourY,
-                  colour
-               )
-            )
+            (colour) => self.listVariedLightnesses(colour)
          ).flat(),
          ...[
             ...(
