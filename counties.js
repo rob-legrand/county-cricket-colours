@@ -2747,7 +2747,6 @@ const counties = (function () {
       ].filter(Array.isArray),
       listScoreboardColours: (county) => [
          ...self.listBasicScoreboardColours(county),
-         ...self.listBasicScoreboardColours(county).map(self.flipLightness),
          ...self.listBasicScoreboardColours(county).map(
             (colour) => self.listVariedLightnesses(colour)
          ).flat(),
