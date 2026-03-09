@@ -2746,45 +2746,16 @@ const counties = (function () {
          county?.textColour
       ].filter(Array.isArray),
       listScoreboardColours: (county) => [
-         ...(
-            Array.isArray(county?.scoreboardColours)
-            ? county.scoreboardColours
-            : []
-         ),
-         county?.backgroundColour,
-         county?.borderColour,
-         county?.textColour,
-         ...[
-            ...(
-               Array.isArray(county?.scoreboardColours)
-               ? county.scoreboardColours
-               : []
-            ),
-            county?.backgroundColour,
-            county?.borderColour,
-            county?.textColour
-         ].filter(Array.isArray).map(
+         ...self.listBasicScoreboardColours(county),
+         ...self.listBasicScoreboardColours(county).map(
             (colour) => self.listVariedLightnesses(colour)
          ).flat(),
-         ...[
-            ...(
-               Array.isArray(county?.scoreboardColours)
-               ? county.scoreboardColours
-               : []
-            ),
-            county?.backgroundColour,
-            county?.borderColour,
-            county?.textColour
-         ].filter(Array.isArray).map(self.flipLightness),
+         ...self.listBasicScoreboardColours(county).map(self.flipLightness),
          self.namedColours.darkGrey,
          self.namedColours.lightGrey,
          self.namedColours.cream,
          self.namedColours.black,
-         (
-            Array.isArray(county?.scoreboardColours)
-            ? county.scoreboardColours[0]
-            : county?.backgroundColour
-         )
+         self.listBasicScoreboardColours(county)[0]
       ].filter(Array.isArray),
       listVariedLightnesses: (colour) => Array.from(
          {length: 256 - Math.max(...colour) + Math.min(...colour)},
