@@ -2770,6 +2770,18 @@ const counties = (function () {
             (colourLevel) => colourLevel + index - Math.min(...colour)
          )
       ),
+      listVariedLightnessesLower: (colour) => Array.from(
+         {length: Math.min(...colour)},
+         (ignore, index) => colour.map(
+            (colourLevel) => colourLevel + index - Math.min(...colour)
+         )
+      ),
+      listVariedLightnessesHigher: (colour) => Array.from(
+         {length: 255 - Math.max(...colour)},
+         (ignore, index) => colour.map(
+            (colourLevel) => colourLevel + index + 1
+         )
+      ),
       namedColours: {
          black: [0, 0, 0],
          cream: [255, 245, 225],
