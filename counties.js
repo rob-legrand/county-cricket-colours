@@ -2749,13 +2749,8 @@ const counties = (function () {
          ...self.listBasicScoreboardColours(county),
          ...self.listBasicScoreboardColours(county).map(
             (colour) => [
-               ...self.listVariedLightnesses(colour).slice(
-                  0,
-                  Math.min(...colour)
-               ).toReversed(),
-               ...self.listVariedLightnesses(colour).slice(
-                  Math.min(...colour) + 1
-               )
+               ...self.listVariedLightnessesLower(colour).toReversed(),
+               ...self.listVariedLightnessesHigher(colour)
             ]
          ).flat(),
          self.namedColours.darkGrey,
