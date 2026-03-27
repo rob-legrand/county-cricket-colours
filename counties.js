@@ -2759,12 +2759,6 @@ const counties = (function () {
          self.namedColours.black,
          self.listBasicScoreboardColours(county)[0]
       ].filter(Array.isArray),
-      listVariedLightnesses: (colour) => Array.from(
-         {length: 256 - Math.max(...colour) + Math.min(...colour)},
-         (ignore, index) => colour.map(
-            (colourLevel) => colourLevel + index - Math.min(...colour)
-         )
-      ),
       listVariedLightnessesLower: (colour) => Array.from(
          {length: Math.min(...colour)},
          (ignore, index) => colour.map(
