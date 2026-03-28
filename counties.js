@@ -2735,6 +2735,17 @@ const counties = (function () {
          (numRowsSoFar, stripe) => numRowsSoFar + stripe.rows,
          0
       ),
+      isColour: (colour) => (
+         Array.isArray(colour)
+         && colour.length === 3
+         && colour.every(
+            (colourLevel) => (
+               Number.isInteger(colourLevel)
+               && colourLevel >= 0
+               && colourLevel < 256
+            )
+         )
+      ),
       listBasicScoreboardColours: (county) => [
          ...(
             Array.isArray(county?.scoreboardColours)
