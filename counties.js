@@ -2528,23 +2528,21 @@ const counties = (function () {
          (
             !Array.isArray(scoreboardColours)
             || scoreboardColours.length < 1
-            || !Array.isArray(scoreboardColours[0])
-            || scoreboardColours[0].length < 3
          )
          ? self.namedColours.cream
-         : (
-            !Array.isArray(colourToAvoid)
-            || scoreboardColours.length < 2
-            || self.calcSquaredDistanceBetweenColours(
-               scoreboardColours[0],
-               colourToAvoid
-            ) > 5175
-         )
-         ? scoreboardColours[0]
-         : self.chooseContrastingScoreboardColour(
-            scoreboardColours.slice(1),
+         : !scoreboardColours.every(self.isColour)
+         ? self.chooseContrastingScoreboardColour(
+            scoreboardColours.filter(self.isColour),
             colourToAvoid
          )
+         : !self.isColour(colourToAvoid)
+         ? scoreboardColours[0]
+         : scoreboardColours.find(
+            (colour) => self.calcSquaredDistanceBetweenColours(
+               colour,
+               colourToAvoid
+            ) > 5175
+         ) ?? scoreboardColours[0]
       ),
       chooseScoreboardColour: (county, otherCounty) => (
          typeof otherCounty === 'object'
