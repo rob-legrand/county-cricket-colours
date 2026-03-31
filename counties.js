@@ -2635,7 +2635,8 @@ const counties = (function () {
          }
          return newCanvas;
       },
-      createCountyElement: function (options) {
+      createCountyElement: (options) => self.createElement(options),
+      createElement: function (options) {
          const newElement = document.createElement(options?.elementType ?? 'div');
          if (typeof options?.attributes === 'object') {
             Object.entries(options.attributes).forEach(function (attribute) {
