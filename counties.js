@@ -2609,7 +2609,9 @@ const counties = (function () {
                   }
                   return totalRowsSoFar + stripe.rows * pixelsPerRow;
                },
-               Math.round(newCanvas.height - (numRows + self.getNumRows(args.colours)) * pixelsPerRow / 2)
+               Math.round(
+                  newCanvas.height - (numRows + self.getNumRows(args.colours)) * pixelsPerRow / 2
+               )
             );
          }
          if (args.isVertical) {
@@ -2630,7 +2632,9 @@ const counties = (function () {
                   }
                   return totalRowsSoFar + stripe.rows * pixelsPerRow;
                },
-               Math.round(newCanvas.width - (numRows + self.getNumRows(args.colours)) * pixelsPerRow / 2)
+               Math.round(
+                  newCanvas.width - (numRows + self.getNumRows(args.colours)) * pixelsPerRow / 2
+               )
             );
          }
          return newCanvas;
@@ -2720,7 +2724,11 @@ const counties = (function () {
                ? ''
                : options?.colourStyle === 'scoreboard'
                ? scoreboardColour
-               : options.county.borderColour ?? options.county.backgroundColour ?? self.namedColours.cream
+               : (
+                  options.county.borderColour
+                  ?? options.county.backgroundColour
+                  ?? self.namedColours.cream
+               )
             )
             : ''
          );
