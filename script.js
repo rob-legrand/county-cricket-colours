@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function () {
    includeClassesFieldset.replaceChildren(
       counties.createCountyElement({
          elementType: 'legend',
-         textContent: 'Include classes'
+         children: ['Include classes']
       }),
       ...allClassLevels.map(
          (classLevel) => counties.createCountyElement({
@@ -209,7 +209,7 @@ document.addEventListener('DOMContentLoaded', function () {
                }),
                counties.createCountyElement({
                   classList: ['county-name'],
-                  textContent: colours.text
+                  children: [colours.text]
                })
             ]
          })
@@ -224,7 +224,7 @@ document.addEventListener('DOMContentLoaded', function () {
             classList: ['county-class'],
             children: [
                counties.createCountyElement({
-                  textContent: ordinalise(classLevel) + ' class'
+                  children: [ordinalise(classLevel) + ' class']
                }),
                counties.createCountyElement({
                   elementType: 'ul',
@@ -238,7 +238,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         children: [
                            counties.createCountyElement({
                               classList: ['county-rank'],
-                              textContent: rank + 1 ?? '-'
+                              children: [rank + 1 ?? '-']
                            }),
                            counties.createCountyElement({
                               county: county,
@@ -344,7 +344,7 @@ document.addEventListener('DOMContentLoaded', function () {
                }),
                counties.createCountyElement({
                   classList: ['county-name'],
-                  textContent: county.classLevel ?? '-'
+                  children: [county.classLevel ?? '-']
                }),
                counties.createCountyElement({
                   county: county,
@@ -385,13 +385,13 @@ document.addEventListener('DOMContentLoaded', function () {
                   elementType: 'td',
                   county: county,
                   classList: ['county-colour-name'],
-                  textContent: rank + 1 ?? '-'
+                  children: [rank + 1 ?? '-']
                }),
                counties.createCountyElement({
                   elementType: 'td',
                   county: county,
                   classList: ['county-colour-name'],
-                  textContent: ordinalise(county.classLevel ?? '-')
+                  children: [ordinalise(county.classLevel ?? '-')]
                }),
                counties.createCountyElement({
                   elementType: 'td',
