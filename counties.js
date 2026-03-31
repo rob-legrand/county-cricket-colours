@@ -176,7 +176,7 @@ const counties = (function () {
 
    const util = Object.freeze({
       convertToRgb: (colour) => (
-         Array.isArray(colour)
+         self.isColour(colour)
          ? (
             'rgb('
             + colour[0] + ', '
@@ -2753,7 +2753,7 @@ const counties = (function () {
          county?.backgroundColour,
          county?.borderColour,
          county?.textColour
-      ].filter(Array.isArray),
+      ].filter(self.isColour),
       listScoreboardColours: (county) => [
          ...self.listBasicScoreboardColours(county),
          ...self.listBasicScoreboardColours(county).map(
@@ -2767,7 +2767,7 @@ const counties = (function () {
          self.namedColours.cream,
          self.namedColours.black,
          self.listBasicScoreboardColours(county)[0]
-      ].filter(Array.isArray),
+      ].filter(self.isColour),
       listVariedLightnessesLower: (colour) => Array.from(
          {length: Math.min(...colour)},
          (ignore, index) => colour.map(
