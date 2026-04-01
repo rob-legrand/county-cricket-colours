@@ -1,4 +1,4 @@
-/*jslint browser */
+/*jslint browser, maxlen: 100 */
 
 import {counties} from './counties.js';
 
