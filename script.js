@@ -58,15 +58,15 @@ document.addEventListener('DOMContentLoaded', function () {
    const includeMatchupsCheckbox = document.querySelector('#include-matchups-section');
    const includeClassesFieldset = document.querySelector('#include-classes');
    includeClassesFieldset.replaceChildren(
-      counties.createCountyElement({
+      counties.createElement({
          elementType: 'legend',
          children: ['Include classes']
       }),
       ...allClassLevels.map(
-         (classLevel) => counties.createCountyElement({
+         (classLevel) => counties.createElement({
             elementType: 'label',
             children: [
-               counties.createCountyElement({
+               counties.createElement({
                   elementType: 'input',
                   attributes: {type: 'checkbox'}
                }),
@@ -198,7 +198,7 @@ document.addEventListener('DOMContentLoaded', function () {
             )
          ]
       ).flat().map(
-         (colours) => counties.createCountyElement({
+         (colours) => counties.createElement({
             classList: ['county'],
             children: [
                counties.createCanvas({
@@ -207,7 +207,7 @@ document.addEventListener('DOMContentLoaded', function () {
                   isHorizontal: true,
                   width: 144
                }),
-               counties.createCountyElement({
+               counties.createElement({
                   classList: ['county-name'],
                   children: [colours.text]
                })
@@ -220,27 +220,27 @@ document.addEventListener('DOMContentLoaded', function () {
          ? includedClassLevels
          : []
       ).map(
-         (classLevel) => counties.createCountyElement({
+         (classLevel) => counties.createElement({
             classList: ['county-class'],
             children: [
-               counties.createCountyElement({
+               counties.createElement({
                   children: [ordinalise(classLevel) + ' class']
                }),
-               counties.createCountyElement({
+               counties.createElement({
                   elementType: 'ul',
                   classList: ['county-list'],
                   children: includedCountiesInfo.filter(
                      (county) => county.classLevel === classLevel
                   ).map(
-                     (county, rank) => counties.createCountyElement({
+                     (county, rank) => counties.createElement({
                         elementType: 'li',
                         classList: ['county'],
                         children: [
-                           counties.createCountyElement({
+                           counties.createElement({
                               classList: ['county-rank'],
                               children: [rank + 1 ?? '-']
                            }),
-                           counties.createCountyElement({
+                           counties.createElement({
                               county: county,
                               classList: ['county-code', 'county-colour-name'],
                               textType: 'countyCode'
@@ -251,7 +251,7 @@ document.addEventListener('DOMContentLoaded', function () {
                               isHorizontal: true,
                               width: 40
                            }),
-                           counties.createCountyElement({
+                           counties.createElement({
                               county: county,
                               classList: ['county-name'],
                               textType: 'countyName',
@@ -271,7 +271,7 @@ document.addEventListener('DOMContentLoaded', function () {
          ? includedCountiesInfo
          : []
       ).map(
-         (county) => counties.createCountyElement({
+         (county) => counties.createElement({
             elementType: 'li',
             classList: ['county'],
             children: [
@@ -337,22 +337,22 @@ document.addEventListener('DOMContentLoaded', function () {
                   height: 1,
                   width: 1
                }),
-               counties.createCountyElement({
+               counties.createElement({
                   county: county,
                   classList: ['county-code', 'county-colour-name'],
                   textType: 'countyCode'
                }),
-               counties.createCountyElement({
+               counties.createElement({
                   classList: ['county-name'],
                   children: [county.classLevel ?? '-']
                }),
-               counties.createCountyElement({
+               counties.createElement({
                   county: county,
                   classList: ['county-colour-name'],
                   textType: 'countyName',
                   useWelsh: options.useWelshCountyNames
                }),
-               counties.createCountyElement({
+               counties.createElement({
                   county: county,
                   classList: ['county-colour-name'],
                   textType: 'countyAbbreviation'
@@ -366,10 +366,10 @@ document.addEventListener('DOMContentLoaded', function () {
          ? includedCountiesInfo
          : []
       ).map(
-         (county, rank) => counties.createCountyElement({
+         (county, rank) => counties.createElement({
             elementType: 'tr',
             children: [
-               counties.createCountyElement({
+               counties.createElement({
                   elementType: 'td',
                   classList: ['centered'],
                   children: [
@@ -381,19 +381,19 @@ document.addEventListener('DOMContentLoaded', function () {
                      })
                   ]
                }),
-               counties.createCountyElement({
+               counties.createElement({
                   elementType: 'td',
                   county: county,
                   classList: ['county-colour-name'],
                   children: [rank + 1 ?? '-']
                }),
-               counties.createCountyElement({
+               counties.createElement({
                   elementType: 'td',
                   county: county,
                   classList: ['county-colour-name'],
                   children: [ordinalise(county.classLevel ?? '-')]
                }),
-               counties.createCountyElement({
+               counties.createElement({
                   elementType: 'td',
                   county: county,
                   classList: ['county-code', 'county-colour-name'],
@@ -401,7 +401,7 @@ document.addEventListener('DOMContentLoaded', function () {
                }),
                ...Array.from(
                   {length: 3},
-                  () => counties.createCountyElement({
+                  () => counties.createElement({
                      elementType: 'td',
                      county: county,
                      classList: ['county-colour-name'],
@@ -409,7 +409,7 @@ document.addEventListener('DOMContentLoaded', function () {
                      useWelsh: options.useWelshCountyNames
                   })
                ),
-               counties.createCountyElement({
+               counties.createElement({
                   elementType: 'td',
                   county: county,
                   classList: ['county-colour-name'],
@@ -431,10 +431,10 @@ document.addEventListener('DOMContentLoaded', function () {
          ? scoreboardMatchups
          : []
       ).map(
-         (indices) => counties.createCountyElement({
+         (indices) => counties.createElement({
             classList: ['matchup'],
             children: indices.map(
-               (index, which) => counties.createCountyElement({
+               (index, which) => counties.createElement({
                   county: includedCountiesInfo[index],
                   classList: ['county-code', 'county-colour-name'],
                   textType: 'countyCode',
