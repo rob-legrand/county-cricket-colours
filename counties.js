@@ -2688,9 +2688,6 @@ const counties = (function () {
                : options?.county?.countyName ?? ''
             )]
          ));
-         if (typeof options?.title === 'string') {
-            newElement.title = options.title;
-         }
          const scoreboardColour = self.chooseScoreboardColour(
             options?.county,
             options?.opponentCounty
