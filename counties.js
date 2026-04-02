@@ -2643,8 +2643,8 @@ const counties = (function () {
       createElement: function (options) {
          const newElement = document.createElement(options?.elementType ?? 'div');
          if (typeof options?.attributes === 'object') {
-            Object.entries(options.attributes).forEach(function (attribute) {
-               newElement.setAttribute(attribute[0], attribute[1]);
+            Object.entries(options.attributes).forEach(function ([name, value]) {
+               newElement.setAttribute(name, value);
             });
          }
          if (Array.isArray(options?.classList)) {
