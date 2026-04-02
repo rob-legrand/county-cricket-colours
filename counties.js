@@ -2654,12 +2654,7 @@ const counties = (function () {
             Array.isArray(options?.children)
             ? options.children
             : [document.createTextNode(
-               (
-                  typeof options?.textContent === 'string'
-                  || Number.isFinite(options?.textContent)
-               )
-               ? options.textContent
-               : options?.textType === 'countyName'
+               options?.textType === 'countyName'
                ? (
                   options?.useWelsh
                   ? options.county?.countyNameInWelsh
