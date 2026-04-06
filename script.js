@@ -426,27 +426,44 @@ document.addEventListener('DOMContentLoaded', function () {
       ).flat().filter(
          (indices) => indices[0] !== indices[1]
       );
-      matchupsSection.replaceChildren(...(
-         options.includeSections.matchups
-         ? scoreboardMatchups
-         : []
-      ).map(
-         (indices) => counties.createElement({
-            classList: ['matchup'],
-            children: indices.map(
-               (index, which) => counties.createElement({
-                  county: includedCountiesInfo[index],
+      matchupsSection.replaceChildren(
+         ...(
+            options.includeSections.matchups
+            ? includedCountiesInfo
+            : []
+         ).map(
+            (county) => counties.createElement({
+               classList: ['matchup'],
+               children: [counties.createElement({
+                  county: county,
                   classList: ['county-code', 'county-colour-name'],
                   textType: 'countyCode',
-                  colourStyle: 'scoreboard',
-                  opponentCounty: (
-                     which === 1
-                     && includedCountiesInfo[indices[0]]
-                  )
-               })
-            )
-         })
-      ));
+                  colourStyle: 'scoreboard'
+               })]
+            })
+         ),
+         ...(
+            options.includeSections.matchups
+            ? scoreboardMatchups
+            : []
+         ).map(
+            (indices) => counties.createElement({
+               classList: ['matchup'],
+               children: indices.map(
+                  (index, which) => counties.createElement({
+                     county: includedCountiesInfo[index],
+                     classList: ['county-code', 'county-colour-name'],
+                     textType: 'countyCode',
+                     colourStyle: 'scoreboard',
+                     opponentCounty: (
+                        which === 1
+                        && includedCountiesInfo[indices[0]]
+                     )
+                  })
+               )
+            })
+         )
+      );
 
       coloursSection.style.display = (
          options.includeSections.colours
