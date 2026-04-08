@@ -2766,8 +2766,7 @@ const counties = (function () {
          self.namedColours.darkGrey,
          self.namedColours.lightGrey,
          self.namedColours.cream,
-         self.namedColours.black,
-         self.listBasicScoreboardColours(county)[0]
+         self.namedColours.black
       ].filter(self.isColour),
       listVariedLightnessesLower: (colour) => Array.from(
          {length: Math.min(...colour)},
