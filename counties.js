@@ -2745,6 +2745,10 @@ const counties = (function () {
             )
          )
       ),
+      isColourList: (list) => (
+         Array.isArray(list)
+         && list.every(self.isColour)
+      ),
       listBasicScoreboardColours: (county) => [
          ...(
             Array.isArray(county?.scoreboardColours)
