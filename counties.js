@@ -2758,7 +2758,9 @@ const counties = (function () {
          county?.backgroundColour,
          county?.borderColour,
          county?.textColour
-      ].filter(self.isColour),
+      ].filter(
+         (x) => self.isColour(x) || self.isColourList(x)
+      ),
       listScoreboardColours: (county) => [
          ...self.listBasicScoreboardColours(county),
          ...self.listBasicScoreboardColours(county).map(
@@ -2771,7 +2773,9 @@ const counties = (function () {
          self.namedColours.lightGrey,
          self.namedColours.cream,
          self.namedColours.black
-      ].filter(self.isColour),
+      ].filter(
+         (x) => self.isColour(x) || self.isColourList(x)
+      ),
       listVariedLightnessesLower: (colour) => Array.from(
          {length: Math.min(...colour)},
          (ignore, index) => colour.map(
