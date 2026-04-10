@@ -2484,6 +2484,12 @@ const counties = (function () {
             borderColour: mlnBlue
          }
       ],
+      crossProduct: (left, right) => left.flatMap(
+         // Create an array with all possible pairs of elements from arrays left and right.
+         (leftOne) => right.map(
+            (rightOne) => [leftOne, rightOne]
+         )
+      ),
       deepCopy: (oldThing, func) => (
          // Create a new object, deeply copied, with func applied at each level.
          typeof func === 'function'
