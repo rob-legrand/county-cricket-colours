@@ -2645,6 +2645,13 @@ const counties = (function () {
          }
          return newCanvas;
       },
+      createColourList: (list) => (
+         self.isColour(list)
+         ? [list]
+         : Array.isArray(list)
+         ? list.filter(self.isColour)
+         : []
+      ),
       createCountyElement: (options) => self.createElement(options),
       createElement: function (options) {
          const newElement = document.createElement(options?.elementType ?? 'div');
