@@ -428,9 +428,7 @@ document.addEventListener('DOMContentLoaded', function () {
                (ignore0, indexInner) => [indexInner, indexOuter]
             )
          ]
-      ).flat().filter(
-         (indices) => indices[0] !== indices[1]
-      );
+      ).flat();
       matchupsSection.replaceChildren(
          ...(
             options.includeSections.matchups
