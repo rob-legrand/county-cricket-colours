@@ -420,9 +420,14 @@ document.addEventListener('DOMContentLoaded', function () {
       ));
 
       const scoreboardMatchups = includedCountiesInfo.map(
-         (ignore, indexRight) => includedCountiesInfo.map(
-            (ignore0, indexLeft) => [indexLeft, indexRight]
-         )
+         (ignore, indexOuter) => [
+            ...includedCountiesInfo.map(
+               (ignore0, indexInner) => [indexOuter, indexInner]
+            ),
+            ...includedCountiesInfo.map(
+               (ignore0, indexInner) => [indexInner, indexOuter]
+            )
+         ]
       ).flat().filter(
          (indices) => indices[0] !== indices[1]
       );
