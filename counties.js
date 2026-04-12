@@ -271,6 +271,19 @@ const counties = (function () {
          return newElement;
       },
       createInfo: () => util.deepCopy(countiesInfo, Object.freeze),
+      findMostDifferentColourPair: (leftColours, rightColours) => util.crossProduct(
+         self.createColourList(leftColours),
+         self.createColourList(rightColours)
+      ).reduce(
+         (bestPair, newPair) => (
+            (
+               self.calcSquaredDistanceBetweenColours(...newPair)
+               > self.calcSquaredDistanceBetweenColours(...bestPair)
+            )
+            ? newPair
+            : bestPair
+         )
+      ),
       flipLightness: (colour) => colour.map(
          (colourLevel) => colourLevel + 255 - Math.max(...colour) - Math.min(...colour)
       ),
