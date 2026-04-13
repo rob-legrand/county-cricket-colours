@@ -278,6 +278,13 @@ const counties = (function () {
          return newElement;
       },
       createInfo: () => util.deepCopy(countiesInfo, Object.freeze),
+      findFirstColour: (list) => (
+         self.isColour(list)
+         ? list
+         : Array.isArray(list)
+         ? self.findFirstColour(list?.[0]) ?? self.namedColours.cream
+         : self.namedColours.cream
+      ),
       findMostDifferentColourPair: (leftColours, rightColours) => util.crossProduct(
          self.createColourList(leftColours),
          self.createColourList(rightColours)
