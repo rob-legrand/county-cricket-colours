@@ -353,6 +353,10 @@ const counties = (function () {
       ].filter(
          (x) => self.isColour(x) || self.isColourList(x)
       ),
+      listVariedLightnesses: (colour) => [
+         ...self.listVariedLightnessesLower(colour).toReversed(),
+         ...self.listVariedLightnessesHigher(colour)
+      ],
       listVariedLightnessesLower: (colour) => Array.from(
          {length: Math.min(...colour)},
          (ignore, index) => colour.map(
