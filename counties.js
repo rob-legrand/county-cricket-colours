@@ -183,6 +183,13 @@ const counties = (function () {
          ? list.filter(self.isColour)
          : []
       ),
+      createColourListList: (list) => (
+         self.isColour(list)
+         ? [self.createColourList(list)]
+         : Array.isArray(list)
+         ? list.map(self.createColourList)
+         : []
+      ),
       createCountyElement: (options) => self.createElement(options),
       createElement: function (options) {
          const newElement = document.createElement(options?.elementType ?? 'div');
