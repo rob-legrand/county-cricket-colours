@@ -82,7 +82,11 @@ const counties = (function () {
          ) ?? scoreboardColours[0]
       ),
       chooseContrastingScoreboardColours: (homeColours, awayColourses) => (
-         self.findMostDifferentColourPair(
+         (!self.isColour(homeColours) && !self.isColourList(homeColours))
+         ? [self.namedColours.cream, self.findFirstColour(awayColourses)]
+         : !self.isColourListList(awayColourses)
+         ? [self.findFirstColour(homeColours), self.namedColours.cream]
+         : self.findMostDifferentColourPair(
             homeColours,
             awayColourses.find(
                (awayColours) => self.calcSquaredDistanceBetweenColours(
