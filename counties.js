@@ -341,10 +341,7 @@ const counties = (function () {
       listScoreboardColours: (county) => [
          ...self.listBasicScoreboardColours(county),
          ...self.listBasicScoreboardColours(county).map(
-            (colour) => [
-               ...self.listVariedLightnessesLower(colour).toReversed(),
-               ...self.listVariedLightnessesHigher(colour)
-            ]
+            self.listVariedLightnesses
          ).flat(),
          self.namedColours.darkGrey,
          self.namedColours.lightGrey,
