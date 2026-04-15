@@ -335,10 +335,12 @@ const counties = (function () {
       ),
       isColourList: (list) => (
          Array.isArray(list)
+         && list.length > 0
          && list.every(self.isColour)
       ),
       isColourListList: (list) => (
          Array.isArray(list)
+         && list.length > 0
          && list.every(
             (x) => self.isColour(x) || self.isColourList(x)
          )
