@@ -107,22 +107,20 @@ const counties = (function () {
          : self.listScoreboardColours(county)[0]
       ),
       chooseScoreboardColours: (homeCounty, awayCounty) => (
-         (typeof homeCounty === 'object' && typeof awayCounty === 'object')
+         [homeCounty, awayCounty].every(
+            (county) => self.listBasicScoreboardColours(county).length > 0
+         )
          ? self.chooseContrastingScoreboardColours(
             self.listScoreboardColours(homeCounty)[0],
             self.listScoreboardColours(awayCounty)
          )
-         : typeof homeCounty === 'object'
-         ? [
-            self.findFirstColour(self.listScoreboardColours(homeCounty)),
-            self.namedColours.cream
-         ]
-         : typeof awayCounty === 'object'
-         ? [
-            self.namedColours.cream,
-            self.findFirstColour(self.listScoreboardColours(awayCounty))
-         ]
-         : [self.namedColours.cream, self.namedColours.cream]
+         : [homeCounty, awayCounty].map(
+            (county) => (
+               self.listBasicScoreboardColours(county).length > 0
+               ? self.findFirstColour(self.listScoreboardColours(county))
+               : self.namedColours.cream
+            )
+         )
       ),
       createCanvas: function (args) {
          const numRows = 20;
