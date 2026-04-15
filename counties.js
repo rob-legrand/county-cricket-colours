@@ -106,6 +106,24 @@ const counties = (function () {
          )
          : self.listScoreboardColours(county)[0]
       ),
+      chooseScoreboardColours: (homeCounty, awayCounty) => (
+         (typeof homeCounty === 'object' && typeof awayCounty === 'object')
+         ? self.chooseContrastingScoreboardColours(
+            self.listScoreboardColours(homeCounty)[0],
+            self.listScoreboardColours(awayCounty)
+         )
+         : typeof homeCounty === 'object'
+         ? [
+            self.findFirstColour(self.listScoreboardColours(homeCounty)),
+            self.namedColours.cream
+         ]
+         : typeof awayCounty === 'object'
+         ? [
+            self.namedColours.cream,
+            self.findFirstColour(self.listScoreboardColours(awayCounty))
+         ]
+         : [self.namedColours.cream, self.namedColours.cream]
+      ),
       createCanvas: function (args) {
          const numRows = 20;
          const pixelsPerRow = Math.ceil(Math.min(
