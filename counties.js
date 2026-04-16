@@ -269,14 +269,15 @@ const counties = (function () {
          ));
          const scoreboardColour = (
             typeof options?.homeCounty === 'object'
-            ? self.chooseScoreboardColour(
-               options?.county,
-               options.homeCounty
-            )
-            : typeof options?.awayCounty === 'object'
-            ? self.chooseScoreboardColour(
+            ? self.chooseScoreboardColours(
+               options.homeCounty,
                options?.county
-            )
+            )[1]
+            : typeof options?.awayCounty === 'object'
+            ? self.chooseScoreboardColours(
+               options?.county,
+               options.awayCounty
+            )[0]
             : self.chooseScoreboardColour(
                options?.county,
                options?.opponentCounty
