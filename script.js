@@ -461,6 +461,14 @@ document.addEventListener('DOMContentLoaded', function () {
                      opponentCounty: (
                         which === 1
                         && includedCountiesInfo[indices[0]]
+                     ),
+                     homeCounty: (
+                        which === 1
+                        && includedCountiesInfo[indices[0]]
+                     ),
+                     awayCounty: (
+                        which === 0
+                        && includedCountiesInfo[indices[1]]
                      )
                   })
                )
