@@ -267,9 +267,20 @@ const counties = (function () {
                : options?.county?.countyName ?? ''
             )]
          ));
-         const scoreboardColour = self.chooseScoreboardColour(
-            options?.county,
-            options?.opponentCounty
+         const scoreboardColour = (
+            typeof options?.homeCounty === 'object'
+            ? self.chooseScoreboardColour(
+               options?.county,
+               options.homeCounty
+            )
+            : typeof options?.awayCounty === 'object'
+            ? self.chooseScoreboardColour(
+               options?.county
+            )
+            : self.chooseScoreboardColour(
+               options?.county,
+               options?.opponentCounty
+            )
          );
          newElement.style.color = util.convertToRgb(
             typeof options?.county === 'object'
