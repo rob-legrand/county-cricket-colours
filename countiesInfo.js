@@ -457,8 +457,7 @@ const countiesInfo = (function () {
          backgroundColour: lanBlue,
          borderColour: lanGreen,
          scoreboardColours: [
-            lanBlue,
-            lanRed,
+            [lanBlue, lanRed],
             lanGreen
          ]
       },
