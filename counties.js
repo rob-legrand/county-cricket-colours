@@ -350,6 +350,7 @@ const counties = (function () {
          (numRowsSoFar, stripe) => numRowsSoFar + stripe.rows,
          0
       ),
+      hasCountyColours: (county) => self.listBasicScoreboardColours(county).length > 0,
       isColour: (colour) => (
          Array.isArray(colour)
          && colour.length === 3
