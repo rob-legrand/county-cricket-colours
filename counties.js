@@ -99,7 +99,7 @@ const counties = (function () {
          )
       ),
       chooseScoreboardColour: (county, otherCounty) => (
-         typeof otherCounty === 'object'
+         self.hasCountyColours(otherCounty)
          ? self.chooseContrastingScoreboardColour(
             self.listScoreboardColours(county),
             self.chooseScoreboardColour(otherCounty)
@@ -107,16 +107,14 @@ const counties = (function () {
          : self.listScoreboardColours(county)[0]
       ),
       chooseScoreboardColours: (homeCounty, awayCounty) => (
-         [homeCounty, awayCounty].every(
-            (county) => self.listBasicScoreboardColours(county).length > 0
-         )
+         [homeCounty, awayCounty].every(self.hasCountyColours)
          ? self.chooseContrastingScoreboardColours(
             self.listScoreboardColours(homeCounty)[0],
             self.listScoreboardColours(awayCounty)
          )
          : [homeCounty, awayCounty].map(
             (county) => (
-               self.listBasicScoreboardColours(county).length > 0
+               self.hasCountyColours(county)
                ? self.findFirstColour(self.listScoreboardColours(county))
                : self.namedColours.cream
             )
@@ -268,12 +266,12 @@ const counties = (function () {
             )]
          ));
          const scoreboardColour = (
-            typeof options?.homeCounty === 'object'
+            self.hasCountyColours(options?.homeCounty)
             ? self.chooseScoreboardColours(
                options.homeCounty,
                options?.county
             )[1]
-            : typeof options?.awayCounty === 'object'
+            : self.hasCountyColours(options?.awayCounty)
             ? self.chooseScoreboardColours(
                options?.county,
                options.awayCounty
@@ -284,7 +282,7 @@ const counties = (function () {
             )
          );
          newElement.style.color = util.convertToRgb(
-            typeof options?.county === 'object'
+            self.hasCountyColours(options?.county)
             ? (
                options?.colourStyle === 'none'
                ? ''
@@ -295,7 +293,7 @@ const counties = (function () {
             : ''
          );
          newElement.style.backgroundColor = util.convertToRgb(
-            typeof options?.county === 'object'
+            self.hasCountyColours(options?.county)
             ? (
                options?.colourStyle === 'none'
                ? ''
@@ -306,7 +304,7 @@ const counties = (function () {
             : ''
          );
          newElement.style.borderColor = util.convertToRgb(
-            typeof options?.county === 'object'
+            self.hasCountyColours(options?.county)
             ? (
                options?.colourStyle === 'none'
                ? ''
