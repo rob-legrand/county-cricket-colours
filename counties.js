@@ -325,7 +325,7 @@ const counties = (function () {
          self.isColour(list)
          ? list
          : Array.isArray(list)
-         ? self.findFirstColour(list?.[0]) ?? self.namedColours.cream
+         ? self.findFirstColour(list?.[0])
          : self.namedColours.cream
       ),
       findMostDifferentColourPair: (leftColours, rightColours) => util.crossProduct(
