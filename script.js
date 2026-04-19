@@ -458,10 +458,6 @@ document.addEventListener('DOMContentLoaded', function () {
                      classList: ['county-code', 'county-colour-name'],
                      textType: 'countyCode',
                      colourStyle: 'scoreboard',
-                     opponentCounty: (
-                        which === 1
-                        && includedCountiesInfo[indices[0]]
-                     ),
                      homeCounty: (
                         which === 1
                         && includedCountiesInfo[indices[0]]
