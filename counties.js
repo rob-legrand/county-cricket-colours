@@ -271,14 +271,10 @@ const counties = (function () {
                options.homeCounty,
                options?.county
             )[1]
-            : self.hasCountyColours(options?.awayCounty)
-            ? self.chooseScoreboardColours(
+            : self.chooseScoreboardColours(
                options?.county,
-               options.awayCounty
+               options?.awayCounty
             )[0]
-            : self.findFirstColour(
-               self.listScoreboardColours(options.county)
-            )
          );
          newElement.style.color = util.convertToRgb(
             self.hasCountyColours(options?.county)
