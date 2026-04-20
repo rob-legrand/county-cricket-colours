@@ -276,9 +276,8 @@ const counties = (function () {
                options?.county,
                options.awayCounty
             )[0]
-            : self.chooseScoreboardColour(
-               options?.county,
-               options?.opponentCounty
+            : self.findFirstColour(
+               self.listScoreboardColours(options.county)
             )
          );
          newElement.style.color = util.convertToRgb(
