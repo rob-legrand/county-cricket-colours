@@ -45,16 +45,16 @@ const counties = (function () {
    });
 
    const self = Object.freeze({
-      calcSquaredDistanceBetweenColours: (colorA, colorB) => (
+      calcColourDifference: (colorA, colorB) => (
          (colorA[0] - colorB[0]) ** 2
          + (colorA[1] - colorB[1]) ** 2
          + (colorA[2] - colorB[2]) ** 2
       ),
       chooseContrastingColour: (primaryColour) => (
-         self.calcSquaredDistanceBetweenColours(
+         self.calcColourDifference(
             primaryColour,
             self.namedColours.black
-         ) > self.calcSquaredDistanceBetweenColours(
+         ) > self.calcColourDifference(
             primaryColour,
             self.namedColours.white
          )
@@ -75,7 +75,7 @@ const counties = (function () {
          : !self.isColour(colourToAvoid)
          ? scoreboardColours[0]
          : scoreboardColours.find(
-            (colour) => self.calcSquaredDistanceBetweenColours(
+            (colour) => self.calcColourDifference(
                colour,
                colourToAvoid
             ) > 5175
@@ -89,7 +89,7 @@ const counties = (function () {
          : self.findMostDifferentColourPair(
             homeColours,
             awayColourses.find(
-               (awayColours) => self.calcSquaredDistanceBetweenColours(
+               (awayColours) => self.calcColourDifference(
                   ...self.findMostDifferentColourPair(
                      homeColours,
                      awayColours
@@ -334,8 +334,8 @@ const counties = (function () {
       ).reduce(
          (bestPair, newPair) => (
             (
-               self.calcSquaredDistanceBetweenColours(...newPair)
-               > self.calcSquaredDistanceBetweenColours(...bestPair)
+               self.calcColourDifference(...newPair)
+               > self.calcColourDifference(...bestPair)
             )
             ? newPair
             : bestPair
