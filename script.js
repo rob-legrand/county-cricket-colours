@@ -422,12 +422,14 @@ document.addEventListener('DOMContentLoaded', function () {
       ));
 
       const calcBaseColourDifference = (matchup) => counties.calcColourDifference(
-         ...matchup.map(
-            (index) => includedCountiesInfo[index]
-         ).map(
-            counties.listBasicScoreboardColours
-         ).map(
-            counties.findFirstColour
+         ...counties.findMostDifferentColourPair(
+            ...matchup.map(
+               (index) => includedCountiesInfo[index]
+            ).map(
+               counties.listBasicScoreboardColours
+            ).map(
+               (colourList) => colourList[0]
+            )
          )
       );
       const scoreboardMatchups = includedCountiesInfo.map(
