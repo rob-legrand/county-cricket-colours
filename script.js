@@ -468,7 +468,10 @@ document.addEventListener('DOMContentLoaded', function () {
                   (index, which) => counties.createElement({
                      county: includedCountiesInfo[index],
                      classList: ['county-code', 'county-colour-name'],
-                     textType: 'countyCode',
+                     children: [
+                        includedCountiesInfo[index].countyCode
+                        + ':' + calcBaseColourDifference(indices)
+                     ],
                      colourStyle: 'scoreboard',
                      homeCounty: (
                         which === 1
