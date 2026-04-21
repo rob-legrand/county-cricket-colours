@@ -124,7 +124,9 @@ document.addEventListener('DOMContentLoaded', function () {
    );
 
    const updateCounties = function () {
-      localStorage.setItem(localStorageKey, JSON.stringify(options));
+      setTimeout(function () {
+         localStorage.setItem(localStorageKey, JSON.stringify(options));
+      }, 0);
 
       const includedCountiesInfo = countiesInfo.filter(
          (county) => (
