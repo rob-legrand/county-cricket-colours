@@ -78,7 +78,7 @@ const counties = (function () {
             (colour) => self.calcColourDifference(
                colour,
                colourToAvoid
-            ) > 5175
+            ) > 5700
          ) ?? scoreboardColours[0]
       ),
       chooseContrastingScoreboardColours: (homeColours, awayColourses) => (
@@ -94,7 +94,7 @@ const counties = (function () {
                      homeColours,
                      awayColours
                   )
-               ) > 5175
+               ) > 5700
             ) ?? awayColourses[0]
          )
       ),
