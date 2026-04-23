@@ -1387,7 +1387,12 @@ const countiesInfo = [
       ],
       textColour: caeGold,
       backgroundColour: caeGreen,
-      borderColour: caeBlack
+      borderColour: caeBlack,
+      scoreboardColours: [
+         caeGreen,
+         caeGold,
+         caeBlack
+      ]
    },
    {
       countyName: 'Roxburghshire',
