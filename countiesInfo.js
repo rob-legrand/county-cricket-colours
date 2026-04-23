@@ -31,6 +31,7 @@ const camBlue = [165, 225, 225];
 const camMaroon = [105, 0, 15];
 const camStraw = [255, 225, 160];
 const cheBlack = [0, 0, 0];
+const cheGold = [225, 180, 0];
 const chePurple = [90, 0, 120];
 const clkBlack = [0, 0, 0];
 const clkGreen = [0, 135, 15];
@@ -757,7 +758,12 @@ const countiesInfo = [
          {rows: 6, colour: cheBlack}
       ],
       backgroundColour: chePurple,
-      borderColour: cheBlack
+      borderColour: cheBlack,
+      scoreboardColours: [
+         chePurple,
+         cheBlack,
+         cheGold
+      ]
    },
    {
       countyName: 'Norfolk',
