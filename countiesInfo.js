@@ -96,6 +96,7 @@ const kenRed = [150, 0, 30];
 const lanBlue = [0, 30, 60];
 const lanGreen = [0, 90, 30];
 const lanRed = [225, 0, 30];
+const leiGold = [240, 210, 0];
 const leiGreen = [0, 60, 0];
 const leiScarlet = [210, 0, 0];
 const linGold = [255, 225, 0];
@@ -696,7 +697,12 @@ const countiesInfo = [
          {rows: 2, colour: leiScarlet}
       ],
       backgroundColour: leiGreen,
-      borderColour: leiScarlet
+      borderColour: leiScarlet,
+      scoreboardColours: [
+         leiGreen,
+         leiScarlet,
+         leiGold
+      ]
    },
    {
       countyName: 'Warwickshire',
