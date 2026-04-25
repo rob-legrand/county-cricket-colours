@@ -421,26 +421,16 @@ document.addEventListener('DOMContentLoaded', function () {
          })
       ));
 
-      const calcBaseColourDifference = (matchup) => counties.calcColourDifference(
-         ...counties.findMostDifferentColourPair(
-            ...matchup.map(
-               (index) => includedCountiesInfo[index]
-            ).map(
-               counties.listBasicScoreboardColours
-            ).map(
-               (colourList) => colourList[0]
-            )
-         )
-      );
       const scoreboardMatchups = includedCountiesInfo.map(
          (ignore, indexOuter) => [
+            ...includedCountiesInfo.map(
+               (ignore0, indexInner) => [indexOuter, indexInner]
+            ),
             ...includedCountiesInfo.map(
                (ignore0, indexInner) => [indexInner, indexOuter]
             )
          ]
-      ).flat().toSorted(
-         (m1, m2) => calcBaseColourDifference(m1) - calcBaseColourDifference(m2)
-      );
+      ).flat();
       matchupsSection.replaceChildren(
          ...(
             options.includeSections.matchups
