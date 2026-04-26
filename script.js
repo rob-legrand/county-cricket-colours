@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', function () {
                   elementType: 'input',
                   attributes: {type: 'checkbox'}
                }),
-               document.createTextNode('\u00a0' + ordinalise(classLevel))
+               '\u00a0' + ordinalise(classLevel)
             ]
          })
       )
