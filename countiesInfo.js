@@ -190,11 +190,58 @@ const countiesInfo = [
       ],
       alternateColours: [
          [
+            {rows: 3, colour: susDarkBlue},
+            {rows: 1},
+            {rows: 1, colour: susGold},
+            {rows: 1, colour: susLightBlue},
+            {rows: 1},
+            {rows: 3, colour: susDarkBlue}
+         ],
+         [
+            {rows: 4, colour: susDarkBlue},
+            {rows: 1, colour: susGold},
+            {rows: 1, colour: susLightBlue},
+            {rows: 4, colour: susDarkBlue}
+         ],
+         [
             {rows: 2, colour: susDarkBlue},
-            {rows: 1},
+            {rows: 1, colour: susGold},
+            {rows: 1, colour: susLightBlue},
+            {rows: 2, colour: susDarkBlue},
+            {rows: 1, colour: susGold},
+            {rows: 1, colour: susLightBlue},
+            {rows: 2, colour: susDarkBlue}
+         ],
+         [
+            {rows: 2, colour: susDarkBlue},
+            {rows: 1, colour: susGold},
+            {rows: 1, colour: susLightBlue},
+            {rows: 2},
+            {rows: 1, colour: susGold},
+            {rows: 1, colour: susLightBlue},
+            {rows: 2, colour: susDarkBlue}
+         ],
+         [
+            {rows: 2, colour: susDarkBlue},
+            {rows: 1, colour: susLightBlue},
+            {rows: 1, colour: susGold},
+            {rows: 2},
+            {rows: 1, colour: susGold},
+            {rows: 1, colour: susLightBlue},
+            {rows: 2, colour: susDarkBlue}
+         ],
+         [
+            {rows: 2, colour: susDarkBlue},
             {rows: 2, colour: susGold},
+            {rows: 2},
             {rows: 2, colour: susLightBlue},
-            {rows: 1},
+            {rows: 2, colour: susDarkBlue}
+         ],
+         [
+            {rows: 2, colour: susDarkBlue},
+            {rows: 2, colour: susGold},
+            {rows: 2, colour: susDarkBlue},
+            {rows: 2, colour: susLightBlue},
             {rows: 2, colour: susDarkBlue}
          ],
          [
@@ -205,6 +252,14 @@ const countiesInfo = [
             {rows: 2, colour: susLightBlue},
             {rows: 1},
             {rows: 1, colour: susDarkBlue}
+         ],
+         [
+            {rows: 2, colour: susDarkBlue},
+            {rows: 1},
+            {rows: 2, colour: susGold},
+            {rows: 2, colour: susLightBlue},
+            {rows: 1},
+            {rows: 2, colour: susDarkBlue}
          ],
          [
             {rows: 1, colour: susDarkBlue},
