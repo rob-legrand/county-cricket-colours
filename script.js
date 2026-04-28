@@ -508,12 +508,12 @@ document.addEventListener('DOMContentLoaded', function () {
    document.querySelector('body').addEventListener('click', function () {
       if (isMenuOpen) {
          isMenuOpen = false;
-         updateCounties();
+         updateMenu();
       }
    });
    document.querySelector('#menu').addEventListener('click', function (ev) {
       isMenuOpen = !isMenuOpen;
-      updateCounties();
+      updateMenu();
       ev.stopPropagation();
    });
    [...document.querySelectorAll('#options input')].forEach(function (checkbox) {
