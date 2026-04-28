@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', function () {
                   elementType: 'input',
                   attributes: {type: 'checkbox'}
                }),
-               '\u00a0' + ordinalise(classLevel)
+               '\u{a0}' + ordinalise(classLevel)
             ]
          })
       )

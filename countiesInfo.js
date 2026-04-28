@@ -683,7 +683,7 @@ const countiesInfo = [
    },
    {
       countyName: 'Leicestershire',
-      countyNameInWelsh: 'Swydd Gaerl\u0177r',
+      countyNameInWelsh: 'Swydd Gaerl\u{177}r',
       countyAbbreviation: 'Leics',
       countyCode: 'lei',
       chapmanCode: 'lei',
@@ -2407,7 +2407,7 @@ const countiesInfo = [
    },
    {
       countyName: 'Anglesey',
-      countyNameInWelsh: 'Sir F\u00f4n',
+      countyNameInWelsh: 'Sir F\u{f4}n',
       countyCode: 'agy',
       chapmanCode: 'agy',
       hcsCode: 'agl',
