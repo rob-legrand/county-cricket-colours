@@ -123,6 +123,27 @@ document.addEventListener('DOMContentLoaded', function () {
       : prototypeThing
    );
 
+   const updateMenu = function () {
+      document.querySelector('#options').style.display = (
+         isMenuOpen
+         ? ''
+         : 'none'
+      );
+      includeColoursCheckbox.checked = options.includeSections.colours;
+      includeClassesCheckbox.checked = options.includeSections.classes;
+      includeGraphicsCheckbox.checked = options.includeSections.graphics;
+      includeTableCheckbox.checked = options.includeSections.table;
+      includeMatchupsCheckbox.checked = options.includeSections.matchups;
+      includeClassCheckboxes.forEach(function (includeClassCheckbox, whichClassLevel) {
+         includeClassCheckbox.checked = options.includeClasses[whichClassLevel];
+      });
+      includeEnglandCheckbox.checked = options.includeCountries.england;
+      includeWalesCheckbox.checked = options.includeCountries.wales;
+      includeScotlandCheckbox.checked = options.includeCountries.scotland;
+      showAlternateColoursCheckbox.checked = options.showAlternateColours;
+      useWelshCountyNamesCheckbox.checked = options.useWelshCountyNames;
+   };
+
    const updateCounties = function () {
       setTimeout(function () {
          localStorage.setItem(localStorageKey, JSON.stringify(options));
@@ -146,24 +167,7 @@ document.addEventListener('DOMContentLoaded', function () {
          (x, y) => x - y
       );
 
-      document.querySelector('#options').style.display = (
-         isMenuOpen
-         ? ''
-         : 'none'
-      );
-      includeColoursCheckbox.checked = options.includeSections.colours;
-      includeClassesCheckbox.checked = options.includeSections.classes;
-      includeGraphicsCheckbox.checked = options.includeSections.graphics;
-      includeTableCheckbox.checked = options.includeSections.table;
-      includeMatchupsCheckbox.checked = options.includeSections.matchups;
-      includeClassCheckboxes.forEach(function (includeClassCheckbox, whichClassLevel) {
-         includeClassCheckbox.checked = options.includeClasses[whichClassLevel];
-      });
-      includeEnglandCheckbox.checked = options.includeCountries.england;
-      includeWalesCheckbox.checked = options.includeCountries.wales;
-      includeScotlandCheckbox.checked = options.includeCountries.scotland;
-      showAlternateColoursCheckbox.checked = options.showAlternateColours;
-      useWelshCountyNamesCheckbox.checked = options.useWelshCountyNames;
+      updateMenu();
 
       coloursSection.replaceChildren(...(
          options.includeSections.colours
