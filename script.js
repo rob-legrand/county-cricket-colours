@@ -126,8 +126,8 @@ document.addEventListener('DOMContentLoaded', function () {
    const updateMenu = function () {
       document.querySelector('#options').style.display = (
          isMenuOpen
-         ? ''
-         : 'none'
+         ? 'flex'
+         : ''
       );
       includeColoursCheckbox.checked = options.includeSections.colours;
       includeClassesCheckbox.checked = options.includeSections.classes;

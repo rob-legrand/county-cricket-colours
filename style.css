@@ -165,7 +165,7 @@ body {
 .options {
    align-items: flex-start;
    background-color: var(--background-color);
-   display: flex;
+   display: none;
    flex-direction: row;
    flex-wrap: wrap;
    gap: 0px 10px;
