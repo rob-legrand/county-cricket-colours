@@ -193,7 +193,6 @@ const counties = (function () {
          ? list.map(self.createColourList)
          : []
       ),
-      createCountyElement: (options) => self.createElement(options),
       createElement: function (options) {
          const newElement = document.createElement(options?.elementType ?? 'div');
          if (typeof options?.attributes === 'object') {
