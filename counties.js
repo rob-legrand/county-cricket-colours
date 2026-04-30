@@ -98,14 +98,6 @@ const counties = (function () {
             ) ?? awayColourses[0]
          )
       ),
-      chooseScoreboardColour: (county, otherCounty) => (
-         self.hasCountyColours(otherCounty)
-         ? self.chooseContrastingScoreboardColour(
-            self.listScoreboardColours(county),
-            self.chooseScoreboardColour(otherCounty)
-         )
-         : self.listScoreboardColours(county)[0]
-      ),
       chooseScoreboardColours: (homeCounty, awayCounty) => (
          [homeCounty, awayCounty].every(self.hasCountyColours)
          ? self.chooseContrastingScoreboardColours(
