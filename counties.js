@@ -61,26 +61,6 @@ const counties = (function () {
          ? self.namedColours.black
          : self.namedColours.white
       ),
-      chooseContrastingScoreboardColour: (scoreboardColours, colourToAvoid) => (
-         (
-            !Array.isArray(scoreboardColours)
-            || scoreboardColours.length < 1
-         )
-         ? self.namedColours.cream
-         : !scoreboardColours.every(self.isColour)
-         ? self.chooseContrastingScoreboardColour(
-            scoreboardColours.filter(self.isColour),
-            colourToAvoid
-         )
-         : !self.isColour(colourToAvoid)
-         ? scoreboardColours[0]
-         : scoreboardColours.find(
-            (colour) => self.calcColourDifference(
-               colour,
-               colourToAvoid
-            ) > 5700
-         ) ?? scoreboardColours[0]
-      ),
       chooseContrastingScoreboardColours: (homeColours, awayColourses) => (
          (!self.isColour(homeColours) && !self.isColourList(homeColours))
          ? [self.namedColours.cream, self.findFirstColour(awayColourses)]
