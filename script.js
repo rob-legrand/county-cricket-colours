@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function () {
       : n + 'th'
    );
 
-   const defaultOptions = {
+   const defaultOptions = counties.deepCopy({
       includeSections: {
          colours: true,
          classes: true,
@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function () {
       },
       showAlternateColours: false,
       useWelshCountyNames: false
-   };
+   }, Object.freeze);
    const localStorageKey = 'county-cricket-colours';
 
    const includeColoursCheckbox = document.querySelector('#include-colours-section');
