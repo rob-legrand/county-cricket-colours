@@ -20,27 +20,6 @@ const counties = (function () {
          (leftOne) => right.map(
             (rightOne) => [leftOne, rightOne]
          )
-      ),
-      deepCopy: (oldThing, func) => (
-         // Create a new object, deeply copied, with func applied at each level.
-         typeof func === 'function'
-         ? func
-         : (x) => x
-      )(
-         Array.isArray(oldThing)
-         // If it's an array, use map directly.
-         ? oldThing.map(
-            (x) => util.deepCopy(x, func)
-         )
-         : typeof oldThing === 'object'
-         // If it's a non-array object, we must be less direct.
-         ? Object.fromEntries(
-            Object.entries(oldThing).map(
-               (x) => [x[0], util.deepCopy(x[1], func)]
-            )
-         )
-         // Otherwise, no recursion is required.
-         : oldThing
       )
    });
 
@@ -279,7 +258,28 @@ const counties = (function () {
          );
          return newElement;
       },
-      createInfo: () => util.deepCopy(countiesInfo, Object.freeze),
+      createInfo: () => self.deepCopy(countiesInfo, Object.freeze),
+      deepCopy: (oldThing, func) => (
+         // Create a new object, deeply copied, with func applied at each level.
+         typeof func === 'function'
+         ? func
+         : (x) => x
+      )(
+         Array.isArray(oldThing)
+         // If it's an array, use map directly.
+         ? oldThing.map(
+            (x) => self.deepCopy(x, func)
+         )
+         : typeof oldThing === 'object'
+         // If it's a non-array object, we must be less direct.
+         ? Object.fromEntries(
+            Object.entries(oldThing).map(
+               (x) => [x[0], self.deepCopy(x[1], func)]
+            )
+         )
+         // Otherwise, no recursion is required.
+         : oldThing
+      ),
       findFirstColour: (list) => (
          self.isColour(list)
          ? list
