@@ -70,7 +70,7 @@ const fifDarkBlue = [0, 0, 150];
 const fifGold = [240, 210, 0];
 const fifLightBlue = [135, 195, 255];
 const flnBlack = [0, 0, 0];
-const flnRed = [255, 45, 0];
+const flnScarlet = [240, 45, 30];
 const glaBlue = [0, 30, 60];
 const glaGreen = [75, 150, 60];
 const glaYellow = [255, 240, 135];
@@ -2102,27 +2102,27 @@ const countiesInfo = [
       classLevel: 7,
       country: 'Wales',
       colours: [
-         {rows: 1, colour: flnRed},
+         {rows: 1, colour: flnScarlet},
          {rows: 2, colour: flnBlack},
          {rows: 2},
          {rows: 4, colour: flnBlack},
          {rows: 2},
          {rows: 2, colour: flnBlack},
-         {rows: 1, colour: flnRed}
+         {rows: 1, colour: flnScarlet}
       ],
       alternateColours: [
          [
             {rows: 2, colour: flnBlack},
             {rows: 2},
             {rows: 2, colour: flnBlack},
-            {rows: 1, colour: flnRed},
+            {rows: 1, colour: flnScarlet},
             {rows: 2, colour: flnBlack},
             {rows: 2},
             {rows: 2, colour: flnBlack}
          ]
       ],
       backgroundColour: flnBlack,
-      borderColour: flnRed
+      borderColour: flnScarlet
    },
    {
       countyName: 'Perthshire',
