@@ -1396,8 +1396,7 @@ const countiesInfo = [
       backgroundColour: bedBlack,
       borderColour: bedPurple,
       scoreboardColours: [
-         bedPurple,
-         bedBlack,
+         [bedBlack, bedPurple],
          bedSilver
       ]
    },
