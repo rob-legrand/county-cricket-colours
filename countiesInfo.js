@@ -967,7 +967,12 @@ const countiesInfo = [
       ],
       textColour: devGold,
       backgroundColour: devDarkBlue,
-      borderColour: devLightBlue
+      borderColour: devLightBlue,
+      scoreboardColours: [
+         devDarkBlue,
+         devLightBlue,
+         devGold
+      ]
    },
    {
       countyName: 'Lincolnshire',
