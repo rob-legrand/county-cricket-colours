@@ -330,7 +330,12 @@ const countiesInfo = [
       ],
       textColour: susGold,
       backgroundColour: susDarkBlue,
-      borderColour: susLightBlue
+      borderColour: susLightBlue,
+      scoreboardColours: [
+         susDarkBlue,
+         susLightBlue,
+         susGold
+      ]
    },
    {
       countyName: 'Kent',
