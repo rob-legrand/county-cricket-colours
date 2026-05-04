@@ -165,92 +165,92 @@ const counties = (function () {
          ? list.filter(self.isColour)
          : []
       ),
-      createElement: function (options) {
-         const newElement = document.createElement(options?.elementType ?? 'div');
-         if (typeof options?.attributes === 'object') {
-            Object.entries(options.attributes).forEach(function ([name, value]) {
+      createElement: function (args) {
+         const newElement = document.createElement(args?.elementType ?? 'div');
+         if (typeof args?.attributes === 'object') {
+            Object.entries(args.attributes).forEach(function ([name, value]) {
                newElement.setAttribute(name, value);
             });
          }
-         if (Array.isArray(options?.classList)) {
-            newElement.classList.add(...options.classList);
+         if (Array.isArray(args?.classList)) {
+            newElement.classList.add(...args.classList);
          }
          newElement.replaceChildren(...(
-            Array.isArray(options?.children)
-            ? options.children
+            Array.isArray(args?.children)
+            ? args.children
             : [document.createTextNode(
-               options?.textType === 'countyName'
+               args?.textType === 'countyName'
                ? (
-                  options?.useWelsh
-                  ? options.county?.countyNameInWelsh
+                  args?.useWelsh
+                  ? args.county?.countyNameInWelsh
                   : undefined
-               ) ?? options.county?.countyName ?? ''
-               : options?.textType === 'countyAbbreviation'
-               ? options.county?.countyAbbreviation ?? options.county?.countyName ?? ''
-               : options?.textType === 'countyCode'
-               ? options.county?.countyCode?.toUpperCase?.() ?? ''
-               : options?.textType === 'chapmanCode'
+               ) ?? args.county?.countyName ?? ''
+               : args?.textType === 'countyAbbreviation'
+               ? args.county?.countyAbbreviation ?? args.county?.countyName ?? ''
+               : args?.textType === 'countyCode'
+               ? args.county?.countyCode?.toUpperCase?.() ?? ''
+               : args?.textType === 'chapmanCode'
                ? (
-                  options.county?.chapmanCode?.toUpperCase?.()
-                  ?? options.county?.countyCode?.toUpperCase?.()
+                  args.county?.chapmanCode?.toUpperCase?.()
+                  ?? args.county?.countyCode?.toUpperCase?.()
                   ?? ''
                )
-               : options?.textType === 'hcsCode'
+               : args?.textType === 'hcsCode'
                ? (
-                  options.county?.hcsCode?.toUpperCase?.()
-                  ?? options.county?.countyCode?.toUpperCase?.()
+                  args.county?.hcsCode?.toUpperCase?.()
+                  ?? args.county?.countyCode?.toUpperCase?.()
                   ?? ''
                )
-               : options?.textType === 'classLevel'
-               ? options.county?.classLevel ?? '-'
-               : options?.textType === 'country'
-               ? options.county?.country ?? '-'
-               : options?.county?.countyName ?? ''
+               : args?.textType === 'classLevel'
+               ? args.county?.classLevel ?? '-'
+               : args?.textType === 'country'
+               ? args.county?.country ?? '-'
+               : args?.county?.countyName ?? ''
             )]
          ));
          const scoreboardColour = (
-            self.hasCountyColours(options?.homeCounty)
+            self.hasCountyColours(args?.homeCounty)
             ? self.chooseScoreboardColours(
-               options.homeCounty,
-               options?.county
+               args.homeCounty,
+               args?.county
             )[1]
             : self.chooseScoreboardColours(
-               options?.county,
-               options?.awayCounty
+               args?.county,
+               args?.awayCounty
             )[0]
          );
          newElement.style.color = util.convertToRgb(
-            self.hasCountyColours(options?.county)
+            self.hasCountyColours(args?.county)
             ? (
-               options?.colourStyle === 'none'
+               args?.colourStyle === 'none'
                ? ''
-               : options?.colourStyle === 'scoreboard'
+               : args?.colourStyle === 'scoreboard'
                ? self.chooseContrastingColour(scoreboardColour)
-               : options.county.textColour ?? self.namedColours.cream
+               : args.county.textColour ?? self.namedColours.cream
             )
             : ''
          );
          newElement.style.backgroundColor = util.convertToRgb(
-            self.hasCountyColours(options?.county)
+            self.hasCountyColours(args?.county)
             ? (
-               options?.colourStyle === 'none'
+               args?.colourStyle === 'none'
                ? ''
-               : options?.colourStyle === 'scoreboard'
+               : args?.colourStyle === 'scoreboard'
                ? scoreboardColour
-               : options.county.backgroundColour ?? self.namedColours.cream
+               : args.county.backgroundColour ?? self.namedColours.cream
             )
             : ''
          );
          newElement.style.borderColor = util.convertToRgb(
-            self.hasCountyColours(options?.county)
+            self.hasCountyColours(args?.county)
             ? (
-               options?.colourStyle === 'none'
+               args?.colourStyle === 'none'
                ? ''
-               : options?.colourStyle === 'scoreboard'
+               : args?.colourStyle === 'scoreboard'
                ? scoreboardColour
                : (
-                  options.county.borderColour
-                  ?? options.county.backgroundColour
+                  args.county.borderColour
+                  ?? args.county.backgroundColour
                   ?? self.namedColours.cream
                )
             )
