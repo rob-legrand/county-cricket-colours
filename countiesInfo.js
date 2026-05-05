@@ -2012,6 +2012,7 @@ const countiesInfo = [
    {
       countyName: 'Banffshire',
       countyNameInWelsh: 'Swydd Banff',
+      countyAbbreviation: 'Banffs',
       countyCode: 'ban',
       chapmanCode: 'ban',
       hcsCode: 'bnf',
