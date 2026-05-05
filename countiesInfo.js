@@ -1331,7 +1331,7 @@ const countiesInfo = [
    {
       countyName: 'Brecknockshire',
       countyNameInWelsh: 'Sir Frycheiniog',
-      countyAbbreviation: 'Brecons',
+      countyAbbreviation: 'Brecks',
       countyCode: 'bre',
       chapmanCode: 'bre',
       hcsCode: 'brn',
