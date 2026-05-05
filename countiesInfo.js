@@ -423,7 +423,11 @@ const countiesInfo = [
          ]
       ],
       backgroundColour: kenRed,
-      borderColour: kenBlue
+      borderColour: kenBlue,
+      scoreboardColours: [
+         kenRed,
+         kenBlue
+      ]
    },
    {
       countyName: 'Surrey',
