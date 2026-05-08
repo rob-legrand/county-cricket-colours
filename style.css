@@ -185,7 +185,7 @@ body {
 
 @media screen and (prefers-color-scheme: dark) {
    :root {
-      --background-color: rgb(255, 245, 225);
-      --text-color: rgb(0, 0, 0);
+      --background-color: rgb(60, 50, 30);
+      --text-color: rgb(255, 255, 255);
    }
 }
