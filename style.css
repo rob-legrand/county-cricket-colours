@@ -150,8 +150,6 @@ body {
 
 .menu {
    align-items: center;
-   background-color: var(--background-color);
-   color: var(--text-color);
    cursor: pointer;
    display: flex;
    font-family: sans-serif;
@@ -167,7 +165,6 @@ body {
 .options {
    align-items: flex-start;
    background-color: var(--background-color);
-   color: var(--text-color);
    display: none;
    flex-direction: row;
    flex-wrap: wrap;
