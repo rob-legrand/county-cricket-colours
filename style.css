@@ -1,13 +1,19 @@
 @charset "UTF-8";
 
 :root {
-   --background-color: rgb(255, 245, 225);
+   --background-color: light-dark(
+      rgb(255, 245, 225),
+      rgb(255, 245, 225)
+   );
    --menu-size: 30px;
    --monospace: Inconsolata, Consolas, "Andale Mono", AndaleMono, monospace;
    --serif:
       Georgia, Palatino, "Palatino Linotype", "Book Antiqua", Garamond,
       "Goudy Old Style", Perpetua, Baskerville, Gentium, serif;
-   --text-color: rgb(0, 0, 0);
+   --text-color: light-dark(
+      rgb(0, 0, 0),
+      rgb(0, 0, 0)
+   );
    color-scheme: light dark;
 }
 
