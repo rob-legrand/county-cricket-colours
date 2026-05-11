@@ -189,10 +189,3 @@ body {
    flex-direction: column;
    justify-content: flex-start;
 }
-
-@media screen and (prefers-color-scheme: dark) {
-   :root {
-      --background-color: rgb(60, 50, 30);
-      --text-color: rgb(255, 255, 255);
-   }
-}
