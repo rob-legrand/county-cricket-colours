@@ -3,7 +3,7 @@
 :root {
    --background-color: light-dark(
       rgb(255, 245, 225),
-      rgb(255, 245, 225)
+      rgb(60, 50, 30)
    );
    --menu-size: 30px;
    --monospace: Inconsolata, Consolas, "Andale Mono", AndaleMono, monospace;
@@ -12,7 +12,7 @@
       "Goudy Old Style", Perpetua, Baskerville, Gentium, serif;
    --text-color: light-dark(
       rgb(0, 0, 0),
-      rgb(0, 0, 0)
+      rgb(255, 255, 255)
    );
    color-scheme: light dark;
 }
