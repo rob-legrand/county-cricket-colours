@@ -46,6 +46,7 @@ document.addEventListener('DOMContentLoaded', function () {
          wales: true,
          scotland: true
       },
+      forceLightMode: false,
       showAlternateColours: false,
       useWelshCountyNames: false
    }, Object.freeze);
