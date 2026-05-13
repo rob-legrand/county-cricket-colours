@@ -80,6 +80,7 @@ document.addEventListener('DOMContentLoaded', function () {
    const includeEnglandCheckbox = document.querySelector('#include-england');
    const includeWalesCheckbox = document.querySelector('#include-wales');
    const includeScotlandCheckbox = document.querySelector('#include-scotland');
+   const forceLightModeCheckbox = document.querySelector('#force-light-mode');
    const showAlternateColoursCheckbox = document.querySelector('#show-alternate-colours');
    const useWelshCountyNamesCheckbox = document.querySelector('#use-welsh-county-names');
    const coloursSection = document.querySelector('#colours-section');
@@ -141,6 +142,7 @@ document.addEventListener('DOMContentLoaded', function () {
       includeEnglandCheckbox.checked = options.includeCountries.england;
       includeWalesCheckbox.checked = options.includeCountries.wales;
       includeScotlandCheckbox.checked = options.includeCountries.scotland;
+      forceLightModeCheckbox.checked = options.forceLightMode;
       showAlternateColoursCheckbox.checked = options.showAlternateColours;
       useWelshCountyNamesCheckbox.checked = options.useWelshCountyNames;
    };
@@ -540,6 +542,7 @@ document.addEventListener('DOMContentLoaded', function () {
          options.includeCountries.england = includeEnglandCheckbox.checked;
          options.includeCountries.wales = includeWalesCheckbox.checked;
          options.includeCountries.scotland = includeScotlandCheckbox.checked;
+         options.forceLightMode = forceLightModeCheckbox.checked;
          options.showAlternateColours = showAlternateColoursCheckbox.checked;
          options.useWelshCountyNames = useWelshCountyNamesCheckbox.checked;
          updateCounties();
