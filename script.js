@@ -170,6 +170,12 @@ document.addEventListener('DOMContentLoaded', function () {
          (x, y) => x - y
       );
 
+      document.querySelector(':root').classList[
+         options.forceLightMode
+         ? 'add'
+         : 'remove'
+      ]('light-mode');
+
       setTimeout(updateMenu, 0);
 
       setTimeout(function () {
