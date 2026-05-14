@@ -170,11 +170,10 @@ document.addEventListener('DOMContentLoaded', function () {
          (x, y) => x - y
       );
 
-      document.querySelector(':root').classList[
+      document.querySelector(':root').classList.toggle(
+         'light-mode',
          options.forceLightMode
-         ? 'add'
-         : 'remove'
-      ]('light-mode');
+      );
 
       setTimeout(updateMenu, 0);
 
