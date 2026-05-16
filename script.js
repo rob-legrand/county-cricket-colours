@@ -178,6 +178,12 @@ document.addEventListener('DOMContentLoaded', function () {
          options.forceLightMode
       );
 
+      document.querySelector(':root').classList[
+         options.forceDarkMode
+         ? 'add'
+         : 'remove'
+      ]('dark-mode');
+
       setTimeout(updateMenu, 0);
 
       setTimeout(function () {
