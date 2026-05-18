@@ -17,17 +17,6 @@
    color-scheme: light dark;
 }
 
-:root.dark-mode {
-   --background-color: light-dark(
-      rgb(60, 50, 30),
-      rgb(60, 50, 30)
-   );
-   --text-color: light-dark(
-      rgb(255, 255, 255),
-      rgb(255, 255, 255)
-   );
-}
-
 html {
    box-sizing: border-box;
    touch-action: manipulation;
@@ -164,6 +153,10 @@ body {
 
 .county-table td:nth-child(7) {
    text-align: end;
+}
+
+.dark-mode {
+   color-scheme: dark;
 }
 
 .light-mode {
