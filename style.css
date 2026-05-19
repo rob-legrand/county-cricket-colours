@@ -155,11 +155,11 @@ body {
    text-align: end;
 }
 
-.dark-mode {
+.dark-mode:not(.light-mode) {
    color-scheme: dark;
 }
 
-.light-mode {
+.light-mode:not(.dark-mode) {
    color-scheme: light;
 }
 
