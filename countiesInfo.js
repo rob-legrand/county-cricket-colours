@@ -821,6 +821,7 @@ const countiesInfo = [
          {rows: 2},
          {rows: 6, colour: cheBlack}
       ],
+      textColour: cheGold,
       backgroundColour: chePurple,
       borderColour: cheBlack,
       scoreboardColours: [
