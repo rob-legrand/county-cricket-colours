@@ -886,7 +886,6 @@ const countiesInfo = [
       ],
       textColour: glaYellow,
       backgroundColour: glaBlue,
-      borderColour: glaGreen,
       scoreboardColours: [
          glaBlue,
          glaYellow,
