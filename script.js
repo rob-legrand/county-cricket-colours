@@ -554,11 +554,13 @@ document.addEventListener('DOMContentLoaded', function () {
          options.includeCountries.england = includeEnglandCheckbox.checked;
          options.includeCountries.wales = includeWalesCheckbox.checked;
          options.includeCountries.scotland = includeScotlandCheckbox.checked;
-         if (checkbox === forceLightModeCheckbox && checkbox.checked) {
-            forceDarkModeCheckbox.checked = false;
-         }
-         if (checkbox === forceDarkModeCheckbox && checkbox.checked) {
-            forceLightModeCheckbox.checked = false;
+         if (checkbox.checked) {
+            if (checkbox === forceLightModeCheckbox) {
+               forceDarkModeCheckbox.checked = false;
+            }
+            if (checkbox === forceDarkModeCheckbox) {
+               forceLightModeCheckbox.checked = false;
+            }
          }
          options.forceLightMode = forceLightModeCheckbox.checked;
          options.forceDarkMode = forceDarkModeCheckbox.checked;
