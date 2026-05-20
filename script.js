@@ -543,13 +543,11 @@ document.addEventListener('DOMContentLoaded', function () {
    });
    [...document.querySelectorAll('#options input')].forEach(function (checkbox) {
       checkbox.addEventListener('change', function () {
-         if (checkbox.checked) {
-            if (checkbox === forceLightModeCheckbox) {
-               forceDarkModeCheckbox.checked = false;
-            }
-            if (checkbox === forceDarkModeCheckbox) {
-               forceLightModeCheckbox.checked = false;
-            }
+         if (checkbox === forceLightModeCheckbox) {
+            forceDarkModeCheckbox.checked = !checkbox.checked && forceDarkModeCheckbox.checked;
+         }
+         if (checkbox === forceDarkModeCheckbox) {
+            forceLightModeCheckbox.checked = !checkbox.checked && forceLightModeCheckbox.checked;
          }
          options.includeSections.colours = includeColoursCheckbox.checked;
          options.includeSections.classes = includeClassesCheckbox.checked;
