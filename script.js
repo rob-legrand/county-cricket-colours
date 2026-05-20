@@ -543,6 +543,14 @@ document.addEventListener('DOMContentLoaded', function () {
    });
    [...document.querySelectorAll('#options input')].forEach(function (checkbox) {
       checkbox.addEventListener('change', function () {
+         if (checkbox.checked) {
+            if (checkbox === forceLightModeCheckbox) {
+               forceDarkModeCheckbox.checked = false;
+            }
+            if (checkbox === forceDarkModeCheckbox) {
+               forceLightModeCheckbox.checked = false;
+            }
+         }
          options.includeSections.colours = includeColoursCheckbox.checked;
          options.includeSections.classes = includeClassesCheckbox.checked;
          options.includeSections.graphics = includeGraphicsCheckbox.checked;
@@ -554,14 +562,6 @@ document.addEventListener('DOMContentLoaded', function () {
          options.includeCountries.england = includeEnglandCheckbox.checked;
          options.includeCountries.wales = includeWalesCheckbox.checked;
          options.includeCountries.scotland = includeScotlandCheckbox.checked;
-         if (checkbox.checked) {
-            if (checkbox === forceLightModeCheckbox) {
-               forceDarkModeCheckbox.checked = false;
-            }
-            if (checkbox === forceDarkModeCheckbox) {
-               forceLightModeCheckbox.checked = false;
-            }
-         }
          options.forceLightMode = forceLightModeCheckbox.checked;
          options.forceDarkMode = forceDarkModeCheckbox.checked;
          options.showAlternateColours = showAlternateColoursCheckbox.checked;
