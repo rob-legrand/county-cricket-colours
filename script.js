@@ -544,10 +544,10 @@ document.addEventListener('DOMContentLoaded', function () {
    [...document.querySelectorAll('#options input')].forEach(function (checkbox) {
       checkbox.addEventListener('change', function () {
          if (checkbox === forceLightModeCheckbox) {
-            forceDarkModeCheckbox.checked = !checkbox.checked && forceDarkModeCheckbox.checked;
+            forceDarkModeCheckbox.checked &&= !checkbox.checked;
          }
          if (checkbox === forceDarkModeCheckbox) {
-            forceLightModeCheckbox.checked = !checkbox.checked && forceLightModeCheckbox.checked;
+            forceLightModeCheckbox.checked &&= !checkbox.checked;
          }
          options.includeSections.colours = includeColoursCheckbox.checked;
          options.includeSections.classes = includeClassesCheckbox.checked;
