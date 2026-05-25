@@ -530,7 +530,7 @@ document.addEventListener('DOMContentLoaded', function () {
       );
    };
 
-   document.querySelector('body').addEventListener('click', function () {
+   document.querySelector(':root').addEventListener('click', function () {
       if (isMenuOpen) {
          isMenuOpen = false;
          updateMenu();
