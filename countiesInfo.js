@@ -826,8 +826,7 @@ const countiesInfo = [
       borderColour: cheBlack,
       scoreboardColours: [
          chePurple,
-         cheBlack,
-         cheGold
+         [cheBlack, cheGold]
       ]
    },
    {
