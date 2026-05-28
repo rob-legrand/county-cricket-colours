@@ -381,10 +381,10 @@ const counties = (function () {
       ),
       namedColours: {
          black: [0, 0, 0],
+         coffee: [60, 50, 30],
          cream: [255, 245, 225],
          darkGrey: [75, 75, 75],
          lightGrey: [180, 180, 180],
-         mud: [60, 50, 30],
          white: [255, 255, 255]
       }
    });
