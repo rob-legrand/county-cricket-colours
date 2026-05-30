@@ -463,7 +463,11 @@ const countiesInfo = [
       ],
       textColour: notGold,
       backgroundColour: notGreen,
-      borderColour: notGold
+      borderColour: notGold,
+      scoreboardColours: [
+         notGreen,
+         notGold
+      ]
    },
    {
       countyName: 'Yorkshire',
