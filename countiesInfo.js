@@ -1468,8 +1468,7 @@ const countiesInfo = [
       borderColour: caeBlack,
       scoreboardColours: [
          caeGreen,
-         caeGold,
-         caeBlack
+         [caeGold, caeBlack]
       ]
    },
    {
