@@ -485,7 +485,12 @@ const countiesInfo = [
       ],
       textColour: yrkGold,
       backgroundColour: yrkDarkBlue,
-      borderColour: yrkLightBlue
+      borderColour: yrkLightBlue,
+      scoreboardColours: [
+         yrkDarkBlue,
+         yrkLightBlue,
+         yrkGold
+      ]
    },
    {
       countyName: 'Middlesex',
