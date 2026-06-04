@@ -554,7 +554,14 @@ const countiesInfo = [
       ],
       textColour: glsGold,
       backgroundColour: glsBlue,
-      borderColour: glsBrown
+      borderColour: glsBrown,
+      scoreboardColours: [
+         glsBlue,
+         glsBrown,
+         glsGold,
+         glsGreen,
+         glsRed
+      ]
    },
    {
       countyName: 'Derbyshire',
