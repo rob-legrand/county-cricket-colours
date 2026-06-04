@@ -581,7 +581,12 @@ const countiesInfo = [
       ],
       textColour: drbGold,
       backgroundColour: drbBrown,
-      borderColour: drbBlue
+      borderColour: drbBlue,
+      scoreboardColours: [
+         drbBrown,
+         drbBlue,
+         drbGold
+      ]
    },
    {
       countyName: 'Hampshire',
