@@ -605,7 +605,11 @@ const countiesInfo = [
       ],
       textColour: hamGold,
       backgroundColour: hamBlue,
-      borderColour: hamGold
+      borderColour: hamGold,
+      scoreboardColours: [
+         hamBlue,
+         hamGold
+      ]
    },
    {
       countyName: 'Somerset',
