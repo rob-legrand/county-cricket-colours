@@ -773,7 +773,11 @@ const countiesInfo = [
       ],
       textColour: essGold,
       backgroundColour: essRed,
-      borderColour: essBlue
+      borderColour: essBlue,
+      scoreboardColours: [
+         essRed,
+         [essBlue, essGold]
+      ]
    },
    {
       countyName: 'Leicestershire',
