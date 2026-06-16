@@ -628,7 +628,12 @@ const countiesInfo = [
       ],
       textColour: somGrey,
       backgroundColour: somMaroon,
-      borderColour: somBlack
+      borderColour: somBlack,
+      scoreboardColours: [
+         somMaroon,
+         somBlack,
+         somGrey
+      ]
    },
    {
       countyName: 'Essex',
