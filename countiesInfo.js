@@ -776,7 +776,8 @@ const countiesInfo = [
       borderColour: essBlue,
       scoreboardColours: [
          essRed,
-         [essBlue, essGold]
+         essBlue,
+         essGold
       ]
    },
    {
