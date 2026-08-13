@@ -845,7 +845,11 @@ const countiesInfo = [
       ],
       textColour: stfGold,
       backgroundColour: stfGreen,
-      borderColour: stfGold
+      borderColour: stfGold,
+      scoreboardColours: [
+         stfGreen,
+         stfGold
+      ]
    },
    {
       countyName: 'Cheshire',
