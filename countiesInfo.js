@@ -822,7 +822,12 @@ const countiesInfo = [
       ],
       textColour: warSilver,
       backgroundColour: warBlue,
-      borderColour: warGold
+      borderColour: warGold,
+      scoreboardColours: [
+         warBlue,
+         warGold,
+         warSilver
+      ]
    },
    {
       countyName: 'Staffordshire',
