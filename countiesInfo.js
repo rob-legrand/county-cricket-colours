@@ -915,7 +915,11 @@ const countiesInfo = [
          {rows: 6, colour: nthMaroon}
       ],
       textColour: nthGold,
-      backgroundColour: nthMaroon
+      backgroundColour: nthMaroon,
+      scoreboardColours: [
+         nthMaroon,
+         nthGold
+      ]
    },
    {
       countyName: 'Glamorgan',
