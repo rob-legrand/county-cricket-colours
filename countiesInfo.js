@@ -894,7 +894,11 @@ const countiesInfo = [
          ]
       ],
       backgroundColour: nfkDarkBlue,
-      borderColour: nfkLightBlue
+      borderColour: nfkLightBlue,
+      scoreboardColours: [
+         nfkDarkBlue,
+         nfkLightBlue
+      ]
    },
    {
       countyName: 'Northamptonshire',
