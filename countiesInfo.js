@@ -1081,7 +1081,12 @@ const countiesInfo = [
       ],
       textColour: camStraw,
       backgroundColour: camMaroon,
-      borderColour: camBlue
+      borderColour: camBlue,
+      scoreboardColours: [
+         camMaroon,
+         camBlue,
+         camStraw
+      ]
    },
    {
       countyName: 'Worcestershire',
