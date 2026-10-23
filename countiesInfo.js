@@ -1058,7 +1058,11 @@ const countiesInfo = [
          {rows: 6, colour: linGreen}
       ],
       textColour: linGold,
-      backgroundColour: linGreen
+      backgroundColour: linGreen,
+      scoreboardColours: [
+         linGreen,
+         linGold
+      ]
    },
    {
       countyName: 'Cambridgeshire',
