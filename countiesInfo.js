@@ -1004,7 +1004,12 @@ const countiesInfo = [
       ],
       textColour: hrtGold,
       backgroundColour: hrtGreen,
-      borderColour: hrtBlue
+      borderColour: hrtBlue,
+      scoreboardColours: [
+         hrtGreen,
+         hrtBlue,
+         hrtGold
+      ]
    },
    {
       countyName: 'Devon',
