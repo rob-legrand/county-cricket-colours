@@ -981,7 +981,12 @@ const countiesInfo = [
       ],
       textColour: nblRed,
       backgroundColour: nblGreen,
-      borderColour: nblGold
+      borderColour: nblGold,
+      scoreboardColours: [
+         nblGreen,
+         nblRed,
+         nblGold
+      ]
    },
    {
       countyName: 'Hertfordshire',
