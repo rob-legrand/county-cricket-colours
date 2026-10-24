@@ -1125,7 +1125,11 @@ const countiesInfo = [
       ],
       textColour: salGold,
       backgroundColour: salBlue,
-      borderColour: salGold
+      borderColour: salGold,
+      scoreboardColours: [
+         salBlue,
+         salGold
+      ]
    },
    {
       countyName: 'Wiltshire',
