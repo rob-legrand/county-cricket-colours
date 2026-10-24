@@ -1104,7 +1104,11 @@ const countiesInfo = [
          {rows: 5, colour: worGreen}
       ],
       backgroundColour: worGreen,
-      borderColour: worBlack
+      borderColour: worBlack,
+      scoreboardColours: [
+         worGreen,
+         worBlack
+      ]
    },
    {
       countyName: 'Shropshire',
