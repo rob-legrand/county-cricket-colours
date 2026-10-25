@@ -1145,7 +1145,10 @@ const countiesInfo = [
          {rows: 2},
          {rows: 6, colour: wilGreen}
       ],
-      backgroundColour: wilGreen
+      backgroundColour: wilGreen,
+      scoreboardColours: [
+         wilGreen
+      ]
    },
    {
       countyName: 'Cornwall',
