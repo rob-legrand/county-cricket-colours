@@ -1250,7 +1250,12 @@ const countiesInfo = [
       ],
       textColour: mnmGold,
       backgroundColour: mnmBlue,
-      borderColour: mnmBlack
+      borderColour: mnmBlack,
+      scoreboardColours: [
+         mnmBlue,
+         mnmBlack,
+         mnmGold
+      ]
    },
    {
       countyName: 'Cumberland',
