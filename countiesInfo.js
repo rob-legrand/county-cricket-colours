@@ -1207,7 +1207,12 @@ const countiesInfo = [
       ],
       textColour: hefLightBlue,
       backgroundColour: hefRed,
-      borderColour: hefDarkBlue
+      borderColour: hefDarkBlue,
+      scoreboardColours: [
+         hefRed,
+         hefDarkBlue,
+         hefLightBlue
+      ]
    },
    {
       countyName: 'Monmouthshire',
