@@ -1597,7 +1597,11 @@ const countiesInfo = [
          {rows: 2, colour: roxBlack}
       ],
       backgroundColour: roxBlue,
-      borderColour: roxBlack
+      borderColour: roxBlack,
+      scoreboardColours: [
+         roxBlue,
+         roxBlack
+      ]
    },
    {
       countyName: 'Oxfordshire',
