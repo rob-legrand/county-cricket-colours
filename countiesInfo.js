@@ -1466,7 +1466,11 @@ const countiesInfo = [
          {rows: 4, colour: rutGreen}
       ],
       textColour: rutGold,
-      backgroundColour: rutGreen
+      backgroundColour: rutGreen,
+      scoreboardColours: [
+         rutGreen,
+         rutGold
+      ]
    },
    {
       countyName: 'Suffolk',
