@@ -1532,7 +1532,11 @@ const countiesInfo = [
          {rows: 5, colour: hunBlue}
       ],
       textColour: hunGold,
-      backgroundColour: hunBlue
+      backgroundColour: hunBlue,
+      scoreboardColours: [
+         hunBlue,
+         hunGold
+      ]
    },
    {
       countyName: 'Caernarfonshire',
