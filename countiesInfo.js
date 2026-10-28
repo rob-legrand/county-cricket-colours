@@ -1444,7 +1444,12 @@ const countiesInfo = [
       ],
       textColour: breBlue,
       backgroundColour: breGold,
-      borderColour: breBlack
+      borderColour: breBlack,
+      scoreboardColours: [
+         breGold,
+         breBlack,
+         breBlue
+      ]
    },
    {
       countyName: 'Rutland',
