@@ -1487,7 +1487,11 @@ const countiesInfo = [
          {rows: 2, colour: sfkMaroon}
       ],
       backgroundColour: sfkMaroon,
-      borderColour: sfkGold
+      borderColour: sfkGold,
+      scoreboardColours: [
+         sfkMaroon,
+         sfkGold
+      ]
    },
    {
       countyName: 'Bedfordshire',
