@@ -1643,7 +1643,12 @@ const countiesInfo = [
       ],
       textColour: brkYellow,
       backgroundColour: brkGreen,
-      borderColour: brkPurple
+      borderColour: brkPurple,
+      scoreboardColours: [
+         brkGreen,
+         brkPurple,
+         brkYellow
+      ]
    },
    {
       countyName: 'Buckinghamshire',
