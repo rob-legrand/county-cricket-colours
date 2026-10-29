@@ -1689,7 +1689,11 @@ const countiesInfo = [
       ],
       textColour: crmGold,
       backgroundColour: crmRed,
-      borderColour: crmGold
+      borderColour: crmGold,
+      scoreboardColours: [
+         crmRed,
+         crmGold
+      ]
    },
    {
       countyName: 'Westmorland',
