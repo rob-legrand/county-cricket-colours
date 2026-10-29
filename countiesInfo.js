@@ -1619,7 +1619,12 @@ const countiesInfo = [
       ],
       textColour: oxfGold,
       backgroundColour: oxfMagenta,
-      borderColour: oxfBlue
+      borderColour: oxfBlue,
+      scoreboardColours: [
+         oxfMagenta,
+         oxfBlue,
+         oxfGold
+      ]
    },
    {
       countyName: 'Berkshire',
