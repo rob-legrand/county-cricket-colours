@@ -1667,7 +1667,11 @@ const countiesInfo = [
          {rows: 5, colour: bucGreen}
       ],
       backgroundColour: bucGreen,
-      borderColour: bucSilver
+      borderColour: bucSilver,
+      scoreboardColours: [
+         bucGreen,
+         bucSilver
+      ]
    },
    {
       countyName: 'Carmarthenshire',
