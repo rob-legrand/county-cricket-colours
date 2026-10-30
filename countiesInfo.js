@@ -1881,7 +1881,12 @@ const countiesInfo = [
       ],
       textColour: mtgGold,
       backgroundColour: mtgBlack,
-      borderColour: mtgRed
+      borderColour: mtgRed,
+      scoreboardColours: [
+         mtgBlack,
+         mtgGold,
+         mtgRed
+      ]
    },
    {
       countyName: 'Denbighshire',
