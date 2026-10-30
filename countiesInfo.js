@@ -1739,7 +1739,11 @@ const countiesInfo = [
          ]
       ],
       backgroundColour: wmlRed,
-      borderColour: wmlGold
+      borderColour: wmlGold,
+      scoreboardColours: [
+         wmlRed,
+         wmlGold
+      ]
    },
    {
       countyName: 'Montgomeryshire',
