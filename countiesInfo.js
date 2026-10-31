@@ -1938,7 +1938,11 @@ const countiesInfo = [
          ]
       ],
       backgroundColour: denRed,
-      borderColour: denBlack
+      borderColour: denBlack,
+      scoreboardColours: [
+         denRed,
+         denBlack
+      ]
    },
    {
       countyName: 'Pembrokeshire',
