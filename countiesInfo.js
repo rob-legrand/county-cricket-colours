@@ -2010,7 +2010,12 @@ const countiesInfo = [
       ],
       textColour: abdGold,
       backgroundColour: abdLightBlue,
-      borderColour: abdDarkBlue
+      borderColour: abdDarkBlue,
+      scoreboardColours: [
+         abdLightBlue,
+         abdDarkBlue,
+         abdGold
+      ]
    },
    {
       countyName: 'Angus',
