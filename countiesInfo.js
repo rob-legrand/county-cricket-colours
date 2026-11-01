@@ -1960,7 +1960,11 @@ const countiesInfo = [
       ],
       textColour: pemLightBlue,
       backgroundColour: pemDarkBlue,
-      borderColour: pemLightBlue
+      borderColour: pemLightBlue,
+      scoreboardColours: [
+         pemDarkBlue,
+         pemLightBlue
+      ]
    },
    {
       countyName: 'Cardiganshire',
