@@ -1981,7 +1981,11 @@ const countiesInfo = [
          {rows: 6, colour: crdBlack}
       ],
       textColour: crdGold,
-      backgroundColour: crdBlack
+      backgroundColour: crdBlack,
+      scoreboardColours: [
+         crdBlack,
+         crdGold
+      ]
    },
    {
       countyName: 'Aberdeenshire',
