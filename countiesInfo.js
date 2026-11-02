@@ -2063,7 +2063,11 @@ const countiesInfo = [
          ]
       ],
       backgroundColour: ansBlue,
-      borderColour: ansRed
+      borderColour: ansRed,
+      scoreboardColours: [
+         ansBlue,
+         ansRed
+      ]
    },
    {
       countyName: 'Kincardineshire',
