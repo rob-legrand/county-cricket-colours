@@ -485,6 +485,9 @@ document.addEventListener('DOMContentLoaded', function () {
                   children: indices.map(
                      (index, which) => counties.createElement({
                         county: includedCountiesInfo[index],
+                        attributes: {
+                           title: includedCountiesInfo[index].countyName
+                        },
                         classList: ['county-code', 'county-colour-name'],
                         textType: 'countyCode',
                         colourStyle: 'scoreboard',
