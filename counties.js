@@ -165,6 +165,35 @@ const counties = (function () {
          ? list.filter(self.isColour)
          : []
       ),
+      createCountyText: (args) => (
+         args?.textType === 'countyName'
+         ? (
+            args?.useWelsh
+            ? args.county?.countyNameInWelsh
+            : undefined
+         ) ?? args.county?.countyName ?? ''
+         : args?.textType === 'countyAbbreviation'
+         ? args.county?.countyAbbreviation ?? args.county?.countyName ?? ''
+         : args?.textType === 'countyCode'
+         ? args.county?.countyCode?.toUpperCase?.() ?? ''
+         : args?.textType === 'chapmanCode'
+         ? (
+            args.county?.chapmanCode?.toUpperCase?.()
+            ?? args.county?.countyCode?.toUpperCase?.()
+            ?? ''
+         )
+         : args?.textType === 'hcsCode'
+         ? (
+            args.county?.hcsCode?.toUpperCase?.()
+            ?? args.county?.countyCode?.toUpperCase?.()
+            ?? ''
+         )
+         : args?.textType === 'classLevel'
+         ? args.county?.classLevel ?? '-'
+         : args?.textType === 'country'
+         ? args.county?.country ?? '-'
+         : args?.county?.countyName ?? ''
+      ),
       createElement: function (args) {
          const newElement = document.createElement(args?.elementType ?? 'div');
          if (typeof args?.attributes === 'object') {
