@@ -498,7 +498,8 @@ document.addEventListener('DOMContentLoaded', function () {
                         awayCounty: (
                            which === 0
                            && includedCountiesInfo[indices[1]]
-                        )
+                        ),
+                        tooltipType: 'countyName'
                      })
                   )
                })
