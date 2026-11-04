@@ -167,6 +167,13 @@ const counties = (function () {
       ),
       createElement: function (args) {
          const newElement = document.createElement(args?.elementType ?? 'div');
+         if (typeof args?.county === 'object') {
+            newElement.setAttribute('title', (
+               args?.useWelsh
+               ? args.county?.countyNameInWelsh
+               : undefined
+            ) ?? args.county?.countyName ?? '');
+         }
          if (typeof args?.attributes === 'object') {
             Object.entries(args.attributes).forEach(function ([name, value]) {
                newElement.setAttribute(name, value);
