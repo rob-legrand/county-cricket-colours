@@ -258,35 +258,14 @@ const counties = (function () {
             : ''
          );
          if (typeof args?.tooltipType === 'string') {
-            newElement.setAttribute('title', (
-               args?.tooltipType === 'countyName'
-               ? (
-                  args?.useWelsh
-                  ? args.county?.countyNameInWelsh
-                  : undefined
-               ) ?? args.county?.countyName ?? ''
-               : args?.tooltipType === 'countyAbbreviation'
-               ? args.county?.countyAbbreviation ?? args.county?.countyName ?? ''
-               : args?.tooltipType === 'countyCode'
-               ? args.county?.countyCode?.toUpperCase?.() ?? ''
-               : args?.tooltipType === 'chapmanCode'
-               ? (
-                  args.county?.chapmanCode?.toUpperCase?.()
-                  ?? args.county?.countyCode?.toUpperCase?.()
-                  ?? ''
-               )
-               : args?.tooltipType === 'hcsCode'
-               ? (
-                  args.county?.hcsCode?.toUpperCase?.()
-                  ?? args.county?.countyCode?.toUpperCase?.()
-                  ?? ''
-               )
-               : args?.tooltipType === 'classLevel'
-               ? args.county?.classLevel ?? '-'
-               : args?.tooltipType === 'country'
-               ? args.county?.country ?? '-'
-               : args?.county?.countyName ?? ''
-            ));
+            newElement.setAttribute(
+               'title',
+               self.createCountyText({
+                  county: args?.county,
+                  textType: args?.tooltipType,
+                  useWelsh: args?.useWelsh
+               })
+            );
          }
          return newElement;
       },
