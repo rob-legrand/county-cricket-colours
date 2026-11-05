@@ -471,7 +471,8 @@ document.addEventListener('DOMContentLoaded', function () {
                      county: county,
                      classList: ['county-code', 'county-colour-name'],
                      textType: 'countyCode',
-                     colourStyle: 'scoreboard'
+                     colourStyle: 'scoreboard',
+                     tooltipType: 'countyName'
                   })]
                })
             ),
