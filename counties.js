@@ -257,7 +257,9 @@ const counties = (function () {
             )
             : ''
          );
-         if (typeof args?.tooltipType === 'string') {
+         if (typeof args?.tooltip === 'string') {
+            newElement.setAttribute('title', args.tooltip);
+         } else if (typeof args?.tooltipType === 'string') {
             newElement.setAttribute(
                'title',
                self.createCountyText({
