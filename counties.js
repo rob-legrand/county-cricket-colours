@@ -156,6 +156,9 @@ const counties = (function () {
                )
             );
          }
+         if (typeof args?.tooltip === 'string') {
+            newCanvas.setAttribute('title', args.tooltip);
+         }
          return newCanvas;
       },
       createColourList: (list) => (
