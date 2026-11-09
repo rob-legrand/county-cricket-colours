@@ -275,7 +275,8 @@ document.addEventListener('DOMContentLoaded', function () {
                                  colours: county.colours,
                                  height: 40,
                                  isHorizontal: true,
-                                 width: 40
+                                 width: 40,
+                                 tooltip: county.countyName
                               }),
                               counties.createElement({
                                  county: county,
