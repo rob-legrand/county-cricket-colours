@@ -308,63 +308,73 @@ document.addEventListener('DOMContentLoaded', function () {
                      colours: county.colours,
                      height: 20,
                      isHorizontal: true,
-                     width: 80
+                     width: 80,
+                     tooltip: county.countyName
                   }),
                   counties.createCanvas({
                      colours: county.colours,
                      height: 20,
                      isVertical: true,
-                     width: 80
+                     width: 80,
+                     tooltip: county.countyName
                   }),
                   counties.createCanvas({
                      colours: county.colours,
                      height: 40,
                      isHorizontal: true,
                      isVertical: true,
-                     width: 80
+                     width: 80,
+                     tooltip: county.countyName
                   }),
                   counties.createCanvas({
                      colours: county.colours,
                      height: 80,
                      isHorizontal: true,
                      isVertical: true,
-                     width: 40
+                     width: 40,
+                     tooltip: county.countyName
                   }),
                   counties.createCanvas({
                      colours: county.colours,
                      height: 1,
                      isHorizontal: true,
-                     width: 20
+                     width: 20,
+                     tooltip: county.countyName
                   }),
                   counties.createCanvas({
                      colours: county.colours,
                      height: 20,
                      isVertical: true,
-                     width: 1
+                     width: 1,
+                     tooltip: county.countyName
                   }),
                   counties.createCanvas({
                      colours: county.colours,
                      height: 1,
                      isHorizontal: true,
                      isVertical: true,
-                     width: 1
+                     width: 1,
+                     tooltip: county.countyName
                   }),
                   counties.createCanvas({
                      colours: county.colours,
                      height: 1,
                      isHorizontal: true,
-                     width: 1
+                     width: 1,
+                     tooltip: county.countyName
                   }),
                   counties.createCanvas({
                      colours: county.colours,
                      height: 1,
                      isVertical: true,
-                     width: 1
+                     width: 1,
+                     tooltip: county.countyName
                   }),
                   counties.createCanvas({
                      colours: county.colours,
                      height: 1,
-                     width: 1
+                     width: 1,
+                     tooltip: county.countyName
                   }),
                   counties.createElement({
                      county: county,
