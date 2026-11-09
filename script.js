@@ -379,7 +379,8 @@ document.addEventListener('DOMContentLoaded', function () {
                   counties.createElement({
                      county: county,
                      classList: ['county-code', 'county-colour-name'],
-                     textType: 'countyCode'
+                     textType: 'countyCode',
+                     tooltipType: 'countyName'
                   }),
                   counties.createElement({
                      classList: ['county-name'],
