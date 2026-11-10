@@ -439,7 +439,8 @@ document.addEventListener('DOMContentLoaded', function () {
                      elementType: 'td',
                      county: county,
                      classList: ['county-code', 'county-colour-name'],
-                     textType: 'countyCode'
+                     textType: 'countyCode',
+                     tooltipType: 'countyName'
                   }),
                   ...Array.from(
                      {length: 3},
