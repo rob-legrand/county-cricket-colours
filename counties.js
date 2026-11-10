@@ -75,84 +75,84 @@ const counties = (function () {
          const numRows = 20;
          const pixelsPerRow = Math.ceil(Math.min(
             (
-               args.isHorizontal
-               ? args.height
+               args?.isHorizontal
+               ? args?.height
                : Number.POSITIVE_INFINITY
             ),
             (
-               args.isVertical
-               ? args.width
+               args?.isVertical
+               ? args?.width
                : Number.POSITIVE_INFINITY
             )
          ) / numRows);
          const newCanvas = document.createElement('canvas');
-         if (args.isHorizontal) {
-            if (args.isVertical) {
-               if (args.width > args.height) {
+         if (args?.isHorizontal) {
+            if (args?.isVertical) {
+               if (args?.width > args?.height) {
                   newCanvas.height = numRows * pixelsPerRow;
-                  newCanvas.width = Math.max(Math.round(args.width), newCanvas.height);
+                  newCanvas.width = Math.max(Math.round(args?.width), newCanvas.height);
                } else {
                   newCanvas.width = numRows * pixelsPerRow;
-                  newCanvas.height = Math.max(Math.round(args.height), newCanvas.width);
+                  newCanvas.height = Math.max(Math.round(args?.height), newCanvas.width);
                }
             } else {
                newCanvas.height = numRows * pixelsPerRow;
-               newCanvas.width = Math.round(args.width);
+               newCanvas.width = Math.round(args?.width);
             }
          } else {
-            if (args.isVertical) {
+            if (args?.isVertical) {
                newCanvas.width = numRows * pixelsPerRow;
-               newCanvas.height = Math.round(args.height);
+               newCanvas.height = Math.round(args?.height);
             } else {
-               newCanvas.width = Math.round(args.width);
-               newCanvas.height = Math.round(args.height);
+               newCanvas.width = Math.round(args?.width);
+               newCanvas.height = Math.round(args?.height);
             }
          }
          newCanvas.getContext('2d').fillStyle = util.convertToRgb(self.namedColours.cream);
          newCanvas.getContext('2d').fillRect(0, 0, newCanvas.width, newCanvas.height);
-         if (args.isHorizontal) {
-            args.colours.reduce(
+         if (args?.isHorizontal) {
+            args?.colours?.reduce(
                function (totalRowsSoFar, stripe) {
                   if (Object.hasOwn(stripe, 'colour')) {
-                     newCanvas.getContext('2d').fillStyle = util.convertToRgb(stripe.colour);
+                     newCanvas.getContext('2d').fillStyle = util.convertToRgb(stripe?.colour);
                      newCanvas.getContext('2d').fillRect(
                         0,
                         totalRowsSoFar,
                         newCanvas.width - (
-                           args.isVertical
-                           ? newCanvas.height - totalRowsSoFar - stripe.rows * pixelsPerRow
+                           args?.isVertical
+                           ? newCanvas.height - totalRowsSoFar - stripe?.rows * pixelsPerRow
                            : 0
                         ),
-                        stripe.rows * pixelsPerRow
+                        stripe?.rows * pixelsPerRow
                      );
                   }
-                  return totalRowsSoFar + stripe.rows * pixelsPerRow;
+                  return totalRowsSoFar + stripe?.rows * pixelsPerRow;
                },
                Math.round(
-                  newCanvas.height - (numRows + self.getNumRows(args.colours)) * pixelsPerRow / 2
+                  newCanvas.height - (numRows + self.getNumRows(args?.colours)) * pixelsPerRow / 2
                )
             );
          }
-         if (args.isVertical) {
-            args.colours.reduce(
+         if (args?.isVertical) {
+            args?.colours?.reduce(
                function (totalRowsSoFar, stripe) {
                   if (Object.hasOwn(stripe, 'colour')) {
-                     newCanvas.getContext('2d').fillStyle = util.convertToRgb(stripe.colour);
+                     newCanvas.getContext('2d').fillStyle = util.convertToRgb(stripe?.colour);
                      newCanvas.getContext('2d').fillRect(
                         totalRowsSoFar,
                         0,
-                        stripe.rows * pixelsPerRow,
+                        stripe?.rows * pixelsPerRow,
                         newCanvas.height - (
-                           args.isHorizontal
-                           ? newCanvas.width - totalRowsSoFar - stripe.rows * pixelsPerRow
+                           args?.isHorizontal
+                           ? newCanvas.width - totalRowsSoFar - stripe?.rows * pixelsPerRow
                            : 0
                         )
                      );
                   }
-                  return totalRowsSoFar + stripe.rows * pixelsPerRow;
+                  return totalRowsSoFar + stripe?.rows * pixelsPerRow;
                },
                Math.round(
-                  newCanvas.width - (numRows + self.getNumRows(args.colours)) * pixelsPerRow / 2
+                  newCanvas.width - (numRows + self.getNumRows(args?.colours)) * pixelsPerRow / 2
                )
             );
          }
