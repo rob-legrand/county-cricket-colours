@@ -72,6 +72,7 @@ const counties = (function () {
          )
       ),
       createCanvas: function (args) {
+         const colours = args?.colours ?? args?.county?.colours;
          const numRows = 20;
          const pixelsPerRow = Math.ceil(Math.min(
             (
@@ -111,7 +112,7 @@ const counties = (function () {
          newCanvas.getContext('2d').fillStyle = util.convertToRgb(self.namedColours.cream);
          newCanvas.getContext('2d').fillRect(0, 0, newCanvas.width, newCanvas.height);
          if (args?.isHorizontal) {
-            args?.colours?.reduce(
+            colours?.reduce(
                function (totalRowsSoFar, stripe) {
                   if (Object.hasOwn(stripe, 'colour')) {
                      newCanvas.getContext('2d').fillStyle = util.convertToRgb(stripe?.colour);
@@ -129,12 +130,12 @@ const counties = (function () {
                   return totalRowsSoFar + stripe?.rows * pixelsPerRow;
                },
                Math.round(
-                  newCanvas.height - (numRows + self.getNumRows(args?.colours)) * pixelsPerRow / 2
+                  newCanvas.height - (numRows + self.getNumRows(colours)) * pixelsPerRow / 2
                )
             );
          }
          if (args?.isVertical) {
-            args?.colours?.reduce(
+            colours?.reduce(
                function (totalRowsSoFar, stripe) {
                   if (Object.hasOwn(stripe, 'colour')) {
                      newCanvas.getContext('2d').fillStyle = util.convertToRgb(stripe?.colour);
@@ -152,7 +153,7 @@ const counties = (function () {
                   return totalRowsSoFar + stripe?.rows * pixelsPerRow;
                },
                Math.round(
-                  newCanvas.width - (numRows + self.getNumRows(args?.colours)) * pixelsPerRow / 2
+                  newCanvas.width - (numRows + self.getNumRows(colours)) * pixelsPerRow / 2
                )
             );
          }
