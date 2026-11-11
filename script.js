@@ -313,14 +313,22 @@ document.addEventListener('DOMContentLoaded', function () {
                      height: 20,
                      isHorizontal: true,
                      width: 80,
-                     tooltip: county.countyName
+                     tooltip: (
+                        options.useWelshCountyNames
+                        ? county.countyNameInWelsh ?? county.countyName
+                        : county.countyName
+                     )
                   }),
                   counties.createCanvas({
                      colours: county.colours,
                      height: 20,
                      isVertical: true,
                      width: 80,
-                     tooltip: county.countyName
+                     tooltip: (
+                        options.useWelshCountyNames
+                        ? county.countyNameInWelsh ?? county.countyName
+                        : county.countyName
+                     )
                   }),
                   counties.createCanvas({
                      colours: county.colours,
@@ -328,7 +336,11 @@ document.addEventListener('DOMContentLoaded', function () {
                      isHorizontal: true,
                      isVertical: true,
                      width: 80,
-                     tooltip: county.countyName
+                     tooltip: (
+                        options.useWelshCountyNames
+                        ? county.countyNameInWelsh ?? county.countyName
+                        : county.countyName
+                     )
                   }),
                   counties.createCanvas({
                      colours: county.colours,
@@ -336,21 +348,33 @@ document.addEventListener('DOMContentLoaded', function () {
                      isHorizontal: true,
                      isVertical: true,
                      width: 40,
-                     tooltip: county.countyName
+                     tooltip: (
+                        options.useWelshCountyNames
+                        ? county.countyNameInWelsh ?? county.countyName
+                        : county.countyName
+                     )
                   }),
                   counties.createCanvas({
                      colours: county.colours,
                      height: 1,
                      isHorizontal: true,
                      width: 20,
-                     tooltip: county.countyName
+                     tooltip: (
+                        options.useWelshCountyNames
+                        ? county.countyNameInWelsh ?? county.countyName
+                        : county.countyName
+                     )
                   }),
                   counties.createCanvas({
                      colours: county.colours,
                      height: 20,
                      isVertical: true,
                      width: 1,
-                     tooltip: county.countyName
+                     tooltip: (
+                        options.useWelshCountyNames
+                        ? county.countyNameInWelsh ?? county.countyName
+                        : county.countyName
+                     )
                   }),
                   counties.createCanvas({
                      colours: county.colours,
@@ -358,27 +382,43 @@ document.addEventListener('DOMContentLoaded', function () {
                      isHorizontal: true,
                      isVertical: true,
                      width: 1,
-                     tooltip: county.countyName
+                     tooltip: (
+                        options.useWelshCountyNames
+                        ? county.countyNameInWelsh ?? county.countyName
+                        : county.countyName
+                     )
                   }),
                   counties.createCanvas({
                      colours: county.colours,
                      height: 1,
                      isHorizontal: true,
                      width: 1,
-                     tooltip: county.countyName
+                     tooltip: (
+                        options.useWelshCountyNames
+                        ? county.countyNameInWelsh ?? county.countyName
+                        : county.countyName
+                     )
                   }),
                   counties.createCanvas({
                      colours: county.colours,
                      height: 1,
                      isVertical: true,
                      width: 1,
-                     tooltip: county.countyName
+                     tooltip: (
+                        options.useWelshCountyNames
+                        ? county.countyNameInWelsh ?? county.countyName
+                        : county.countyName
+                     )
                   }),
                   counties.createCanvas({
                      colours: county.colours,
                      height: 1,
                      width: 1,
-                     tooltip: county.countyName
+                     tooltip: (
+                        options.useWelshCountyNames
+                        ? county.countyNameInWelsh ?? county.countyName
+                        : county.countyName
+                     )
                   }),
                   counties.createElement({
                      county: county,
