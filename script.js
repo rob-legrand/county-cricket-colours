@@ -464,7 +464,11 @@ document.addEventListener('DOMContentLoaded', function () {
                            height: 40,
                            isHorizontal: true,
                            width: 40,
-                           tooltip: county.countyName
+                           tooltip: (
+                              options.useWelshCountyNames
+                              ? county.countyNameInWelsh ?? county.countyName
+                              : county.countyName
+                           )
                         })
                      ]
                   }),
