@@ -425,6 +425,7 @@ document.addEventListener('DOMContentLoaded', function () {
                      county: county,
                      classList: ['county-code', 'county-colour-name'],
                      textType: 'countyCode',
+                     useWelsh: options.useWelshCountyNames,
                      tooltipType: 'countyName'
                   }),
                   counties.createElement({
