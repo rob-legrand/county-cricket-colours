@@ -555,6 +555,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         county: includedCountiesInfo[index],
                         classList: ['county-code', 'county-colour-name'],
                         textType: 'countyCode',
+                        useWelsh: options.useWelshCountyNames,
                         colourStyle: 'scoreboard',
                         homeCounty: (
                            which === 1
