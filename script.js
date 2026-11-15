@@ -307,116 +307,86 @@ document.addEventListener('DOMContentLoaded', function () {
                classList: ['county'],
                children: [
                   counties.createCanvas({
-                     colours: county.colours,
+                     county: county,
                      height: 20,
                      isHorizontal: true,
                      width: 80,
-                     tooltip: (
-                        options.useWelshCountyNames
-                        ? county.countyNameInWelsh ?? county.countyName
-                        : county.countyName
-                     )
+                     tooltipType: 'countyName',
+                     useWelsh: options.useWelshCountyNames
                   }),
                   counties.createCanvas({
-                     colours: county.colours,
+                     county: county,
                      height: 20,
                      isVertical: true,
                      width: 80,
-                     tooltip: (
-                        options.useWelshCountyNames
-                        ? county.countyNameInWelsh ?? county.countyName
-                        : county.countyName
-                     )
+                     tooltipType: 'countyName',
+                     useWelsh: options.useWelshCountyNames
                   }),
                   counties.createCanvas({
-                     colours: county.colours,
+                     county: county,
                      height: 40,
                      isHorizontal: true,
                      isVertical: true,
                      width: 80,
-                     tooltip: (
-                        options.useWelshCountyNames
-                        ? county.countyNameInWelsh ?? county.countyName
-                        : county.countyName
-                     )
+                     tooltipType: 'countyName',
+                     useWelsh: options.useWelshCountyNames
                   }),
                   counties.createCanvas({
-                     colours: county.colours,
+                     county: county,
                      height: 80,
                      isHorizontal: true,
                      isVertical: true,
                      width: 40,
-                     tooltip: (
-                        options.useWelshCountyNames
-                        ? county.countyNameInWelsh ?? county.countyName
-                        : county.countyName
-                     )
+                     tooltipType: 'countyName',
+                     useWelsh: options.useWelshCountyNames
                   }),
                   counties.createCanvas({
-                     colours: county.colours,
+                     county: county,
                      height: 1,
                      isHorizontal: true,
                      width: 20,
-                     tooltip: (
-                        options.useWelshCountyNames
-                        ? county.countyNameInWelsh ?? county.countyName
-                        : county.countyName
-                     )
+                     tooltipType: 'countyName',
+                     useWelsh: options.useWelshCountyNames
                   }),
                   counties.createCanvas({
-                     colours: county.colours,
+                     county: county,
                      height: 20,
                      isVertical: true,
                      width: 1,
-                     tooltip: (
-                        options.useWelshCountyNames
-                        ? county.countyNameInWelsh ?? county.countyName
-                        : county.countyName
-                     )
+                     tooltipType: 'countyName',
+                     useWelsh: options.useWelshCountyNames
                   }),
                   counties.createCanvas({
-                     colours: county.colours,
+                     county: county,
                      height: 1,
                      isHorizontal: true,
                      isVertical: true,
                      width: 1,
-                     tooltip: (
-                        options.useWelshCountyNames
-                        ? county.countyNameInWelsh ?? county.countyName
-                        : county.countyName
-                     )
+                     tooltipType: 'countyName',
+                     useWelsh: options.useWelshCountyNames
                   }),
                   counties.createCanvas({
-                     colours: county.colours,
+                     county: county,
                      height: 1,
                      isHorizontal: true,
                      width: 1,
-                     tooltip: (
-                        options.useWelshCountyNames
-                        ? county.countyNameInWelsh ?? county.countyName
-                        : county.countyName
-                     )
+                     tooltipType: 'countyName',
+                     useWelsh: options.useWelshCountyNames
                   }),
                   counties.createCanvas({
-                     colours: county.colours,
+                     county: county,
                      height: 1,
                      isVertical: true,
                      width: 1,
-                     tooltip: (
-                        options.useWelshCountyNames
-                        ? county.countyNameInWelsh ?? county.countyName
-                        : county.countyName
-                     )
+                     tooltipType: 'countyName',
+                     useWelsh: options.useWelshCountyNames
                   }),
                   counties.createCanvas({
-                     colours: county.colours,
+                     county: county,
                      height: 1,
                      width: 1,
-                     tooltip: (
-                        options.useWelshCountyNames
-                        ? county.countyNameInWelsh ?? county.countyName
-                        : county.countyName
-                     )
+                     tooltipType: 'countyName',
+                     useWelsh: options.useWelshCountyNames
                   }),
                   counties.createElement({
                      county: county,
