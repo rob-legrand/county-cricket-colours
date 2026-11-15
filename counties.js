@@ -159,6 +159,14 @@ const counties = (function () {
          }
          if (typeof args?.tooltip === 'string') {
             newCanvas.setAttribute('title', args.tooltip);
+         } else if (typeof args?.tooltipType === 'string') {
+            newCanvas.setAttribute(
+               'title',
+               self.createCountyText({
+                  county: args?.county,
+                  textType: args?.tooltipType
+               })
+            );
          }
          return newCanvas;
       },
