@@ -273,15 +273,12 @@ document.addEventListener('DOMContentLoaded', function () {
                                  tooltipType: 'countyName'
                               }),
                               counties.createCanvas({
-                                 colours: county.colours,
+                                 county: county,
                                  height: 40,
                                  isHorizontal: true,
                                  width: 40,
-                                 tooltip: (
-                                    options.useWelshCountyNames
-                                    ? county.countyNameInWelsh ?? county.countyName
-                                    : county.countyName
-                                 )
+                                 tooltipType: 'countyName',
+                                 useWelsh: options.useWelshCountyNames
                               }),
                               counties.createElement({
                                  county: county,
