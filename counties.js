@@ -164,7 +164,8 @@ const counties = (function () {
                'title',
                self.createCountyText({
                   county: args?.county,
-                  textType: args?.tooltipType
+                  textType: args?.tooltipType,
+                  useWelsh: args?.useWelsh
                })
             );
          }
