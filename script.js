@@ -429,15 +429,12 @@ document.addEventListener('DOMContentLoaded', function () {
                      classList: ['centered'],
                      children: [
                         counties.createCanvas({
-                           colours: county.colours,
+                           county: county,
                            height: 40,
                            isHorizontal: true,
                            width: 40,
-                           tooltip: (
-                              options.useWelshCountyNames
-                              ? county.countyNameInWelsh ?? county.countyName
-                              : county.countyName
-                           )
+                           tooltipType: 'countyName',
+                           useWelsh: options.useWelshCountyNames
                         })
                      ]
                   }),
