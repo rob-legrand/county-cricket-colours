@@ -193,6 +193,7 @@ document.addEventListener('DOMContentLoaded', function () {
             (county) => [
                {
                   colours: county.colours,
+                  county: county,
                   text: (
                      county.classLevel ?? '-'
                   ) + ' ' + (
@@ -209,6 +210,7 @@ document.addEventListener('DOMContentLoaded', function () {
                   ? county.alternateColours.map(
                      (colours) => ({
                         colours: colours,
+                        county: county,
                         text: (
                            options.useWelshCountyNames
                            ? county.countyNameInWelsh ?? county.countyName
@@ -225,6 +227,7 @@ document.addEventListener('DOMContentLoaded', function () {
                children: [
                   counties.createCanvas({
                      colours: colours.colours,
+                     county: colours.county,
                      height: 120,
                      isHorizontal: true,
                      width: 144,
