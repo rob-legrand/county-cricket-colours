@@ -236,7 +236,6 @@ document.addEventListener('DOMContentLoaded', function () {
                   counties.createElement({
                      county: colours.county,
                      classList: ['county-name'],
-                     children: [colours.text],
                      colourStyle: 'none'
                   })
                ]
