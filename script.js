@@ -236,6 +236,8 @@ document.addEventListener('DOMContentLoaded', function () {
                   counties.createElement({
                      county: colours.county,
                      classList: ['county-name'],
+                     textType: 'countyName',
+                     useWelsh: options.useWelshCountyNames,
                      colourStyle: 'none'
                   })
                ]
