@@ -234,8 +234,10 @@ document.addEventListener('DOMContentLoaded', function () {
                      tooltip: colours.text
                   }),
                   counties.createElement({
+                     county: colours.county,
                      classList: ['county-name'],
-                     children: [colours.text]
+                     children: [colours.text],
+                     colourStyle: 'none'
                   })
                ]
             })
