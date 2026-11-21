@@ -231,7 +231,8 @@ document.addEventListener('DOMContentLoaded', function () {
                      height: 120,
                      isHorizontal: true,
                      width: 144,
-                     tooltipType: 'countyName'
+                     tooltipType: 'countyName',
+                     useWelsh: options.useWelshCountyNames
                   }),
                   counties.createElement({
                      county: colours.county,
