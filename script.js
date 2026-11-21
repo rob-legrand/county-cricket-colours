@@ -193,14 +193,7 @@ document.addEventListener('DOMContentLoaded', function () {
             (county) => [
                {
                   colours: county.colours,
-                  county: county,
-                  text: (
-                     county.classLevel ?? '-'
-                  ) + ' ' + (
-                     options.useWelshCountyNames
-                     ? county.countyNameInWelsh ?? county.countyName
-                     : county.countyName
-                  )
+                  county: county
                },
                ...(
                   (
@@ -210,12 +203,7 @@ document.addEventListener('DOMContentLoaded', function () {
                   ? county.alternateColours.map(
                      (colours) => ({
                         colours: colours,
-                        county: county,
-                        text: (
-                           options.useWelshCountyNames
-                           ? county.countyNameInWelsh ?? county.countyName
-                           : county.countyName
-                        )
+                        county: county
                      })
                   )
                   : []
