@@ -191,20 +191,14 @@ document.addEventListener('DOMContentLoaded', function () {
             : []
          ).map(
             (county) => [
-               {
-                  colours: county.colours,
-                  county: county
-               },
+               {colours: county.colours, county: county},
                ...(
                   (
                      options.showAlternateColours
                      && Array.isArray(county.alternateColours)
                   )
                   ? county.alternateColours.map(
-                     (colours) => ({
-                        colours: colours,
-                        county: county
-                     })
+                     (colours) => ({colours: colours, county: county})
                   )
                   : []
                )
