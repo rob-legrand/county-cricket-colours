@@ -2147,7 +2147,12 @@ const countiesInfo = [
       ],
       textColour: kcdGold,
       backgroundColour: kcdRed,
-      borderColour: kcdGreen
+      borderColour: kcdGreen,
+      scoreboardColours: [
+         kcdRed,
+         kcdGold,
+         kcdGreen
+      ]
    },
    {
       countyName: 'Stirlingshire',
