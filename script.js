@@ -437,7 +437,8 @@ document.addEventListener('DOMContentLoaded', function () {
                      elementType: 'td',
                      county: county,
                      classList: ['county-colour-name'],
-                     children: [ordinalise(county.classLevel ?? '-')]
+                     children: [ordinalise(county.classLevel ?? '-')],
+                     tooltip: ordinalise(county.classLevel ?? '-') + ' class'
                   }),
                   counties.createElement({
                      elementType: 'td',
