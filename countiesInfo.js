@@ -2272,7 +2272,12 @@ const countiesInfo = [
          ]
       ],
       backgroundColour: banGreen,
-      borderColour: banBlue
+      borderColour: banBlue,
+      scoreboardColours: [
+         banGreen,
+         banBlue,
+         banBlack
+      ]
    },
    {
       countyName: 'Flintshire',
