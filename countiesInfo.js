@@ -2331,7 +2331,11 @@ const countiesInfo = [
       ],
       textColour: perGold,
       backgroundColour: perGreen,
-      borderColour: perGold
+      borderColour: perGold,
+      scoreboardColours: [
+         perGreen,
+         perGold
+      ]
    },
    {
       countyName: 'Clackmannanshire',
