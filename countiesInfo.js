@@ -2309,7 +2309,11 @@ const countiesInfo = [
          ]
       ],
       backgroundColour: flnBlack,
-      borderColour: flnScarlet
+      borderColour: flnScarlet,
+      scoreboardColours: [
+         flnBlack,
+         flnScarlet
+      ]
    },
    {
       countyName: 'Perthshire',
