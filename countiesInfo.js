@@ -2174,7 +2174,12 @@ const countiesInfo = [
          ]
       ],
       backgroundColour: stiRed,
-      borderColour: stiBrown
+      borderColour: stiBrown,
+      scoreboardColours: [
+         stiRed,
+         stiBrown,
+         stiBlack
+      ]
    },
    {
       countyName: 'Banffshire',
