@@ -223,9 +223,21 @@ const counties = (function () {
             : [document.createTextNode(self.createCountyText(args))]
          ));
          const scoreboardColour = (
-            Object.hasOwn(args, 'homeCounty')
+            typeof args?.homeCounty === 'object'
+            ? (
+               self.hasCountyColours(args?.county) > self.hasCountyColours(args.homeCounty)
+               ? self.chooseScoreboardColours(
+                  args.county,
+                  args.homeCounty
+               )[0]
+               : self.chooseScoreboardColours(
+                  args.homeCounty,
+                  args?.county
+               )[1]
+            )
+            : self.hasCountyColours(args?.awayCounty) > self.hasCountyColours(args?.county)
             ? self.chooseScoreboardColours(
-               args.homeCounty,
+               args.awayCounty,
                args?.county
             )[1]
             : self.chooseScoreboardColours(
