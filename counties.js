@@ -223,7 +223,7 @@ const counties = (function () {
             : [document.createTextNode(self.createCountyText(args))]
          ));
          const scoreboardColour = (
-            self.hasCountyColours(args?.homeCounty)
+            Object.hasOwn(args, 'homeCounty')
             ? self.chooseScoreboardColours(
                args.homeCounty,
                args?.county
@@ -234,37 +234,37 @@ const counties = (function () {
             )[0]
          );
          newElement.style.color = util.convertToRgb(
-            self.hasCountyColours(args?.county)
+            Object.hasOwn(args, 'county')
             ? (
-               args?.colourStyle === 'none'
+               args.colourStyle === 'none'
                ? ''
-               : args?.colourStyle === 'scoreboard'
+               : args.colourStyle === 'scoreboard'
                ? self.chooseContrastingColour(scoreboardColour)
-               : args.county.textColour ?? self.namedColours.cream
+               : args.county?.textColour ?? self.namedColours.cream
             )
             : ''
          );
          newElement.style.backgroundColor = util.convertToRgb(
-            self.hasCountyColours(args?.county)
+            Object.hasOwn(args, 'county')
             ? (
-               args?.colourStyle === 'none'
+               args.colourStyle === 'none'
                ? ''
-               : args?.colourStyle === 'scoreboard'
+               : args.colourStyle === 'scoreboard'
                ? scoreboardColour
-               : args.county.backgroundColour ?? self.namedColours.cream
+               : args.county?.backgroundColour ?? self.namedColours.cream
             )
             : ''
          );
          newElement.style.borderColor = util.convertToRgb(
-            self.hasCountyColours(args?.county)
+            Object.hasOwn(args, 'county')
             ? (
-               args?.colourStyle === 'none'
+               args.colourStyle === 'none'
                ? ''
-               : args?.colourStyle === 'scoreboard'
+               : args.colourStyle === 'scoreboard'
                ? scoreboardColour
                : (
-                  args.county.borderColour
-                  ?? args.county.backgroundColour
+                  args.county?.borderColour
+                  ?? args.county?.backgroundColour
                   ?? self.namedColours.cream
                )
             )
