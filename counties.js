@@ -57,19 +57,9 @@ const counties = (function () {
             ) ?? awayColourses[0]
          )
       ),
-      chooseScoreboardColours: (homeCounty, awayCounty) => (
-         [homeCounty, awayCounty].every(self.hasCountyColours)
-         ? self.chooseContrastingScoreboardColours(
-            self.listScoreboardColours(homeCounty)[0],
-            self.listScoreboardColours(awayCounty)
-         )
-         : [homeCounty, awayCounty].map(
-            (county) => (
-               self.hasCountyColours(county)
-               ? self.findFirstColour(self.listScoreboardColours(county))
-               : self.namedColours.cream
-            )
-         )
+      chooseScoreboardColours: (homeCounty, awayCounty) => self.chooseContrastingScoreboardColours(
+         self.listScoreboardColours(homeCounty)[0],
+         self.listScoreboardColours(awayCounty)
       ),
       createCanvas: function (args) {
          const colours = args?.colours ?? args?.county?.colours;
