@@ -359,17 +359,16 @@ const counties = (function () {
             (x) => self.isColour(x) || self.isColourList(x)
          )
       ),
-      listBasicScoreboardColours: (county) => [
-         ...(
-            Array.isArray(county?.scoreboardColours)
-            ? county.scoreboardColours
-            : []
-         ),
-         county?.backgroundColour,
-         county?.borderColour,
-         county?.textColour
-      ].filter(
-         (x) => self.isColour(x) || self.isColourList(x)
+      listBasicScoreboardColours: (county) => (
+         Array.isArray(county?.scoreboardColours)
+         ? county.scoreboardColours
+         : [
+            county?.backgroundColour,
+            county?.borderColour,
+            county?.textColour
+         ].filter(
+            (x) => self.isColour(x)
+         )
       ),
       listScoreboardColours: (county) => [
          ...self.listBasicScoreboardColours(county),
